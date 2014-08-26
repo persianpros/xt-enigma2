@@ -1,0 +1,18 @@
+<!--suppress XmlUnboundNsPrefix -->
+<default>
+	  <prerequisites>
+                    <tag type="System" />
+	  </prerequisites>
+          <info>
+                    <author>Kr4tos</author>
+                    <name>AtemioCore</name>
+                    <packagename>enigma2-plugin-systemplugins-atemiocore</packagename>
+                    <shortdescription>AtemioCore for atemio image</shortdescription>
+                    <description>AtemioCore for atemio image, not remove.</description>
+          </info>
+
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-plugin-systemplugins-atemiocore" />
+	</files>
+
+</default>

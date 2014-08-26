@@ -1,0 +1,16 @@
+<!--suppress XmlUnboundNsPrefix -->
+<default>
+  <prerequisites>
+                  <tag type="System" />
+  </prerequisites>
+          <info>
+                    <author>Kr4tos</author>
+                    <name>AtemioPanel</name>
+                    <packagename>AtemioPanel</packagename>
+                    <shortdescription>AtemioPanel</shortdescription>
+                    <description>Allows for Atemio Image.</description>
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-plugin-extensions-atemiopanel" />
+	  </files>
+</default>
