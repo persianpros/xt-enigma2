@@ -13,7 +13,7 @@ class AboutTeam(Screen):
 
     def __init__(self, session, args = 0):
         Screen.__init__(self, session)
-        abouttxt = '\nAtemio Support Team:\n\n- Kr4tos (Developer)\n- mmark (Graphics and Skin) \n\n-Betatesting:\n xionsenx, Stb Boss.\n\nFurther credits goes to:\n Atemio Team.\n ProjectMan for his constant support.\n\n- Oe-Alliance Openvix OpenPLI\n'
+        abouttxt = '\nAtemio4you Image Team:\n\n- henrylicious (Developer)\n- skaman (Developer)\n- satinfo (Developer)\n- mmark (Graphics and Skin) \n\n-Betatesting:\n xionsenx, Stb_Boss.\n\nFurther credits goes to:\n Atemio Team.\n ProjectMan for his constant support.\n\n- Oe-Alliance Openvix OpenPLI\n'
         self['about'] = Label(abouttxt)
         self['actions'] = ActionMap(['OkCancelActions', 'ColorActions'], {'cancel': self.quit}, -2)
 
