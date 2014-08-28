@@ -4,11 +4,11 @@
                     <tag type="System" />
 	  </prerequisites>
           <info>
-                    <author>Kr4tos</author>
+                    <author>Atemio4you Image Team</author>
                     <name>AtemioCore</name>
                     <packagename>enigma2-plugin-systemplugins-atemiocore</packagename>
-                    <shortdescription>AtemioCore for atemio image</shortdescription>
-                    <description>AtemioCore for atemio image, not remove.</description>
+                    <shortdescription>AtemioCore for Atemio Image</shortdescription>
+                    <description>AtemioCore for Atemio Image, not remove.</description>
           </info>
 
 	  <files type="package"> <!-- without version, without .ipk -->

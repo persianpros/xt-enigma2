@@ -4,11 +4,11 @@
                   <tag type="System" />
   </prerequisites>
           <info>
-                    <author>Kr4tos</author>
+                    <author>Atemio4you Image Team</author>
                     <name>AtemioPanel</name>
                     <packagename>AtemioPanel</packagename>
                     <shortdescription>AtemioPanel</shortdescription>
-                    <description>Allows for Atemio Image.</description>
+                    <description>Include some quick features like control panel, softcam panel, job panel, device panel, etc.</description>
           </info>
 	  <files type="package"> <!-- without version, without .ipk -->
 		<file type="package" name="enigma2-plugin-extensions-atemiopanel" />
