@@ -219,7 +219,7 @@ class SystemMemoryInfo(Screen):
 		Screen.setTitle(self, _("Memory Information"))
 		self.skinName = ["SystemMemoryInfo", "About"]
 		self["lab1"] = StaticText(_("Atemio Image"))
-		self["lab2"] = StaticText(_("By Kr4tos"))
+		self["lab2"] = StaticText(_("by Atemio4you Image Team"))
 		self["AboutScrollLabel"] = ScrollLabel()
 
 		self["actions"] = ActionMap(["SetupActions", "ColorActions"],
