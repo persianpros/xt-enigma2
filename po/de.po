@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-24 14:18+0100\n"
-"PO-Revision-Date: 2014-08-28 15:28+0000\n"
+"PO-Revision-Date: 2014-08-28 16:00+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/atemio-e2/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -1832,10 +1832,10 @@ msgid "NO, do not restore settings"
 msgstr "Einstellungen werden nicht wiederhergestellt"
 
 msgid "YES, to restore plugins"
-msgstr "Plugins wiederherstellen"
+msgstr "Erweiterungen wiederherstellen"
 
 msgid "NO, do not restore plugins"
-msgstr "Plugins werden nicht wiederhergestellt"
+msgstr "Erweiterungen werden nicht wiederhergestellt"
 
 msgid "Please wait while gathers information..."
 msgstr "Bitte warten, sammle Informationen..."
@@ -1844,18 +1844,22 @@ msgid "Restore Wizard"
 msgstr "Wiederherstellungsassistent"
 
 msgid "Please wait while plugins restore completes..."
-msgstr ""
+msgstr "Bitte warten bis Wiederherstellung der Erweiterungen beendet wurde..."
 
 msgid ""
 "Sorry feeds are down for maintenance, Please try using Backup Manager to "
 "restore plugins later."
 msgstr ""
+"Feeds sind nicht verfügbar wegen Wartungsarbeiten. Bitte versuchen Sie die "
+"Wiederherstellung der Erweiterungen mit dem Backup Manager."
 
 #, python-format
 msgid ""
 "Your %s %s is not connected to the internet, Please try using Backup Manager"
 " to restore plugins later."
 msgstr ""
+"Ihre %s %s ist nicht mit dem Internet verbunden. Bitte versuchen Sie die "
+"Wiederherstellung der Erweiterungen mit dem Backup Manager."
 
 msgid "A background update check is is progress, please wait for retry."
 msgstr ""
@@ -1942,28 +1946,30 @@ msgid "Restoring backup..."
 msgstr ""
 
 msgid "Creating list of installed plugins..."
-msgstr ""
+msgstr "Erstelle eine Liste der installierten Erweiterungen..."
 
 msgid "Comparing against backup..."
 msgstr ""
 
 msgid "Restoring plugins..."
-msgstr ""
+msgstr "Wiederherstellung der Erweiterungen..."
 
 msgid "Restoring plugins, this can take a long time..."
-msgstr ""
+msgstr "Wiederherstellung der Erweiterungen kann eine Weile dauern..."
 
 msgid "Rebooting..."
-msgstr ""
+msgstr "Neustart..."
 
 msgid "Do you want to restore your Enigma2 settings ?"
-msgstr ""
+msgstr "Wollen Sie Ihre Einstellungen wiederherstellen ?"
 
 msgid "Sorry, but the restore failed."
-msgstr ""
+msgstr "Wiederherstellung is gescheitert."
 
 msgid "Sorry feeds are down for maintenance, Please try again later."
 msgstr ""
+"Feeds sind nicht verfügbar wegen Wartungsarbeiten, bitte versuchen Sie es "
+"später"
 
 #, python-format
 msgid ""
@@ -1972,7 +1978,7 @@ msgid ""
 msgstr "Die %s %s ist nicht mit dem Internet verbunden. Bitte überprüfe die Netzwerkeinstellungen und versuche es erneut."
 
 msgid "Do you want to restore your Enigma2 plugins ?"
-msgstr ""
+msgstr "Wollen Sie Ihre Erweiterungen wiederherstellen ?"
 
 msgid "Now skipping restore process"
 msgstr ""
@@ -3135,7 +3141,7 @@ msgid "Python frontend for /tmp/mmi.socket"
 msgstr "Python frontend für /tmp/mmi.socket"
 
 msgid "Error executing plugin"
-msgstr "Ausführen des Plugins fehlgeschlagen"
+msgstr "Ausführen der Erweiterung fehlgeschlagen"
 
 msgid "Atemio"
 msgstr ""
@@ -5953,7 +5959,7 @@ msgid "Audio"
 msgstr "Ton"
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Erweiterung"
 
 msgid "Emu"
 msgstr ""
@@ -7763,10 +7769,13 @@ msgid "Plugin Browser"
 msgstr "Erweiterungen"
 
 msgid "Remove plugins"
-msgstr "Plugins entfernen"
+msgstr "Erweiterung entfernen"
 
 msgid "Download plugins"
-msgstr "Plugins herunterladen"
+msgstr "Erweiterung herunterladen"
+
+msgid "Hold plugins"
+msgstr "Erweiterung sperren"
 
 msgid "Some plugins are not available:\n"
 msgstr "Einige Plugins sind nicht verfügbar:\n"
@@ -7781,21 +7790,21 @@ msgid ""
 msgstr "Das Softwaremanagement Plugin ist nicht installiert!\nBitte installieren Sie es."
 
 msgid "Downloadable plugins"
-msgstr "Herunterladbare Plugins"
+msgstr "Herunterladbare Erweiterung"
 
 msgid "Downloading plugin information. Please wait..."
-msgstr "Lade Plugin-Informationen herunter. Bitte warten..."
+msgstr "Lade Erweiterung-Informationen herunter. Bitte warten..."
 
 msgid "Getting plugin information. Please wait..."
-msgstr "Lade Plugin-Informationen. Bitte warten..."
+msgstr "Lade Erweiterung-Informationen. Bitte warten..."
 
 #, python-format
 msgid "Do you really want to download the plugin \"%s\"?"
-msgstr "Das Plugin \"%s\" wirklich herunterladen?"
+msgstr "Die Erweiterung \"%s\" wirklich herunterladen?"
 
 #, python-format
 msgid "Do you really want to remove the plugin \"%s\"?"
-msgstr "Das Plugin \"%s\" wirklich deinstallieren?"
+msgstr "Die Erweiterung \"%s\" wirklich deinstallieren?"
 
 msgid "Reloading bouquets and services..."
 msgstr "Bouquets und Sender neu laden"
@@ -7807,7 +7816,7 @@ msgid "Install lcd picons on"
 msgstr "Installiere LCD PIcon in"
 
 msgid "Install plugins"
-msgstr "Installiere Plugins"
+msgstr "Installiere Erweiterung"
 
 msgid "Sorry feeds are down for maintenance"
 msgstr "Entschuldigung Feeds sind wegen Wartungsarbeiten nicht erreichbar."
@@ -7827,7 +7836,7 @@ msgid ""
 msgstr "Du hast schon ein Bootlogo installiert\nsoll es entfernt werden\n\"%s\"?"
 
 msgid "Plugin Filter..."
-msgstr ""
+msgstr "Filter für Erweiterung"
 
 msgid "drivers"
 msgstr ""
