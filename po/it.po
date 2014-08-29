@@ -1,52 +1,53 @@
 # English translations for Enigma2.
 # 
 # Translators:
-# angelo <angelo.xbox@libero.it>, 2013
-# Alessandro <scialpi2001@libero.it>, 2013
 # alfio <pappaalfio@libero.it>, 2013
+# Proiectman <info@atemio4you.com>, 2014
 # xionsenx <xionsenx@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-08-28 15:29+0000\n"
+"PO-Revision-Date: 2014-08-29 22:10+0000\n"
 "Last-Translator: xionsenx <xionsenx@gmail.com>\n"
-"Language-Team: Italian (http://www.transifex.com/projects/p/atemio-e2/language/it/)\n"
+"Language-Team: Italian \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #, python-format
 msgid ""
 "A finished powertimer wants to set your\n"
 "%s %s to standby. Do that now?"
-msgstr "Un Powertime scaduto vuole mettere il tuo\n %s %s in standby. Farlo ora?"
+msgstr "Il termine di una registrazione programmata prevede di porre il tuo\n%s %s in standby. Farlo ora?"
 
 #, python-format
 msgid ""
 "A finished powertimer wants to shutdown your %s %s.\n"
 "Do that now?"
-msgstr "Un Powertime scaduto vuole spegnere il tuo %s %s.\nFarlo ora?"
+msgstr "Il termine di una registrazione programmata prevede di spegnere il tuo %s %s.\nFarlo ora?"
 
 #, python-format
 msgid ""
 "A finished powertimer wants to reboot your %s %s.\n"
 "Do that now?"
-msgstr "Un Powertime scaduto vuole riavviare il tuo %s %s.\nFarlo ora?"
+msgstr "Il termine di una registrazione programmata prevede di riavviare il tuo %s %s.\nFarlo ora?"
 
 msgid ""
 "A finished powertimer wants to restart the user interface.\n"
 "Do that now?"
-msgstr "Un Powertime scaduto vuole riavviare la GUI.\nFarlo ora?"
+msgstr "Il termine di una registrazione programmata prevede di riavviare la GUI.\nFarlo ora?"
 
 #, python-format
 msgid ""
 "A finished power timer wants to shut down\n"
 "your %s %s. Shutdown now?"
-msgstr "Un Powertime scaduto vuole spegnere il tuo %s %s.\nFarlo ora?"
+msgstr "Il termine di una registrazione programmata prevede di spegnere il\ntuo %s %s. Farlo ora?"
 
 msgid "The timer file (pm_timers.xml) is corrupt and could not be loaded."
 msgstr "File Timer (pm_timers.xml) corrotto: NON caricabile!"
