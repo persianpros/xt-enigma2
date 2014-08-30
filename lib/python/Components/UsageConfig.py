@@ -1,6 +1,6 @@
 import os
 from time import time
-from boxbranding import getBrandOEM
+from boxbranding import getBrandOEM, getBoxTyp
 
 from enigma import eDVBDB, eEPGCache, setTunerTypePriorityOrder, setPreferredTuner, setSpinnerOnOff, setEnableTtCachingOnOff, eEnv, Misc_Options, eBackgroundFileEraser, eServiceEvent
 
@@ -15,7 +15,7 @@ from Tools.HardwareInfo import HardwareInfo
 
 def InitUsageConfig():
 	config.misc.useNTPminutes = ConfigSelection(default = "30", choices = [("30", "30" + " " +_("minutes")), ("60", _("Hour")), ("1440", _("Once per day"))])
-	if getBrandOEM() == 'vuplus':
+	if getBrandOEM() == 'ini':
 		config.misc.remotecontrol_text_support = ConfigYesNo(default = True)
 	else:
 		config.misc.remotecontrol_text_support = ConfigYesNo(default = False)
@@ -199,6 +199,25 @@ def InitUsageConfig():
 
 	config.usage.jobtaksextensions = ConfigYesNo(default = True)
 
+	config.usage.scroll_label_delay = ConfigSelection(default = "3000", choices = [
+		("1000", "1 " + _("seconds")),
+		("2000", "2 " + _("seconds")),
+		("3000", "3 " + _("seconds")),
+		("4000", "4 " + _("seconds")),
+		("5000", "5 " + _("seconds")),
+		("6000", "6 " + _("seconds")),
+		("7000", "7 " + _("seconds")),
+		("8000", "8 " + _("seconds")),
+		("9000", "9 " + _("seconds")),
+		("10000", "10 " + _("seconds")),
+		("noscrolling", _("off"))])
+	config.usage.scroll_label_speed = ConfigSelection(default = "300", choices = [
+		("500", _("slow")),
+		("300", _("normal")),
+		("200", _("medium")),
+		("100", _("fast")),
+		("50", _("very fast"))])
+
 	config.usage.servicenum_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
 	config.usage.servicename_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
 	config.usage.serviceinfo_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
@@ -373,13 +392,16 @@ def InitUsageConfig():
 	config.network = ConfigSubsection()
 	if SystemInfo["WakeOnLAN"]:
 		def wakeOnLANChanged(configElement):
-			open(SystemInfo["WakeOnLAN"], "w").write(configElement.value and "enable" or "disable")
+			if getBoxTyp() in ('atemionemesis'):
+				open(SystemInfo["WakeOnLAN"], "w").write(configElement.value and "on" or "off")
+			else
+				open(SystemInfo["WakeOnLAN"], "w").write(configElement.value and "enable" or "disable")
 		config.network.wol = ConfigYesNo(default = False)
 		config.network.wol.addNotifier(wakeOnLANChanged)
 	config.network.AFP_autostart = ConfigYesNo(default = False)
-	config.network.NFS_autostart = ConfigYesNo(default = True)
+	config.network.NFS_autostart = ConfigYesNo(default = False)
 	config.network.OpenVPN_autostart = ConfigYesNo(default = False)
-	config.network.Samba_autostart = ConfigYesNo(default = True)
+	config.network.Samba_autostart = ConfigYesNo(default = False)
 	config.network.Inadyn_autostart = ConfigYesNo(default = False)
 	config.network.uShare_autostart = ConfigYesNo(default = False)
 
