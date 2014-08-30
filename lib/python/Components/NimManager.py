@@ -48,10 +48,10 @@ class SecConfigure:
 		sec.setLNBLOFL(9750000)
 		sec.setLNBLOFH(10600000)
 		sec.setLNBThreshold(11700000)
-		sec.setLNBIncreasedVoltage(lnbParam.OFF)
+		sec.setLNBIncreasedVoltage(False)
 		sec.setRepeats(0)
 		sec.setFastDiSEqC(fastDiSEqC)
-		sec.setSeqRepeat(0)
+		sec.setSeqRepeat(False)
 		sec.setCommandOrder(0)
 
 		#user values
@@ -153,19 +153,22 @@ class SecConfigure:
 				used_nim_slots.append((slot.slot, slot.description, slot.config.configMode.value != "nothing" and True or False, slot.isCompatible("DVB-S2"), slot.frontend_id is None and -1 or slot.frontend_id))
 		eDVBResourceManager.getInstance().setFrontendSlotInformations(used_nim_slots)
 
-		for slot in nim_slots:
-			if slot.frontend_id is not None:
-				types = [type for type in ["DVB-C", "DVB-T", "DVB-T2", "DVB-S", "DVB-S2", "ATSC"] if eDVBResourceManager.getInstance().frontendIsCompatible(slot.frontend_id, type)]
-				if "DVB-T2" in types:
-					# DVB-T2 implies DVB-T support
-					types.remove("DVB-T")
-				if "DVB-S2" in types:
-					# DVB-S2 implies DVB-S support
-					types.remove("DVB-S")
-				if len(types) > 1:
-					slot.multi_type = {}
-					for type in types:
-						slot.multi_type[str(types.index(type))] = type
+		try:
+			for slot in nim_slots:
+				if slot.frontend_id is not None:
+					types = [type for type in ["DVB-C", "DVB-T", "DVB-T2", "DVB-S", "DVB-S2", "ATSC"] if eDVBResourceManager.getInstance().frontendIsCompatible(slot.frontend_id, type)]
+					if "DVB-T2" in types:
+						# DVB-T2 implies DVB-T support
+						types.remove("DVB-T")
+					if "DVB-S2" in types:
+						# DVB-S2 implies DVB-S support
+						types.remove("DVB-S")
+					if len(types) > 1:
+						slot.multi_type = {}
+						for type in types:
+							slot.multi_type[str(types.index(type))] = type
+		except:
+			pass
 
 		for slot in nim_slots:
 			x = slot.slot
@@ -203,6 +206,7 @@ class SecConfigure:
 					sec.setSlotNotLinked(x)
 					if nim.configMode.value == "equal":
 						pass
+
 					elif nim.configMode.value == "simple":		#simple config
 						print "diseqcmode: ", nim.diseqcMode.value
 						if nim.diseqcMode.value == "single":			#single
@@ -363,16 +367,21 @@ class SecConfigure:
 					sec.setLNBLOFL(currLnb.lofl.value * 1000)
 					sec.setLNBLOFH(currLnb.lofh.value * 1000)
 					sec.setLNBThreshold(currLnb.threshold.value * 1000)
-
+				elif currLnb.lof.value == "circle":
+					sec.setLNBLOFL(10750000)
+					sec.setLNBLOFH(10750000)
+					sec.setLNBThreshold(12700000)
+					sec.setToneMode(switchParam.OFF)
+					
 #				if currLnb.output_12v.value == "0V":
 #					pass # nyi in drivers
 #				elif currLnb.output_12v.value == "12V":
 #					pass # nyi in drivers
 
 				if currLnb.increased_voltage.value:
-					sec.setLNBIncreasedVoltage(lnbParam.ON)
+					sec.setLNBIncreasedVoltage(True)
 				else:
-					sec.setLNBIncreasedVoltage(lnbParam.OFF)
+					sec.setLNBIncreasedVoltage(False)
 
 				dm = currLnb.diseqcMode.value
 				if dm == "none":
@@ -548,8 +557,9 @@ class NIM(object):
 		if self.isCompatible(what):
 			return True
 		for type in self.multi_type.values():
-			if what in self.compatible[type]:
-				return True
+			if type and what:
+				if what in self.compatible[type]:
+					return True
 		return False
 
 	def getType(self):
@@ -711,7 +721,7 @@ class NimManager:
 			#print "SATS", self.satellites
 			#print "TRANSPONDERS", self.transponders
 
-		if self.hasNimType("DVB-C") or self.hasNimType("DVB-T"):
+		if self.hasNimType("DVB-C") or self.hasNimType("DVB-T") or self.hasNimType("DVB-T2"):
 			print "Reading cables.xml"
 			db.readCables(self.cablesList, self.transponderscable)
 #			print "CABLIST", self.cablesList
@@ -1153,7 +1163,8 @@ def InitNimManager(nimmgr):
 		"universal_lnb": _("Universal LNB"),
 		"unicable": _("Unicable"),
 		"c_band": _("C-Band"),
-		"user_defined": _("User defined")}
+		"user_defined": _("User defined"),
+		"circle": _("Circular")}
 
 	lnb_choices_default = "universal_lnb"
 
@@ -1418,7 +1429,7 @@ def InitNimManager(nimmgr):
 			for x in nimmgr.satList:
 				tmp = ConfigSubsection()
 				tmp.voltage = ConfigSelection(advanced_voltage_choices, "polarization")
-				tmp.tonemode = ConfigSelection(advanced_tonemode_choices, "band")
+				tmp.tonemode = ConfigSelection(advanced_tonemode_choices, "off")
 				tmp.usals = ConfigYesNo(True)
 				tmp.rotorposition = ConfigInteger(default=1, limits=(1, 255))
 				lnb = ConfigSelection(advanced_lnb_choices, "0")
@@ -1499,7 +1510,7 @@ def InitNimManager(nimmgr):
 			if n:
 				possible_scan_types.append(("provider", _("Provider")))
 				nim.cable.scan_provider = ConfigSelection(default = "0", choices = list)
-			nim.cable.scan_type = ConfigSelection(default = "bands", choices = possible_scan_types)
+			nim.cable.scan_type = ConfigSelection(default = "provider", choices = possible_scan_types)
 			nim.cable.scan_band_EU_VHF_I = ConfigYesNo(default = True)
 			nim.cable.scan_band_EU_MID = ConfigYesNo(default = True)
 			nim.cable.scan_band_EU_VHF_III = ConfigYesNo(default = True)
@@ -1616,10 +1627,16 @@ def InitNimManager(nimmgr):
 		x = slot.slot
 		nim = config.Nims[x]
 		addMultiType = False
+		print"[NimManager] slot name=%s" % slot.description
 		try:
 			nim.multiType
 		except:
-			addMultiType = True
+			if slot.description.find("Sundtek SkyTV Ultimate III") > -1:
+				print"[NimManager] Sundtek SkyTV Ultimate III detected, multiType = False"
+				addMultiType = False
+			else:
+				print"[NimManager] multiType = True"
+				addMultiType = True
 		if slot.isMultiType() and addMultiType:
 			typeList = []
 			for id in slot.getMultiTypeList().keys():
