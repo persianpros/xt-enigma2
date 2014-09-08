@@ -35,7 +35,7 @@ config.pluginfilter.security = ConfigYesNo(default = True)
 config.pluginfilter.settings = ConfigYesNo(default = True)
 config.pluginfilter.skins = ConfigYesNo(default = True)
 config.pluginfilter.display = ConfigYesNo(default = True)
-config.pluginfilter.softcams = ConfigYesNo(default = True)
+config.pluginfilter.softcams = ConfigYesNo(default = False)
 config.pluginfilter.systemplugins = ConfigYesNo(default = True)
 config.pluginfilter.weblinks = ConfigYesNo(default = True)
 config.pluginfilter.userfeed = ConfigText(default = 'http://', fixed_size=False)
@@ -43,12 +43,6 @@ config.pluginfilter.userfeed = ConfigText(default = 'http://', fixed_size=False)
 def languageChanged():
 	plugins.clearPluginList()
 	plugins.readPluginList(resolveFilename(SCOPE_PLUGINS))
-
-def Check_Softcam():
-	found = False
-	if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo'):
-		found = True
-	return found
 
 class PluginBrowserSummary(Screen):
 	def __init__(self, session, parent):
@@ -255,9 +249,8 @@ class PluginDownloadBrowser(Screen):
 			self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'skins')
 		if config.pluginfilter.display.value:
 			self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'display')
-		if Check_Softcam():
-			if config.pluginfilter.softcams.value:
-				self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'softcams')
+		if config.pluginfilter.softcams.value:
+			self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'softcams')
 		if config.pluginfilter.systemplugins.value:
 			self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'systemplugins')
 		if config.pluginfilter.weblinks.value:
