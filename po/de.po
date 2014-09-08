@@ -2363,26 +2363,8 @@ msgstr ""
 msgid "Cam Manager"
 msgstr "Cam Manager"
 
-msgid "Select or install your favourite cam"
-msgstr ""
-
-msgid "Download Addons"
-msgstr ""
-
-msgid "Download addons plugins"
-msgstr ""
-
-msgid "Manual Install"
-msgstr ""
-
-msgid "Manual install ipk files"
-msgstr "Manuelles installieren von IPK-Files"
-
 msgid "Remove Addons"
 msgstr "Addons entfernen"
-
-msgid "Remove installed extra addons plugin"
-msgstr ""
 
 msgid "Mount or umount your device"
 msgstr ""
@@ -2391,9 +2373,6 @@ msgid "Added or remove swap"
 msgstr ""
 
 msgid "Script Executer"
-msgstr ""
-
-msgid "Execute script"
 msgstr ""
 
 msgid "Backup Atemio"
@@ -9253,9 +9232,6 @@ msgstr "Scart-Videorekorder"
 msgid "Information"
 msgstr "Informationen"
 
-msgid "Devices"
-msgstr ""
-
 msgid "Service searching"
 msgstr "Kanalsuche"
 
@@ -11197,32 +11173,11 @@ msgstr "Addons manuell installieren"
 msgid "Remove installed extra addons plugin"
 msgstr "Addons entfernen"
 
-msgid "Mount Manager"
-msgstr "Swap Verwaltung"
-
-msgid "Script Executer"
-msgstr ""
-
-msgid "Backup Atemio"
-msgstr ""
-
-msgid "Backup settings and Flash"
-msgstr ""
-
-msgid "Select Option..."
-msgstr ""
-
-msgid "Setup Mounts"
-msgstr ""
-
 msgid "Download addons plugins"
 msgstr "Erweiterungen herunterladen"
 
 msgid "Devices"
 msgstr ""
-
-msgid "Cancel"
-msgstr "Abbruch"
 
 msgid "Execute Script"
 msgstr "Script ausführen"
