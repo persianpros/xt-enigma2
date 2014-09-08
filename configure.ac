@@ -322,7 +322,6 @@ lib/python/Components/Renderer/Makefile
 lib/python/Components/Sources/Makefile
 lib/python/Screens/Makefile
 lib/python/Plugins/Makefile
-lib/python/Plugins/PLi/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/buttons/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/icons/Makefile
