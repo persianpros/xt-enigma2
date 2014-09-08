@@ -2,6 +2,7 @@ PANELVER = '0.1.0'
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.Console import Console
+from Screens.PluginBrowser import *
 from enigma import eTimer, eConsoleAppContainer
 from Components.ActionMap import ActionMap
 from Components.Label import Label
@@ -76,8 +77,24 @@ loadxml = loadXml()
 
 class AtemioMenu(Screen):
     __module__ = __name__
-    skin = '\n\t<screen name="Atemio Panel" position="center,center" size="800,600" title="Atemio Panel">\n\t  <widget source="list" render="Listbox" position="15,80" size="730,500" scrollbarMode="showOnDemand">\n\t    <convert type="TemplatedMultiContent">\n\t\t\t\t\t\t{"template": [\n\t\t\t\t\t\t\t\tMultiContentEntryText(pos = (90, 5), size = (300, 30), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_LEFT, text = 1),\n\t\t\t\t\t\t\t\tMultiContentEntryText(pos = (110, 30), size = (640, 50), font=0, flags = RT_VALIGN_TOP, text = 2),\n\t\t\t\t\t\t\t\tMultiContentEntryPixmapAlphaTest(pos=(5, 1), size=(72, 72), png = 3),\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t"fonts": [gFont("Regular", 20)],\n\t\t\t\t\t\t"itemHeight": 80\n\t\t\t\t\t\t}\n\t\t\t\t</convert>\n\t  </widget>\n\t  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/icons/logo.png" position="30,0" size="711,76" alphatest="on" />\t\n\t  <widget source="conn" render="Label" position="15,540" size="730,35" font="Regular;20" halign="center" valign="center" transparent="1" />\n\t</screen>'
-
+    skin = """
+    	<screen name="Atemio Panel" position="center,center" size="800,600" title="Atemio Panel">
+    		<widget source="list" render="Listbox" position="15,80" size="730,500" scrollbarMode="showOnDemand">
+    			<convert type="TemplatedMultiContent">
+    				{"template": [
+    								MultiContentEntryText(pos = (90, 5), size = (300, 30), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_LEFT, text = 1),
+    								MultiContentEntryText(pos = (110, 30), size = (640, 50), font=0, flags = RT_VALIGN_TOP, text = 2),
+    								MultiContentEntryPixmapAlphaTest(pos=(5, 1), size=(72, 72), png = 3),
+    							],
+    				"fonts": [gFont("Regular", 20)],
+    				"itemHeight": 80
+    				}
+    			</convert>
+    		</widget>
+    		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/icons/logo.png" position="30,0" size="711,76" alphatest="on" />
+    		<widget source="conn" render="Label" position="15,540" size="730,35" font="Regular;20" halign="center" valign="center" transparent="1" />
+    	</screen>"""
+    	
     def __init__(self, session):
         Screen.__init__(self, session)
         self.list = []
@@ -86,20 +103,14 @@ class AtemioMenu(Screen):
         self['spaceused'] = ProgressBar()
         self.container = eConsoleAppContainer()
         self.container.appClosed.append(self.runFinished)
-        self.containerExtra = eConsoleAppContainer()
-        self.containerExtra.appClosed.append(self.runFinishedExtra)
 
-        self.linkExtra = t.readExtraUrl()
-
-        self.MenuList = [('CamEx',_('Cam Manager'),_('Select or install your favourite cam'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/plugin.pyo')),
-         ('DownAdd',_('Download Addons'),_('Download addons plugins'),'icons/p_downloads.png',True),
-         #('DownExtra',_('Extra Addons'),_('Download extra addons plugins'),'icons/p_extra.png',fileExists('/etc/atemio_extra.url')),
-         ('ManInstall',_('Manual Install'),_('Manual install ipk files'),'icons/p_manual.png',True),
-         ('RemAddons',_('Remove Addons'),_('Remove installed extra addons plugin'),'icons/p_remove.png',True),
+        self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure your softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
+         ('PluginBrowser',_('Plugin Browser'),_('Install and remove plugins'),'icons/p_downloads.png',True),
+         ('IPKInstall',_('IPK Installer'),_('Install local ipk files'),'icons/p_manual.png',True),
          ('MountManager',_('Mount Manager'),_('Mount or umount your device'),'icons/p_mount.png',True),         
          ('SwapManager',_('Swap Manager'),_('Added or remove swap'),'icons/p_swap.png',True),         
          ('ScriptEx',_('Script Executer'),_('Execute script'),'icons/p_script.png', True),
-         ('BkSetting',_('Backup Atemio'),_('Backup setting and flash'),'icons/p_backup.png', True),
+         ('Backup',_('Backup Atemio'),_('Backup setting and flash'),'icons/p_backup.png', True),
          ('aboutTeam',_('About Team'),_('Show info about Team'),'icons/p_about.png', True)]
 
         self['actions'] = ActionMap(['WizardActions', 'ColorActions'], {'ok': self.KeyOk,
@@ -124,7 +135,7 @@ class AtemioMenu(Screen):
         diskSpace = getVarSpaceKb()
         percFree = int(diskSpace[0] / diskSpace[1] * 100)
         percUsed = int((diskSpace[1] - diskSpace[0]) / diskSpace[1] * 100)
-        self.setTitle('%s - %s: %s (%d%%)' % (_('Atemio Addons'),
+        self.setTitle('%s - %s: %s (%d%%)' % (_('Atemio Panel'),
          _('Free'),
          self.ConvertSize(int(diskSpace[0])),
          percFree))
@@ -134,30 +145,14 @@ class AtemioMenu(Screen):
         self['conn'].text = ''
         if not self.container.running():
             sel = self['list'].getCurrent()[0]
-            if sel == 'CamEx':
-                if fileExists(resolveFilename(SCOPE_PLUGINS, '/usr/lib/enigma2/python/Plugins/PLi/SoftcamSetup/plugin.pyo')):
-                    try:
-                        from Plugins.PLi.SoftcamSetup import Sc
-                    except ImportError:
-                        self.session.open(MessageBox, _('The Softcamsetup Plugin is not installed!\nPlease install it.'), type=MessageBox.TYPE_INFO, timeout=10)
-                    else:
-                        self.session.open(Sc.ScNewSelection)
-            elif sel == 'DownAdd':
-                from Screens.PluginBrowser import PluginDownloadBrowser
-                self.session.open(PluginDownloadBrowser, PluginDownloadBrowser.DOWNLOAD)
-            elif (sel == "DownExtra"):
-                self['conn'].text = (_("Connetting to addons server.\nPlease wait..."))
-                u.typeDownload = 'E'
-                if self.linkExtra != None:
-                    self.containerExtra.execute("wget " + self.linkExtra + "atemio_extra/tmp.tmp -O /tmp/tmp.tmp")
-                else:
-                    self['conn'].text = (_("Server not found!\nPlease check internet connection."))
-            elif sel == 'ManInstall':
+            if sel == 'SoftCam':
+                from Plugins.Extensions.SoftCamPanel import SoftCamPanel
+                self.session.open(SoftCamPanel.SoftCamPanel)
+            elif sel == 'PluginBrowser':
+                self.session.open(PluginBrowser)
+            elif sel == 'IPKInstall':
                 from IPKInstaller import AtemioIPKInstaller
                 self.session.open(AtemioIPKInstaller)
-            elif sel == 'RemAddons':
-                from Screens.PluginBrowser import PluginDownloadBrowser
-                self.session.openWithCallback(self.PluginDownloadBrowserClosed, PluginDownloadBrowser, PluginDownloadBrowser.REMOVE)
             elif sel == 'MountManager':
                 from DeviceMount import DevicesPanel
                 self.session.open(DevicesPanel)
@@ -169,23 +164,9 @@ class AtemioMenu(Screen):
             elif sel == 'aboutTeam':
                 from About import AboutTeam
                 self.session.open(AboutTeam)
-            elif sel == 'BkSetting':
+            elif sel == 'Backup':
                 from Plugins.SystemPlugins.AtemioCore.ui import AtemioMenuBk
                 self.session.open(AtemioMenuBk)
-
-            
-    def runFinishedExtra(self, retval):
-        if fileExists('/tmp/tmp.tmp'):
-            try:
-                f = open('/tmp/tmp.tmp', 'r')
-                line = f.readline()[:-1]
-                f.close()
-                self.container.execute('wget ' + self.linkExtra + 'atemio_extra/' + line + ' -O /tmp/addons.xml')
-            except:
-                self['conn'].text = _('Server not found! Please check internet connection.')
-
-        else:
-            self['conn'].text = _('Server not found! Please check internet connection.')
 
     def runFinished(self, retval):
         if fileExists('/tmp/addons.xml'):
@@ -201,17 +182,13 @@ class AtemioMenu(Screen):
             self['conn'].text = _('Server not found! Please check internet connection.')
 
     def cancel(self):
-        if not self.container.running() and not self.containerExtra.running():
+        if not self.container.running():
             del self.container.appClosed[:]
             del self.container
-            del self.containerExtra.appClosed[:]
-            del self.containerExtra
             self.close()
         else:
             if self.container.running():
                 self.container.kill()
-            if self.containerExtra.running():
-                self.containerExtra.kill()
             if fileExists('/tmp/addons.xml'):
                 remove('/tmp/addons.xml')
             if fileExists('/tmp/tmp.tmp'):
@@ -234,8 +211,16 @@ class AtemioMenu(Screen):
         self.updateList()
 
 class ScriptExecuter(Screen):
-    skin = '\n\t<screen name="Script Panel" position="center,center" size="800,600">\n\t\t\t<widget source="list" render="Listbox" position="14,10" size="770,491" scrollbarMode="showOnDemand">\n\t\t\t\t<convert type="StringList" />\n\t\t\t</widget>\n\t\t\t<widget name="labstatus" position="14,510" size="800,30" font="Regular;21" valign="center" noWrap="1" backgroundColor="#333f3f3f" foregroundColor="#FFC000" shadowOffset="-2,-2" shadowColor="black" transparent="1" />\n\t  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/buttons/key_red.png" position="275,550" size="34,47" alphatest="on" />\n\t  <widget name="key_red" position="311,553" zPosition="1" size="209,40" font="Regular;20" halign="center" valign="center" backgroundColor="#009f1313" transparent="1" />\n\t</screen>'
-
+    skin = """
+    	<screen name="Script Panel" position="center,center" size="800,600">
+    		<widget source="list" render="Listbox" position="14,10" size="770,491" scrollbarMode="showOnDemand">
+    			<convert type="StringList" />
+    		</widget>
+    		<widget name="labstatus" position="14,510" size="800,30" font="Regular;21" valign="center" noWrap="1" backgroundColor="#333f3f3f" foregroundColor="#FFC000" shadowOffset="-2,-2" shadowColor="black" transparent="1" />
+    		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/buttons/key_red.png" position="275,550" size="34,47" alphatest="on" />
+    		<widget name="key_red" position="311,553" zPosition="1" size="209,40" font="Regular;20" halign="center" valign="center" backgroundColor="#009f1313" transparent="1" />
+    	</screen>"""
+    	
     def __init__(self, session):
         Screen.__init__(self, session)
         self['labstatus'] = Label(_('NO SCRIPT FOUND'))
@@ -251,7 +236,7 @@ class ScriptExecuter(Screen):
         self.onShown.append(self.setWindowTitle)
 
     def setWindowTitle(self):
-        self.setTitle(_('Script Panel'))
+        self.setTitle(_('Atemio Script Panel'))
 
     def script_sel(self):
         self['list'].index = 1
@@ -391,7 +376,7 @@ class	AtemioExtraDown(Screen):
 		self.onShown.append(self.setWindowTitle)
 
 	def setWindowTitle(self):
-		self.setTitle(_("Atemio Download ") + str(u.pluginType))
+		self.setTitle(_("Atemio Panel Download ") + str(u.pluginType))
 
 	def KeyOk(self):
 		if not self.container.running():
@@ -509,5 +494,4 @@ def menu(menuid, **kwargs):
 def Plugins(**kwargs):
     list = []
     list.append(PluginDescriptor(icon='icons/icon.png', name='Atemio Panel', description='Atemio Panel', where=PluginDescriptor.WHERE_MENU, fnc=menu))
-#    list.append(PluginDescriptor(icon='icons/icon.png', name='Atemio Panel', description='Everything in one panel', where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main))
     return list
