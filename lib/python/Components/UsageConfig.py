@@ -747,7 +747,7 @@ def InitUsageConfig():
 	config.pluginbrowser.src = ConfigYesNo(default = False)
 
 #### Atemio #####
-	config.atemio = ConfigSubsection();
+	config.atemio = ConfigSubsection()
 	config.atemio.skindevelopermode = ConfigYesNo(default=False)
 
 def updateChoices(sel, choices):
