@@ -15,7 +15,11 @@ from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, SCOPE_CURRENT_SKIN
 from os import popen, system, remove, listdir, chdir, getcwd, statvfs, mkdir, path, walk
 from Screens.NetworkSetup import *
-from Plugins.Extensions.SoftCamPanel import SoftCamPanel
+try:
+	from Plugins.Extensions.SoftCamPanel import SoftCamPanel
+except:
+	pass
+from Plugins.Extensions.AtemioPanel.BackupManager import AtemioBackupManager
 from IPKInstaller import AtemioIPKInstaller
 from About import AboutTeam
 from Plugins.SystemPlugins.AtemioCore.ui import AtemioSoftwareManager
