@@ -247,7 +247,7 @@ class doFlashImage(Screen):
 		box = self.box()
 		self.hide()
 		if self.Online:
-			url = self.feedurl + "/" + box + "/" + sel
+			url = self.feedurl + "image/" + box + "/" + sel
 			print "[Flash Online] Download image: >%s<" % url
 			if self.newfeed:
 				self.feedurl = self.newfeed[0][:-1]
@@ -543,10 +543,10 @@ class doFlashImage(Screen):
 			lines = the_page.split('\n')
 			tt = len(box)
 			for line in lines:
-				if line.find("<a href='%s/" % box) > -1:
-					t = line.find("<a href='%s/" % box)
+				if line.find("<a href='image/%s/" % box) > -1:
+					t = line.find("<a href='image/%s/" % box)
 					if self.feed == "a4y" or self.feed == "a4y2":
-						self.imagelist.append(line[t+tt+10:t+tt+tt+39])
+						self.imagelist.append(line[t+tt+16:t+tt+tt+51])
 					else:
 						self.imagelist.append(line[t+tt+10:t+tt+tt+40])
 		else:
