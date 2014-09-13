@@ -1511,7 +1511,7 @@ class UpdatePlugin(Screen):
 		# TODO: Use Twisted's URL fetcher, urlopen is evil. And it can
 		# run in parallel to the package update.
 		try:
-			urlopenSTATUS = "http://status.atemio4you/index.php"
+			urlopenSTATUS = "http://status.atemio4you.com/index.php"
 			d = urlopen(urlopenSTATUS)
 			tmpStatus = d.read()
 			if config.softwareupdate.updatebeta.value and 'gelb.png' in tmpStatus:
