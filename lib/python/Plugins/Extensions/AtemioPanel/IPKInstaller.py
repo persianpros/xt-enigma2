@@ -27,7 +27,7 @@ class AtemioIPKInstaller(Screen):
     
 	def __init__(self, session):
 		Screen.__init__(self, session)
-		Screen.setTitle(self, _("IPK Installer"))
+		Screen.setTitle(self, _("Atemio IPK Installer"))
 		self['lab1'] = Label()
 		self.defaultDir = '/tmp'
 		self.onChangedEntry = [ ]

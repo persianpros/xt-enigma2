@@ -2,7 +2,6 @@ PANELVER = '0.1.0'
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.Console import Console
-from Screens.PluginBrowser import *
 from enigma import eTimer, eConsoleAppContainer
 from Components.ActionMap import ActionMap
 from Components.Label import Label
@@ -15,6 +14,11 @@ from Components.Pixmap import Pixmap
 from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, SCOPE_CURRENT_SKIN
 from os import popen, system, remove, listdir, chdir, getcwd, statvfs, mkdir, path, walk
+from Screens.NetworkSetup import *
+from Plugins.Extensions.SoftCamPanel import SoftCamPanel
+from IPKInstaller import AtemioIPKInstaller
+from About import AboutTeam
+from Plugins.SystemPlugins.AtemioCore.ui import AtemioSoftwareManager
 import os
 import sys
 from Plugins.Plugin import PluginDescriptor
@@ -76,208 +80,128 @@ loadxml = loadXml()
 
 
 class AtemioMenu(Screen):
-    __module__ = __name__
-    skin = """
-    	<screen name="Atemio Panel" position="center,center" size="800,600" title="Atemio Panel">
-    		<widget source="list" render="Listbox" position="15,80" size="730,500" scrollbarMode="showOnDemand">
-    			<convert type="TemplatedMultiContent">
-    				{"template": [
-    								MultiContentEntryText(pos = (90, 5), size = (300, 30), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_LEFT, text = 1),
-    								MultiContentEntryText(pos = (110, 30), size = (640, 50), font=0, flags = RT_VALIGN_TOP, text = 2),
-    								MultiContentEntryPixmapAlphaTest(pos=(5, 1), size=(72, 72), png = 3),
-    							],
-    				"fonts": [gFont("Regular", 20)],
-    				"itemHeight": 80
-    				}
-    			</convert>
-    		</widget>
-    		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/icons/logo.png" position="30,0" size="711,76" alphatest="on" />
-    		<widget source="conn" render="Label" position="15,540" size="730,35" font="Regular;20" halign="center" valign="center" transparent="1" />
-    	</screen>"""
+	__module__ = __name__
+	skin="""
+		<screen name="Atemio Panel" position="center,center" size="800,600" title="Atemio Panel">
+			<widget source="list" render="Listbox" position="15,80" size="730,500" scrollbarMode="showOnDemand">
+				<convert type="TemplatedMultiContent">
+					{"template": [
+									MultiContentEntryText(pos = (90, 5), size = (300, 30), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_LEFT, text = 1),
+									MultiContentEntryText(pos = (110, 30), size = (640, 50), font=0, flags = RT_VALIGN_TOP, text = 2),
+									MultiContentEntryPixmapAlphaTest(pos=(5, 1), size=(72, 72), png = 3),
+								],
+					"fonts": [gFont("Regular", 20)],
+					"itemHeight": 80
+					}
+				</convert>
+			</widget>
+			<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/icons/logo.png" position="30,0" size="711,76" alphatest="on" />
+			<widget source="conn" render="Label" position="15,540" size="730,35" font="Regular;20" halign="center" valign="center" transparent="1" />
+		</screen>"""
     	
-    def __init__(self, session):
-        Screen.__init__(self, session)
-        self.list = []
-        self['list'] = List(self.list)
-        self['conn'] = StaticText('')
-        self['spaceused'] = ProgressBar()
-        self.container = eConsoleAppContainer()
-        self.container.appClosed.append(self.runFinished)
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		self.list = []
+		self['list'] = List(self.list)
+		self['conn'] = StaticText('')
+		self['spaceused'] = ProgressBar()
+		self.container = eConsoleAppContainer()
+		self.container.appClosed.append(self.runFinished)
 
-        self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure your softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
-         ('PluginBrowser',_('Plugin Browser'),_('Install and remove plugins'),'icons/p_downloads.png',True),
-         ('IPKInstall',_('IPK Installer'),_('Install local ipk files'),'icons/p_manual.png',True),
-         ('MountManager',_('Mount Manager'),_('Mount or umount your device'),'icons/p_mount.png',True),         
-         ('SwapManager',_('Swap Manager'),_('Added or remove swap'),'icons/p_swap.png',True),         
-         ('ScriptEx',_('Script Executer'),_('Execute script'),'icons/p_script.png', True),
-         ('Backup',_('Backup Atemio'),_('Backup setting and flash'),'icons/p_backup.png', True),
-         ('aboutTeam',_('About Team'),_('Show info about Team'),'icons/p_about.png', True)]
+		self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure and install your softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
+			('Network',_('Network Setup'),_('configure your network'),'icons/p_network.png',True),
+			('IPKInstall',_('IPK Installer'),_('Install local ipk files'),'icons/p_plugins.png',True),        
+			('SoftwareManager',_('Software Manager'),_('Update / Backup / Restore of your box.'),'icons/p_software.png', True),
+			('Info',_('Info'),_('Show info'),'icons/p_about.png', True)]
 
-        self['actions'] = ActionMap(['WizardActions', 'ColorActions'], {'ok': self.KeyOk,
-         'red': self.cancel,
-         'back': self.cancel})
-        self.onLayoutFinish.append(self.updateList)
-        self.onShown.append(self.setWindowTitle)
+		self['actions'] = ActionMap(['WizardActions', 'ColorActions'], 
+        	{
+				'ok': self.KeyOk,
+				'red': self.cancel,
+				'back': self.cancel,
+			},-1)
+				
+		self.onLayoutFinish.append(self.updateList)
+		self.onShown.append(self.setWindowTitle)
         
-    def ConvertSize(self, size):
-        size = int(size)
-        if size >= 1073741824:
-            Size = '%0.2f TB' % (size / 1073741824.0)
-        elif size >= 1048576:
-            Size = '%0.2f GB' % (size / 1048576.0)
-        elif size >= 1024:
-            Size = '%0.2f MB' % (size / 1024.0)
-        else:
-            Size = '%0.2f KB' % size
-        return str(Size)
+	def ConvertSize(self, size):
+		size = int(size)
+		if size >= 1073741824:
+			Size = '%0.2f TB' % (size / 1073741824.0)
+		elif size >= 1048576:
+			Size = '%0.2f GB' % (size / 1048576.0)
+		elif size >= 1024:
+			Size = '%0.2f MB' % (size / 1024.0)
+		else:
+			Size = '%0.2f KB' % size
+		return str(Size)
 
-    def setWindowTitle(self):
-        diskSpace = getVarSpaceKb()
-        percFree = int(diskSpace[0] / diskSpace[1] * 100)
-        percUsed = int((diskSpace[1] - diskSpace[0]) / diskSpace[1] * 100)
-        self.setTitle('%s - %s: %s (%d%%)' % (_('Atemio Panel'),
-         _('Free'),
-         self.ConvertSize(int(diskSpace[0])),
-         percFree))
-        self['spaceused'].setValue(percUsed)
+	def setWindowTitle(self):
+		diskSpace = getVarSpaceKb()
+		percFree = int(diskSpace[0] / diskSpace[1] * 100)
+		percUsed = int((diskSpace[1] - diskSpace[0]) / diskSpace[1] * 100)
+		self.setTitle('%s - %s: %s (%d%%)' % (_('Atemio Panel'),
+		 _('Free'),
+		 self.ConvertSize(int(diskSpace[0])),
+		 percFree))
+		self['spaceused'].setValue(percUsed)
 
-    def KeyOk(self):
-        self['conn'].text = ''
-        if not self.container.running():
-            sel = self['list'].getCurrent()[0]
-            if sel == 'SoftCam':
-                from Plugins.Extensions.SoftCamPanel import SoftCamPanel
-                self.session.open(SoftCamPanel.SoftCamPanel)
-            elif sel == 'PluginBrowser':
-                self.session.open(PluginBrowser)
-            elif sel == 'IPKInstall':
-                from IPKInstaller import AtemioIPKInstaller
-                self.session.open(AtemioIPKInstaller)
-            elif sel == 'MountManager':
-                from DeviceMount import DevicesPanel
-                self.session.open(DevicesPanel)
-            elif sel == 'SwapManager':
-                from SwapManager import AtemioSwapPanel
-                self.session.open(AtemioSwapPanel)
-            elif sel == 'ScriptEx':
-                self.session.open(ScriptExecuter)
-            elif sel == 'aboutTeam':
-                from About import AboutTeam
-                self.session.open(AboutTeam)
-            elif sel == 'Backup':
-                from Plugins.SystemPlugins.AtemioCore.ui import AtemioMenuBk
-                self.session.open(AtemioMenuBk)
+	def KeyOk(self):
+		self['conn'].text = ''
+		if not self.container.running():
+			sel = self['list'].getCurrent()[0]
+			if sel == 'SoftCam':
+				self.session.open(SoftCamPanel.SoftCamPanel)
+			elif sel == 'Network':
+				self.session.open(NetworkAdapterSelection)
+			elif sel == 'IPKInstall':
+				self.session.open(AtemioIPKInstaller)
+			elif sel == 'Info':
+				self.session.open(AboutTeam)
+			elif sel == 'SoftwareManager':
+				self.session.open(AtemioBackupManager)
 
-    def runFinished(self, retval):
-        if fileExists('/tmp/addons.xml'):
-            try:
-                loadxml.load('/tmp/addons.xml')
-                remove('/tmp/addons.xml')
-                self['conn'].text = ''
-                self.session.open(AtemioExtraFile)
-            except:
-                self['conn'].text = _('File xml is not correctly formatted!')
+	def runFinished(self, retval):
+		if fileExists('/tmp/addons.xml'):
+			try:
+				loadxml.load('/tmp/addons.xml')
+				remove('/tmp/addons.xml')
+				self['conn'].text = ''
+				self.session.open(AtemioExtraFile)
+			except:
+				self['conn'].text = _('File xml is not correctly formatted!')
 
-        else:
-            self['conn'].text = _('Server not found! Please check internet connection.')
+		else:
+			self['conn'].text = _('Server not found! Please check internet connection.')
 
-    def cancel(self):
-        if not self.container.running():
-            del self.container.appClosed[:]
-            del self.container
-            self.close()
-        else:
-            if self.container.running():
-                self.container.kill()
-            if fileExists('/tmp/addons.xml'):
-                remove('/tmp/addons.xml')
-            if fileExists('/tmp/tmp.tmp'):
-                remove('/tmp/tmp.tmp')
-            self['conn'].text = _('Process Killed by user. Server Not Connected!')
+	def cancel(self):
+		if not self.container.running():
+			del self.container.appClosed[:]
+			del self.container
+			self.close()
+		else:
+			if self.container.running():
+				self.container.kill()
+			if fileExists('/tmp/addons.xml'):
+				remove('/tmp/addons.xml')
+			if fileExists('/tmp/tmp.tmp'):
+				remove('/tmp/tmp.tmp')
+			self['conn'].text = _('Process Killed by user. Server Not Connected!')
 
-    def updateList(self):
-        del self.list[:]
-        skin_path = GetSkinPath()
-        for i in self.MenuList:
-            if i[4]:
-                self.list.append((i[0],
-                 i[1],
-                 i[2],
-                 LoadPixmap(skin_path + i[3])))
+	def updateList(self):
+		del self.list[:]
+		skin_path = GetSkinPath()
+		for i in self.MenuList:
+			if i[4]:
+				self.list.append((i[0],
+				 i[1],
+				 i[2],
+				 LoadPixmap(skin_path + i[3])))
 
-        self['list'].setList(self.list)
+		self['list'].setList(self.list)
 
-    def PluginDownloadBrowserClosed(self):
-        self.updateList()
-
-class ScriptExecuter(Screen):
-    skin = """
-    	<screen name="Script Panel" position="center,center" size="800,600">
-    		<widget source="list" render="Listbox" position="14,10" size="770,491" scrollbarMode="showOnDemand">
-    			<convert type="StringList" />
-    		</widget>
-    		<widget name="labstatus" position="14,510" size="800,30" font="Regular;21" valign="center" noWrap="1" backgroundColor="#333f3f3f" foregroundColor="#FFC000" shadowOffset="-2,-2" shadowColor="black" transparent="1" />
-    		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AtemioPanel/buttons/key_red.png" position="275,550" size="34,47" alphatest="on" />
-    		<widget name="key_red" position="311,553" zPosition="1" size="209,40" font="Regular;20" halign="center" valign="center" backgroundColor="#009f1313" transparent="1" />
-    	</screen>"""
-    	
-    def __init__(self, session):
-        Screen.__init__(self, session)
-        self['labstatus'] = Label(_('NO SCRIPT FOUND'))
-        self['key_red'] = Label(_('Execute'))
-        self.mlist = []
-        self.populateScript()
-        self['list'] = List(self.mlist)
-        self['list'].onSelectionChanged.append(self.schanged)
-        self['actions'] = ActionMap(['WizardActions', 'ColorActions'], {'ok': self.startScript,
-         'back': self.close,
-         'red': self.startScript})
-        self.onLayoutFinish.append(self.script_sel)
-        self.onShown.append(self.setWindowTitle)
-
-    def setWindowTitle(self):
-        self.setTitle(_('Atemio Script Panel'))
-
-    def script_sel(self):
-        self['list'].index = 1
-        self['list'].index = 0
-
-    def populateScript(self):
-        try:
-            if not path.exists('/usr/script'):
-                mkdir('/usr/script', 493)
-        except:
-            pass
-
-        myscripts = listdir('/usr/script')
-        for fil in myscripts:
-            if fil.find('.sh') != -1:
-                fil2 = fil[:-3]
-                desc = 'N/A'
-                f = open('/usr/script/' + fil, 'r')
-                for line in f.readlines():
-                    if line.find('#DESCRIPTION=') != -1:
-                        line = line.strip()
-                        desc = line[13:]
-
-                f.close()
-                res = (fil2, desc)
-                self.mlist.append(res)
-
-    def schanged(self):
-        mysel = self['list'].getCurrent()
-        if mysel:
-            mytext = ' ' + mysel[1]
-            self['labstatus'].setText(mytext)
-
-    def startScript(self):
-        mysel = self['list'].getCurrent()
-        if mysel:
-            mysel = mysel[0]
-            mysel2 = '/usr/script/' + mysel + '.sh'
-            mytitle = 'Atemio Script: ' + mysel
-            self.session.open(Console, title=mytitle, cmdlist=[mysel2])
-
+	def PluginDownloadBrowserClosed(self):
+		self.updateList()
 
 class	AtemioExtraFile(Screen):
 	__module__ = __name__
@@ -310,9 +234,9 @@ class	AtemioExtraFile(Screen):
 			'ok': self.KeyOk,
 			'back': self.close,
 			'red': self.close,
-			'green': self.KeyOk,
-			
-		})
+			'green': self.KeyOk,		
+		},-1)
+		
 		self.onLayoutFinish.append(self.loadData)
 		self.onShown.append(self.setWindowTitle)
 
@@ -329,8 +253,7 @@ class	AtemioExtraFile(Screen):
 		for tag in loadxml.tree_list: 
 			self.list.append((tag [1], tag [1]))
 		self['list'].setList(self.list)
-
-
+            
 class	AtemioExtraDown(Screen):
 	__module__ = __name__
 	skin = """
@@ -366,17 +289,18 @@ class	AtemioExtraDown(Screen):
 		self.linkExtra = t.readExtraUrl()
 
 		self['actions'] = ActionMap(['WizardActions','ColorActions'],
-		{
-			'ok': self.KeyOk,
-			'back': self.cancel,
-			'red': self.cancel,
-			'green': self.KeyOk,
-		})
+			{
+				'ok': self.KeyOk,
+				'back': self.cancel,
+				'red': self.cancel,
+				'green': self.KeyOk,
+			},-1)
+			
 		self.onLayoutFinish.append(self.loadPlugin)
 		self.onShown.append(self.setWindowTitle)
 
 	def setWindowTitle(self):
-		self.setTitle(_("Atemio Panel Download ") + str(u.pluginType))
+		self.setTitle(_("Atemio Download Panel") + str(u.pluginType))
 
 	def KeyOk(self):
 		if not self.container.running():
@@ -477,6 +401,7 @@ class	AtemioExtraDown(Screen):
 					u.dir  = tag [4] 
 					u.size  = tag [5] 
 					u.check  = tag [6]
+
 
 def main(session, **kwargs):
     session.open(AtemioMenu)

@@ -64,7 +64,7 @@ class PluginDescriptor:
 	# or return a function which is called with session and the interface name for extended setup of this interface
 	WHERE_NETWORKMOUNTS = 16
 
-	WHERE_ATEMIOMENUBK = 17
+	WHERE_ATEMIOSOFTWAREMANAGER = 17
 	
 
 	def __init__(self, name="Plugin", where=None, description="", icon=None, fnc=None, wakeupfnc=None, needsRestart=None, internal=False, weight=0):

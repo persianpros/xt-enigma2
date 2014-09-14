@@ -7,7 +7,6 @@ from Components.Harddisk import harddiskmanager
 from Plugins.Extensions.AtemioPanel.BackupManager import BackupManagerautostart
 from Plugins.Extensions.AtemioPanel.ImageManager import ImageManagerautostart
 from Plugins.Extensions.AtemioPanel.IPKInstaller import IpkgInstaller
-from Plugins.Extensions.AtemioPanel.SwapManager import SwapAutostart
 
 from os import path, listdir
 
@@ -46,12 +45,12 @@ if checkConfigBackup() is None:
 else:
 	backupAvailable = 1
 
-def AtemioMenuBk(session):
+def AtemioSoftwareManager(session):
 	import ui
-	return ui.AtemioMenuBk(session)
+	return ui.AtemioSoftwareManager(session)
 
 def UpgradeMain(session, **kwargs):
-	session.open(AtemioMenuBk)
+	session.open(AtemioSoftwareManager)
 
 def startSetup(menuid):
 	if menuid != "setup":
@@ -93,8 +92,7 @@ def filescan(**kwargs):
 			openfnc = filescan_open, )
 
 def Plugins(path, **kwargs):
-	plist = [PluginDescriptor(where=PluginDescriptor.WHERE_ATEMIOMENUBK, needsRestart = False, fnc=startSetup)]
-	plist.append(PluginDescriptor(where = PluginDescriptor.WHERE_AUTOSTART, fnc = SwapAutostart))
+	plist = [PluginDescriptor(where=PluginDescriptor.WHERE_ATEMIOSOFTWAREMANAGER, needsRestart = False, fnc=startSetup)]
 	plist.append(PluginDescriptor(where = PluginDescriptor.WHERE_SESSIONSTART, fnc = ImageManagerautostart))
 	plist.append(PluginDescriptor(where = PluginDescriptor.WHERE_SESSIONSTART, fnc = BackupManagerautostart))
 	

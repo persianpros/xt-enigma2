@@ -2,15 +2,19 @@
 from . import _
 
 from Screens.Screen import Screen
+from Screens.SoftwareUpdate import UpdatePlugin
 from Components.ActionMap import NumberActionMap
 from Components.Button import Button
 from Components.Sources.StaticText import StaticText
 from Components.Sources.List import List
 from Components.MultiContent import MultiContentEntryText
+from Plugins.Extensions.AtemioPanel.BackupManager import AtemioBackupManager
+from Plugins.Extensions.AtemioPanel.ImageManager import AtemioImageManager
 from enigma import RT_HALIGN_LEFT, RT_VALIGN_CENTER, gFont
 from os import listdir, path, mkdir
+from boxbranding import getMachineBrand, getMachineName
 
-class AtemioMenuBk(Screen):
+class AtemioSoftwareManager(Screen):
 	skin = """
 	  <screen position="0,0" size="1401,721">
 	  <widget font="Regular; 150" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
@@ -39,12 +43,16 @@ class AtemioMenuBk(Screen):
 	
 	def __init__(self, session, args = 0):
 		Screen.__init__(self, session)
-		Screen.setTitle(self, _("Atemio"))
+		Screen.setTitle(self, _("Atemio Software Manager"))
 		self.menu = args
 		self.list = []
+		machinename = getMachineName()
+		machinebrand = getMachineBrand()
 		if self.menu == 0:
-			self.list.append(("backup-manager", _("Backup Setting Manager"), _("Manage your backups of your settings." ), None))
-			self.list.append(("image-manager", _("Backup Image Manager"), _("Create and Restore complete images of the system." ), None))
+			self.list.append(("software-update", _("Software Update"), _("Online update of your %s %s." % (machinebrand, machinename)), None))
+			self.list.append(("settings-manager", _("Settings Manager"), _("Backup and restore settings of your %s %s." % (machinebrand, machinename)), None))
+			self.list.append(("image-manager", _("Image Manager"), _("Backup and restore complete image of your %s %s." % (machinebrand, machinename)), None))
+			
 		self["menu"] = List(self.list)
 		self["key_red"] = Button(_("Cancel"))
 
@@ -78,7 +86,7 @@ class AtemioMenuBk(Screen):
 		self["menu"].index = idx
 
 	def setWindowTitle(self):
-		self.setTitle(_("Atemio"))
+		self.setTitle(_("Atemio Software Manager"))
 
 	def go(self, num = None):
 		if num is not None:
@@ -90,9 +98,9 @@ class AtemioMenuBk(Screen):
 		if current:
 			currentEntry = current[0]
 			if self.menu == 0:
-				if (currentEntry == "backup-manager"):
-					from Plugins.Extensions.AtemioPanel.BackupManager import AtemioBackupManager
+				if (currentEntry == "settings-manager"):
 					self.session.open(AtemioBackupManager)
+				elif (currentEntry == "software-update"):
+					self.session.open(UpdatePlugin)
 				elif (currentEntry == "image-manager"):
-					from Plugins.Extensions.AtemioPanel.ImageManager import AtemioImageManager
 					self.session.open(AtemioImageManager)

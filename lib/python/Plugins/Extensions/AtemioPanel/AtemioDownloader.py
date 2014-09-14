@@ -155,7 +155,6 @@ class AtemioConsole(Screen):
 		self.setTitle(self.Wtitle)
 
 	def startRun(self):
-		#print "Console: executing in run the command:", self.cmd
 		if self.container.execute(self.cmd):
 			self.runFinished(-1)
 

@@ -89,7 +89,7 @@ class AtemioBackupManager(Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
-		Screen.setTitle(self, _("Backup Manager"))
+		Screen.setTitle(self, _("Atemio Backup Manager"))
 
 		self['lab1'] = Label()
 		self["backupstatus"] = Label()

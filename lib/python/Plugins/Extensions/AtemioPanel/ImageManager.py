@@ -17,7 +17,7 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Components.Console import Console
 from Screens.Console import Console as ScreenConsole
-
+from Plugins.SystemPlugins.SoftwareManager.Flash_online import FlashOnline
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Tools.Notifications import AddPopupWithCallback
@@ -85,7 +85,7 @@ class AtemioImageManager(Screen):
 	"""
 	def __init__(self, session):
 		Screen.__init__(self, session)
-		Screen.setTitle(self, _("Image Manager"))
+		Screen.setTitle(self, _("Atemio Image Manager"))
 
 		self['lab1'] = Label()
 		self["backupstatus"] = Label()
@@ -252,7 +252,7 @@ class AtemioImageManager(Screen):
 		self.session.openWithCallback(self.setupDone, Setup, 'atemioimagemanager', 'SystemPlugins/AtemioCore')
 
 	def doDownload(self):
-		self.session.openWithCallback(self.populate_List, ImageManagerDownload, self.BackupDirectory)
+		self.session.open(FlashOnline)
 
 	def setupDone(self, test=None):
 		self.populate_List()
@@ -663,17 +663,10 @@ class ImageBackup(Screen):
 		makedirs(self.MAINDEST, 0644)
 		if self.ROOTFSTYPE == 'jffs2':
 			print '[ImageManager] Stage1: JFFS2 Detected.'
-			if getMachineBuild() == 'gb800solo':
-				JFFS2OPTIONS = " --disable-compressor=lzo -e131072 -l -p125829120"
-			if getMachineBuild() in ('dm800', 'dm800se','dm500hd'):
-				JFFS2OPTIONS = " --eraseblock=0x4000 -n -l"
-			else:
-				JFFS2OPTIONS = " --disable-compressor=lzo --eraseblock=0x20000 -n -l"
+			JFFS2OPTIONS = " --disable-compressor=lzo --eraseblock=0x20000 -n -l"
 			self.commands.append('mount --bind / ' + self.TMPDIR + '/root')
 			self.commands.append('mount -t jffs2 /dev/mtdblock/2 ' + self.TMPDIR + '/boot')
 			self.commands.append('mkfs.jffs2 --root=' + self.TMPDIR + '/root --faketime --output=' + self.WORKDIR + '/root.jffs2' + JFFS2OPTIONS)
-			if getMachineBuild() in ('dm800', 'dm800se', 'dm500hd'):
-				self.commands.append('mkfs.jffs2 --root=' + self.TMPDIR + '/boot --faketime --output=' + self.WORKDIR + '/boot.jffs2' + JFFS2OPTIONS)
 		else:
 			print '[ImageManager] Stage1: UBIFS Detected.'
 			UBINIZE = 'ubinize'
@@ -775,110 +768,3 @@ class ImageBackup(Screen):
 			autoImageManagerTimer.backupupdate(atLeast)
 		else:
 			autoImageManagerTimer.backupstop()
-
-
-class ImageManagerDownload(Screen):
-	skin = """
-	  <screen position="0,0" size="1280,720">
-	  <ePixmap alphatest="blend" pixmap="skin_default/buttons/green.png" position="610,637" size="30,35" />
-	  <ePixmap alphatest="blend" pixmap="skin_default/buttons/yellow.png" position="805,637" size="30,35" />
-	  <widget font="Regular;22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
-	  <widget font="Regular;22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
-	  <widget font="Regular;22" halign="left" itemHeight="28" name="lab1" position="470,135" size="750,50" transparent="1" valign="top" zPosition="2" />
-	  <widget enableWrapAround="1" foregroundColor="foreground" itemHeight="28" name="list" position="470,190" scrollbarMode="showOnDemand" size="750,440" transparent="1" />
-	  <applet type="onLayoutFinish">
-	          self["list"].instance.setItemHeight(28)
-	        </applet>
-	</screen>"""
-
-	def __init__(self, session, BackupDirectory):
-		Screen.__init__(self, session)
-		Screen.setTitle(self, _("Image Manager"))
-		self.BackupDirectory = BackupDirectory
-		self['lab1'] = Label(_("Select an image to Download:"))
-		self["key_red"] = Button(_("Close"))
-		self["key_green"] = Button(_("Download"))
-
-		self.onChangedEntry = []
-		self.emlist = []
-		self['list'] = MenuList(self.emlist)
-		self.populate_List()
-
-		if not self.selectionChanged in self["list"].onSelectionChanged:
-			self["list"].onSelectionChanged.append(self.selectionChanged)
-
-	def selectionChanged(self):
-		for x in self.onChangedEntry:
-			x()
-
-	def populate_List(self):
-		try:
-			self['myactions'] = ActionMap(['ColorActions', 'OkCancelActions', 'DirectionActions'],
-										  {
-										  'cancel': self.close,
-										  'red': self.close,
-										  'green': self.keyDownload,
-										  'ok': self.keyDownload,
-										  }, -1)
-
-			if not path.exists(self.BackupDirectory):
-				mkdir(self.BackupDirectory, 0755)
-			from ftplib import FTP
-			import urllib, zipfile, base64
-
-			wos_user = 'backup@atemio4you.com'
-			wos_pwd = base64.b64decode('YmFja3VwQXRlbWlv==').replace('\n', '')
-			ftp = FTP('backup@atemio4you.com')
-			ftp.login(wos_user, wos_pwd)
-			if getMachineMake() == 'atemio5x00':
-				self.boxtype = 'atemio5x00'
-			elif getMachineMake() == 'atemio6x00':
-				self.boxtype = 'atemio6x00'
-			elif getMachineMake() == 'atemionemesis':
-				self.boxtype = 'atemionemesis'
-
-			print 'getMachineMake:',getMachineMake()
-			print 'getMachineBuild:',getMachineBuild()
-			print 'getBoxType:',getBoxType()
-			ftp.cwd(self.boxtype)
-
-			del self.emlist[:]
-			for fil in ftp.nlst():
-				if not fil.endswith('.') and fil.find(getBoxType()) != -1:
-					self.emlist.append(fil)
-			self.emlist.sort()
-			self.emlist.reverse()
-			ftp.quit()
-			ftp.close()
-		except:
-			self['myactions'] = ActionMap(['ColorActions', 'OkCancelActions', 'DirectionActions'],
-										  {
-										  'cancel': self.close,
-										  'red': self.close,
-										  }, -1)
-			self.emlist.append(" ")
-		self["list"].setList(self.emlist)
-		self["list"].show()
-
-	def keyDownload(self):
-		self.sel = self['list'].getCurrent()
-		if self.sel:
-			message = _("Are you sure you want to download this image:\n ") + self.sel
-			ybox = self.session.openWithCallback(self.doDownload, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle(_("Download Confirmation"))
-		else:
-			self.session.open(MessageBox, _("You have no image to download."), MessageBox.TYPE_INFO, timeout=10)
-
-	def doDownload(self, answer):
-		if answer is True:
-			self.selectedimage = self['list'].getCurrent()
-			file = self.BackupDirectory + self.selectedimage
-
-			mycmd1 = _("echo 'Downloading Image.'")
-			mycmd2 = "wget -q http://image.atemio4you.com/" + self.selectedimage + " -O " + self.BackupDirectory + "image.zip"
-			mycmd3 = "mv " + self.BackupDirectory + "image.zip " + file
-			self.session.open(ScreenConsole, title=_('Downloading Image...'), cmdlist=[mycmd1, mycmd2, mycmd3], closeOnSuccess=True)
-
-	def myclose(self, result, retval, extra_args):
-		remove(self.BackupDirectory + self.selectedimage)
-		self.close()

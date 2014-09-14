@@ -623,6 +623,16 @@ def find_in_list(list, search, listpos=0):
 
 global_session = None
 
+def isModule():
+	if eDVBCIInterfaces.getInstance().getNumOfSlots():
+		NUM_CI=eDVBCIInterfaces.getInstance().getNumOfSlots()
+		if NUM_CI > 0:
+			for slot in range(NUM_CI):
+				state = eDVBCI_UI.getInstance().getState(slot)
+				if state > 0:
+					return True
+	return False
+
 def sessionstart(reason, session):
 	global global_session
 	global_session = session
@@ -639,12 +649,12 @@ def main(session, **kwargs):
 	session.open(CIselectMainMenu)
 
 def menu(menuid, **kwargs):
-	if menuid == "cam" and eDVBCIInterfaces.getInstance().getNumOfSlots():
+	if menuid == "setup" and isModule():
 		return [(_("Common Interface Assignment"), main, "ci_assign", 11)]
 	return [ ]
 
 def Plugins(**kwargs):
-	if config.usage.setup_level.index > 1:
+	if config.usage.setup_level.index >= 1:
 		return [PluginDescriptor( where = PluginDescriptor.WHERE_SESSIONSTART, needsRestart = False, fnc = sessionstart ),
 				PluginDescriptor( where = PluginDescriptor.WHERE_AUTOSTART, needsRestart = False, fnc = autostart ),
 				PluginDescriptor( name = _("Common Interface assignment"), description = _("a gui to assign services/providers/caids to common interface modules"), where = PluginDescriptor.WHERE_MENU, needsRestart = False, fnc = menu )]

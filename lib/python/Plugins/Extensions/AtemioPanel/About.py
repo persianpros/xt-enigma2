@@ -13,7 +13,7 @@ class AboutTeam(Screen):
 
     def __init__(self, session, args = 0):
         Screen.__init__(self, session)
-        abouttxt = '\nAtemio4you Image Team:\n\n- henrylicious (Developer)\n- skaman (Developer)\n- satinfo (Developer)\n- mmark (Graphics and Skin) \n\n-Betatesting:\n xionsenx, Stb_Boss.\n\nFurther credits goes to:\n Atemio Team.\n ProjectMan for his constant support.\n\n- Oe-Alliance Openvix OpenPLI\n'
+        abouttxt = '\nAtemio4you Image Team:\n\n- ch3wb4kka (Developer)\n- satinfo (Developer)\n- mmark (Graphics and Skin) \n\n-Betatesting:\n xionsenx, Stb_Boss.\n\nFurther credits goes to:\n- Atemio4You Team.\n- ProjectMan for his constant support.\n\n- OE-Alliance, openViX, openPLi\n'
         self['about'] = Label(abouttxt)
         self['actions'] = ActionMap(['OkCancelActions', 'ColorActions'], {'cancel': self.quit}, -2)
 
@@ -24,16 +24,6 @@ class AboutTeam(Screen):
 from os import system, statvfs, remove
 
 class AtemioUtils:
-
-	def readExtraUrl(self):
-		try:
-			#os.system("dos2unix /var/etc/extra.url");
-			f = open("/var/etc/atemio_extra.url", "r")
-			line = f.readline() [:-1]
-			f.close()
-			return line
-		except:
-			return None
 
 	def getVarSpace(self):
 		free = -1
