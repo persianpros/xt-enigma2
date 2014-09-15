@@ -28,12 +28,9 @@ if distro.lower() == "openhdf":
 	image = 1
 elif distro.lower() == "atemio4you":
   image = 0
-feedurl_a4y = 'http://image.atemio4you.com/%s' %ImageVersion
-if ImageVersion == '2.1' or ImageVersion == '2.0':
-	ImageVersion2= '2.3'
-else:
-	ImageVersion2= '2.1'
-feedurl_a4y2= 'http://image.atemio4you.com/%s' %ImageVersion2
+feedurl_a4y = 'http://beta.atemio4you.com/'
+ImageVersion2= '2.3'
+feedurl_a4y2= 'http://beta.atemio4you.com/'
 feedurl_hdf = 'http://v4.hdfreaks.cc'
 imagePath = '/media/hdd/images'
 flashPath = '/media/hdd/images/flash'
@@ -515,12 +512,12 @@ class doFlashImage(Screen):
 				else:
 					self.feedurl = feedurl_a4y2
 					self["key_blue"].setText("A4Y %s" %ImageVersion)
-			url = '%s/index.php?open=%s' % (self.feedurl,box)
+			url = '%s/index.php?open=image/%s' % (self.feedurl,box)
 			try:
 				req = urllib2.Request(url)
 				if self.newfeed:
 					self.feedurl = self.newfeed[0][:-1]
-					url = '%s/index.php?open=%s' % (self.feedurl,box)
+					url = '%s/index.php?open=image/%s' % (self.feedurl,box)
 					authinfo = urllib2.HTTPPasswordMgrWithDefaultRealm()
 					authinfo.add_password(None, self.feedurl, self.newfeed[1][:-1], self.newfeed[2][:-1])
 					handler = urllib2.HTTPBasicAuthHandler(authinfo)
