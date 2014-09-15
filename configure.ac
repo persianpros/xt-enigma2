@@ -322,10 +322,6 @@ lib/python/Components/Renderer/Makefile
 lib/python/Components/Sources/Makefile
 lib/python/Screens/Makefile
 lib/python/Plugins/Makefile
-lib/python/Plugins/Extensions/AtemioPanel/Makefile
-lib/python/Plugins/Extensions/AtemioPanel/buttons/Makefile
-lib/python/Plugins/Extensions/AtemioPanel/icons/Makefile
-lib/python/Plugins/Extensions/AtemioPanel/meta/Makefile
 lib/python/Plugins/Extensions/Makefile
 lib/python/Plugins/Extensions/CutListEditor/Makefile
 lib/python/Plugins/Extensions/CutListEditor/meta/Makefile
@@ -345,8 +341,6 @@ lib/python/Plugins/Extensions/SocketMMI/src/Makefile
 lib/python/Plugins/Extensions/TuxboxPlugins/Makefile
 lib/python/Plugins/Extensions/TuxboxPlugins/meta/Makefile
 lib/python/Plugins/SystemPlugins/Makefile
-lib/python/Plugins/SystemPlugins/AtemioCore/Makefile
-lib/python/Plugins/SystemPlugins/AtemioCore/meta/Makefile
 lib/python/Plugins/SystemPlugins/CableScan/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/meta/Makefile
@@ -362,8 +356,6 @@ lib/python/Plugins/SystemPlugins/Hotplug/Makefile
 lib/python/Plugins/SystemPlugins/Hotplug/meta/Makefile
 lib/python/Plugins/SystemPlugins/NetworkWizard/Makefile
 lib/python/Plugins/SystemPlugins/NetworkWizard/meta/Makefile
-lib/python/Plugins/SystemPlugins/NFIFlash/Makefile
-lib/python/Plugins/SystemPlugins/NFIFlash/meta/Makefile
 lib/python/Plugins/SystemPlugins/PositionerSetup/Makefile
 lib/python/Plugins/SystemPlugins/PositionerSetup/meta/Makefile
 lib/python/Plugins/SystemPlugins/SABnzbdSetup/Makefile
