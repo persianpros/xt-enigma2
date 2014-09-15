@@ -7,6 +7,4 @@ SUBDIRS = SoftwareManager PositionerSetup Satfinder \
 	VideoEnhancement WirelessLan NetworkWizard \
 	SABnzbdSetup FastScan SatelliteEquipmentControl DiseqcTester 
 
-endif
-
 install_PYTHON = __init__.py
