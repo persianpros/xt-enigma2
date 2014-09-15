@@ -9598,9 +9598,6 @@ msgid ""
 "is included in the stream and a valid card is available)."
 msgstr "Aktiviert ein Merkmal so das ein anderer Empfänger einen Stream entschlüsseln kann (wenn ECM Daten im Stream enthalten sind und eine Karte vorhanden ist)."
 
-msgid "Require authentication for http streams"
-msgstr ""
-
 msgid "When enabled, authentication is required to watch http streams."
 msgstr ""
 
