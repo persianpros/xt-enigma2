@@ -9299,9 +9299,6 @@ msgstr "EPG Speichern"
 msgid "Load EPG"
 msgstr "EPG Laden"
 
-msgid "Enable Virgin EPG"
-msgstr "Virgin EPG aktivieren"
-
 msgid "Front Display Panel"
 msgstr "Display"
 
@@ -10043,7 +10040,7 @@ msgid "Use Netmed EPG information when it is available."
 msgstr "Verwende Netmed EPG Information falls vorhanden."
 
 msgid "Enable Virgin EPG"
-msgstr ""
+msgstr "Virgin EPG aktivieren"
 
 msgid "Use Virgin EPG information when it is available."
 msgstr ""
