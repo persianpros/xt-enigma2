@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-09-15 12:53+0000\n"
+"PO-Revision-Date: 2014-09-15 17:30+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: German \n"
 "MIME-Version: 1.0\n"
@@ -3275,11 +3275,10 @@ msgstr "Favoriten"
 msgid "Select service to add..."
 msgstr "Wählen Sie einen Kanal zum Hinzufügen"
 
-msgid "Common Interface Assignment"
-msgstr "Common Interface Zuweisung"
+msgid "Common interface Assignment"
+msgstr "Common Interface-Zuweisung"
 
-msgid "Common Interface assignment"
-msgstr "Common Interface Zuweisung"
+
 
 msgid "a gui to assign services/providers/caids to common interface modules"
 msgstr "Eine Benutzeroberfläche, um einem Common Interface Kanäle/Provider/CAIDs zuzuweisen."
@@ -4050,7 +4049,9 @@ msgstr "Softwareverwaltung"
 msgid ""
 "\n"
 "Press OK on your remote control to continue."
-msgstr "\nDrücken Sie OK, um fortzufahren."
+msgstr ""
+"\n"
+"Zum Fortfahren OK drücken."
 
 msgid "Press MENU on your remote control for additional options."
 msgstr "Menu drücken für zusätzliche Optionen."
@@ -4460,7 +4461,7 @@ msgid "Upgrade finished."
 msgstr "Upgrade beendet."
 
 msgid "Install extensions"
-msgstr ""
+msgstr "Erweiterungen installieren..."
 
 msgid "from"
 msgstr "von"
@@ -9230,7 +9231,7 @@ msgid ""
 msgstr "Willkommen im Image-Upgrade-Assistenten. Der Assistent wird bei der Aktualisierung der Firmware der %s %s helfen. Mit diesem Assistenten können die aktuellen Einstellungen gesichert werden und es gibt eine kleine Einweisung wie die Firmware aktualisiert werden kann."
 
 msgid "Where do you want to backup your settings?"
-msgstr ""
+msgstr "Wohin möchten Sie die Einstellungen sichern?"
 
 msgid ""
 "You have chosen to backup your settings. Please press OK to start the backup"
@@ -9250,12 +9251,19 @@ msgid ""
 "restore. Please press OK to start the restore now."
 msgstr "Sie haben sich entschlossen, Ihre Einstellungen wiederherzustellen. Die Benutzeroberfläche wird nach der Wiederherstellung neu starten. Bitte drücken Sie OK, um mit der Wiederherstellung zu beginnen."
 
-#, python-format
+#
 msgid ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
-"Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
-msgstr "Ein PC muss mit der %s %s verbunden sein.Für weiterführende Informationen besuche die Webseite http://www.dm7025.de.\nDie %s %s wird nun ausgeschaltet. Nachdem das Update wie auf der Webseite beschrieben durchgeführt wurde, wird die neue Firmware fragen, ob die Einstellungen wiederhergestellt werden sollen."
-
+"You need a PC connected to your %s %s. If you need further instructions, "
+"please visit the website http://www.atemio4you.com\n"
+"Your %s %s will now be halted. After you have performed the update "
+"instructions from the website, your new firmware will ask you to restore "
+"your settings."
+msgstr ""
+"Sie müssen einen PC mit Ihrer %s %s verbunden haben. Wenn Sie weiterführende "
+"Informationen benötigen, besuchen Sie die Webseite http://www.atemio4you.com\n"
+"Die %s %s wird nun ausgeschaltet. Nachdem Sie das Update wie auf der "
+"Webseite beschrieben durchgeführt haben, wird Sie die neue Firmware fragen, "
+"ob Sie die Einstellungen wiederherstellen wollen."
 #, python-format
 msgid "Your %s %s is shutting down. Please wait..."
 msgstr "Die %s %s schaltet sich nun aus. Bitte warte einen Moment..."
@@ -9265,6 +9273,21 @@ msgstr "Der Assistent ist nun abgeschlossen."
 
 msgid "Timers"
 msgstr "Timer"
+
+msgid "Yes, shut down now."
+msgstr "Ja, jetzt ausschalten."
+
+msgid "No, do nothing."
+msgstr "Nein, nichts zu tun."
+
+msgid "OK, guide me through the upgrade process"
+msgstr "OK, führen Sie mich durch den Upgrade-Vorgang"
+
+msgid "Yes, backup my settings!"
+msgstr "Ja, meine Einstellungen sichern!"
+
+msgid "No backup needed"
+msgstr "Keine Sicherung benötigt"
 
 msgid "CronTimers"
 msgstr "CronTimer"
@@ -9384,7 +9407,7 @@ msgid "SoftCam / CI"
 msgstr "SoftCam / CI"
 
 msgid "Common interface"
-msgstr ""
+msgstr "CI (Common Interface)"
 
 msgid "CCcam info"
 msgstr "CCcam Informationen"
@@ -9402,10 +9425,10 @@ msgid "Restart"
 msgstr "Neustart"
 
 msgid "Restart enigma"
-msgstr ""
+msgstr "GUI neu starten"
 
 msgid "Deep standby"
-msgstr "Tiefschlaf / Ausschalten"
+msgstr "Ausschalten"
 
 msgid "Shutdown"
 msgstr "Ausschalten"
@@ -11248,13 +11271,13 @@ msgid "Download addons plugins"
 msgstr "Erweiterungen herunterladen"
 
 msgid "Devices"
-msgstr ""
+msgstr "Geräte "
 
 msgid "Execute Script"
 msgstr "Script ausführen"
 
-msgid "Wait...."
-msgstr "Bitte warten...."
+msgid "Wait..."
+msgstr "Bitte warten..."
 
 msgid "% Flash Used..."
 msgstr "% Speicher benutzt..."
