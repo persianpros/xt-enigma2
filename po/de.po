@@ -8608,7 +8608,7 @@ msgid "About..."
 msgstr "Über..."
 
 msgid "Skin setup"
-msgstr "Skinauswahl"
+msgstr "Skin Auswahl"
 
 msgid "Enigma2 Changes"
 msgstr "Enigma2 Änderungen"
@@ -9315,7 +9315,7 @@ msgid "Logs"
 msgstr "Logs"
 
 msgid "Keyboard"
-msgstr "Tastatur"
+msgstr "Einstellung ext. Tastatur"
 
 msgid "Logs manager"
 msgstr "Log Verwaltung"
@@ -9603,6 +9603,10 @@ msgstr ""
 
 msgid "Skin Developer Mode"
 msgstr ""
+
+#
+msgid "Extended System"
+msgstr "Erweiterte Einstellungen"
 
 msgid ""
 "It's not elegant and low performace... but for skin developing is great!"
