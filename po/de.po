@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-09-15 12:15+0000\n"
+"PO-Revision-Date: 2014-09-15 12:53+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: German \n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,15 @@ msgid ""
 "Do that now?"
 msgstr "Ein Powertimer will die %s %s neu starten.\nJetzt neu starten?"
 
+#
+msgid "Yes, restore the settings now"
+msgstr "Ja, die Einstellungen jetzt wiederherstellen"
+
+#
+msgid "No, just start my %s %s"
+msgstr "Nein, nur die %s %s starten"
+
+#
 msgid ""
 "A finished powertimer wants to restart the user interface.\n"
 "Do that now?"
@@ -5717,6 +5726,9 @@ msgstr "Zeige detailierte Sendungsinformation"
 msgid "Show single epg for current channel"
 msgstr "Zeige Einzel-EPG für den aktuellen Sender"
 
+msgid "SingleEPG settings"
+msgstr "SingleEPG Einstellungen"
+
 msgid "Setup menu"
 msgstr "Konfiguration"
 
@@ -7209,7 +7221,7 @@ msgid "Use a gateway"
 msgstr "Einen Gateway verwenden?"
 
 msgid "Enable Wake On LAN"
-msgstr ""
+msgstr "Wake on LAN aktivieren"
 
 msgid "Hidden network"
 msgstr "Verstecktes Netzwerk"
@@ -7273,6 +7285,34 @@ msgstr "Netzwerkadaptermenü verlassen"
 
 msgid "select menu entry"
 msgstr "Wählen Sie einen Menüpunkt"
+
+#
+msgid "Auto language selection"
+msgstr "Automatische Sprachauswahl"
+
+#
+msgid "Button setup"
+msgstr "Tastenbelegung"
+
+#
+msgid "Customize"
+msgstr "Extra-Anpassungen"
+
+#
+msgid "Channel selection settings"
+msgstr "Einstellungen der Kanalliste"
+
+#
+msgid "Subtitle settings"
+msgstr "Einstellungen Untertitel"
+
+#
+msgid "Time settings"
+msgstr "Zeiteinstellungen"
+
+#
+msgid "Fan Control"
+msgstr "Lüfterkontrolle"
 
 msgid ""
 "Are you sure you want to restart your network interfaces?\n"
@@ -8920,6 +8960,9 @@ msgstr "Diese Option erlaubt es die 3D Tiefe einzustellen"
 msgid "Show in extensions list ?"
 msgstr "Zeige in Erweiterungen?"
 
+msgid "Show in extensions"
+msgstr "Zeige in Erweiterungen"
+
 msgid "This option lets you show the option in the extension screen"
 msgstr "Diese Option erlaubt es die Option in Erweiterungen anzuzeigen"
 
@@ -8945,6 +8988,9 @@ msgstr "Zeitverzögerung"
 
 msgid "Set the time before checking video source for resolution infomation."
 msgstr "Systemzeit setzen vor Prüfung der Videoauflösung."
+
+msgid "Choose Tuner"
+msgstr "Tuner auswählen"
 
 msgid "Force de-interlace"
 msgstr "DeInterlacing erzwingen"
@@ -9236,10 +9282,10 @@ msgid "Service searching"
 msgstr "Kanalsuche"
 
 msgid "Blind scan"
-msgstr ""
+msgstr "Blind Scan"
 
 msgid "Manual scan"
-msgstr ""
+msgstr "Manueller Suchlauf"
 
 msgid "Mainmenu"
 msgstr "Hauptmenü"
@@ -9253,8 +9299,11 @@ msgstr "EPG Speichern"
 msgid "Load EPG"
 msgstr "EPG Laden"
 
+msgid "Enable Virgin EPG"
+msgstr "Virgin EPG aktivieren"
+
 msgid "Front Display Panel"
-msgstr ""
+msgstr "Display"
 
 msgid "HDMI CEC"
 msgstr "HDMI CEC"
@@ -9535,6 +9584,9 @@ msgstr "Wenn ein Sender eingestellt ist durchsucht die Box den Transponder nach 
 
 msgid "Include ECM in http streams"
 msgstr "Integriere ECM in HTTP-Streams"
+
+msgid "Require authentication for http streams"
+msgstr "Verlange Authentifizierung für HTTP-Streams"
 
 msgid ""
 "ECM data will be included in the stream. This enables a client receiver to "
@@ -9836,7 +9888,7 @@ msgid ""
 msgstr "Sender können in Favoriten gruppiert werden. Wenn aktiviert kann mehr als eine Favoritenliste benutzt werden."
 
 msgid "Enable panic button"
-msgstr ""
+msgstr "Panik-Taste aktivieren"
 
 msgid ""
 "When enabled, pressing '0' will zap you to the first channel in your first "
@@ -9844,7 +9896,7 @@ msgid ""
 msgstr "Wenn aktiviert springt man mit '0' zum ersten Sender der ersten Favoritenliste und die Sendervergangenheit wird gelöscht."
 
 msgid "Jump first press in channel selection"
-msgstr ""
+msgstr "Springe zuerst in Programmauswahl"
 
 msgid ""
 "This option allows you to choose what the first button press jumps to in "
@@ -9866,7 +9918,7 @@ msgid "When enabled, show channel numbers in the channel selection screen."
 msgstr "Zeige Kanalnummer in Kanalauswahl"
 
 msgid "Show crypto icons"
-msgstr ""
+msgstr "Anzeige der Verschlüsselung"
 
 msgid ""
 "Configure if and how crypto icons will be shown in the channel selection "
@@ -9998,6 +10050,10 @@ msgstr ""
 
 msgid "Maintain old EPG data for"
 msgstr "Behalte abgelaufene EPG-Daten (in Minuten)"
+
+#
+msgid "MultiEPG settings"
+msgstr "MultiEPG Einstellungen"
 
 msgid ""
 "Configure for how many minutes finished events should remain visible in the "
@@ -10151,6 +10207,9 @@ msgstr "Wahl der ersten Audiospur-Sprache (höchste Priorität)."
 msgid "Audio language selection 2"
 msgstr "Ton Sprachwahl 2"
 
+msgid "Config"
+msgstr "Einstellungen"
+
 msgid "Configure the second audio language."
 msgstr "Wahl der zweiten Audiospur-Sprache."
 
@@ -10173,7 +10232,7 @@ msgid "When enabled, the receiver will select an AC3 track (when available)."
 msgstr "AC3 Tonspur verwenden (falls vorhanden)."
 
 msgid "Prefer AC3+ track"
-msgstr ""
+msgstr "AC3+ bevorzugen"
 
 msgid "When enabled, the receiver will select an AC3+ track (when available)."
 msgstr ""
@@ -10834,7 +10893,7 @@ msgid ""
 msgstr "Wenn 'ja' erlaubt es mit der Seekbar zu einem beliebigen Punkt der Sendung zu springen."
 
 msgid "Sort list by"
-msgstr ""
+msgstr "Liste sortieren nach"
 
 msgid "You can have the list sorted by time or alphanumerical."
 msgstr "Du kannst die Liste zeitlich oder alphanumerisch sortiert haben."
@@ -10923,7 +10982,7 @@ msgid "Configure the width allocated to the picon."
 msgstr "Konfiguriere die freigehaltene Breite für PIcon."
 
 msgid "Info icon width"
-msgstr ""
+msgstr "Info-Icon anzeigen Breite"
 
 msgid ""
 "Configure the minimum width before showing the 'i' icon, '0' is equal to not"
@@ -10950,6 +11009,9 @@ msgstr "Diese Option erlaubt es das Aussehen vom EPG einzustellen (Text oder Gra
 
 msgid "Picture in graphics"
 msgstr "Bild in Grafik"
+
+msgid "Hard disk setup"
+msgstr "Konfiguration der HDD"
 
 msgid "If set to 'yes' shows a small TV-screen in the EPG."
 msgstr "Wenn 'Ja' eingestellt ist wird PIG (kleines TV-Bild) im EPG angezeigt."
@@ -11026,6 +11088,15 @@ msgstr ""
 msgid "Allows you schedule your image backups."
 msgstr ""
 
+msgid "Choose your Skin"
+msgstr "Oberfläche auswählen"
+
+msgid "Fan mode"
+msgstr "Lüfter-Modus"
+
+msgid "Fan setup"
+msgstr "Einstellungen Lüfter"
+
 #, python-format
 msgid ""
 "Welcome.\n"
@@ -11042,8 +11113,9 @@ msgstr "Mit den hoch/runter-Tasten können Sie eine Option auswählen. Danach bi
 msgid "Use the wizard to set up basic features"
 msgstr "Grundeinstellungen jetzt vornehmen"
 
+#
 msgid "Exit the wizard"
-msgstr ""
+msgstr "Assistenten beenden"
 
 msgid "Please connect your receiver to the internet"
 msgstr "Bitte verbinden Sie Ihren Receiver mit dem Internet"
@@ -11076,8 +11148,9 @@ msgstr "Einstellungen für Tuner C."
 msgid "Please set up tuner D"
 msgstr "Einstellungen für Tuner D."
 
+#
 msgid "Do you want to install a channel list?"
-msgstr ""
+msgstr "Wollen Sie eine Kanalliste installieren ?"
 
 msgid "Do you want to do a service scan?"
 msgstr "Jetzt nach Kanälen suchen?"
