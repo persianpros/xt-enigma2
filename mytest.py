@@ -22,7 +22,7 @@ from traceback import print_exc
 profile("SimpleSummary")
 from Screens import InfoBar
 from Screens.SimpleSummary import SimpleSummary
-from Plugins.Extensions.AtemioPanel.SkinDeveloperSummary import SkinDeveloperSummary
+#from Plugins.Extensions.AtemioPanel.SkinDeveloperSummary import SkinDeveloperSummary
 
 from sys import stdout, exc_info
 

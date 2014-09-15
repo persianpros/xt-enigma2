@@ -53,7 +53,7 @@ from time import time, localtime, strftime
 from bisect import insort
 from sys import maxint
 
-from Plugins.Extensions.AtemioPanel.plugin import AtemioMenu
+#from Plugins.Extensions.AtemioPanel.plugin import AtemioMenu
 import os, cPickle
 
 # hack alert!
@@ -3034,7 +3034,7 @@ class InfoBarSubserviceSelection:
 		self["SubserviceSelectionAction"] = HelpableActionMap(self, "InfobarSubserviceSelectionActions",
 			{
 				"GreenPressed": self.GreenPressed,
-				"showAtemioPanel": (self.AtemioBlueP, _("Atemio BluePanel"))
+		#		"showAtemioPanel": (self.AtemioBlueP, _("Atemio BluePanel"))
 			})
 
 		self["SubserviceQuickzapAction"] = HelpableActionMap(self, "InfobarSubserviceQuickzapActions",
@@ -3052,8 +3052,8 @@ class InfoBarSubserviceSelection:
 
 		self.bsel = None
 
-	def AtemioBlueP(self):
-		self.session.open(AtemioMenu)
+	#def BlueP(self):
+	#	self.session.open(AtemioMenu)
 
 	def GreenPressed(self):
 		from Screens.PluginBrowser import PluginBrowser
