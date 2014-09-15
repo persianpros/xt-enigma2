@@ -11312,7 +11312,7 @@ msgstr ""
 "Flashen   Online / Lokal Ihrer %s %s."
 
 msgid "Flash On the fly (select a image)"
-msgstr "Image zum Flashen auswählen""
+msgstr "Image zum Flashen auswählen"
 
 msgid ""
 "Do you really want to delete\n"
