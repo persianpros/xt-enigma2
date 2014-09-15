@@ -63,6 +63,7 @@ class FlashOnline(Screen):
 		<widget name="key_blue" position="420,360" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="info-online" position="10,30" zPosition="1" size="450,100" font="Regular;20" halign="left" valign="top" transparent="1" />
 		<widget name="info-local" position="10,150" zPosition="1" size="450,200" font="Regular;20" halign="left" valign="top" transparent="1" />
+		<widget name="info-flash" position="10,190" zPosition="1" size="450,200" font="Regular;20" halign="left" valign="top" transparent="1" />
 	</screen>"""
 		
 	def __init__(self, session):
@@ -75,7 +76,8 @@ class FlashOnline(Screen):
 		self["key_red"] = Button(_("Exit"))
 		self["key_blue"] = Button("")
 		self["info-local"] = Label(_("Local = Flash a image from local path /hdd/images"))
-		self["info-online"] = Label(_("Online = Download a image and flash it"))
+		self["info-online"] = Label(_("Online = Download a image from Atemio4you and flash it"))
+		self["info-flash"] = Label(_("Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nYou have the option to download or to flash a local image.")) 
 		
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
 		{
