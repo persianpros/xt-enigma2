@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-09-08 19:00+0000\n"
+"PO-Revision-Date: 2014-09-15 12:15+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: German \n"
 "MIME-Version: 1.0\n"
@@ -2011,7 +2011,7 @@ msgid "Now skipping restore process"
 msgstr ""
 
 msgid "Select files/folders to backup"
-msgstr "Wählen Sie Dateien/Ordner für die Sicherung"
+msgstr "Dateien/Ordner für Backup"
 
 msgid "Save"
 msgstr "Speichern"
@@ -4122,7 +4122,7 @@ msgid ""
 msgstr "\nWiederherstellen Ihrer nach Datum sortierten Sicherungen."
 
 msgid "Select backup location"
-msgstr "Wählen Sie den Sicherungsort"
+msgstr "Sicherungsort auswählen"
 
 msgid ""
 "\n"
@@ -4131,13 +4131,13 @@ msgid ""
 msgstr "\nWählen Sie Ihr Sicherungs-Laufwerk.\nAktuelles Laufwerk: "
 
 msgid "Select backup files"
-msgstr "Wählen Sie die zu sichernden Dateien"
+msgstr "Zu sichernden Dateien auswählen"
 
 msgid "Select files for backup."
 msgstr "Dateien zum Sichern auswählen."
 
 msgid "Packet management"
-msgstr "Paketverwaltung"
+msgstr "Paket-Verwaltung"
 
 msgid ""
 "\n"
@@ -4145,7 +4145,7 @@ msgid ""
 msgstr "\nAnzeigen, Installieren und Entfernen verfügbarer oder installierter Pakete."
 
 msgid "Select upgrade source"
-msgstr "Wählen Sie eine Update-Quelle"
+msgstr "Update-Quelle auswählen"
 
 msgid ""
 "\n"
@@ -4427,7 +4427,7 @@ msgid "Installation finished."
 msgstr "Installation beendet."
 
 msgid "Select upgrade source to edit."
-msgstr "Wählen Sie eine Update-Quelle zum Bearbeiten."
+msgstr "Update-Quelle auswählen"
 
 msgid "Edit upgrade source url."
 msgstr "Update Quell-URL bearbeiten."
@@ -4436,7 +4436,7 @@ msgid "Reload"
 msgstr "Aktualisieren"
 
 msgid "Packet manager"
-msgstr "Paketmanager"
+msgstr "Paket-Verwaltung"
 
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Versuche eine neue Aktualisierungsliste herunterzuladen. Bitte warten Sie..."
@@ -7809,7 +7809,7 @@ msgid "Remove plugins"
 msgstr "Plugins entfernen"
 
 msgid "Download plugins"
-msgstr "Plugins herunterladen"
+msgstr "Download"
 
 msgid "Hold plugins"
 msgstr "Plugin sperren"
