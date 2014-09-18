@@ -1,4 +1,4 @@
-installdir = $(pkglibdir)/python/Plugins/SystemPlugins/DeviceManager
+installdir = $(pkglibdir)/python/Plugins/SystemPlugins/AtemioDeviceManager
 
 SUBDIRS = icons
 
