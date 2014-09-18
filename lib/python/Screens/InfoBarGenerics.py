@@ -915,6 +915,7 @@ class InfoBarChannelSelection:
 				"openServiceList": (self.openServiceList, _("Open service list")),
 				"openSatellites": (self.openSatellites, _("Open satellites list")),
 				"openBouquets": (self.openBouquets, _("Open favouries list")),
+				"openatemiodevicemanager": (self.openAtemioDeviceManager, _("open atemio device manager")),
 				"LeftPressed": self.LeftPressed,
 				"RightPressed": self.RightPressed,
 				"ChannelPlusPressed": self.ChannelPlusPressed,
@@ -924,6 +925,16 @@ class InfoBarChannelSelection:
 				"FavouritesPressed": self.FavouritesPressed,
 				"SleepPressed": self.SleepPressed,
 			})
+
+	def openAtemioDeviceManager(self):
+		if fileExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/AtemioDeviceManager/plugin.pyo"):
+			for plugin in plugins.getPlugins([PluginDescriptor.WHERE_EXTENSIONSMENU, PluginDescriptor.WHERE_EVENTINFO]):
+				if plugin.name == _("Atemio Device Manager - Fast Mounted Remove"):
+					self.runPlugin(plugin)
+					break
+		else:
+			self.session.open(MessageBox, _("The Atemio Device Manager plugin is not installed!\nPlease install it."), type = MessageBox.TYPE_INFO,timeout = 10 )
+
 
 	def SleepPressed(self):
 		self.session.open(PowerTimerEditList)
