@@ -11115,6 +11115,11 @@ msgstr "Oberfläche auswählen"
 msgid "Fan mode"
 msgstr "Lüfter-Modus"
 
+msgid "save"
+msgstr "Speichern"
+
+
+
 msgid "Fan setup"
 msgstr "Einstellungen Lüfter"
 
@@ -11225,9 +11230,14 @@ msgid ""
 msgstr "Danke für die Benutzung des Assistenten. Die %s %s ist jetzt einsatzbereit.\nDrücke OK auf der Fernbedienung um die %s %s jetzt zu benutzen."
 
 msgid ""
-"Please setup your user interface by adjusting the values till the edges of the blue box are touching the edges of your TV.\n"
+"Please setup your user interface by adjusting the values till the edges of "
+"the red box are touching the edges of your TV.\n"
 "When you are ready press OK to continue."
-msgstr "Konfiguriere die Benutzeroberfläche durch ändern der Werte bis die blaue Box die Ränder des Fernsehers erreichen.\nDrücke OK zum Fortfahren"
+msgstr ""
+"Justieren Sie die Position der Benutzeroberfläche. Die  Ränder des roten "
+"Bereichs sollten die Ränder des TV-Bildschirms berühren.\n"
+"\n"
+"Danach OK drücken zum Fortfahren."
 
 msgid ""
 "Video input selection\n"
