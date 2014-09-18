@@ -115,7 +115,7 @@ self.selectKey("LEFT")
 self.selectKey("RIGHT")
 			</code>
 		</step>
-		<step id="channels">
+		<!--step id="channels">
 			<condition>
 from Components.NimManager import nimmanager
 self.condition = nimmanager.somethingConnected() and config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
@@ -128,7 +128,7 @@ self.clearSelectedKeys()
 self.selectKey("LEFT")
 self.selectKey("RIGHT")
 			</code>
-		</step>
+		</step-->
 		<step id="scanquestion">
 			<text value="Do you want to do a service scan?" />
 			<displaytext value="Do you want to do a service scan?" />
@@ -175,7 +175,6 @@ self.condition = nimmanager.somethingConnected() and not config.misc.installwiza
 				<listentry caption="Yes, do another manual scan now" step="manualscan" />
 			</list>
 		</step>
-<!--
 		<step id="finisheddefaultsatlists">
 			<text value="Do you want to enable the parental control feature on your %s %s?" />
 			<displaytext value="Do you want to enable the parental control feature on your %s %s?" />
@@ -220,10 +219,9 @@ config.ParentalControl.servicepinactive.save()
 config.ParentalControl.setuppin.value = config.ParentalControl.servicepin[0].value
 config.ParentalControl.setuppin.save()
 			</code>
-			<text value="After the start wizard is completed, you need to protect single services. Refer to your %s %s's manual on how to do that." />
-			<displaytext value="After the start wizard is completed, you need to protect single services. Refer to your %s %s's manual on how to do that." />
+			<text value="After the start wizard is completed, you need to protect single services. Refer to your %s %s's manual on how to do that.\n\nPlease press OK to continue." />
+			<displaytext value="After the start wizard is completed, you need to protect single services. Refer to your %s %s's manual on how to do that.\n\nPlease press OK to continue." />
 		</step>
--->
 		<step id="end" laststep="true">
 			<condition>
 self.condition = self.isLastWizard

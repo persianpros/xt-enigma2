@@ -11191,7 +11191,7 @@ msgid "Yes, do a manual scan now"
 msgstr "Ja, eine manuelle Suche durchführen"
 
 msgid "What do you want to scan?"
-msgstr ""
+msgstr "Was wollen Sie scannen?"
 
 msgid "Do you want to do another manual service scan?"
 msgstr "Wollen Sie eine weitere manuelle Suche durchführen?"
@@ -11201,27 +11201,34 @@ msgstr "Ja, eine weitere manuelle Suche durchführen"
 
 #, python-format
 msgid "Do you want to enable the parental control feature on your %s %s?"
-msgstr ""
+msgstr "Den Jugendschutz auf der %s %s aktivieren?"
 
 msgid ""
 "You need to set a PIN code and hide it from your children.\n"
 "\n"
 "Do you want to set the pin now?"
 msgstr ""
+"Sie müssen einen PIN-Code eingeben und diesen Kindern unzugänglich machen.\n"
+"\n"
+"Den PIN-Code jetzt eingeben?"
 
 msgid "parental control pin"
-msgstr ""
+msgstr "Jugendschutz-PIN-Code"
 
 msgid ""
 "Please be aware, that anyone can disable the parental control, if you have "
 "not set a PIN."
 msgstr ""
+"Bitte beachten: ohne gesetzte PIN kann der Jugendschutz ohne weiteres "
+"deaktiviert werden."
 
 #, python-format
 msgid ""
 "After the start wizard is completed, you need to protect single services. "
-"Refer to your %s %s's manual on how to do that."
+"Refer to your %s %s's manual on how to do that.\n\nPlease press OK to continue."
 msgstr ""
+"Nachdem der Startassistent beendet wurde, müssen Sie ggf. noch einzelne "
+"Sender blockieren. Die Vorgehensweise bitte dem Handbuch der %s %s entnehmen.\n\nBitte drücken Sie OK um fortzufahren."
 
 #, python-format
 msgid ""
@@ -11232,12 +11239,12 @@ msgstr "Danke für die Benutzung des Assistenten. Die %s %s ist jetzt einsatzber
 msgid ""
 "Please setup your user interface by adjusting the values till the edges of "
 "the red box are touching the edges of your TV.\n"
-"When you are ready press OK to continue."
+"When you are ready press green to continue."
 msgstr ""
 "Justieren Sie die Position der Benutzeroberfläche. Die  Ränder des roten "
 "Bereichs sollten die Ränder des TV-Bildschirms berühren.\n"
 "\n"
-"Danach OK drücken zum Fortfahren."
+"Danach grün drücken um zu speichern."
 
 msgid ""
 "Video input selection\n"
