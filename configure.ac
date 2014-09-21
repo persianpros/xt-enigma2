@@ -323,6 +323,10 @@ lib/python/Components/Sources/Makefile
 lib/python/Screens/Makefile
 lib/python/Plugins/Makefile
 lib/python/Plugins/Extensions/Makefile
+lib/python/Plugins/Extensions/AtemioPanel/Makefile
+lib/python/Plugins/Extensions/AtemioPanel/buttons/Makefile
+lib/python/Plugins/Extensions/AtemioPanel/icons/Makefile
+lib/python/Plugins/Extensions/AtemioPanel/meta/Makefile
 lib/python/Plugins/Extensions/CutListEditor/Makefile
 lib/python/Plugins/Extensions/CutListEditor/meta/Makefile
 lib/python/Plugins/Extensions/DVDBurn/Makefile
