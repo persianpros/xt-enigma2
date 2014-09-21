@@ -15,8 +15,9 @@ from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, SCOPE_CURRENT_SKIN
 from os import popen, system, remove, listdir, chdir, getcwd, statvfs, mkdir, path, walk
 from Screens.NetworkSetup import *
-from Screens.PluginBrowser import *
-from Plugins.SystemPlugins.SoftwareManager.plugin import *
+#from Screens.PluginBrowser import *
+#from Plugins.SystemPlugins.SoftwareManager.plugin import *
+from IPKInstaller import AtemioIPKInstaller
 from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
 from About import AboutTeam
 import os
@@ -65,11 +66,10 @@ class AtemioPanel(Screen):
 		self['conn'] = StaticText('')
 		self['spaceused'] = ProgressBar()
 
-		self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure and install your softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
-			('Network',_('Network Setup'),_('configure your network'),'icons/p_network.png',True),
-			('SoftwareManager',_('Software Manager'),_('Update / Backup / Restore of your box.'),'icons/p_software.png',True),  
-			('PluginBrowser',_('Plugin Browser'),_('install / remove Plugins from feed.'),'icons/p_plugins.png',True),       
-			('AtemioDevice',_('Atemio Device Manager'),_('Setup your HDD / USB device.'),'icons/p_device.png', True),
+		self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure and install softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
+			('Network',_('Network'),_('configure your network'),'icons/p_network.png',True),
+			('AtemioIPKInstaller',_('Atemio IPK Installer'),_('install IPK from any device'),'icons/p_plugins.png',True),        
+			('AtemioDevice',_('Atemio Device Manager'),_('Setup HDD / USB devices'),'icons/p_device.png', True),
 			('Info',_('Info'),_('Show info'),'icons/p_about.png', True)]
 
 		self['actions'] = ActionMap(['WizardActions', 'ColorActions'], 
@@ -112,10 +112,8 @@ class AtemioPanel(Screen):
 			self.session.open(SoftCamPanel.SoftCamPanel)
 		elif sel == 'Network':
 			self.session.open(NetworkAdapterSelection)
-		elif sel == 'SoftwareManager':
-			self.session.open(UpdatePluginMenu)
-		elif sel == 'PluginBrowser':
-			self.session.open(PluginBrowser)
+		elif sel == 'AtemioIPKInstaller':
+			self.session.open(AtemioIPKInstaller)
 		elif sel == 'AtemioDevice':
 			self.session.open(HddSetup)
 		elif sel == 'Info':

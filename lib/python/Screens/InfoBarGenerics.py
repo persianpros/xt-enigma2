@@ -3063,7 +3063,7 @@ class InfoBarSubserviceSelection:
 
 		self.bsel = None
 
-	def BlueP(self):
+	def AtemioBlueP(self):
 		self.session.open(AtemioPanel)
 
 	def GreenPressed(self):
