@@ -86,7 +86,7 @@ class IpkgComponent:
 
 	def startCmd(self, cmd, args = None):
 		if cmd == self.CMD_UPDATE:
-			if getImageVersion() == 'beta':
+			if getImageVersion() == '2.3':
 				if os.path.exists('/var/lib/opkg/lists'):
 					rmtree('/var/lib/opkg/lists')
 			else:
