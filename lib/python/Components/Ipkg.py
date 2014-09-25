@@ -170,6 +170,7 @@ class IpkgComponent:
 				self.fetchedList.append(item)
 				self.callCallbacks(self.EVENT_LISTITEM, item)
 				return
+
 		try:
 			if data.startswith('Downloading'):
 				self.callCallbacks(self.EVENT_DOWNLOAD, data.split(' ', 5)[1].strip())
@@ -208,10 +209,10 @@ class IpkgComponent:
 
 	def getFetchedList(self):
 		return self.fetchedList
-		
+
 	def getExcludeList(self):
 		return self.excludeList
-
+	
 	def stop(self):
 		self.cmd.kill()
 
