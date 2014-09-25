@@ -10,14 +10,12 @@ from Components.Sources.Boolean import Boolean
 from Components.config import config, configfile, ConfigBoolean, ConfigClock
 from Components.SystemInfo import SystemInfo
 from Components.UsageConfig import preferredInstantRecordPath, defaultMoviePath, preferredTimerPath, ConfigSelection
-# from Components.Task import Task, Job, job_manager as JobManager
+from Components.Task import Task, Job, job_manager as JobManager
 from Components.Pixmap import MovingPixmap, MultiPixmap
 from Components.Sources.StaticText import StaticText
 from Components.ScrollLabel import ScrollLabel
 from Plugins.Plugin import PluginDescriptor
-
 from Components.Timeshift import InfoBarTimeshift
-
 from Screens.Screen import Screen
 from Screens import ScreenSaver
 from Screens.ChannelSelection import ChannelSelection, PiPZapSelection, BouquetSelector, EpgBouquetSelector

@@ -16,9 +16,9 @@ from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, SCOPE_
 from os import popen, system, remove, listdir, chdir, getcwd, statvfs, mkdir, path, walk
 from Screens.NetworkSetup import *
 #from Screens.PluginBrowser import *
-#from Plugins.SystemPlugins.SoftwareManager.plugin import *
-from IPKInstaller import AtemioIPKInstaller
-from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
+#from Plugins.SystemPlugins.SoftwareManager.Flash_online import FlashOnline
+from IPKInstaller import Ipkinstall
+#from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
 from About import AboutTeam
 import os
 import sys
@@ -68,7 +68,8 @@ class AtemioPanel(Screen):
 
 		self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure and install softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
 			('Network',_('Network'),_('configure your network'),'icons/p_network.png',True),
-			('AtemioIPKInstaller',_('Atemio IPK Installer'),_('install IPK from any device'),'icons/p_plugins.png',True),        
+			('AtemioIPKInstaller',_('Atemio IPK Installer'),_('install IPK from any device'),'icons/p_plugins.png',True),
+			#('FlashOnline',_('Flash Image online'),_('Flash image online on the fly'),'icons/p_plugins.png',True),        
 			('AtemioDevice',_('Atemio Device Manager'),_('Setup HDD / USB devices'),'icons/p_device.png', True),
 			('Info',_('Info'),_('Show info'),'icons/p_about.png', True)]
 
@@ -113,9 +114,11 @@ class AtemioPanel(Screen):
 		elif sel == 'Network':
 			self.session.open(NetworkAdapterSelection)
 		elif sel == 'AtemioIPKInstaller':
-			self.session.open(AtemioIPKInstaller)
-		elif sel == 'AtemioDevice':
-			self.session.open(HddSetup)
+			self.session.open(Ipkinstall)
+		#elif sel == 'FlashOnline':
+		#	self.session.open(FlashOnline)
+		#elif sel == 'AtemioDevice':
+		#	self.session.open(HddSetup)
 		elif sel == 'Info':
 			self.session.open(AboutTeam)
 
