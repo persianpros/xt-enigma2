@@ -86,7 +86,7 @@ class IpkgComponent:
 
 	def startCmd(self, cmd, args = None):
 		if cmd == self.CMD_UPDATE:
-			if getImageVersion() == '4.0':
+			if getImageVersion() == 'beta':
 				if os.path.exists('/var/lib/opkg/lists'):
 					rmtree('/var/lib/opkg/lists')
 			else:
@@ -164,9 +164,6 @@ class IpkgComponent:
 				self.excludeList.append(item)
 				return
 			elif item[0].find('-bootlogo') > -1 and not config.plugins.softwaremanager.overwriteBootlogoFiles.value:
-				self.excludeList.append(item)
-				return
-			elif item[0].find('openhdf-spinner') > -1 and not config.plugins.softwaremanager.overwriteSpinnerFiles.value:
 				self.excludeList.append(item)
 				return
 			else:
