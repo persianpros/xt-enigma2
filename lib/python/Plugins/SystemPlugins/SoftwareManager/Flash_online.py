@@ -65,7 +65,7 @@ class FlashOnline(Screen):
 		<widget name="info-local" position="10,150" zPosition="1" size="450,200" font="Regular;20" halign="left" valign="top" transparent="1" />
 		<widget name="info-flash" position="10,190" zPosition="1" size="450,200" font="Regular;20" halign="left" valign="top" transparent="1" />
 	</screen>"""
-		
+
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		self.session = session
@@ -77,9 +77,9 @@ class FlashOnline(Screen):
 		self["key_blue"] = Button("")
 		self["info-local"] = Label(_("Local = Flash a image from local path /hdd/images"))
 		self["info-online"] = Label(_("Online = Download a image from Atemio4you and flash it"))
-		self["info-flash"] = Label(_("Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nYou have the option to download or to flash a local image.")) 
-		
-		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
+		self["info-flash"] = Label(_("Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nYou have the option to download or to flash a local image."))
+
+		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
 			"blue": self.blue,
 			"yellow": self.yellow,
@@ -104,7 +104,7 @@ class FlashOnline(Screen):
 				os.mkdir(imagePath)
 			except:
 				pass
-		
+
 		if os.path.exists(flashPath):
 			try:
 				os.system('rm -rf ' + flashPath)
@@ -117,8 +117,8 @@ class FlashOnline(Screen):
 		return True
 
 	def quit(self):
-		self.close()	
-		
+		self.close()
+
 	def blue(self):
 		pass
 
@@ -147,7 +147,7 @@ class doFlashImage(Screen):
 		<widget name="key_blue" position="420,460" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="imageList" position="10,10" zPosition="1" size="450,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>"""
-		
+
 	def __init__(self, session, online ):
 		Screen.__init__(self, session)
 		self.session = session
@@ -168,7 +168,7 @@ class doFlashImage(Screen):
 		else:
 			self.feed = "hdf"
 		self["imageList"] = MenuList(self.imagelist)
-		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
+		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
 			"green": self.green,
 			"yellow": self.yellow,
@@ -181,10 +181,10 @@ class doFlashImage(Screen):
 		if os.path.exists('/etc/enigma2/newfeed'):
 			self.newfeed = ReadNewfeed()
 
-		
+
 	def quit(self):
-		self.close()	
-		
+		self.close()
+
 	def blue(self):
 		if self.Online:
 			if image == 1:
@@ -212,7 +212,7 @@ class doFlashImage(Screen):
 				os.remove(self.imagePath + "/" + self.filename)
 			self.imagelist.remove(self.filename)
 			self["imageList"].l.setList(self.imagelist)
-		
+
 	def box(self):
 		box = getBoxType()
 		machinename = getMachineName()
@@ -285,7 +285,7 @@ class doFlashImage(Screen):
 					self.close()
 		else:
 			self.session.openWithCallback(self.startInstallLocal, MessageBox, _("Do you want to backup your settings now?"), default=False)
-			
+
 
 	def ImageDownloadCB(self, ret):
 		if ret:
@@ -318,7 +318,7 @@ class doFlashImage(Screen):
 		Settings = False
 		AllPlugins = False
 		noPlugins = False
-		
+
 		if os.path.exists('/media/hdd/images/config/settings'):
 			Settings = True
 		if os.path.exists('/media/hdd/images/config/plugins'):
@@ -425,7 +425,7 @@ class doFlashImage(Screen):
 			os.mkdir(flashTmp)
 		kernel = True
 		rootfs = True
-		
+
 		for path, subdirs, files in os.walk(tmpPath):
 			for name in files:
 				if name.find('kernel') > -1 and name.endswith('.bin') and kernel:
@@ -448,7 +448,7 @@ class doFlashImage(Screen):
 					dest = flashTmp + '/e2jffs2.img'
 					shutil.copyfile(binfile, dest)
 					rootfs = False
-					
+
 	def yellow(self):
 		if not self.Online:
 			self.session.openWithCallback(self.DeviceBrowserClosed, DeviceBrowser, None, matchingPattern="^.*\.(zip|bin|jffs2|img)", showDirectories=True, showMountpoints=True, inhibitMounts=["/autofs/sr0/"])
@@ -491,7 +491,7 @@ class doFlashImage(Screen):
 				self.unzip_image(strPath + '/' + filename, flashPath)
 			else:
 				self.layoutFinished()
-	
+
 		else:
 			self.imagePath = imagePath
 
@@ -546,9 +546,11 @@ class doFlashImage(Screen):
 				if line.find("<a href='image/%s/" % box) > -1:
 					t = line.find("<a href='image/%s/" % box)
 					if self.feed == "a4y" or self.feed == "a4y2":
-						self.imagelist.append(line[t+tt+16:t+tt+tt+51])
+						e = line.find("zip'")
+						self.imagelist.append(line[t+tt+16:e+3])
 					else:
-						self.imagelist.append(line[t+tt+10:t+tt+tt+40])
+						e = line.find('zip"')
+						self.imagelist.append(line[t+tt+10:t+tt+10+tt+e+3])
 		else:
 			self["key_blue"].setText(_("Delete"))
 			self["key_yellow"].setText(_("Devices"))
