@@ -1,7 +1,9 @@
 import os
 from enigma import eConsoleAppContainer
 from Components.Harddisk import harddiskmanager
-from boxbranding import getImageDistro
+from Components.config import config
+from shutil import rmtree
+from boxbranding import getImageDistro, getImageVersion
 
 opkgDestinations = []
 opkgStatusPath = ''
@@ -65,6 +67,8 @@ class IpkgComponent:
 		self.cmd = eConsoleAppContainer()
 		self.cache = None
 		self.callbackList = []
+		self.fetchedList = []
+		self.excludeList = []
 		self.setCurrentCommand()
 
 	def setCurrentCommand(self, command = None):
@@ -82,34 +86,48 @@ class IpkgComponent:
 
 	def startCmd(self, cmd, args = None):
 		if cmd == self.CMD_UPDATE:
-			for fn in os.listdir('/var/lib/opkg'):
-				if fn.startswith(getImageDistro()):
-					os.remove('/var/lib/opkg/'+fn)
+			if getImageVersion() == '4.0':
+				if os.path.exists('/var/lib/opkg/lists'):
+					rmtree('/var/lib/opkg/lists')
+			else:
+				for fn in os.listdir('/var/lib/opkg'):
+					if fn.startswith(getImageDistro()):
+						os.remove('/var/lib/opkg/'+fn)
 			self.runCmdEx("update")
 		elif cmd == self.CMD_UPGRADE:
 			append = ""
 			if args["test_only"]:
 				append = " -test"
+			if len(self.excludeList) > 0:
+				for x in self.excludeList:
+					print"[IPKG] exclude Package (hold): '%s'" % x[0]
+					os.system("opkg flag hold " + x[0])
 			self.runCmdEx("upgrade" + append)
 		elif cmd == self.CMD_LIST:
 			self.fetchedList = []
+			self.excludeList = []
 			if args['installed_only']:
 				self.runCmdEx("list_installed")
 			else:
 				self.runCmd("list")
 		elif cmd == self.CMD_INSTALL:
-			self.runCmd("install " + args['package'])
+			self.runCmd("--force-overwrite install " + args['package'])
 		elif cmd == self.CMD_REMOVE:
 			self.runCmd("remove " + args['package'])
 		elif cmd == self.CMD_UPGRADE_LIST:
 			self.fetchedList = []
-			self.runCmdEx("list-upgradable")
+			self.excludeList = []
+			self.runCmd("list-upgradable")
 		self.setCurrentCommand(cmd)
 
 	def cmdFinished(self, retval):
 		self.callCallbacks(self.EVENT_DONE)
 		self.cmd.appClosed.remove(self.cmdFinished)
 		self.cmd.dataAvail.remove(self.cmdData)
+		if len(self.excludeList) > 0:
+			for x in self.excludeList:
+				print"[IPKG] restore Package flag (unhold): '%s'" % x[0]
+				os.system("opkg flag ok " + x[0])
 
 	def cmdData(self, data):
 # 		print "data:", data
@@ -133,9 +151,29 @@ class IpkgComponent:
 	def parseLine(self, data):
 		if self.currentCommand in (self.CMD_LIST, self.CMD_UPGRADE_LIST):
 			item = data.split(' - ', 2)
-			self.fetchedList.append(item)
-			self.callCallbacks(self.EVENT_LISTITEM, item)
-			return
+			if item[0].find('-settings-') > -1 and not config.plugins.softwaremanager.overwriteSettingsFiles.value:
+				self.excludeList.append(item)
+				return
+			elif item[0].find('kernel-module-') > -1 and not config.plugins.softwaremanager.overwriteDriversFiles.value:
+				self.excludeList.append(item)
+				return
+			elif item[0].find('-softcams-') > -1 and not config.plugins.softwaremanager.overwriteEmusFiles.value:
+				self.excludeList.append(item)
+				return
+			elif item[0].find('-picons-') > -1 and not config.plugins.softwaremanager.overwritePiconsFiles.value:
+				self.excludeList.append(item)
+				return
+			elif item[0].find('-bootlogo') > -1 and not config.plugins.softwaremanager.overwriteBootlogoFiles.value:
+				self.excludeList.append(item)
+				return
+			elif item[0].find('openhdf-spinner') > -1 and not config.plugins.softwaremanager.overwriteSpinnerFiles.value:
+				self.excludeList.append(item)
+				return
+			else:
+				self.fetchedList.append(item)
+				self.callCallbacks(self.EVENT_LISTITEM, item)
+				return
+
 		try:
 			if data.startswith('Downloading'):
 				self.callCallbacks(self.EVENT_DOWNLOAD, data.split(' ', 5)[1].strip())
@@ -175,6 +213,9 @@ class IpkgComponent:
 	def getFetchedList(self):
 		return self.fetchedList
 
+	def getExcludeList(self):
+		return self.excludeList
+	
 	def stop(self):
 		self.cmd.kill()
 
