@@ -98,6 +98,10 @@ class IpkgComponent:
 			append = ""
 			if args["test_only"]:
 				append = " -test"
+			if len(self.excludeList) > 0:
+				for x in self.excludeList:
+					print"[IPKG] exclude Package (hold): '%s'" % x[0]
+					os.system("opkg flag hold " + x[0])
 			self.runCmdEx("upgrade" + append)
 		elif cmd == self.CMD_LIST:
 			self.fetchedList = []
