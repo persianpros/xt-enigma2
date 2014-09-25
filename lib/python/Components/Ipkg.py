@@ -117,7 +117,7 @@ class IpkgComponent:
 		elif cmd == self.CMD_UPGRADE_LIST:
 			self.fetchedList = []
 			self.excludeList = []
-			self.runCmdEx("list-upgradable")
+			self.runCmd("list-upgradable")
 		self.setCurrentCommand(cmd)
 
 	def cmdFinished(self, retval):
