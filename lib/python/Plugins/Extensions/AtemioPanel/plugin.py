@@ -18,7 +18,7 @@ from Screens.NetworkSetup import *
 #from Screens.PluginBrowser import *
 #from Plugins.SystemPlugins.SoftwareManager.Flash_online import FlashOnline
 from IPKInstaller import Ipkinstall
-#from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
+from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
 from About import AboutTeam
 import os
 import sys
@@ -117,8 +117,8 @@ class AtemioPanel(Screen):
 			self.session.open(Ipkinstall)
 		#elif sel == 'FlashOnline':
 		#	self.session.open(FlashOnline)
-		#elif sel == 'AtemioDevice':
-		#	self.session.open(HddSetup)
+		elif sel == 'AtemioDevice':
+			self.session.open(HddSetup)
 		elif sel == 'Info':
 			self.session.open(AboutTeam)
 
