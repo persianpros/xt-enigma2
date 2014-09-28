@@ -28,9 +28,9 @@ if distro.lower() == "openhdf":
 	image = 1
 elif distro.lower() == "atemio4you":
   image = 0
-feedurl_a4y = 'http://beta.atemio4you.com/'
+feedurl_a4y = 'http://image.atemio4you.com/'
 ImageVersion2= '2.3'
-feedurl_a4y2= 'http://beta.atemio4you.com/'
+feedurl_a4y2= 'http://image.atemio4you.com/'
 feedurl_hdf = 'http://v4.hdfreaks.cc'
 imagePath = '/media/hdd/images'
 flashPath = '/media/hdd/images/flash'
