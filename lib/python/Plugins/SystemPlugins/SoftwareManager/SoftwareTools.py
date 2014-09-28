@@ -1,18 +1,17 @@
 # -*- coding: iso-8859-1 -*-
-from time import time
-from boxbranding import getImageVersion
-
 from enigma import eConsoleAppContainer
-
 from Components.Console import Console
+from Components.About import about
 from Components.PackageInfo import PackageInfoHandler
 from Components.Language import language
 from Components.Sources.List import List
 from Components.Ipkg import IpkgComponent
 from Components.Network import iNetwork
-from Tools.Directories import resolveFilename, SCOPE_METADIR
-from boxbranding import getBoxType
+from Tools.Directories import pathExists, fileExists, resolveFilename, SCOPE_METADIR
+from Tools.HardwareInfo import HardwareInfo
+from time import time
 
+from boxbranding import getBoxType, getImageVersion
 
 class SoftwareTools(PackageInfoHandler):
 	lastDownloadDate = None
@@ -33,6 +32,7 @@ class SoftwareTools(PackageInfoHandler):
 		self.language = language.getLanguage()[:2] # getLanguage returns e.g. "fi_FI" for "language_country"
 		PackageInfoHandler.__init__(self, self.statusCallback, blocking = False, neededTag = 'ALL_TAGS', neededFlag = self.ImageVersion)
 		self.directory = resolveFilename(SCOPE_METADIR)
+		self.hardware_info = HardwareInfo()
 		self.list = List([])
 		self.NotifierCallback = None
 		self.Console = Console()

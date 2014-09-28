@@ -32,6 +32,14 @@ msgstr ""
 "A finished powertimer wants to shutdown your %s %s.\n"
 "Do that now?"
 
+msgid "Yes, restore the settings now"
+msgstr "Yes, restore the settings now"
+
+#
+msgid "No, just start my %s %s"
+msgstr "No, just start my %s %s"
+
+
 #, python-format
 msgid ""
 "A finished powertimer wants to reboot your %s %s.\n"

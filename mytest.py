@@ -1,5 +1,4 @@
-import sys
-import os
+import sys, os
 from time import time
 
 if os.path.isfile("/usr/lib/enigma2/python/enigma.zip"):
@@ -10,7 +9,7 @@ profile("PYTHON_START")
 
 import Tools.RedirectOutput
 import enigma
-from boxbranding import getBrandOEM, getBoxType
+from boxbranding import getBoxType, getBrandOEM
 import eConsoleImpl
 import eBaseImpl
 enigma.eTimer = eBaseImpl.eTimer
@@ -22,7 +21,6 @@ from traceback import print_exc
 profile("SimpleSummary")
 from Screens import InfoBar
 from Screens.SimpleSummary import SimpleSummary
-from Plugins.Extensions.AtemioPanel.SkinDeveloperSummary import SkinDeveloperSummary
 
 from sys import stdout, exc_info
 
@@ -41,11 +39,11 @@ from skin import readSkin
 
 profile("LOAD:Tools")
 from Tools.Directories import InitFallbackFiles, resolveFilename, SCOPE_PLUGINS, SCOPE_ACTIVE_SKIN, SCOPE_CURRENT_SKIN, SCOPE_CONFIG
-from Components.config import config, configfile, ConfigText, ConfigYesNo, ConfigInteger, ConfigSelection, NoSave
+from Components.config import config, configfile, ConfigText, ConfigYesNo, ConfigInteger, ConfigSelection, NoSave, ConfigNumber
 InitFallbackFiles()
 
 profile("config.misc")
-config.misc.boxtype = ConfigText(default = boxtype)
+config.misc.boxtype = ConfigText(default = getBoxType())
 config.misc.blackradiopic = ConfigText(default = resolveFilename(SCOPE_ACTIVE_SKIN, "black.mvi"))
 radiopic = resolveFilename(SCOPE_ACTIVE_SKIN, "radio.mvi")
 if os.path.exists(resolveFilename(SCOPE_CONFIG, "radio.mvi")):
@@ -64,8 +62,8 @@ config.misc.DeepStandby = NoSave(ConfigYesNo(default=False)) # detect deepstandb
 #def leaveStandby():
 #	print "!!!!!!!!!!!!!!!!!leave standby"
 
-#def standbyCountChanged(configelement):
-#	print "!!!!!!!!!!!!!!!!!enter standby num", configelement.value
+#def standbyCountChanged(configElement):
+#	print "!!!!!!!!!!!!!!!!!enter standby num", configElement.value
 #	from Screens.Standby import inStandby
 #	inStandby.onClose.append(leaveStandby)
 
@@ -92,7 +90,7 @@ def NTPserverChanged(configelement):
 	os.chmod("/etc/default/ntpdate", 0755)
 	from Components.Console import Console
 	Console = Console()
-	Console.ePopen('/usr/bin/ntpdate-sync')
+	Console.ePopen('/usr/bin/ntpdate ' + config.misc.NTPserver.value)
 config.misc.NTPserver.addNotifier(NTPserverChanged, immediate_feedback = True)
 
 profile("Twisted")
@@ -115,7 +113,10 @@ profile("LOAD:Plugin")
 from Components.PluginComponent import plugins
 
 profile("LOAD:Wizard")
+from Screens.Wizard import wizardManager
 from Screens.StartWizard import *
+from Screens.VideoWizard import *
+
 import Screens.Rc
 from Tools.BoundFunction import boundFunction
 from Plugins.Plugin import PluginDescriptor
@@ -270,10 +271,7 @@ class Session:
 
 	def instantiateSummaryDialog(self, screen, **kwargs):
 		self.pushSummary()
-		if config.atemio.skindevelopermode.value:
-			summary = SkinDeveloperSummary
-		else:
-			summary = screen.createSummary() or SimpleSummary
+		summary = screen.createSummary() or SimpleSummary
 		arguments = (screen,)
 		self.summary = self.doInstantiateDialog(summary, arguments, kwargs, self.summary_desktop)
 		self.summary.show()
@@ -394,6 +392,7 @@ class PowerKey:
 
 	def shutdown(self):
 		wasRecTimerWakeup = False
+		from time import time
 		recordings = self.session.nav.getRecordings()
 		if not recordings:
 			next_rec_time = self.session.nav.RecordTimer.getNextRecordingTime()
@@ -403,9 +402,17 @@ class PowerKey:
 				file = f.read()
 				f.close()
 				wasRecTimerWakeup = int(file) and True or False
-			if self.session.nav.RecordTimer.isRecTimerWakeup() or wasRecTimerWakeup:
+			if self.session.nav.RecordTimer.isRecTimerWakeup() or wasRecTimerWakeup or self.session.nav.RecordTimer.isRecording():
 				print "PowerOff (timer wakewup) - Recording in progress or a timer about to activate, entering standby!"
-				self.standby()
+				lastrecordEnd = 0
+				for timer in self.session.nav.RecordTimer.timer_list:
+					if lastrecordEnd == 0 or lastrecordEnd >= timer.begin:
+						print "Set after-event for recording %s to DEEP-STANDBY." % timer.name
+						timer.afterEvent = 2
+						if timer.end > lastrecordEnd:
+							lastrecordEnd = timer.end + 900
+				from Screens.MessageBox import MessageBox
+				self.session.openWithCallback(self.gotoStandby,MessageBox,_("PowerOff while Recording in progress!\nEntering standby, after recording the box will shutdown."), type = MessageBox.TYPE_INFO, timeout = 10)
 			else:
 				print "PowerOff - Now!"
 				self.session.open(Screens.Standby.TryQuitMainloop, 1)
@@ -444,6 +451,9 @@ class PowerKey:
 		if self.standbyblocked == 0:
 			self.doAction(action = config.usage.on_short_powerpress.value)
 
+	def gotoStandby(self, ret):
+		self.standby()
+
 	def standby(self):
 		if not Screens.Standby.inStandby and self.session.current_dialog and self.session.current_dialog.ALLOW_SUSPEND and self.session.in_exec:
 			self.session.open(Screens.Standby.Standby)
@@ -462,7 +472,7 @@ class AutoScartControl:
 		config.av.vcrswitch.addNotifier(self.recheckVCRSb)
 		enigma.eAVSwitch.getInstance().vcr_sb_notifier.get().append(self.VCRSbChanged)
 
-	def recheckVCRSb(self, configelement):
+	def recheckVCRSb(self, configElement):
 		self.VCRSbChanged(self.current_vcr_sb)
 
 	def VCRSbChanged(self, value):
@@ -479,9 +489,6 @@ from Screens.Ci import CiHandler
 
 profile("Load:VolumeControl")
 from Components.VolumeControl import VolumeControl
-
-from time import time, localtime, strftime
-from Tools.StbHardware import setFPWakeuptime, setRTCtime
 
 def runScreenTest():
 	config.misc.startCounter.value += 1
@@ -547,8 +554,14 @@ def runScreenTest():
 
 	profile("wakeup")
 
+	from time import time, strftime, localtime
+	from Tools.StbHardware import setFPWakeuptime, getFPWakeuptime, setRTCtime
 	#get currentTime
 	nowTime = time()
+	if not config.misc.SyncTimeUsing.value == "0" or boxtype.startswith('gb') or getBrandOEM().startswith('ini'):
+		print "dvb time sync disabled... so set RTC now to current linux time!", strftime("%Y/%m/%d %H:%M", localtime(nowTime))
+		setRTCtime(nowTime)
+
 	wakeupList = [
 		x for x in ((session.nav.RecordTimer.getNextRecordingTime(), 0, session.nav.RecordTimer.isNextRecordAfterEventActionAuto()),
 					(session.nav.RecordTimer.getNextZapTime(), 1),
@@ -559,15 +572,16 @@ def runScreenTest():
 	wakeupList.sort()
 	recordTimerWakeupAuto = False
 	if wakeupList and wakeupList[0][1] != 3:
+		from time import strftime
 		startTime = wakeupList[0]
 		if (startTime[0] - nowTime) < 270: # no time to switch box back on
 			wptime = nowTime + 30  # so switch back on in 30 seconds
 		else:
-			if getBrandOEM() == 'gigablue':
+			if getBoxType().startswith("gb"):
 				wptime = startTime[0] - 120 # Gigaboxes already starts 2 min. before wakeup time
 			else:
 				wptime = startTime[0] - 240
-		if not config.misc.SyncTimeUsing.value == "0" or getBrandOEM() == 'gigablue':
+		if not config.misc.SyncTimeUsing.value == "0" or getBoxType().startswith('gb'):
 			print "dvb time sync disabled... so set RTC now to current linux time!", strftime("%Y/%m/%d %H:%M", localtime(nowTime))
 			setRTCtime(nowTime)
 		print "set wakeup time to", strftime("%Y/%m/%d %H:%M", localtime(wptime))
@@ -580,6 +594,7 @@ def runScreenTest():
 
 	PowerTimerWakeupAuto = False
 	if wakeupList and wakeupList[0][1] == 3:
+		from time import strftime
 		startTime = wakeupList[0]
 		if (startTime[0] - nowTime) < 60: # no time to switch box back on
 			wptime = nowTime + 30  # so switch back on in 30 seconds
@@ -588,7 +603,7 @@ def runScreenTest():
 				wptime = startTime[0] + 120 # Gigaboxes already starts 2 min. before wakeup time
 			else:
 				wptime = startTime[0]
-		if not config.misc.SyncTimeUsing.value == "0" or getBrandOEM() == 'gigablue':
+		if not config.misc.SyncTimeUsing.value == "0" or getBoxType().startswith('gb'):
 			print "dvb time sync disabled... so set RTC now to current linux time!", strftime("%Y/%m/%d %H:%M", localtime(nowTime))
 			setRTCtime(nowTime)
 		print "set wakeup time to", strftime("%Y/%m/%d %H:%M", localtime(wptime+60))

@@ -10,14 +10,12 @@ from Components.Sources.Boolean import Boolean
 from Components.config import config, configfile, ConfigBoolean, ConfigClock
 from Components.SystemInfo import SystemInfo
 from Components.UsageConfig import preferredInstantRecordPath, defaultMoviePath, preferredTimerPath, ConfigSelection
-# from Components.Task import Task, Job, job_manager as JobManager
+from Components.Task import Task, Job, job_manager as JobManager
 from Components.Pixmap import MovingPixmap, MultiPixmap
 from Components.Sources.StaticText import StaticText
 from Components.ScrollLabel import ScrollLabel
 from Plugins.Plugin import PluginDescriptor
-
 from Components.Timeshift import InfoBarTimeshift
-
 from Screens.Screen import Screen
 from Screens import ScreenSaver
 from Screens.ChannelSelection import ChannelSelection, PiPZapSelection, BouquetSelector, EpgBouquetSelector
@@ -53,7 +51,7 @@ from time import time, localtime, strftime
 from bisect import insort
 from sys import maxint
 
-from Plugins.Extensions.AtemioPanel.plugin import AtemioMenu
+from Plugins.Extensions.AtemioPanel.plugin import AtemioPanel
 import os, cPickle
 
 # hack alert!
@@ -915,6 +913,7 @@ class InfoBarChannelSelection:
 				"openServiceList": (self.openServiceList, _("Open service list")),
 				"openSatellites": (self.openSatellites, _("Open satellites list")),
 				"openBouquets": (self.openBouquets, _("Open favouries list")),
+				"openatemiodevicemanager": (self.openAtemioDeviceManager, _("open atemio device manager")),
 				"LeftPressed": self.LeftPressed,
 				"RightPressed": self.RightPressed,
 				"ChannelPlusPressed": self.ChannelPlusPressed,
@@ -924,6 +923,16 @@ class InfoBarChannelSelection:
 				"FavouritesPressed": self.FavouritesPressed,
 				"SleepPressed": self.SleepPressed,
 			})
+
+	def openAtemioDeviceManager(self):
+		if fileExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/AtemioDeviceManager/plugin.pyo"):
+			for plugin in plugins.getPlugins([PluginDescriptor.WHERE_EXTENSIONSMENU, PluginDescriptor.WHERE_EVENTINFO]):
+				if plugin.name == _("Atemio Device Manager - Fast Mounted Remove"):
+					self.runPlugin(plugin)
+					break
+		else:
+			self.session.open(MessageBox, _("The Atemio Device Manager plugin is not installed!\nPlease install it."), type = MessageBox.TYPE_INFO,timeout = 10 )
+
 
 	def SleepPressed(self):
 		self.session.open(PowerTimerEditList)
@@ -3053,7 +3062,7 @@ class InfoBarSubserviceSelection:
 		self.bsel = None
 
 	def AtemioBlueP(self):
-		self.session.open(AtemioMenu)
+		self.session.open(AtemioPanel)
 
 	def GreenPressed(self):
 		from Screens.PluginBrowser import PluginBrowser
