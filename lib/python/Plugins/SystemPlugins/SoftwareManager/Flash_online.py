@@ -18,20 +18,10 @@ import urllib2
 import os
 import shutil
 import math
-from boxbranding import getBoxType,  getImageDistro, getMachineName, getMachineBrand, getImageVersion
+from boxbranding import getBoxType,  getImageDistro, getMachineName, getMachineBrand
 
-distro =  getImageDistro()
-ImageVersion = getImageVersion()
-
-image = 0 # 0=atemio4you / 1=openhdf
-if distro.lower() == "openhdf":
-	image = 1
-elif distro.lower() == "atemio4you":
-  image = 0
+#############################################################################################################
 feedurl_a4y = 'http://image.atemio4you.com/'
-ImageVersion2= '2.3'
-feedurl_a4y2= 'http://image.atemio4you.com/'
-feedurl_hdf = 'http://v4.hdfreaks.cc'
 imagePath = '/media/hdd/images'
 flashPath = '/media/hdd/images/flash'
 flashTmp = '/media/hdd/images/tmp'
@@ -77,7 +67,7 @@ class FlashOnline(Screen):
 		self["key_blue"] = Button("")
 		self["info-local"] = Label(_("Local = Flash a image from local path /hdd/images"))
 		self["info-online"] = Label(_("Online = Download a image from Atemio4you and flash it"))
-		self["info-flash"] = Label(_("Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nYou have the option to download or to flash a local image."))
+		self["info-flash"] = Label(_("Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nFlash image from online or flash a local image."))
 
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
@@ -163,10 +153,7 @@ class doFlashImage(Screen):
 		self.Online = online
 		self.imagePath = imagePath
 		self.feedurl = feedurl_a4y
-		if image == 0:
-			self.feed = "a4y"
-		else:
-			self.feed = "hdf"
+		self.feed = "a4y"
 		self["imageList"] = MenuList(self.imagelist)
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
@@ -187,16 +174,7 @@ class doFlashImage(Screen):
 
 	def blue(self):
 		if self.Online:
-			if image == 1:
-				if self.feed == "a4y":
-					self.feed = "hdf"
-				else:
-					self.feed = "a4y"
-			else:
-				if self.feed == "a4y":
-					self.feed = "a4y2"
-				else:
-					self.feed = "a4y"
+			self.feed = "a4y"
 			self.layoutFinished()
 			return
 		sel = self["imageList"].l.getCurrentSelection()
@@ -500,20 +478,6 @@ class doFlashImage(Screen):
 		self.imagelist = []
 		if self.Online:
 			self["key_yellow"].setText("Backup&Flash")
-			if image == 1:
-				if self.feed == "a4y":
-					self.feedurl = feedurl_a4y
-					self["key_blue"].setText("openHDF")
-				else:
-					self.feedurl = feedurl_hdf
-					self["key_blue"].setText("Atemio4You")
-			else:
-				if self.feed == "a4y":
-					self.feedurl = feedurl_a4y
-					self["key_blue"].setText("A4Y %s" %ImageVersion2)
-				else:
-					self.feedurl = feedurl_a4y2
-					self["key_blue"].setText("A4Y %s" %ImageVersion)
 			url = '%s/index.php?open=image/%s' % (self.feedurl,box)
 			try:
 				req = urllib2.Request(url)
