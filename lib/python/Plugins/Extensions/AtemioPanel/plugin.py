@@ -114,7 +114,8 @@ class AtemioPanel(Screen):
 		elif sel == 'Network':
 			self.session.open(NetworkAdapterSelection)
 		elif sel == 'AtemioIPKInstaller':
-			self.session.open(Ipkinstall)
+			from Plugins.Extensions.MediaScanner.plugin import main
+			main(self.session)
 		#elif sel == 'FlashOnline':
 		#	self.session.open(FlashOnline)
 		elif sel == 'AtemioDevice':
