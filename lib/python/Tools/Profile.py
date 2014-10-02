@@ -43,17 +43,8 @@ def profile(id):
 			else:
 				perc = PERCENTAGE_START
 			try:
-				if getBoxType() in ("odinm7", "odinm6", "xp1000s"):
-					f = open("/dev/dbox/oled0", "w")
-					f.write("%d" % perc)
-				elif getBoxType() in ("gb800se", "gb800solo"):
-					f = open("/dev/dbox/oled0", "w")
-					f.write("%d  \n" % perc)
-				elif getBoxType() == "gb800seplus":
-					f = open("/dev/mcu", "w")
-					f.write("%d  \n" % perc)
-				elif getBoxType() == "ebox5000":
-					f = open("/proc/progress", "w")
+				if boxtype in ("atemionemesis"):
+					f = open("/proc/vfd", "w")
 					f.write("%d" % perc)
 				else:
 					f = open("/proc/progress", "w")

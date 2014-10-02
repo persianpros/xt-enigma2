@@ -363,6 +363,7 @@ def InitUsageConfig():
 		for hdd in harddiskmanager.HDDList():
 			hdd[1].setIdleTime(int(configElement.value))
 	config.usage.hdd_standby.addNotifier(setHDDStandby, immediate_feedback=False)
+	config.usage.hdd_timer = ConfigYesNo(default = False)
 
 	if SystemInfo["12V_Output"]:
 		def set12VOutput(configElement):
