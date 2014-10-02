@@ -1,5 +1,5 @@
 # the implementation here is a bit crappy.
-from boxbranding import getBoxType
+from boxbranding import getBoxType, getMachineBuild
 import time
 from Directories import resolveFilename, SCOPE_CONFIG
 
@@ -43,9 +43,9 @@ def profile(id):
 			else:
 				perc = PERCENTAGE_START
 			try:
-				if boxtype in ("atemionemesis"):
-					f = open("/proc/vfd", "w")
-					f.write("%d" % perc)
+                if getMachineBuild() in ("inihdp"):
+                    f = open("/proc/vfd", "w")
+					f.write("Loading %d %%" % perc)
 				else:
 					f = open("/proc/progress", "w")
 					f.write("%d \n" % perc)
