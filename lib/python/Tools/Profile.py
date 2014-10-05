@@ -11,6 +11,7 @@ profile_start = time.time()
 profile_data = {}
 total_time = 1
 profile_file = None
+boxtype = getBoxType()
 
 try:
 	f = open(resolveFilename(SCOPE_CONFIG, "profile"), "r")
@@ -43,13 +44,16 @@ def profile(id):
 			else:
 				perc = PERCENTAGE_START
 			try:
-                if getMachineBuild() in ("inihdp"):
-                    f = open("/proc/vfd", "w")
-					f.write("Loading %d %%" % perc)
+				if boxtype in ("atemionemesis"):
+					f = open("/proc/vfd", "w")
+					f.write("%d" % perc)
+#				if getMachineBuild() in ("inihdp"):
+#					f = open("/proc/vfd", "w")
+#					f.write("Loading %d %%" % perc)
 				else:
 					f = open("/proc/progress", "w")
 					f.write("%d \n" % perc)
-				f.close()
+					f.close()
 			except IOError:
 				pass
 

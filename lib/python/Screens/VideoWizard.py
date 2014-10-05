@@ -12,6 +12,7 @@ from Tools.Directories import resolveFilename, SCOPE_SKIN, SCOPE_ACTIVE_SKIN
 from Tools.HardwareInfo import HardwareInfo
 
 config.misc.showtestcard = ConfigBoolean(default = False)
+boxtype = getBoxType()
 
 has_rca = False
 has_dvi = False
