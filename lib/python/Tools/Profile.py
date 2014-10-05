@@ -46,7 +46,7 @@ def profile(id):
 			try:
 				if boxtype in ("atemionemesis"):
 					f = open("/proc/vfd", "w")
-					f.write("%d" % perc)
+					f.write("Loading %d %%" % perc)
 #				if getMachineBuild() in ("inihdp"):
 #					f = open("/proc/vfd", "w")
 #					f.write("Loading %d %%" % perc)
