@@ -5,7 +5,7 @@ from HddSetup import HddSetup
 from HddMount import HddFastRemove
 from Plugins.Plugin import PluginDescriptor
 
-def deviceManagerSetup(menuid, **kwargs):
+def deviceManagerSetup(session, **kwargs):
 	session.open(HddSetup)
 
 def deviceManagerFastRemove(session, **kwargs):
