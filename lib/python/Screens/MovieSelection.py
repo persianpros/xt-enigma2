@@ -31,6 +31,7 @@ import Screens.InfoBar
 from Tools import NumericalTextInput
 from Tools.Directories import resolveFilename, SCOPE_HDD
 from Tools.BoundFunction import boundFunction
+from Plugins.SystemPlugins.AtemioDeviceManager.HddSetup import *
 import Tools.CopyFiles
 import Tools.Trashcan
 import NavigationInstance
@@ -1924,8 +1925,7 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase):
 		self.session.open(NetworkSetup.NetworkMountsMenu)
 
 	def showDeviceMounts(self):
-		import Plugins.SystemPlugins.Atemio.MountManager
-		self.session.open(Plugins.Extensions.AtemioPanel.DeviceMount.DevicesPanel)
+		self.session.open(HddSetup)
 
 	def showActionFeedback(self, text):
 		if self.feedbackTimer is None:
