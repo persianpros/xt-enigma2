@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-10-08 17:55+0000\n"
+"PO-Revision-Date: 2014-10-09 01:00+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: Atemio4you Image Team \n"
 "MIME-Version: 1.0\n"
@@ -756,19 +756,19 @@ msgid "minutes"
 msgstr "Minuten"
 
 msgid "MiniTV"
-msgstr ""
+msgstr "MiniTV"
 
 msgid "OSD"
-msgstr ""
+msgstr "OSD"
 
 msgid "MiniTV with OSD"
-msgstr ""
+msgstr "MiniTV mit OSD"
 
 msgid "PIP"
-msgstr ""
+msgstr "PiP"
 
 msgid "PIP with OSD"
-msgstr ""
+msgstr "PiP mit OSD"
 
 msgid "None"
 msgstr "Keine"
@@ -846,16 +846,16 @@ msgid "Unicable Matrix"
 msgstr "Unicable Matrix"
 
 msgid " (disabled)"
-msgstr "(deaktiviert)"
+msgstr " (deaktiviert)"
 
 msgid " (lower than any auto)"
-msgstr ""
+msgstr " (niedriger als jedes auto)"
 
 msgid " (higher than rotor any auto)"
-msgstr ""
+msgstr " (höher als jedes rotor auto)"
 
 msgid " (higher than any auto)"
-msgstr ""
+msgstr " (höher als jedes auto)"
 
 msgid "Port A"
 msgstr "Port A"
@@ -879,7 +879,7 @@ msgid "Positioner"
 msgstr "Rotor"
 
 msgid "Positioner (selecting satellites)"
-msgstr ""
+msgstr "Positionierer (wähle Satelliten)"
 
 msgid "USALS"
 msgstr "USALS"
@@ -924,10 +924,10 @@ msgid "All satellites 4 (USALS)"
 msgstr "alle Satelliten 4 (USALS)"
 
 msgid "Selecting satellites 1 (USALS)"
-msgstr ""
+msgstr "Alle Satelliten 1 (USALS) auswählen"
 
 msgid "Selecting satellites 2 (USALS)"
-msgstr ""
+msgstr "Alle Satelliten 2 (USALS) auswählen"
 
 msgid "not configured"
 msgstr "Nicht konfiguriert"
@@ -1342,8 +1342,6 @@ msgstr "Links vom Sendernamen"
 msgid "Right from servicename"
 msgstr "Rechts vom Sendernamen"
 
-msgid "Devide"
-msgstr ""
 
 msgid "Disable"
 msgstr "Deaktivieren"
@@ -1811,7 +1809,7 @@ msgid "Picon"
 msgstr "Picon"
 
 msgid "Picon and Service Name"
-msgstr "PIcon und Sendername"
+msgstr "Picon und Sendername"
 
 msgid "Graphics"
 msgstr "Grafiken"
@@ -1904,24 +1902,28 @@ msgid "Please wait while plugins restore completes..."
 msgstr "Bitte warten, bis die Plugins komplett wiederhergestellt sind ..."
 
 msgid ""
-"Sorry feeds are down for maintenance, Please try using Backup Manager to "
+"Sorry feeds are down for maintenance. Please try using Backup Manager to "
 "restore plugins later."
 msgstr ""
+"Feeds sind wegen Wartungsarbeiten nicht erreichbar. Bitte später mit dem Backup Manager"
+"ihre Plugins wiederherstellen."
 
 #, python-format
 msgid ""
 "Your %s %s is not connected to the internet, Please try using Backup Manager"
 " to restore plugins later."
 msgstr ""
+"Ihre %s %s ist nicht mit dem Internet verbunden ist, versuchen Sie es später ihre Plugins"
+"mit dem Backup-Manager wiederherzustellen."
 
 msgid "A background update check is is progress, please wait for retry."
-msgstr ""
+msgstr "Ein Update-Prüfung läuft im Hintergrund, bitte für warten."
 
 msgid "Sorry, but the file is not compatible with this image version."
-msgstr ""
+msgstr "Es tut uns leid, aber die Datei ist nicht mit dieser Image Version kompatibel."
 
 msgid "Please wait while settings restore completes..."
-msgstr ""
+msgstr "Bitte warten bis die Wiederherstellung der Settings abgeschlossen ist ..."
 
 msgid "Daily"
 msgstr "täglich"
@@ -1970,8 +1972,8 @@ msgstr ""
 
 msgid ""
 "Are you sure you want to delete this backup:\n"
-" "
-msgstr "Soll dieses Backup wirklich gelöscht werden:"
+msgstr ""
+"Soll dieses Backup wirklich gelöscht werden:\n"
 
 msgid "Remove Confirmation"
 msgstr "Bestätige Löschvorgang"
@@ -2020,7 +2022,7 @@ msgid "Sorry, but the restore failed."
 msgstr ""
 
 msgid "Sorry feeds are down for maintenance, Please try again later."
-msgstr ""
+msgstr "Zur Zeit finden Wartungsarbeiten statt. Bitte später erneut versuchen."
 
 #, python-format
 msgid ""
@@ -2138,25 +2140,27 @@ msgid "Type: "
 msgstr "Typ:"
 
 msgid "Mount failed"
-msgstr ""
+msgstr "Mount fehlgeschlagen"
 
 msgid ""
 "Can't unmount partition, make sure it is not being used for swap or "
 "record/timeshift paths"
 msgstr ""
+"Kann die Patition nicht nunmounten, stellen Sie sicher, dass sie nicht für "
+"Swap oder Record/Timeshift verwendet wird"
 
 msgid "This Device is already mounted as HDD."
-msgstr ""
+msgstr "Das Gerät ist bereits als HDD eingehängt."
 
 msgid "Choose where to mount your devices to:"
-msgstr ""
+msgstr "Bitte Mountpunkte der Geräte auswählen:"
 
 #, python-format
 msgid "Wait please while scanning your %s %s devices..."
 msgstr ""
 
 msgid "Updating mount locations."
-msgstr ""
+msgstr "Aktualisieren Mount-Einstellungen."
 
 msgid "Please wait."
 msgstr "Bitte warten."
@@ -2166,34 +2170,36 @@ msgid ""
 "Changes need a system restart to take effect.\n"
 "Restart your %s %s now?"
 msgstr ""
+"Geräteänderungen benötigen einen Neustart.\n"
+"Ihre %s %s jetzt neu starten?"
 
 #, python-format
 msgid "Restart %s %s."
-msgstr ""
+msgstr "Neustart der %s %s"
 
 msgid "IPK Installer"
 msgstr "IPK Installer"
 
 msgid "Close"
-msgstr "Schließen"
+msgstr "Beenden"
 
 msgid "Install"
-msgstr "Installiere"
+msgstr "Installieren"
 
 msgid "Select a package to install:"
 msgstr "Paket zum installieren auswählen:"
 
 msgid "Are you ready to install ?"
-msgstr ""
+msgstr "Sind Sie bereit für die Installation ?"
 
 msgid "Install Confirmation"
-msgstr ""
+msgstr "Installationsbestätigung"
 
 msgid "Installing..."
 msgstr "Installieren..."
 
 msgid "Restart Enigma2."
-msgstr ""
+msgstr "Enigma2 neu starten."
 
 msgid "Invert"
 msgstr "Umkehren"
@@ -2217,15 +2223,15 @@ msgid "You have no image to delete."
 msgstr "Kein Image zum Löschen ausgewählt."
 
 msgid "Are you ready to create a backup image ?"
-msgstr ""
+msgstr "Sind Sie bereit ein Backup-Image zu erstellen?"
 
 msgid "Backup Confirmation"
-msgstr ""
+msgstr "Backup-Bestätigung"
 
 msgid ""
 "Are you sure you want to restore this image:\n"
-" "
-msgstr "Soll das Image wirklich wiederhergestellt werden:"
+msgstr ""
+"Soll das Image wirklich wiederhergestellt werden:\n"
 
 msgid "You have no image to restore."
 msgstr ""
@@ -2447,9 +2453,6 @@ msgstr ""
 msgid "Execute"
 msgstr "Ausführen"
 
-msgid "Script Panel"
-msgstr ""
-
 msgid "Continue"
 msgstr "Weiter"
 
@@ -2519,7 +2522,7 @@ msgid "Do you want restart enigma2 now?"
 msgstr ""
 
 msgid "Restart Enigma2"
-msgstr ""
+msgstr "Enigma2 neu starten"
 
 msgid ""
 "Process Killed by user.\n"
@@ -2527,7 +2530,7 @@ msgid ""
 msgstr ""
 
 msgid "Atemio Panel"
-msgstr ""
+msgstr "Atemio Panel"
 
 msgid "Cutlist editor..."
 msgstr "Schnitteditor..."
@@ -5998,10 +6001,7 @@ msgid "Audio"
 msgstr "Ton"
 
 msgid "Plugins"
-msgstr "Erweiterungen"
-
-msgid "Emu"
-msgstr ""
+msgstr "Plugins"
 
 msgid "leave movie player..."
 msgstr "Medienplayer verlassen..."
@@ -6013,7 +6013,7 @@ msgid "Yes, and delete this movie"
 msgstr "Ja, diesen Film löschen"
 
 msgid "Yes, delete this movie and return to movie list"
-msgstr ""
+msgstr "Video löschen und zurück zur Filmauswah"
 
 msgid "No, but restart from begin"
 msgstr "Nein, aber von Anfang an neu beginnen"
@@ -6080,7 +6080,7 @@ msgid "Open satellites list"
 msgstr "Öffne Satellitenliste"
 
 msgid "Open favouries list"
-msgstr ""
+msgstr "Favoritenliste öffnen"
 
 msgid "Please open Picture in Picture first"
 msgstr "Bitte Bild in Bild zuerst aktivieren."
@@ -6316,9 +6316,6 @@ msgstr "Digital Downmix umschalten"
 msgid "Dobly Digital downmix is now"
 msgstr "DD/DTS Downmix ist jetzt"
 
-msgid "Atemio BluePanel"
-msgstr ""
-
 msgid "Switch to next sub service"
 msgstr "Zum nächsten Unterkanal schalten"
 
@@ -6413,16 +6410,16 @@ msgid "Switch to HDMI in mode"
 msgstr "Wechsel zu HDMI in Modus"
 
 msgid "Turn on HDMI-IN Full screen mode"
-msgstr ""
+msgstr "Aktiviere HDMI-In Vollbild"
 
 msgid "Turn off HDMI-IN Full screen mode"
-msgstr ""
+msgstr "Deaktiviere HDMI-In Vollbild"
 
 msgid "Turn on HDMI-IN PiP mode"
-msgstr ""
+msgstr "Aktiviere HDMI-In PiP-Modus"
 
 msgid "Turn off HDMI-IN PiP mode"
-msgstr ""
+msgstr "Deaktiviere HDMI-In PiP-Modus"
 
 msgid "Input"
 msgstr "Eingabe"
@@ -6492,30 +6489,6 @@ msgstr "ms"
 
 msgid "Use these input device settings?"
 msgstr "Diese Eingabegeräte Einstellungen benutzten?"
-
-msgid "DMM normal"
-msgstr "DMM normal"
-
-msgid "DMM advanced"
-msgstr "Erweitertes DMM"
-
-msgid "et5000/6000"
-msgstr ""
-
-msgid "VU+"
-msgstr ""
-
-msgid "et8000/et10000"
-msgstr ""
-
-msgid "et9x00/6500"
-msgstr ""
-
-msgid "et4000"
-msgstr ""
-
-msgid "XP1000"
-msgstr ""
 
 msgid "Remote control type"
 msgstr "Typ der Fernbedienung"
@@ -6943,7 +6916,7 @@ msgid "Blue long"
 msgstr "Blau lang"
 
 msgid "TV"
-msgstr ""
+msgstr "TV"
 
 msgid "Radio"
 msgstr "Radio"
@@ -7045,7 +7018,7 @@ msgid "Tags"
 msgstr "Tags"
 
 msgid "On end of movie (as menu)"
-msgstr ""
+msgstr "Am Ende eines Films (als Menü)"
 
 msgid "Sort list:"
 msgstr "Sortiere Liste:"
@@ -7579,7 +7552,7 @@ msgid "uShare Name"
 msgstr "uShare Name"
 
 msgid "Interface"
-msgstr ""
+msgstr "Interface"
 
 msgid "uShare Port"
 msgstr "uShare Port"
@@ -7594,7 +7567,7 @@ msgid "Web Interface"
 msgstr "Web Interface"
 
 msgid "Telnet Interface"
-msgstr ""
+msgstr "Telnet Interface"
 
 msgid "XBox 360 support"
 msgstr "XBox 360 Unterstützung"
@@ -7851,17 +7824,17 @@ msgid ""
 msgstr "Verschieben des 'Bild im Bild' über die Navigationstasten.\nBouquet +/-, um die Größe zu ändern.\nOK zum Speichern, EXIT zum Abbrechen."
 
 msgid "Press '0' to toggle PiP mode"
-msgstr ""
+msgstr "Drücke '0' um PiP-Modus zu wechseln"
 
 #, python-format
 msgid "Current mode: %s \n"
-msgstr ""
+msgstr "Aktueller Modus: %s\n"
 
 msgid "Cascade PiP"
-msgstr ""
+msgstr "Cascade PiP"
 
 msgid "Splitscreen"
-msgstr ""
+msgstr "Splitscreen"
 
 msgid "Side by side"
 msgstr "Side by Side"
@@ -7870,7 +7843,7 @@ msgid "Big PiP"
 msgstr ""
 
 msgid "External PiP"
-msgstr ""
+msgstr "Externes PiP"
 
 msgid "Incorrect type service for PiP!"
 msgstr "Falsche Senderart für PiP!"
@@ -7969,13 +7942,13 @@ msgid "This allows you to show extensions modules in downloads"
 msgstr ""
 
 msgid "systemplugins"
-msgstr ""
+msgstr "System-Plugins"
 
 msgid "This allows you to show systemplugins modules in downloads"
 msgstr ""
 
 msgid "softcams"
-msgstr ""
+msgstr "Softcams"
 
 msgid "This allows you to show softcams modules in downloads"
 msgstr ""
@@ -7987,7 +7960,7 @@ msgid "This allows you to show skins modules in downloads"
 msgstr ""
 
 msgid "display"
-msgstr ""
+msgstr "Display"
 
 msgid "This allows you to show lcd skins in downloads"
 msgstr ""
@@ -7999,7 +7972,7 @@ msgid "This allows you to show picons modules in downloads"
 msgstr ""
 
 msgid "settings"
-msgstr "Einstellungen"
+msgstr "Settings"
 
 msgid "This allows you to show settings modules in downloads"
 msgstr ""
@@ -8011,7 +7984,7 @@ msgid "This allows you to show m2k modules in downloads"
 msgstr ""
 
 msgid "weblinks"
-msgstr ""
+msgstr "Weblinks"
 
 msgid "This allows you to show weblinks modules in downloads"
 msgstr ""
@@ -8022,26 +7995,23 @@ msgstr "PLi"
 msgid "This allows you to show pli modules in downloads"
 msgstr ""
 
-msgid "atemio"
-msgstr "Atemio"
-
 msgid "This allows you to show atemio modules in downloads"
 msgstr ""
 
 msgid "security"
-msgstr ""
+msgstr "Security"
 
 msgid "This allows you to show security modules in downloads"
 msgstr ""
 
 msgid "kernel modules"
-msgstr ""
+msgstr "Kernel Module"
 
 msgid "This allows you to show kernel modules in downloads"
 msgstr ""
 
 msgid "user feed url"
-msgstr ""
+msgstr "Benutzerdefinierte URL"
 
 msgid "Please enter the your personal feed URL"
 msgstr ""
@@ -8386,7 +8356,7 @@ msgid "Tuner settings"
 msgstr "Tuner Einstellungen"
 
 msgid "Set default"
-msgstr ""
+msgstr "Setze Standard"
 
 msgid "Tuner configuration"
 msgstr "Tuner-Konfiguration"
@@ -8413,25 +8383,25 @@ msgid "Tuner is not supported"
 msgstr "nicht unterstützter Tuner"
 
 msgid "Select all"
-msgstr ""
+msgstr "Alle auswählen"
 
 msgid "Press OK to toggle the selection"
-msgstr ""
+msgstr "Drücke OK um die Auswahl umzuschalten"
 
 msgid "Select satellites"
-msgstr ""
+msgstr "Wähle Satelliten"
 
 msgid "Reverse list"
-msgstr ""
+msgstr "Umgekehrte Liste"
 
 msgid "Standart list"
-msgstr ""
+msgstr "Standarliste"
 
 msgid "Connected satellites"
-msgstr ""
+msgstr "Verbundene Satelliten"
 
 msgid "Select sort method:"
-msgstr ""
+msgstr "Wähle Sortier-Modus:"
 
 msgid "Try to find used transponders in cable network.. please wait..."
 msgstr "Suche benutzte Transponder im Kabel Netzwerk.. bitte warten..."
@@ -8440,7 +8410,7 @@ msgid "Manual Scan"
 msgstr "Manuelle Suche"
 
 msgid "Scan"
-msgstr "Suche "
+msgstr "Suche"
 
 msgid "Press OK to start the scan"
 msgstr "Zum Starten der Suche OK drücken."
@@ -9435,9 +9405,6 @@ msgstr "3D Einstellungen"
 msgid "Position setup"
 msgstr "Position Einstellungen"
 
-msgid "SoftCam / CI"
-msgstr "SoftCam / CI"
-
 msgid "Common interface"
 msgstr "Common Interface"
 
@@ -9842,7 +9809,7 @@ msgstr "Sortiere Einstellungen alphabetisch"
 
 msgid ""
 "This option allows you to disable sorting of the option in setting screens"
-msgstr ""
+msgstr "Diese Option erlaubt es die Sortierung in den Einstellungen auszuschalten"
 
 msgid "Sort menu screens alphabetically"
 msgstr "Sortiere Menüs alphabetisch"
@@ -9854,7 +9821,7 @@ msgid "Sort plug-in browser alphabetically"
 msgstr "Sortiere Erweiterungen alphabetisch"
 
 msgid "This option allows you to disable sorting of the plugin browser."
-msgstr ""
+msgstr "Diese Option erlaubt es die Sortierungen in den Erweiterungen auszuschalten."
 
 msgid "Show PVR status in Movie Player infobar"
 msgstr "Zeige PVR Status in der Infobar des Medienplayers"
@@ -10499,6 +10466,8 @@ msgid ""
 "Select seekbar to be activated by arrow L/R (long) or &lt;&lt; &gt;&gt; "
 "(long)."
 msgstr ""
+"Wähle ob Seekbar mit Pfeil links/rechts (lang) oder Sprung vorwärts/"
+"rückwärts (lang aktiviert werden soll."
 
 msgid "Seekbar sensibility"
 msgstr "Empfindlichkeit der Seekbar"
@@ -10628,22 +10597,23 @@ msgid "Keyboard map"
 msgstr "Tastaturlayout"
 
 msgid "Show MiniTV in the Front Display"
-msgstr ""
+msgstr "Zeige MiniTV im Display"
 
 msgid "You can Display MiniTV with or without OSD Menu"
-msgstr ""
+msgstr "Zeige im Display MiniTV mit oder ohne OSD Menü"
 
 msgid "Show PIP in the Front Display"
-msgstr ""
+msgstr Zeige PIP im Display""
 
 msgid "You can Display PIP with or without OSD Menu"
 msgstr ""
+"Sie können sich PIP mit oder ohne OSD Menü im Front-Display anzeigen lassen."
 
 msgid "Set Framerate for MiniTV"
-msgstr ""
+msgstr "Setzen der Framerate im MiniTV"
 
 msgid "Lower Framerate save CPU Time"
-msgstr ""
+msgstr "Geringe Framerate reduziert die CPU Belastung"
 
 msgid "Brightness (Normal)"
 msgstr "Helligkeit (Normal)"
@@ -10681,10 +10651,10 @@ msgid "LED brightness during deep standby."
 msgstr "LED Helligkeit wenn ausgeschaltet."
 
 msgid "StandbyLED"
-msgstr ""
+msgstr "Bereitschaft-LED"
 
 msgid "Turn on the power LED during standby."
-msgstr ""
+msgstr "Power-LED in Bereitschaft einschalten."
 
 msgid "Repeat Display Message"
 msgstr "Nachricht wiederholen"
@@ -11094,7 +11064,7 @@ msgid "Info button (long)"
 msgstr "Info Tastendruck (lang)"
 
 msgid "Channel 1 at start"
-msgstr ""
+msgstr "Startsender"
 
 msgid ""
 "If set to 'yes' the EPG will always open at the first channel of bouquet. If"
@@ -11120,7 +11090,7 @@ msgid "If set to 'yes' it will show the 'SRC' packages in browser."
 msgstr "Mit 'JA' werden 'SRC' Pakete im Browser angezeigt. 'SRC' Dateien enthalten den Quelltext wenn verfügbar falls man Änderungen vornehmen möchte und kann."
 
 msgid "Backup Location"
-msgstr ""
+msgstr "Speicherort für die Sicherung"
 
 msgid "Location of where backup should be saved."
 msgstr ""
