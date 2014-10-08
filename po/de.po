@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-09-19 23:37+0000\n"
+"PO-Revision-Date: 2014-10-08 17:20+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
-"Language-Team: German \n"
+"Language-Team: Atemio4you Image Team \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -670,6 +670,27 @@ msgstr "Initialisiere Laufwerk...."
 
 msgid "Removing partition table"
 msgstr "Partitionstabelle entfernen"
+
+msgid "Check"
+msgstr "Überprüfen"
+
+msgid "Format"
+msgstr "Formatieren"
+
+msgid "Exit"
+msgstr "Beenden"
+
+msgid "Unmount"
+msgstr "Aushängen"
+
+msgid "Mount"
+msgstr "Einhängen"
+
+msgid "Partitionen"
+msgstr "Formatieren"
+
+msgid "Atemio Device Manager"
+msgstr "Atemio Geräte Manager"
 
 msgid "Rereading partition table"
 msgstr "Partitionstabelle erneut einlesen"
@@ -3173,6 +3194,13 @@ msgstr ""
 msgid "Create and Restore complete images of the system."
 msgstr ""
 
+msgid ""
+"\n"
+"Backup your running %s %s image to HDD or USB."
+msgstr ""
+"\n"
+"Backup des laufenden Images ihrer %s %s auf HDD oder USB."
+
 msgid "Scanning..."
 msgstr "Suche..."
 
@@ -3202,6 +3230,15 @@ msgstr "HD Liste"
 
 msgid "Configure your network settings, and press OK to start the scan"
 msgstr "Konfigurieren Sie Ihr Netzwerk und drücken Sie OK, um den Suchvorgang zu starten."
+
+msgid "configure your network"
+msgstr "Hier können Sie Ihr Netzwerk konfigurieren"
+
+msgid "install IPK from any device"
+msgstr "Lokale Erweiterungen installieren"
+
+msgid "Setup HDD / USB devices"
+msgstr "HDD / USB Geräte konfigurieren"
 
 msgid "No cable tuner found!"
 msgstr "Kein Kabelempfänger gefunden!"
@@ -3278,7 +3315,14 @@ msgstr "Wählen Sie einen Kanal zum Hinzufügen"
 msgid "Common interface Assignment"
 msgstr "Common Interface-Zuweisung"
 
+msgid "Default PIN for CI"
+msgstr "Standard PIN für CI"
 
+msgid "Enable auto PIN"
+msgstr "Aktiviere Automatische PIN"
+
+msgid "Common interface PIN Setup"
+msgstr "Einstellung Pin für CI (Common Interface)"
 
 msgid "a gui to assign services/providers/caids to common interface modules"
 msgstr "Eine Benutzeroberfläche, um einem Common Interface Kanäle/Provider/CAIDs zuzuweisen."
@@ -4301,7 +4345,7 @@ msgid "View list of available networking extensions"
 msgstr "Eine Liste der verfügbaren Netzwerk-Erweiterungen anzeigen."
 
 msgid "Common Interface"
-msgstr "Common Interface"
+msgstr "CI (Common Interface)"
 
 msgid "View list of available CommonInterface extensions"
 msgstr "Eine Liste der verfügbaren Common Interface-Erweiterungen anzeigen."
@@ -6685,6 +6729,9 @@ msgstr "Willst Du eine Textdatei anhängen in der das Log erklärt wird?\n(Wähl
 
 msgid "Attach a file"
 msgstr "Eine Datei anhängen"
+
+msgid "Message"
+msgstr "Nachricht"
 
 msgid ""
 "has been sent to the Atemio beta team.\n"
@@ -9407,7 +9454,7 @@ msgid "SoftCam / CI"
 msgstr "SoftCam / CI"
 
 msgid "Common interface"
-msgstr "CI (Common Interface)"
+msgstr "Common Interface"
 
 msgid "CCcam info"
 msgstr "CCcam Informationen"
@@ -11014,21 +11061,28 @@ msgid "Configure the width allocated to the picon."
 msgstr "Konfiguriere die freigehaltene Breite für PIcon."
 
 msgid "Info icon width"
-msgstr "Info-Icon anzeigen Breite"
+msgstr "Info-Icon Breite anzeigen"
 
 msgid ""
 "Configure the minimum width before showing the 'i' icon, '0' is equal to not"
 " showing the icon at all."
-msgstr ""
+msgstr "Konfiguriere die Minimumbreite bevor das 'I' Icon gezeigt wird. '0' bedeutet "
+"das Icon wird gar nicht gezeigt."
 
 msgid "Timeline font size"
 msgstr "Zeitachse Schriftgröße"
 
-msgid "Timeline 24 Hour"
-msgstr ""
+msgid "Graphical Infobar EPG settings"
+msgstr "Grafischer InfoBar-EPG Einstellungen"
+
+msgid "GraphicalEPG settings"
+msgstr "Grafischer EPG Einstellungen"
+
+msgid "InfobarEPG settings"
+msgstr "Infobar EPG Einstellungen"
 
 msgid "Show time in 24 hour clock format."
-msgstr ""
+msgstr "Zeige Zeit im 24 Stunden Format."
 
 msgid "Time scale"
 msgstr "Zeitskala"
@@ -11129,9 +11183,7 @@ msgstr "Lüfter-Modus"
 msgid "save"
 msgstr "Speichern"
 
-
-
-msgid "Fan setup"
+msgid "Fan setup..."
 msgstr "Einstellungen Lüfter"
 
 #, python-format
@@ -11307,9 +11359,9 @@ msgid "Download Addons"
 msgstr "Addons herunterladen"
 
 msgid ""
-"Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nYou have the option to download or to flash a local image."
+"Welcome to Atemio Online Flash !\n\nWith this tool you can flash a new image on the fly.\nFlash Image from online or flash a local image."
 msgstr ""
-"Willkommen bei Atemio Online Flash !\n\nMit diesem Tool können Sie ein Image über Ihre Fernbedienung flashen.\nSie können online oder lokal ein neues Image flashen."
+"Willkommen bei Atemio Online Flash !\n\nMit diesem Tool können Sie bequem über Ihre Fernbedienung flashen.\nSie können online oder lokal ein neues Image flashen."
 
 msgid "Online = Download a image from Atemio4you and flash it"
 msgstr "Online = Image online von Atemio4you laden und flashen."
@@ -11332,8 +11384,46 @@ msgid "Flash on the fly your your Receiver software."
 msgstr ""
 "Flashen Sie online oder von einer lokalen Quelle ihre Receiver Software."
 
+msgid "Do you want to backup your settings now?"
+msgstr "Wollen Sie ihre Einstellungen sichern?"
+
 msgid "Flash Online"
 msgstr "Flashen Online/Lokal"
+
+msgid "Flash Image Online"
+msgstr "Flashen Online/Lokal"
+
+msgid "Use Harddisk Hardware Standby Timer"
+msgstr "Verwendung des Festplatten Hardware Standby Timers"
+
+msgid "Timeline 24 Hour"
+msgstr "Zeitleiste 24 Stunden"
+
+msgid ""
+"Please select what to do after flashing the image:\n"
+"(In addition, if it exists, a local script will be executed as well at /"
+"media/hdd/images/config/myrestore.sh)"
+msgstr ""
+"Wählen Sie was geschehen soll:\n"
+"Wenn ein Script\n"
+"/media/hdd/images/config/myrestore.sh\n"
+"vorhanden ist, wird es ausgeführt."
+
+msgid "Flash and start installation wizard"
+msgstr "Flashen und Assistenten für die Grundeinstellung benutzen"
+
+msgid "Flash and restore settings and no plugins"
+msgstr "Flashen und Wiederherstellen der Einstellungen, ohne Plugins"
+
+msgid "Flash and restore settings and selected plugins (ask user)"
+msgstr "Flashen und Wiederherstellen der Einstellungen, Plugins abfragen"
+
+msgid "Flash and restore settings and all saved plugins"
+msgstr "Flashen und Wiederherstellen der Einstellungen und Plugins "
+
+msgid "Do not flash image"
+msgstr "Jetzt nicht Flashen"
+
 
 msgid ""
 "No /hdd found !!\n"
