@@ -96,10 +96,10 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		self.mainMenu()
 
 	def doButtonsCheck(self):
-		self["key_red"].setText(_("Graphical EPG"))
+		self["key_red"].setText(_("EPG"))
 		self["key_yellow"].setText(_("Audio"))
 		self["key_green"].setText(_("Plugins"))
-		self["key_blue"].setText(_("Emu"))
+		self["key_blue"].setText(_("Atemio Panel"))
 
 	def __onClose(self):
 		InfoBar.instance = None
@@ -247,10 +247,10 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, InfoBarLongKeyDetection, InfoBar
 		MoviePlayer.instance = self
 
 	def doButtonsCheck(self):
-		self["key_red"].setText(_("Graphical EPG"))
+		self["key_red"].setText(_("EPG"))
 		self["key_green"].setText(_("Plugins"))
 		self["key_yellow"].setText(_("Audio"))
-		self["key_blue"].setText(_("Emu"))
+		self["key_blue"].setText(_("Atemio Panel"))
 
 	def __onClose(self):
 		MoviePlayer.instance = None

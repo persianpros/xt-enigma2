@@ -291,7 +291,7 @@ class SecondInfoBar(Screen):
 		if config.atemiosettings.ColouredButtons.value:
 			self["key_yellow"].setText(_("Search"))
 		self["key_red"].setText(_("Similar"))
-		self["key_blue"].setText(_("Extensions"))
+		self["key_blue"].setText(_("Atemio Panel"))
 		self["SecondInfoBar"].doBind()
 		self.getEvent()
 
