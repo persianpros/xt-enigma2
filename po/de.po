@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Atemio E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-10-08 17:20+0000\n"
+"PO-Revision-Date: 2014-10-08 17:30+0000\n"
 "Last-Translator: satinfo <satinfo76@web.de>\n"
 "Language-Team: Atemio4you Image Team \n"
 "MIME-Version: 1.0\n"
@@ -686,8 +686,8 @@ msgstr "Aushängen"
 msgid "Mount"
 msgstr "Einhängen"
 
-msgid "Partitionen"
-msgstr "Formatieren"
+msgid "Partition"
+msgstr "Partitionen"
 
 msgid "Atemio Device Manager"
 msgstr "Atemio Geräte Manager"
@@ -718,12 +718,6 @@ msgstr "Wandle ext3 nach ext4 um..."
 
 msgid "Internal flash"
 msgstr "Interner Flash"
-
-msgid "Unmount"
-msgstr "Aushängen"
-
-msgid "Mount"
-msgstr "Einhängen"
 
 msgid "Wakeup"
 msgstr "Anschalten"
@@ -2634,9 +2628,6 @@ msgstr "Beschreibung"
 msgid "Channel"
 msgstr "Kanal"
 
-msgid "Exit"
-msgstr "Beenden"
-
 msgid "Update"
 msgstr "Aktualisieren"
 
@@ -2645,9 +2636,6 @@ msgstr "DVD Medien-Toolbox"
 
 msgid "Please wait... Loading list..."
 msgstr "Bitte warten... Liste wird geladen..."
-
-msgid "Format"
-msgstr "Formatieren"
 
 msgid "of a DUAL layer medium used."
 msgstr "eines Doppelschicht-Mediums (Dual Layer) benutzt."
@@ -5965,9 +5953,6 @@ msgstr "Wollen Sie das Laufwerk wirklich formatieren?\nSämtliche Daten auf dem 
 
 msgid "Filesystem Check"
 msgstr "Dateisystemüberprüfung"
-
-msgid "Check"
-msgstr "Test"
 
 msgid ""
 "Do you really want to check the filesystem?\n"
