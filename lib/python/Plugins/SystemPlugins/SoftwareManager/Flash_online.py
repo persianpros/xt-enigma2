@@ -327,6 +327,8 @@ class doFlashImage(Screen):
 			if answer[1] == "restoresettingsandallplugins":
 				restoreSettings   = True
 				restoreAllPlugins = True
+			if restoreSettings:
+				self.SaveEPG()
 			if answer[1] != "abort":
 				if restoreSettings:
 					try:
@@ -529,6 +531,11 @@ class doFlashImage(Screen):
 						break
 
 		self["imageList"].l.setList(self.imagelist)
+
+	def SaveEPG(self):
+		from enigma import eEPGCache
+		epgcache = eEPGCache.getInstance()
+		epgcache.save()
 
 class ImageDownloadJob(Job):
 	def __init__(self, url, filename, file):

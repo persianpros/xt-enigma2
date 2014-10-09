@@ -18,7 +18,7 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.Console import Console
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Plugins.Plugin import PluginDescriptor
-from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_ACTIVE_SKIN, fileExists
+from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_ACTIVE_SKIN
 from Tools.LoadPixmap import LoadPixmap
 
 from time import time
@@ -43,6 +43,14 @@ config.pluginfilter.userfeed = ConfigText(default = 'http://', fixed_size=False)
 def languageChanged():
 	plugins.clearPluginList()
 	plugins.readPluginList(resolveFilename(SCOPE_PLUGINS))
+
+def CreateFeedConfig():
+	fileconf = "/etc/opkg/user-feed.conf"
+	feedurl = "src/gz user-feeds %s\n" % config.pluginfilter.userfeed.value
+	f = open(fileconf, "w")
+	f.write(feedurl)
+	f.close()
+	os.system("ipkg update")
 
 class PluginBrowserSummary(Screen):
 	def __init__(self, session, parent):
@@ -184,6 +192,7 @@ class PluginDownloadBrowser(Screen):
 		self.type = type
 		self.needupdate = needupdate
 		self.createPluginFilter()
+		self.LanguageList = language.getLanguageListSelection()
 
 		self.container = eConsoleAppContainer()
 		self.container.appClosed.append(self.runFinished)
@@ -257,6 +266,7 @@ class PluginDownloadBrowser(Screen):
 			self.PLUGIN_PREFIX2.append(self.PLUGIN_PREFIX + 'weblinks')
 		if config.pluginfilter.kernel.value:
 			self.PLUGIN_PREFIX2.append('kernel-module-')
+		self.PLUGIN_PREFIX2.append('enigma2-locale-')
 
 	def go(self):
 		sel = self["list"].l.getCurrentSelection()
@@ -365,7 +375,7 @@ class PluginDownloadBrowser(Screen):
 				self.doToogle(self.installFinished, self["list"].l.getCurrentSelection()[0].name)
 
 	def doRemove(self, callback, pkgname):
-		if pkgname.startswith('kernel-module-'):
+		if pkgname.startswith('kernel-module-') or pkgname.startswith('enigma2-locale-'):
 			self.session.openWithCallback(callback, Console, cmdlist = [self.ipkg_remove + Ipkg.opkgExtraDestinations() + " " + pkgname, "sync"], closeOnSuccess = True)
 		else:
 			self.session.openWithCallback(callback, Console, cmdlist = [self.ipkg_remove + Ipkg.opkgExtraDestinations() + " " + self.PLUGIN_PREFIX + pkgname, "sync"], closeOnSuccess = True)
@@ -379,7 +389,7 @@ class PluginDownloadBrowser(Screen):
 			self.session.openWithCallback(callback, Console, cmdlist = [self.ipkg_toogle + " " + self.PLUGIN_PREFIX + pkgname, "sync"], closeOnSuccess = False)
 
 	def doInstall(self, callback, pkgname):
-		if pkgname.startswith('kernel-module-'):
+		if pkgname.startswith('kernel-module-') or pkgname.startswith('enigma2-locale-'):
 			self.session.openWithCallback(callback, Console, cmdlist = [self.ipkg_install + " " + pkgname, "sync"], closeOnSuccess = True)
 		else:
 			self.session.openWithCallback(callback, Console, cmdlist = [self.ipkg_install + " " + self.PLUGIN_PREFIX + pkgname, "sync"], closeOnSuccess = True)
@@ -438,7 +448,7 @@ class PluginDownloadBrowser(Screen):
 			pass
 		if self.type != self.TOOGLE:
 			for plugin in self.pluginlist:
-				if plugin[3] == self["list"].l.getCurrentSelection()[0].name:
+				if plugin[3] == self["list"].l.getCurrentSelection()[0].name or plugin[0] == self["list"].l.getCurrentSelection()[0].name:
 					self.pluginlist.remove(plugin)
 					break
 		self.plugins_changed = True
@@ -507,7 +517,7 @@ class PluginDownloadBrowser(Screen):
 			plugin = x.split(" - ", 2)
 			# 'opkg list_installed' only returns name + version, no description field
 			if len(plugin) >= 1:
-				if not plugin[0].endswith('-dev') and not plugin[0].endswith('-staticdev') and not plugin[0].endswith('-dbg') and not plugin[0].endswith('-doc') and not plugin[0].endswith('-src') and not plugin[0].endswith('-po') and not plugin[0].endswith('-meta'):
+				if not plugin[0].endswith('-dev') and not plugin[0].endswith('-staticdev') and not plugin[0].endswith('-dbg') and not plugin[0].endswith('-doc') and not plugin[0].endswith('-src') and not plugin[0].endswith('-meta'):
 					# Plugin filter
 					for s in self.PLUGIN_PREFIX2:
 						if plugin[0].startswith(s):
@@ -518,8 +528,15 @@ class PluginDownloadBrowser(Screen):
 								if plugin[0] not in self.installedplugins:
 									if len(plugin) == 2:
 										# 'opkg list_installed' does not return descriptions, append empty description
-										plugin.append('')
-									plugin.append(plugin[0][15:])
+										if plugin[0].startswith('enigma2-locale-'):
+											lang = plugin[0].split('-')
+											if len(lang) > 3:
+												plugin.append(lang[2] + '-' + lang[3])
+											else:
+												plugin.append(lang[2])
+										else:
+											plugin.append('')
+ 									plugin.append(plugin[0][15:])
 
 									self.pluginlist.append(plugin)
 
@@ -539,13 +556,34 @@ class PluginDownloadBrowser(Screen):
 		for x in self.pluginlist:
 			split = x[3].split('-', 1)
 			if x[0][0:14] == 'kernel-module-':
-					split[0] = "kernel modules"
+				split[0] = "kernel modules"
+			elif x[0][0:15] == 'enigma2-locale-':
+				split[0] = "languages"
 
 			if not self.plugins.has_key(split[0]):
 				self.plugins[split[0]] = []
 
 			if split[0] == "kernel modules":
 				self.plugins[split[0]].append((PluginDescriptor(name = x[0], description = x[2], icon = verticallineIcon), x[0][14:], x[1]))
+			elif split[0] == "languages":
+				for t in self.LanguageList:
+					if len(x[2])>2:
+						tmpT = t[0].lower()
+						tmpT = tmpT.replace('_','-')
+						if tmpT == x[2]:
+							countryIcon = LoadPixmap(resolveFilename(SCOPE_ACTIVE_SKIN, "countries/" + t[0] + ".png"))
+							if countryIcon is None:
+								countryIcon = LoadPixmap(resolveFilename(SCOPE_ACTIVE_SKIN, "countries/missing.png"))
+							self.plugins[split[0]].append((PluginDescriptor(name = x[0], description = x[2], icon = countryIcon), t[1], x[1]))
+							break
+					else:
+						if t[0][:2] == x[2] and t[0][3:] != 'GB':
+							countryIcon = LoadPixmap(resolveFilename(SCOPE_ACTIVE_SKIN, "countries/" + t[0] + ".png"))
+							if countryIcon is None:
+								countryIcon = LoadPixmap(resolveFilename(SCOPE_ACTIVE_SKIN, "countries/missing.png"))
+							self.plugins[split[0]].append((PluginDescriptor(name = x[0], description = x[2], icon = countryIcon), t[1], x[1]))
+							break
+							
 			else:
 				if len(split) < 2:
 					continue

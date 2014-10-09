@@ -22,7 +22,7 @@ def InitCiConfig():
 	config.ci = ConfigSubList()
 	for slot in range(MAX_NUM_CI):
 		config.ci.append(ConfigSubsection())
-		config.ci[slot].canDescrambleMultipleServices = ConfigSelection(choices = [("auto", _("Auto")), ("no", _("No")), ("yes", _("Yes"))], default = "auto")
+		config.ci[slot].canDescrambleMultipleServices = ConfigSelection(choices = [("auto", _("Auto")), ("no", _("No")), ("yes", _("Yes"))], default = "no")
 		if SystemInfo["CommonInterfaceSupportsHighBitrates"]:
 			config.ci[slot].canHandleHighBitrates = ConfigSelection(choices = [("no", _("No")), ("yes", _("Yes"))], default = "yes")
 			config.ci[slot].canHandleHighBitrates.slotid = slot
@@ -84,17 +84,17 @@ class MMIDialog(Screen):
 			pinlength = entry[1]
 			if entry[3] == 1:
 				# masked pins:
-				x = ConfigPIN(0, len = pinlength, censor = "*")
+				x = ConfigPIN(int(config.cipin.pin1.value), len = pinlength, censor = "*")
 			else:
 				# unmasked pins:
-				x = ConfigPIN(0, len = pinlength)
+				x = ConfigPIN(int(config.cipin.pin1.value), len = pinlength)
 			x.addEndNotifier(self.pinEntered)
 			self["subtitle"].setText(entry[2])
 			list.append( getConfigListEntry("", x) )
 			self["bottom"].setText(_("please press OK when ready"))
 			if config.cipin.pin1autook.value:
 				self.okbuttonClick()
-				
+
 	def pinEntered(self, value):
 		self.okbuttonClick()
 
