@@ -10603,7 +10603,7 @@ msgid "You can Display MiniTV with or without OSD Menu"
 msgstr "Zeige im Display MiniTV mit oder ohne OSD Menü"
 
 msgid "Show PIP in the Front Display"
-msgstr "Zeige PIP im Display""
+msgstr "Zeige PIP im Display"
 
 msgid "You can Display PIP with or without OSD Menu"
 msgstr ""
