@@ -406,8 +406,7 @@ class installedPlugins(Screen):
 
 	skin = """
 		<screen position="center,center" size="600,100" title="Install Plugins" >
-		<widget name="label" position="10,30" size="570,50" halign="center" font="Regular;20" transparent="1" foregroundColor="white" />
-		<widget name="filelist" position="5,50" size="550,230" scrollbarMode="showOnDemand" />
+		<widget name="label" position="10,30" size="500,50" halign="center" font="Regular;20" transparent="1" foregroundColor="white" />
 		</screen>"""
 
 	def __init__(self, session):
@@ -428,7 +427,7 @@ class installedPlugins(Screen):
 
 	def doList(self):
 		print"[SOFTWARE MANAGER] read installed package list"
-		self.container.execute("ipkg list-installed | egrep 'enigma2-plugin-|task-base|packagegroup-base'")
+		self.container.execute("ipkg list-installed | egrep 'enigma2-plugin-|task-base'")
 
 	def dataAvail(self, strData):
 		if self.type == self.LIST:
@@ -508,6 +507,8 @@ class RestorePlugins(Screen):
 
 	def setWindowTitle(self):
 		self.setTitle(_("Restore Plugins"))
+		if os.path.exists("/media/hdd/images/config/plugins") and config.misc.firstrun.value:
+			self.green()
 
 	def exit(self):
 		self.close()

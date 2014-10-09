@@ -19,6 +19,10 @@ from boxbranding import getBoxType, getMachineBrand, getMachineName, getDriverDa
 
 VERSION = "Version 1.0"
 
+HaveGZkernel = True
+if getBrandOEM() in ("fulan"):
+	HaveGZkernel = False
+
 def Freespace(dev):
 	statdev = statvfs(dev)
 	space = (statdev.f_bavail * statdev.f_frsize) / 1024
@@ -38,7 +42,6 @@ class ImageBackup(Screen):
 		<widget name="key_blue" position="420,360" zPosition="2" size="140,40" valign="center" halign="center" font="Regular;21" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 		<widget name="info-hdd" position="10,30" zPosition="1" size="450,100" font="Regular;20" halign="left" valign="top" transparent="1" />
 		<widget name="info-usb" position="10,150" zPosition="1" size="450,200" font="Regular;20" halign="left" valign="top" transparent="1" />
-		<widget name="info-yellow" position="10,290" zPosition="1" size="550,200" font="Regular;20" halign="left" valign="top" transparent="1" />
 	</screen>"""
 		
 	def __init__(self, session, args = 0):
@@ -73,7 +76,7 @@ class ImageBackup(Screen):
 		self["key_yellow"] = Button("")
 		self["info-usb"] = Label(_("USB = Do you want to make a back-up on USB?\nThis will take between 4 and 15 minutes depending on the used filesystem and is fully automatic.\nMake sure you first insert an USB flash drive before you select USB."))
 		self["info-hdd"] = Label(_("HDD = Do you want to make an USB-back-up image on HDD? \nThis only takes 2 or 10 minutes and is fully automatic."))
-		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
+		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"], 
 		{
 			"blue": self.quit,
 			"yellow": self.yellow,
@@ -98,7 +101,7 @@ class ImageBackup(Screen):
 		return True
 		
 	def quit(self):
-		self.close()
+		self.close()	
 		
 	def red(self):
 		if self.check_hdd():
@@ -118,7 +121,7 @@ class ImageBackup(Screen):
 
 	def yellow(self):
 		#// Not used
-		pass
+		pass	
 
 	def SearchUSBcanidate(self):
 		for paths, subdirs, files in walk("/media"):
@@ -127,7 +130,7 @@ class ImageBackup(Screen):
 					for file in listdir("/media/" + dir):
 						if file.find("backupstick") > -1:
 							print "USB-DEVICE found on: /media/%s" % dir
-							return "/media/" + dir
+							return "/media/" + dir						
 			break
 		return "XX"
 
@@ -156,26 +159,23 @@ class ImageBackup(Screen):
 			self.session.open(MessageBox, _(text), type = MessageBox.TYPE_ERROR)
 			return
 
-		self.TYPE = "ET"
 		self.SHOWNAME = "%s %s" %(self.MACHINEBRAND, self.MODEL)
 		self.MAINDESTOLD = "%s/%s" %(self.DIRECTORY, self.MODEL)
 		self.MAINDEST = "%s/%s" %(self.DIRECTORY,self.IMAGEFOLDER)
 		self.EXTRA = "%s/fullbackup_%s/%s" % (self.DIRECTORY, self.IMAGEFOLDER, self.DATE)
 		self.EXTRAOLD = "%s/fullbackup_%s/%s/%s" % (self.DIRECTORY, self.MODEL, self.DATE, self.MODEL)
 
+
 		self.message = "echo -e '\n"
 		self.message += (_("Back-up Tool for a %s\n" %self.SHOWNAME)).upper()
 		self.message += VERSION + '\n'
 		self.message += "_________________________________________________\n\n"
 		self.message += _("Please be patient, a backup will now be made,\n")
-		self.message += _("\n")
-		self.message += _("If you want to watch TV while backup is running,\n")
-		self.message += _("press the yellow key to toggle the screen.\n")
-		if self.ROOTFSTYPE == "ubifs":
+		if self.ROOTFSTYPE == "ubi":
 			self.message += _("because of the used filesystem the back-up\n")
 			self.message += _("will take about 3-12 minutes for this system\n")
 		else:
-			self.message += _("This will take between 2 and 9 minutes\n")
+			self.message += _("this will take between 2 and 9 minutes\n")
 		self.message += "\n_________________________________________________\n\n"
 		self.message += "'"
 
@@ -220,24 +220,28 @@ class ImageBackup(Screen):
 		cmdlist.append('echo " "')
 		cmdlist.append("nanddump -a -f %s/vmlinux.gz /dev/%s" % (self.WORKDIR, self.MTDKERNEL))
 		cmdlist.append('echo " "')
-		cmdlist.append('echo "Check: kerneldump"')
+		
+		if HaveGZkernel:
+			cmdlist.append('echo "Check: kerneldump"')
 		cmdlist.append("sync")
-				
+
 		self.session.open(Console, title = self.TITLE, cmdlist = cmdlist, finishedCallback = self.doFullBackupCB, closeOnSuccess = True)
 
 	def doFullBackupCB(self):
-		ret = commands.getoutput(' gzip -d %s/vmlinux.gz -c > /tmp/vmlinux.bin' % self.WORKDIR)
-		if ret:
-			text = "Kernel dump error\n"
-			text += "Please Flash your Kernel new and Backup again"
-			system('rm -rf /tmp/vmlinux.bin')
-			self.session.open(MessageBox, _(text), type = MessageBox.TYPE_ERROR)
-			return
+		if HaveGZkernel:
+			ret = commands.getoutput(' gzip -d %s/vmlinux.gz -c > /tmp/vmlinux.bin' % self.WORKDIR)
+			if ret:
+				text = "Kernel dump error\n"
+				text += "Please Flash your Kernel new and Backup again"
+				system('rm -rf /tmp/vmlinux.bin')
+				self.session.open(MessageBox, _(text), type = MessageBox.TYPE_ERROR)
+				return
 
 		cmdlist = []
 		cmdlist.append(self.message)
-		cmdlist.append('echo "Kernel dump OK"')
-		cmdlist.append("rm -rf /tmp/vmlinux.bin")
+		if HaveGZkernel:
+			cmdlist.append('echo "Kernel dump OK"')
+			cmdlist.append("rm -rf /tmp/vmlinux.bin")
 		cmdlist.append('echo "_________________________________________________"')
 		cmdlist.append('echo "Almost there... "')
 		cmdlist.append('echo "Now building the USB-Image"')
@@ -257,7 +261,7 @@ class ImageBackup(Screen):
 		cmdlist.append('echo "rename this file to "force" to force an update without confirmation" > %s/noforce' %self.MAINDEST)
 		cmdlist.append('cp -r %s %s' % (self.MAINDEST, self.EXTRA))
 
-		if self.MODEL == "gbquad" or self.MODEL == "gbquadplus" or self.MODEL == "gb800ue" or self.MODEL == "gb800ueplus":
+		if self.MODEL in ("gbquad", "gbquadplus", "gb800ue", "gb800ueplus"):
 			lcdwaitkey = '/usr/share/lcdwaitkey.bin'
 			lcdwarning = '/usr/share/lcdwarning.bin'
 			if path.exists(lcdwaitkey):
@@ -265,7 +269,7 @@ class ImageBackup(Screen):
 			if path.exists(lcdwarning):
 				system('cp %s %s/lcdwarning.bin' %(lcdwarning, self.MAINDEST))
 		if self.MODEL == "gb800solo":
-			burnbat = "%s/fullbackup_%s/%s" % (self.DIRECTORY, self.TYPE, self.DATE)
+			burnbat = "%s/fullbackup_%s/%s" % (self.DIRECTORY, self.MODEL, self.DATE)
 			f = open("%s/burn.bat" % (burnbat), "w")
 			f.write("flash -noheader usbdisk0:gigablue/solo/kernel.bin flash0.kernel\n")
 			f.write("flash -noheader usbdisk0:gigablue/solo/rootfs.bin flash0.rootfs\n")
@@ -326,65 +330,9 @@ class ImageBackup(Screen):
 				cmdlist.append('echo "This only takes about 1 or 2 minutes"')
 				cmdlist.append('echo " "')
 
-				if self.TYPE == 'ET':
-					cmdlist.append('mkdir -p %s/%sx00' % (self.TARGET, self.MODEL[:-3]))
-					cmdlist.append('cp -r %s %s' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'VU':
-					cmdlist.append('mkdir -p %s/vuplus_back/%s' % (self.TARGET, self.MODEL[2:]))
-					cmdlist.append('cp -r %s %s/vuplus_back/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'VENTON':
-					cmdlist.append('mkdir -p %s/venton/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/venton/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'SEZAM':
-					cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'MICRACLE':
-					cmdlist.append('mkdir -p %s/miraclebox/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/miraclebox/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'GI':
-					cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'GIGABLUE':
-					cmdlist.append('mkdir -p %s/gigablue/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/gigablue/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'SOGNO':
-					cmdlist.append('mkdir -p %s/sogno/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/sogno/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'ODINM9' or self.TYPE == 'MARAM9':
-					#cmdlist.append('mkdir -p %s/odinm9/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'ODINM7':
-					#cmdlist.append('mkdir -p %s/' % (self.TARGET))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'E3HD':
-					#cmdlist.append('mkdir -p %s/' % (self.TARGET))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'MAXDIGITAL' or self.TYPE == 'OCTAGON':
-					cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'IXUSS':
-					cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'IXUSS':
-					cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'MIXOS':
-					cmdlist.append('mkdir -p %s/ebox/7403' % (self.TARGET))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'MIXOS2':
-					cmdlist.append('mkdir -p %s/ebox/7358' % (self.TARGET))
-					cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
-				elif self.TYPE == 'TECHNO':
-					cmdlist.append('mkdir -p %s/update/%s/cfe' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/update/%s/cfe' % (self.MAINDEST, self.TARGET, self.MODEL))
-				elif self.TYPE == 'IQON':
-					cmdlist.append('mkdir -p %s/update/%s/cfe' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/update/%s/cfe' % (self.MAINDEST, self.TARGET, self.MODEL))
-				elif self.TYPE == 'EDISION':
-					cmdlist.append('mkdir -p %s/update/%s/cfe' % (self.TARGET, self.MODEL))
-					cmdlist.append('cp -r %s %s/update/%s/cfe' % (self.MAINDEST, self.TARGET, self.MODEL))
-				else:
-					cmdlist.append('echo " "')
+				cmdlist.append('mkdir -p %s/%s' % (self.TARGET, self.IMAGEFOLDER))
+				cmdlist.append('cp -r %s %s/' % (self.MAINDEST, self.TARGET))
+
 
 				cmdlist.append("sync")
 				cmdlist.append('echo "Backup finished and copied to your USB-flash drive"')

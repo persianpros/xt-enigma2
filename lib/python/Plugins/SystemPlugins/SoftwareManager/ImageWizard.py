@@ -20,7 +20,7 @@ boxtype = getBoxType()
 
 config.misc.firstrun = ConfigBoolean(default = True)
 config.plugins.configurationbackup = ConfigSubsection()
-if boxtype in ('maram9', 'classm', 'axodin', 'axodinc', 'starsatlx', 'genius', 'evo'):
+if boxtype in ('maram9', 'classm', 'axodin', 'axodinc', 'starsatlx', 'genius', 'evo', 'galaxym6') and not path.exists("/media/hdd/backup_%s" %boxtype):
 	config.plugins.configurationbackup.backuplocation = ConfigText(default = '/media/backup/', visible_width = 50, fixed_size = False)
 else:
 	config.plugins.configurationbackup.backuplocation = ConfigText(default = '/media/hdd/', visible_width = 50, fixed_size = False)
@@ -31,7 +31,7 @@ backupfile = "enigma2settingsbackup.tar.gz"
 
 def checkConfigBackup():
 	parts = [ (r.description, r.mountpoint) for r in harddiskmanager.getMountedPartitions(onlyhotplug = False)]
-	if boxtype in ('maram9', 'classm', 'axodin', 'axodinc', 'starsatlx', 'genius', 'evo'):
+	if boxtype in ('maram9', 'classm', 'axodin', 'axodinc', 'starsatlx', 'genius', 'evo', 'galaxym6'):
 		parts.append(('mtd backup','/media/backup'))
 	for x in parts:
 		if x[1] == '/':
@@ -64,7 +64,7 @@ def checkConfigBackup():
 					config.plugins.configurationbackup.backuplocation.save()
 					config.plugins.configurationbackup.save()
 					return x
-		return None		
+		return None
 
 def checkBackupFile():
 	backuplocation = config.plugins.configurationbackup.backuplocation.value
@@ -119,7 +119,7 @@ class ImageWizard(WizardLanguage, Rc):
 		self["wizard"] = Pixmap()
 		Screen.setTitle(self, _("Welcome..."))
 		self.selectedDevice = None
-		
+
 	def markDone(self):
 		pass
 
@@ -131,22 +131,21 @@ class ImageWizard(WizardLanguage, Rc):
 				list.remove(x)
 		for x in list:
 			if x[1].startswith('/autofs/'):
-				list.remove(x)	
+				list.remove(x)
 		return list
 
 	def deviceSelectionMade(self, index):
 		self.deviceSelect(index)
-		
+
 	def deviceSelectionMoved(self):
 		self.deviceSelect(self.selection)
-		
+
 	def deviceSelect(self, device):
 		self.selectedDevice = device
 		config.plugins.configurationbackup.backuplocation.setValue(self.selectedDevice)
 		config.plugins.configurationbackup.backuplocation.save()
 		config.plugins.configurationbackup.save()
 
-	
+
 if config.misc.firstrun.value:
 	wizardManager.registerWizard(ImageWizard, backupAvailable, priority = 10)
-
