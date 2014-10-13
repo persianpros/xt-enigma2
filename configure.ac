@@ -327,6 +327,7 @@ lib/python/Plugins/Extensions/AtemioPanel/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/buttons/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/icons/Makefile
 lib/python/Plugins/Extensions/AtemioPanel/meta/Makefile
+lib/python/Plugins/Extensions/IniMyTube/Makefile
 lib/python/Plugins/Extensions/CutListEditor/Makefile
 lib/python/Plugins/Extensions/CutListEditor/meta/Makefile
 lib/python/Plugins/Extensions/DVDPlayer/Makefile
