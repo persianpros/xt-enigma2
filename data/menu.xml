@@ -46,7 +46,6 @@
 				<id val="system" />
 				<item weight="10" text="A/V settings" entryID="av_setup"><screen module="VideoMode" screen="VideoSetup" /></item>
 				<item level="1" entryID="autolanguage_setup"><setup id="autolanguagesetup" /></item>
-				<item level="0" entryID="remote_setup"><setup id="remotesetup"/></item>
 				<item level="0" entryID="usage_setup"><setup id="usage" /></item>
 				<item level="0" entryID="channelselection_setup"><setup id="channelselection" /></item>
 				<menu level="0" text="Extended System" entryID="extended_selection">
@@ -58,6 +57,7 @@
 						</menu>
 					<item level="0" text="Timeshift settings" entryID="timshift_setup"><screen module="Timershift" screen="TimeshiftSettings" /></item>
 					<item level="0" text="Recording settings" entryID="recording_setup"><screen module="Recordings" screen="RecordingSettings" /></item>
+					<item level="0" text="Button setup" entryID="hotkey_setup"><screen module="Hotkey" screen="HotkeySetup" /></item>
 					<item level="1" text="Input devices" entryID="input_device_setup"><screen module="InputDeviceSetup" screen="InputDeviceSelection" /></item>
 					<item text="Keyboard"><setup id="keyboard" /></item>
 					<item level="0" entryID="time_setup"><setup id="time"/></item>
@@ -69,7 +69,6 @@
 					<menu level="2" text="OSD settings" entryID="osd_setup" requires="OsdMenu">
 						<id val="osd_menu" />
 						<item level="0" entryID="user_interface"><setup id="userinterface" /></item>
-                        <item level="2" text="Button setup" entryID="hotkey_setup"><screen module="Hotkey" screen="HotkeySetup" /></item>
 						<item level="2" text="OSD Position" entryID="osdsetup" requires="CanChangeOsdPosition"><screen module="UserInterfacePositioner" screen="UserInterfacePositioner2"/></item>
 						<item level="2" text="OSD 3D Setup" entryID="osd3dsetup" requires="CanChange3DOsd"><screen module="UserInterfacePositioner" screen="OSD3DSetupScreen"/></item>
 					</menu>
