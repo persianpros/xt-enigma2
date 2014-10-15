@@ -151,8 +151,10 @@ class Language:
 				delLang = delLang.lower()
 				delLang = delLang.replace('_','-')				
 				os.system("opkg remove " + Lpackagename + delLang)
+				os.system("opkg install enigma2-locale-en-gb")
 			else:
 				os.system("opkg remove " + Lpackagename + delLang[:2])
+				os.system("opkg install enigma2-locale-en-gb")
 		else:
 			print"Delete all lang except ", lang
 			ll = os.listdir(LPATH)
@@ -162,12 +164,15 @@ class Language:
 						x = x.lower()
 						x = x.replace('_','-')
 						os.system("opkg remove " + Lpackagename + x)
+						os.system("opkg install enigma2-locale-en-gb")
 				else:
 					if x != lang[:2] and x != "en":
 						os.system("opkg remove " + Lpackagename + x)
+						os.system("opkg install enigma2-locale-en-gb")
 					elif x == "pt":
 						if x != lang:
 							os.system("opkg remove " + Lpackagename + x)
+							os.system("opkg install enigma2-locale-en-gb")
 			
 			os.system("touch /etc/enigma2/.removelang")
 
