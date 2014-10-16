@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Atemio4you E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-16 13:05+0100\n"
-"PO-Revision-Date: 2014-10-08 21:33+0100\n"
+"PO-Revision-Date: 2014-10-15 12:39+0100\n"
 "Last-Translator: Delagroov <delagroov@gmail.com>\n"
 "Language-Team: Volatile/DeGroov/Rob van der Does\n"
 "MIME-Version: 1.0\n"
@@ -86,6 +86,21 @@ msgid ""
 msgstr ""
 "Timer opname mislukt!\n"
 "Verander van zender en probeer het opnieuw.\n"
+
+msgid "Customize"
+msgstr "Aanpassen"
+
+msgid "Time settings"
+msgstr "Tijd instellingen"
+
+msgid "Channel selection settings"
+msgstr "Zenderlijst instellingen"
+
+msgid "Button setup"
+msgstr "Toets instellingen"
+
+msgid "Subtitle settings"
+msgstr "Ondertitel instellingen"
 
 #, python-format
 msgid ""
