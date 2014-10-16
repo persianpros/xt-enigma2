@@ -486,10 +486,6 @@ class Harddisk:
 		self.timer = eTimer()
 		self.timer.callback.append(self.runIdle)
 		self.idle_running = True
-		self.hdd_timer = False
-		configsettings = readFile('/etc/enigma2/settings')
-		if "config.usage.hdd_timer" in configsettings:
-			self.hdd_timer = True
 		self.setIdleTime(self.max_idle_time) # kick the idle polling loop
 
 	def runIdle(self):
