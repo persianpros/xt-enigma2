@@ -4,12 +4,25 @@ prefix=@prefix@
 exec_prefix=@exec_prefix@
 datarootdir=@datarootdir@
 
-if [ -x @bindir@/showiframe ]; then
-	if [ -f @sysconfdir@/enigma2/backdrop.mvi ]; then
-		@bindir@/showiframe @sysconfdir@/enigma2/backdrop.mvi
-	elif [ -f @datadir@/backdrop.mvi ]; then
-		@bindir@/showiframe @datadir@/backdrop.mvi
+if [ -e /proc/stb/ft/config -a "$(grep 0 /proc/stb/ft/config)" != "0" ]; then
+	echo "factory test mode"
+else
+	if [ -x @bindir@/showiframe ]; then
+		if [ -f @sysconfdir@/enigma2/backdrop.mvi ]; then
+			@bindir@/showiframe @sysconfdir@/enigma2/backdrop.mvi
+		elif [ -f @datadir@/backdrop.mvi ]; then
+			@bindir@/showiframe @datadir@/backdrop.mvi
+		fi
 	fi
+fi
+#check if factory mode is present
+if [ ! -f /etc/enigma2/settings ]; then
+	cp -a /usr/share/enigma2/defaults/settings /etc/enigma2/settings
+fi
+
+#check if factory mode is present
+if [ ! -f /etc/enigma2/pm_timers.xml ]; then
+	cp -a /usr/share/enigma2/defaults/pm_timers.xml /etc/enigma2/pm_timers.xml
 fi
 
 # hook to execute scripts always before enigma2 start
@@ -33,14 +46,18 @@ sync
 (sleep 2; echo "enigma2 is the main pvr application... adjust oom score!"; PID=$(pidof enigma2); \
         [ -e /proc/$PID/oom_score_adj ] && echo "-999" > /proc/$PID/oom_score_adj || echo "-17" > /proc/$PID/oom_adj;) &
 
-if [ "$(grep config.crash.enabledebug /etc/enigma2/settings)" == "config.crash.enabledebug=true" ]; then
-	if [ "$(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')" != "" -a -d "$(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')" ]; then
-		LD_PRELOAD=$LIBS @bindir@/enigma2 &> $(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')Enigma2-$(date +%d-%m-%Y_%H-%M-%S).log
+if [ -e /proc/stb/ft/config -a "$(grep 0 /proc/stb/ft/config)" != "0" ]; then
+	/home/root/factory/enigma2
+else        
+	if [ "$(grep config.crash.enabledebug /etc/enigma2/settings)" == "config.crash.enabledebug=true" ]; then
+		if [ "$(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')" != "" -a -d "$(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')" ]; then
+			LD_PRELOAD=$LIBS @bindir@/enigma2 &> $(grep config.crash.debug_path= /etc/enigma2/settings | sed 's/config.crash.debug_path=//g')Enigma2-$(date +%d-%m-%Y_%H-%M-%S).log
+		else
+			LD_PRELOAD=$LIBS @bindir@/enigma2 &> /home/root/logs/Enigma2-$(date +%d-%m-%Y_%H-%M-%S).log
+		fi
 	else
-		LD_PRELOAD=$LIBS @bindir@/enigma2 &> /home/root/logs/Enigma2-$(date +%d-%m-%Y_%H-%M-%S).log
+		LD_PRELOAD=$LIBS @bindir@/enigma2
 	fi
-else
-	LD_PRELOAD=$LIBS @bindir@/enigma2
 fi
 
 # enigma2 exit codes:
@@ -76,6 +93,10 @@ case $ret in
 		;;
 	43)
 		init 1
+		;;
+	44)
+		# little hack but it will be fixed soon in drivers
+		/usr/lib/enigma2/python/Plugins/SystemPlugins/MICOMUpgrade/bin/fbclear && /usr/lib/enigma2/python/Plugins/SystemPlugins/MICOMUpgrade/bin/fbclear && /usr/bin/showiframe /usr/lib/enigma2/python/Plugins/SystemPlugins/MICOMUpgrade/wait.mvi && echo fpupload > /proc/vfd && sleep 7 && cat /tmp/micom.bin > /dev/mcu && /usr/bin/showiframe /usr/lib/enigma2/python/Plugins/SystemPlugins/MICOMUpgrade/reboot.mvi && sleep 200000
 		;;
 	*)
 		rm -f /tmp/.listen.camd.socket.ignore
