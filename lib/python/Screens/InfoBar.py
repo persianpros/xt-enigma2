@@ -497,6 +497,24 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, InfoBarLongKeyDetection, InfoBar
 	def swapPiP(self):
 		pass
 
+	def showDefaultEPG(self):
+		self.infobar and self.infobar.showMultiEPG()
+
+	def openEventView(self):
+		self.infobar and self.infobar.showDefaultEPG()
+
+	def showEventInfoPlugins(self):
+		self.infobar and self.infobar.showEventInfoPlugins()
+
+	def showEventGuidePlugins(self):
+		self.infobar and self.infobar.showEventGuidePlugins()
+
+	def openSingleServiceEPG(self):
+		self.infobar and self.infobar.openSingleServiceEPG()
+
+	def openMultiServiceEPG(self):
+		self.infobar and self.infobar.openMultiServiceEPG()
+
 	def showMovies(self):
 		ref = self.session.nav.getCurrentlyPlayingServiceOrGroup()
 		if ref and ':0:/' not in ref.toString():
