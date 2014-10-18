@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-30 22:11+0100\n"
+"POT-Creation-Date: 2014-10-18 02:16+0200\n"
 "PO-Revision-Date: 2014-01-22 23:31+0100\n"
 "Last-Translator: Andy Blackburn <andyblac@icloud.com>\n"
 "Language-Team: none\n"
@@ -14,6 +14,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 1.5.5\n"
+
+msgid ""
+"\n"
+"\n"
+"[User - bouquets (TV)]\n"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"\n"
+"A recording is in progress."
+msgstr "Čakajte, kým prebieha vyhľadávanie..."
 
 #
 msgid ""
@@ -37,6 +49,12 @@ msgid ""
 "Backup your %s %s settings."
 msgstr "Zálohovať nastavenia systému"
 
+#, python-format
+msgid ""
+"\n"
+"Backup your running %s %s image to HDD or USB."
+msgstr ""
+
 #
 msgid ""
 "\n"
@@ -44,6 +62,12 @@ msgid ""
 msgstr ""
 "\n"
 "Upraviť adresu zdroja aktualizácií."
+
+#, python-format
+msgid ""
+"\n"
+"Flash on the fly your %s %s."
+msgstr ""
 
 #, fuzzy, python-format
 msgid ""
@@ -117,6 +141,16 @@ msgstr ""
 "\n"
 "Zobraziť, nainštalovať a odstrániť dostupné alebo nainštalované balíčky."
 
+msgid ""
+"\n"
+"[Installed Plugins]\n"
+msgstr ""
+
+msgid ""
+"\n"
+"[User - bouquets (RADIO)]\n"
+msgstr ""
+
 msgid " (PiP)"
 msgstr ""
 
@@ -124,6 +158,19 @@ msgid " (Radio)"
 msgstr ""
 
 msgid " (TV)"
+msgstr ""
+
+#, fuzzy
+msgid " (disabled)"
+msgstr "zrušené"
+
+msgid " (higher than any auto)"
+msgstr ""
+
+msgid " (higher than rotor any auto)"
+msgstr ""
+
+msgid " (lower than any auto)"
 msgstr ""
 
 msgid " and"
@@ -172,6 +219,10 @@ msgstr ""
 #. TRANSLATORS: long date representation short dayname daynum short monthname hour:minute in strftime() format! See 'man strftime'
 msgid "%a %e/%m  %-H:%M"
 msgstr ""
+
+#, fuzzy
+msgid "%d %B %Y"
+msgstr "%d.%B %Y"
 
 #, python-format
 msgid "%d GB"
@@ -242,6 +293,13 @@ msgid "%d minutes"
 msgstr ""
 
 #, python-format
+msgid "%d pixel wide"
+msgid_plural "%d pixels wide"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, python-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
@@ -265,10 +323,6 @@ msgstr ""
 #, python-format
 msgid "%s %s advanced remote control (native)"
 msgstr ""
-
-#, fuzzy, python-format
-msgid "%s %s format data DVD (HDTV compatible)"
-msgstr "Dátové DVD vo formáte %s %s (vyhovuje HDTV)"
 
 #, python-format
 msgid "%s %s front panel"
@@ -339,6 +393,9 @@ msgstr ""
 msgid "* Only available if more than one interface is active."
 msgstr "* Dostupné, len ak je aktívnych viac rozhraní než jedno."
 
+msgid "/media/custom"
+msgstr ""
+
 msgid "/s"
 msgstr ""
 
@@ -354,6 +411,15 @@ msgstr "1,2"
 msgid "1080i"
 msgstr ""
 
+msgid "1080i 50Hz"
+msgstr ""
+
+msgid "1080i 60Hz"
+msgstr ""
+
+msgid "1080i50: 24/50/60Hz"
+msgstr ""
+
 msgid "1080p 24Hz"
 msgstr ""
 
@@ -367,6 +433,9 @@ msgid "1080p 50Hz"
 msgstr ""
 
 msgid "1080p 60Hz"
+msgstr ""
+
+msgid "1080p50: 24/50/60Hz"
 msgstr ""
 
 msgid "12V output"
@@ -434,13 +503,7 @@ msgstr ""
 msgid "3D Surround"
 msgstr "Zvuk"
 
-msgid "3D setup"
-msgstr ""
-
 msgid "3X"
-msgstr ""
-
-msgid "3d mode"
 msgstr ""
 
 msgid "4:3"
@@ -459,6 +522,9 @@ msgid "720p"
 msgstr ""
 
 msgid "720p 24Hz"
+msgstr ""
+
+msgid "720p50: 24/50/60Hz"
 msgstr ""
 
 msgid "<Current movielist location>"
@@ -573,9 +639,6 @@ msgstr "Práve sa nahráva. Zastavte nahrávanie pred nastavovaním motora."
 msgid "A recording is currently running. Please stop the recording before trying to scan."
 msgstr ""
 
-msgid "A recording is currently running. Please stop the recording before trying to start the satfinder."
-msgstr "Práve sa nahráva. Zastavte nahrávanie pred spustením vyhľadávača satelitov."
-
 msgid "A repeating timer or just once?"
 msgstr ""
 
@@ -623,14 +686,14 @@ msgstr ""
 msgid "A/V settings"
 msgstr ""
 
-msgid "AA"
-msgstr "AA"
-
 msgid "AAC downmix"
 msgstr ""
 
-msgid "AB"
-msgstr "AB"
+msgid "AAC transcoding"
+msgstr ""
+
+msgid "AC3"
+msgstr ""
 
 msgid "ACQUIRING TSID/ONID"
 msgstr ""
@@ -648,6 +711,9 @@ msgstr ""
 msgid "Abort"
 msgstr "Zrušiť"
 
+msgid "Aborting updateprogress"
+msgstr ""
+
 msgid "About"
 msgstr "O prijímači"
 
@@ -657,21 +723,15 @@ msgstr "O prijímači"
 msgid "Accesspoint:"
 msgstr "Prístupový bod:"
 
-msgid "Action on long power button press"
-msgstr ""
-
-msgid "Action on short power button press"
-msgstr ""
-
 msgid "Activate"
+msgstr ""
+
+msgid "Activate HbbTV (Redbutton)"
 msgstr ""
 
 #, fuzzy
 msgid "Activate MAC-address configuration"
 msgstr "aktivovať aktuálne nastavenie"
-
-msgid "Activate PiP"
-msgstr ""
 
 msgid "Activate Picture in Picture"
 msgstr "Zapnúť obraz v obraze"
@@ -684,6 +744,12 @@ msgid "Activate network settings"
 msgstr "Aktivovať nastavenia siete"
 
 msgid "Activate the configured network settings."
+msgstr ""
+
+msgid "Activate timeshift End"
+msgstr ""
+
+msgid "Activate timeshift end and pause"
 msgstr ""
 
 msgid "Active"
@@ -713,9 +779,6 @@ msgstr "Pridať značku"
 #, fuzzy
 msgid "Add a nameserver entry"
 msgstr "pridať DNS"
-
-msgid "Add a new title"
-msgstr "Pridať nový titul"
 
 #, fuzzy
 msgid "Add a record timer"
@@ -770,16 +833,20 @@ msgstr "pridať stanicu"
 msgid "Add timer"
 msgstr "Pridať časovač"
 
-msgid "Add title"
-msgstr "Pridať titul"
-
 msgid "Add to bouquet"
 msgstr "Pridať do buketu"
+
+#, fuzzy
+msgid "Add to favorites"
+msgstr "Pridať do obľúbených"
 
 msgid "Add to favourites"
 msgstr "Pridať do obľúbených"
 
 msgid "Add/Remove timer for current event"
+msgstr ""
+
+msgid "Added: "
 msgstr ""
 
 msgid "Adding schedule..."
@@ -791,11 +858,12 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-msgid "Adjust 3D settings"
-msgstr ""
-
 msgid "Adjust the color settings so that all the color shades are distinguishable, but appear as saturated as possible. If you are happy with the result, press OK to close the video fine-tuning, or use the number keys to select other test screens."
 msgstr "Nastavte farby tak, aby boli jednotlivé odtiene dobre rozlíšiteľné, ale zároveň čo najsýtejšie. Ak ste s výsledkom spokojní, stlačením tlačidla OK ukončite jemné ladenie obrazu alebo číslicovými tlačidlami zvoľte iný testovací obrazec."
+
+#, fuzzy
+msgid "Advanced"
+msgstr "rozšírené"
 
 #, fuzzy
 msgid "Advanced options"
@@ -816,11 +884,21 @@ msgstr "Modul vylepšeného softvéru"
 msgid "Advanced video enhancement setup"
 msgstr "Rozšírené nastavenie obrazu"
 
-msgid "Advanced video setup"
-msgstr ""
-
 msgid "After event"
 msgstr "Po udalosti"
+
+#
+#, fuzzy
+msgid "After pressing OK, please wait!"
+msgstr ""
+"\n"
+"Po stlačení tlačidla OK počkajte!"
+
+msgid ""
+"After the start wizard is completed, you need to protect single services. Refer to your %s %s's manual on how to do that.\n"
+"\n"
+"Please press OK to continue."
+msgstr ""
 
 msgid "Album"
 msgstr "Album"
@@ -831,6 +909,10 @@ msgstr ""
 msgid "All"
 msgstr "Všetky"
 
+#, fuzzy
+msgid "All Time"
+msgstr "Čas"
+
 msgid "All ages"
 msgstr ""
 
@@ -838,7 +920,16 @@ msgstr ""
 msgid "All resolutions"
 msgstr "Rozlíšenie"
 
-msgid "All satellites"
+msgid "All satellites 1 (USALS)"
+msgstr ""
+
+msgid "All satellites 2 (USALS)"
+msgstr ""
+
+msgid "All satellites 3 (USALS)"
+msgstr ""
+
+msgid "All satellites 4 (USALS)"
 msgstr ""
 
 msgid "Allocate"
@@ -875,9 +966,6 @@ msgid "Allows you to enable/disable displaying icons on the front panel."
 msgstr ""
 
 msgid "Allows you to hide the extensions of known file types."
-msgstr ""
-
-msgid "Allows you to send a copy of the log to yourself."
 msgstr ""
 
 msgid "Allows you to set the maximum size (MB) of the individual debug logs. When that size is reached, a new file will be created."
@@ -925,6 +1013,10 @@ msgstr ""
 
 msgid "An empty filename is illegal."
 msgstr "Prázdny názov súboru je neplatný."
+
+#, fuzzy
+msgid "An error occured."
+msgstr "Objavila sa neznáma chyba!"
 
 msgid "An error occurred while downloading the packetlist. Please try again."
 msgstr ""
@@ -1009,11 +1101,11 @@ msgstr "Umelec"
 msgid "Arts/Culture"
 msgstr ""
 
+msgid "Ascending"
+msgstr ""
+
 msgid "Ask user"
 msgstr "opýtať sa"
-
-msgid "Aspect ratio"
-msgstr ""
 
 #, fuzzy
 msgid "Assigned CAIds:"
@@ -1026,8 +1118,27 @@ msgstr "Priradené služby a poskytovatelia:"
 msgid "At End:"
 msgstr ""
 
+msgid "Atemio BluePanel"
+msgstr ""
+
+msgid "Atemio Device Manager"
+msgstr ""
+
+msgid "Atemio Device Manager - Fast Mounted Remove"
+msgstr ""
+
+msgid "Atemio Image"
+msgstr ""
+
+msgid "Atemio Panel"
+msgstr ""
+
 msgid "Attach a file"
 msgstr ""
+
+#, fuzzy
+msgid "Audio"
+msgstr "Zvukový PID"
 
 msgid "Audio PID"
 msgstr "Zvukový PID"
@@ -1047,19 +1158,12 @@ msgstr ""
 msgid "Audio options..."
 msgstr ""
 
-#, fuzzy, python-format
-msgid "Audio track (%s) format"
-msgstr "formát zvukovej stopy (%s)"
-
-#, fuzzy, python-format
-msgid "Audio track (%s) language"
-msgstr "jazyk zvukovej stopy (%s)"
+#, fuzzy
+msgid "Australia"
+msgstr "Taliančina"
 
 msgid "Author: "
 msgstr "Autor: "
-
-msgid "Authoring mode"
-msgstr "Režim autorizácie"
 
 #. TRANSLATORS: (aspect ratio policy: always try to display as fullscreen, when there is no content (black bars) on left/right, even if this breaks the aspect.
 msgid "Auto"
@@ -1073,9 +1177,6 @@ msgstr "Vypnúť"
 msgid "Auto Standby"
 msgstr "Pohotovostný režim"
 
-msgid "Auto chapter split every ? minutes (0=never)"
-msgstr "Automaticky rozdeľovať kapitoly každých ? minút (0 = nikdy)"
-
 msgid "Auto flesh"
 msgstr "Automatické flešovanie"
 
@@ -1088,6 +1189,10 @@ msgstr ""
 
 msgid "Auto language selection"
 msgstr ""
+
+#, fuzzy
+msgid "Auto paginate on last entry:"
+msgstr "nadol na poslednú položku"
 
 msgid "Auto scart switching"
 msgstr "Automatické prepnutie scartu"
@@ -1130,14 +1235,15 @@ msgstr ""
 msgid "Automatically update Client/Server View?"
 msgstr ""
 
+#, fuzzy
+msgid "Autos & Vehicles"
+msgstr "Automatické flešovanie"
+
 msgid "Autostart"
 msgstr ""
 
 msgid "Autostart:"
 msgstr ""
-
-msgid "Available format variables"
-msgstr "Dostupné premenné formátu"
 
 msgid "Available shares:"
 msgstr ""
@@ -1145,14 +1251,12 @@ msgstr ""
 msgid "B"
 msgstr "B"
 
-msgid "BA"
-msgstr "BA"
-
-msgid "BB"
-msgstr "BB"
-
 msgid "Back"
 msgstr "Späť"
+
+#, python-format
+msgid "Back-up Tool for a %s\n"
+msgstr ""
 
 msgid "Background"
 msgstr "Pozadie"
@@ -1170,6 +1274,14 @@ msgstr ""
 msgid "Background delete speed"
 msgstr ""
 
+#, fuzzy, python-format
+msgid "Backup Date: %s\n"
+msgstr "Aktualizovať zoznam balíčkov"
+
+#, fuzzy
+msgid "Backup Image"
+msgstr "Zálohovanie zlyhalo."
+
 msgid "Backup Manager"
 msgstr ""
 
@@ -1181,6 +1293,11 @@ msgstr "Zálohovanie zlyhalo."
 
 msgid "Backup is running..."
 msgstr "Zálohovanie beží..."
+
+msgid ""
+"Backup plugins found\n"
+"do you want to install now?"
+msgstr ""
 
 msgid "Backup system settings"
 msgstr "Zálohovať nastavenia systému"
@@ -1194,6 +1311,9 @@ msgstr "Šírka pásma"
 #, fuzzy
 msgid "Base time"
 msgstr "Čas začiatku"
+
+msgid "Base transparency for teletext, more options available within teletext screen."
+msgstr ""
 
 msgid "Basque"
 msgstr ""
@@ -1216,6 +1336,9 @@ msgstr "Činnosť po zastavení filmu"
 msgid "Behavior when a movie reaches the end"
 msgstr "Činnosť po skončení filmu"
 
+msgid "Big PiP"
+msgstr ""
+
 msgid "Bitrate:"
 msgstr "Dátový tok:"
 
@@ -1234,6 +1357,9 @@ msgstr "Potlačenie blokového šumu"
 msgid "Blue"
 msgstr ""
 
+msgid "Blue long"
+msgstr ""
+
 msgid "Bookmarks"
 msgstr "Záložky"
 
@@ -1244,6 +1370,9 @@ msgid "Boost green"
 msgstr ""
 
 msgid "Bouquet List"
+msgstr ""
+
+msgid "Brazil"
 msgstr ""
 
 msgid "Brightness"
@@ -1269,21 +1398,11 @@ msgstr ""
 msgid "Bulgarian"
 msgstr ""
 
-msgid "Burn DVD"
-msgstr "Napáliť DVD"
-
-#, fuzzy, python-format
-msgid "Burn audio track (%s)"
-msgstr "napáliť zvukovú stopu (%s)"
-
-msgid "Burn existing image to DVD"
-msgstr "Napáliť existujúci image na DVD"
-
-msgid "Burn to DVD"
-msgstr "Napáliť na DVD..."
-
 msgid "Bus: "
 msgstr "Zbernica:"
+
+msgid "But you have activated \"Install unstable updates\""
+msgstr ""
 
 msgid "Button"
 msgstr ""
@@ -1291,7 +1410,7 @@ msgstr ""
 msgid "Button setup"
 msgstr ""
 
-msgid "By Team Atemio"
+msgid "Button setup for"
 msgstr ""
 
 msgid "Bypass HDMI EDID Check"
@@ -1350,20 +1469,29 @@ msgstr ""
 msgid "CCcam Shares Info"
 msgstr ""
 
-msgid "CCcam info"
-msgstr ""
-
 msgid "CH"
 msgstr ""
 
 msgid "CHANGE BOUQUET"
 msgstr ""
 
+#, fuzzy
+msgid "CI (Common Interface) Setup"
+msgstr "Common Interface"
+
 msgid "CI assignment"
 msgstr "Priradenie CI"
 
 #, python-format
+msgid "CPU Speed:\t%s"
+msgstr ""
+
+#, python-format
 msgid "CPU:\t%s"
+msgstr ""
+
+#, python-format
+msgid "CPU: %s"
 msgstr ""
 
 msgid "CVBS"
@@ -1401,6 +1529,9 @@ msgstr ""
 msgid "Can be used for different fps between external subtitles and video."
 msgstr ""
 
+msgid "Canada"
+msgstr ""
+
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -1416,7 +1547,40 @@ msgstr ""
 msgid "Cannot find any signal ..., aborting !"
 msgstr ""
 
+msgid ""
+"Cannot format current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+
+#, python-format
+msgid "Cannot format partition %d"
+msgstr ""
+
+msgid ""
+"Cannot mount new drive.\n"
+"Please check filesystem or format it and try again"
+msgstr ""
+
 msgid "Cannot move to trash can"
+msgstr ""
+
+msgid ""
+"Cannot umount current device.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+
+msgid ""
+"Cannot umount current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+
+msgid ""
+"Cannot umount device.\n"
+"A record in progress, timeshit or some external tools (like samba, swapfile and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
 msgstr ""
 
 msgid "Capacity: "
@@ -1437,6 +1601,12 @@ msgstr ""
 msgid "Cardserial"
 msgstr ""
 
+msgid "Cascade PiP"
+msgstr ""
+
+msgid "Caution update not tested yet !!"
+msgstr ""
+
 msgid "Center DVB subtitles"
 msgstr ""
 
@@ -1446,6 +1616,9 @@ msgstr "Zmeniť bukety pri rýchlom prepínaní"
 #, fuzzy
 msgid "Change next timer"
 msgstr "Zmeniť veľkosť kroku"
+
+msgid "Change old drive with this new drive"
+msgstr ""
 
 msgid "Change pin code"
 msgstr "Zmeniť kód PIN"
@@ -1468,6 +1641,10 @@ msgstr "Zmeniť PINy staníc"
 msgid "Change setup PIN"
 msgstr "Zmeniť PIN nastavení"
 
+#, fuzzy
+msgid "Change sort by..."
+msgstr "Zmeniť PIN nastavení"
+
 msgid "Change step size"
 msgstr "Zmeniť veľkosť kroku"
 
@@ -1479,14 +1656,8 @@ msgstr "Zmeniť veľkosť kroku"
 msgid "Change to bouquet"
 msgstr "Pridať do buketu"
 
-msgid "Changelog"
-msgstr "Protokol zmien"
-
 msgid "Channel"
 msgstr "Stanica"
-
-msgid "Channel +/- button mode"
-msgstr ""
 
 msgid "Channel 1 at start"
 msgstr ""
@@ -1496,6 +1667,10 @@ msgstr ""
 
 msgid "Channel List"
 msgstr ""
+
+#, fuzzy
+msgid "Channel down"
+msgstr "Stanica"
 
 msgid "Channel list context menu"
 msgstr ""
@@ -1529,6 +1704,10 @@ msgstr "Voľba stanice"
 msgid "Channel selection settings"
 msgstr "Nastavenia zostavy"
 
+#, fuzzy
+msgid "Channel up"
+msgstr "Stanica"
+
 msgid "Channel:"
 msgstr "Stanica:"
 
@@ -1548,6 +1727,9 @@ msgstr "Kapitola:"
 msgid "Check"
 msgstr "Skontrolovať"
 
+msgid "Check disk terminated with success"
+msgstr ""
+
 msgid "Check every (hours)"
 msgstr ""
 
@@ -1562,6 +1744,14 @@ msgstr ""
 
 msgid "Checking Logs..."
 msgstr ""
+
+#, fuzzy
+msgid "Checking disk"
+msgstr "Kontrolujem systém súborov..."
+
+#, fuzzy, python-format
+msgid "Checking disk %s"
+msgstr "Kontrolujem systém súborov..."
 
 #, fuzzy
 msgid "Checking filesystem..."
@@ -1599,6 +1789,10 @@ msgstr ""
 msgid "Choose between Daily, Weekly, Weekdays or user defined."
 msgstr ""
 
+#, fuzzy
+msgid "Choose target folder"
+msgstr "Zvoliť cieľový adresár"
+
 msgid "Choose the location for crash and debug logs."
 msgstr ""
 
@@ -1614,7 +1808,13 @@ msgstr ""
 msgid "Choose what you want the '0' button to do when PIP is active."
 msgstr ""
 
+msgid "Choose whether AAC sound tracks should be transcoded."
+msgstr ""
+
 msgid "Choose whether multi channel sound tracks should be downmixed to stereo."
+msgstr ""
+
+msgid "Choose whether multi channel sound tracks should be output as PCM."
 msgstr ""
 
 msgid "Choose whether or not to show an icon when a motorised dish is moving."
@@ -1628,6 +1828,10 @@ msgstr ""
 
 msgid "Chose between record and ZAP."
 msgstr ""
+
+#, fuzzy
+msgid "Circular"
+msgstr "Kruhová ľavá"
 
 msgid "Circular left"
 msgstr "Kruhová ľavá"
@@ -1655,6 +1859,10 @@ msgstr "Vymazať pred skenovaním"
 msgid "Clear fixed"
 msgstr ""
 
+#, fuzzy
+msgid "Clear history on Exit:"
+msgstr "pri ukončení uložiť zoznam prehrávok"
+
 msgid "Clear log"
 msgstr "Vymazať log"
 
@@ -1679,9 +1887,6 @@ msgstr "Upraviť zoznam buketov"
 msgid "Close dialog"
 msgstr ""
 
-msgid "Close title selection"
-msgstr "Zatvoriť výber titulkov"
-
 msgid "Code rate HP"
 msgstr ""
 
@@ -1694,18 +1899,15 @@ msgstr "Rýchlosť HP"
 msgid "Coderate LP"
 msgstr "Rýchlosť LP"
 
-msgid "Collection name"
-msgstr "Názov zostavy"
-
-msgid "Collection settings"
-msgstr "Nastavenia zostavy"
-
 msgid "Color format"
 msgstr ""
 
 #, fuzzy
 msgid "Color space"
 msgstr "Formát farby"
+
+msgid "Comedy"
+msgstr ""
 
 #, fuzzy
 msgid "Command To Run"
@@ -1717,9 +1919,6 @@ msgstr "Poradie príkazov"
 #, fuzzy
 msgid "Command type"
 msgstr "Poradie príkazov"
-
-msgid "Committed DiSEqC command"
-msgstr "Potvrdený príkaz DiSEqC"
 
 msgid "Common Interface"
 msgstr "Common Interface"
@@ -1734,14 +1933,15 @@ msgstr "Priradenie CI"
 msgid "Common interface"
 msgstr ""
 
+#, fuzzy
+msgid "Common interface PIN Setup"
+msgstr "Common Interface"
+
 msgid "Communication"
 msgstr "Komunikácia"
 
 msgid "Complete"
 msgstr "Kompletné"
-
-msgid "Complex (allows mixing audio tracks and aspects)"
-msgstr "Komplexné (umožňuje miešanie rôznych zvukových a obrazových formátov)"
 
 msgid "Composition of the recording filenames"
 msgstr "Zloženie názvov súborov nahrávok"
@@ -1763,6 +1963,10 @@ msgstr ""
 msgid "Configure an additional delay to improve subtitle synchronisation."
 msgstr ""
 
+#, fuzzy
+msgid "Configure and install softcams"
+msgstr "Nakonfigurujte rozhranie"
+
 msgid "Configure duration of inactivity before the hard disk drive goes to standby"
 msgstr ""
 
@@ -1770,6 +1974,9 @@ msgid "Configure for how many minutes finished events should remain visible in t
 msgstr ""
 
 msgid "Configure how recording filenames are constructed."
+msgstr ""
+
+msgid "Configure if and how crypto icons will be shown in the channel selection list."
 msgstr ""
 
 msgid "Configure if and how service type icons will be shown."
@@ -1853,12 +2060,6 @@ msgstr ""
 msgid "Configure the fourth subtitle language."
 msgstr ""
 
-msgid "Configure the function of a long press of the power button."
-msgstr ""
-
-msgid "Configure the function of a short press of the power button."
-msgstr ""
-
 msgid "Configure the function of the <  > buttons."
 msgstr ""
 
@@ -1881,6 +2082,9 @@ msgid "Configure the longitude of your location."
 msgstr ""
 
 msgid "Configure the minimum amount of disk space to be available for recordings. When the amount of space drops below this value, deleted items will be removed from the trash can."
+msgstr ""
+
+msgid "Configure the minimum width before showing the 'i' icon, '0' is equal to not showing the icon at all."
 msgstr ""
 
 msgid "Configure the nameserver (DNS)."
@@ -1937,6 +2141,9 @@ msgstr "Vlastný posun času pre tlačidlá 7 a 9"
 msgid "Configure the slow motion speeds."
 msgstr ""
 
+msgid "Configure the source of the frontend data as shown on the infobars. 'Settings' is as stored on the settings. 'Tuner' is as reported by the tuner."
+msgstr ""
+
 msgid "Configure the speed of the background deletion process. Lower speed will consume less hard disk drive performance."
 msgstr ""
 
@@ -1979,6 +2186,9 @@ msgstr ""
 msgid "Configure which tuner type will be preferred, when the same service is available on different types of tuners."
 msgstr ""
 
+msgid "Configure which tuner will be preferred for recordings, when more than one tuner is available. 'Disabled' would select a tuner based on preferred tuner in customise screen. 'Auto' would choose based on E2's default rules, ignoring preferred tuner in customise screen."
+msgstr ""
+
 msgid "Configure which tuner will be preferred, when more than one tuner is available. If set to 'auto' the system will give priority to the tuner having the lowest number of channels/satellites."
 msgstr ""
 
@@ -2017,6 +2227,10 @@ msgstr "Pripojiť k bezdrôtovej sieti"
 msgid "Connected clients"
 msgstr ""
 
+#, fuzzy
+msgid "Connected satellites"
+msgstr "odstrániť zvolený satelit"
+
 msgid "Connected to"
 msgstr "Pripojené k "
 
@@ -2032,8 +2246,9 @@ msgstr "Zostava"
 msgid "Content"
 msgstr ""
 
-msgid "Content does not fit on DVD!"
-msgstr "Obsah sa nezmestí na DVD!"
+#, fuzzy
+msgid "Context"
+msgstr "Pokračovať"
 
 msgid "Continue"
 msgstr "Pokračovať"
@@ -2075,6 +2290,10 @@ msgid "Copy"
 msgstr ""
 
 #, fuzzy
+msgid "Copy to other directory"
+msgstr "vytvoriť adresár"
+
+#, fuzzy
 msgid "Copying files"
 msgstr "Dlhé názvy súborov"
 
@@ -2083,15 +2302,11 @@ msgid "Cores:\t%s"
 msgstr ""
 
 #, fuzzy, python-format
-msgid "Could not connect to %s %s .NFI image feed server:"
-msgstr "Nemôžem sa pripojiť k serveru so súbormi %s %s .NFI:"
+msgid "Cores: %s"
+msgstr "Nová verzia:"
 
 msgid "Could not find installed channel list."
 msgstr ""
-
-#, fuzzy
-msgid "Could not load medium! No disc inserted?"
-msgstr "Nemôžem použiť médium. Je vložený disk?"
 
 msgid "Could not open Picture in Picture"
 msgstr "Nedá sa otvoriť obraz v obraze"
@@ -2114,9 +2329,6 @@ msgstr ""
 
 msgid "Crash Logs"
 msgstr ""
-
-msgid "Create DVD-ISO"
-msgstr "Vytvoriť disk DVD-ISO"
 
 #, fuzzy
 msgid "Create directory"
@@ -2163,6 +2375,10 @@ msgstr ""
 msgid "Current device: "
 msgstr "Aktuálne zariadenie:"
 
+#, fuzzy, python-format
+msgid "Current mode: %s \n"
+msgstr "Aktuálne zariadenie:"
+
 msgid "Current settings:"
 msgstr "Aktuálne nastavenia:"
 
@@ -2178,9 +2394,6 @@ msgstr "Aktuálna hodnota:"
 
 msgid "Current version:"
 msgstr "Aktuálna verzia:"
-
-msgid "Currently installed image"
-msgstr "Aktuálne nainštalovaný image"
 
 #, fuzzy
 msgid "Custom"
@@ -2210,8 +2423,18 @@ msgstr ""
 msgid "Cutlist editor..."
 msgstr "Editor strihov..."
 
+#, python-format
+msgid "Cylinders: %s (max) %s (current)"
+msgstr ""
+
+msgid "Cylinders: unknown"
+msgstr ""
+
 msgid "Czech"
 msgstr "Čeština"
+
+msgid "Czech Republic"
+msgstr ""
 
 msgid "DAC"
 msgstr ""
@@ -2228,8 +2451,8 @@ msgstr ""
 msgid "DMM normal"
 msgstr ""
 
-msgid "DUAL LAYER DVD"
-msgstr "DVOJVRSTVOVÉ DVD"
+msgid "DTS"
+msgstr ""
 
 msgid "DVB subtitle black transparency"
 msgstr ""
@@ -2252,23 +2475,12 @@ msgstr ""
 msgid "DVB-T2"
 msgstr ""
 
-msgid "DVD data format"
+msgid "DVB_C"
 msgstr ""
-
-#, fuzzy
-msgid "DVD file browser"
-msgstr "Prehliadač súborov DVD"
-
-msgid "DVD media toolbox"
-msgstr "Nástroje pre DVD"
 
 #, fuzzy
 msgid "DVD player"
 msgstr "skryť prehrávač"
-
-#, fuzzy
-msgid "DVD titlelist"
-msgstr "Zoznam titulov DVD"
 
 #, fuzzy
 msgid "Daily"
@@ -2291,6 +2503,9 @@ msgstr ""
 
 msgid "Default"
 msgstr "Predvolené"
+
+msgid "Default PIN for CI"
+msgstr ""
 
 msgid "Default movie location"
 msgstr "Predvolené umiestnenie filmov"
@@ -2328,6 +2543,10 @@ msgstr ""
 
 msgid "Delete Confirmation"
 msgstr ""
+
+#, fuzzy
+msgid "Delete Language"
+msgstr "Jazyk"
 
 msgid "Delete entry"
 msgstr "Vymazať zadanie"
@@ -2371,6 +2590,10 @@ msgstr "mažem súbory"
 msgid "Depth"
 msgstr ""
 
+#, fuzzy
+msgid "Descending"
+msgstr "Nahrávanie"
+
 msgid "Descramble & record ECM' gives the option to descramble afterwards if descrambling on recording failed. 'Don't descramble, record ECM' save a scramble recording that can be descrambled on playback. 'Normal' means descramble the recording and don't record ECM."
 msgstr ""
 
@@ -2392,6 +2615,16 @@ msgstr ""
 msgid "Detected NIMs:"
 msgstr "Zistené tunery:"
 
+#, fuzzy
+msgid "Device Details"
+msgstr "Zobraziť podrobnosti"
+
+#, python-format
+msgid ""
+"Device Fixed Mount Point change needs a system restart in order to take effect.\n"
+"Restart your %s %s now?"
+msgstr ""
+
 msgid "Device Information"
 msgstr ""
 
@@ -2407,8 +2640,23 @@ msgstr ""
 msgid "Devices"
 msgstr ""
 
+msgid "Devide"
+msgstr ""
+
 msgid "DiSEqC"
 msgstr "DiSEqC"
+
+#, fuzzy
+msgid "DiSEqC 1.0 command"
+msgstr "Potvrdený príkaz DiSEqC"
+
+#, fuzzy
+msgid "DiSEqC 1.1 command"
+msgstr "Potvrdený príkaz DiSEqC"
+
+#, fuzzy
+msgid "DiSEqC 1.1 repeats"
+msgstr "Opakovania DiSEqC"
 
 msgid "DiSEqC A/B"
 msgstr "DiSEqC A/B"
@@ -2423,9 +2671,6 @@ msgstr "Režim DiSEqC"
 msgid "DiSEqC port %s: %s"
 msgstr ""
 
-msgid "DiSEqC repeats"
-msgstr "Opakovania DiSEqC"
-
 #, fuzzy
 msgid "DiSEqC-tester settings"
 msgstr "Nastavenia testovača DiSEqC"
@@ -2438,9 +2683,6 @@ msgstr "Odstránenie digitálnych obrysov"
 
 msgid "Digital downmix"
 msgstr ""
-
-msgid "Direct playback of linked titles without menu"
-msgstr "Priame prehrávanie prepojených titulov bez menu"
 
 msgid "Directory"
 msgstr ""
@@ -2474,7 +2716,11 @@ msgstr "Odpojiť"
 msgid "Disk space to reserve for recordings (in GB)"
 msgstr ""
 
-msgid "Display"
+#, python-format
+msgid "Disk temperature: %s"
+msgstr ""
+
+msgid "Disk temperature: unknown"
 msgstr ""
 
 msgid "Display 16:9 content as"
@@ -2486,6 +2732,9 @@ msgstr "Obraz 4:3 zobraziť ako"
 msgid "Display >16:9 content as"
 msgstr "Obraz >16:9 zobraziť ako"
 
+msgid "Display MyTube in extensions menu:"
+msgstr ""
+
 #, fuzzy
 msgid "Display and user interface"
 msgstr "Displej a užívateľské rozhranie"
@@ -2493,11 +2742,18 @@ msgstr "Displej a užívateľské rozhranie"
 msgid "Display message before playing next movie"
 msgstr ""
 
+msgid "Display search results by:"
+msgstr ""
+
 msgid "Display the EIT now/next eventdata in infobar."
 msgstr ""
 
 #, fuzzy
 msgid "Do not change"
+msgstr "nemeniť"
+
+#, fuzzy
+msgid "Do not flash image"
 msgstr "nemeniť"
 
 msgid "Do not record"
@@ -2514,6 +2770,12 @@ msgid ""
 "Do you really want to convert the filesystem?\n"
 "You cannot go back!"
 msgstr ""
+
+#, fuzzy, python-format
+msgid ""
+"Do you really want to delete\n"
+"%s ?"
+msgstr "Naozaj chcete zmazať %s?"
 
 #, python-format
 msgid "Do you really want to delete %s ?"
@@ -2534,13 +2796,18 @@ msgstr "Naozaj chcete zmazať %s?"
 msgid "Do you really want to download the plugin \"%s\"?"
 msgstr "Naozaj chcete stiahnuť modul \"%s\"?"
 
-msgid "Do you really want to exit?"
-msgstr "Naozaj chcete skončiť?"
+#, fuzzy, python-format
+msgid "Do you really want to hold the plugin \"%s\"?"
+msgstr "Naozaj chcete stiahnuť modul \"%s\"?"
 
 msgid ""
 "Do you really want to initialize the device?\n"
 "All data on the disk will be lost!"
 msgstr ""
+
+#, fuzzy
+msgid "Do you really want to move to trashcan ?"
+msgstr "Naozaj chcete odstrániť modul \"%s\"?"
 
 #, python-format
 msgid "Do you really want to permamently remove '%s' from trash can ?"
@@ -2565,6 +2832,10 @@ msgstr "Naozaj chcete odstrániť modul \"%s\"?"
 msgid "Do you really want to remove your bookmark of %s?"
 msgstr "Naozaj chcete odstrániť záložku %s?"
 
+#, fuzzy, python-format
+msgid "Do you really want to unhold the plugin \"%s\"?"
+msgstr "Naozaj chcete stiahnuť modul \"%s\"?"
+
 msgid "Do you want to add any additional information ?"
 msgstr ""
 
@@ -2578,8 +2849,21 @@ msgid ""
 "(choose 'No' to type message using virtual keyboard.)"
 msgstr ""
 
-msgid "Do you want to burn this collection to DVD medium?"
-msgstr "Chcete túto zostavu napáliť na DVD?"
+#, fuzzy
+msgid "Do you want to backup your settings now?"
+msgstr "Kam chcete zálohovať svoje nastavenia?"
+
+#, fuzzy
+msgid "Do you want to continue?"
+msgstr "Čo chcete vyhľadať?"
+
+#, fuzzy, python-format
+msgid "Do you want to delete %s language?"
+msgstr "Naozaj chcete zmazať %s?"
+
+#, fuzzy
+msgid "Do you want to delete all other languages?"
+msgstr "Chcete nainštalovať balíček:\n"
 
 msgid ""
 "Do you want to delete all selected files:\n"
@@ -2592,9 +2876,9 @@ msgstr "Chcete vyhľadať stanice?"
 msgid "Do you want to do another manual service scan?"
 msgstr "Chcete urobiť ďalšie ručné vyhľadávanie staníc?"
 
-#, python-format
-msgid "Do you want to download the image to %s ?"
-msgstr "Chcete stiahnuť image na %s?"
+#, fuzzy
+msgid "Do you want to enable the parental control feature on your %s %s?"
+msgstr "Chcete obnoviť nastavenia?"
 
 msgid "Do you want to install the package:\n"
 msgstr "Chcete nainštalovať balíček:\n"
@@ -2602,11 +2886,12 @@ msgstr "Chcete nainštalovať balíček:\n"
 msgid "Do you want to play DVD in drive?"
 msgstr "Chcete prehrať DVD v mechanike?"
 
-msgid "Do you want to preview this DVD before burning?"
-msgstr "Chcete si toto DVD prezrieť pred napálením?"
-
 #, fuzzy, python-format
 msgid "Do you want to reboot your %s %s"
+msgstr "Chcete obnoviť nastavenia?"
+
+#, fuzzy, python-format
+msgid "Do you want to reboot your %s %s?"
 msgstr "Chcete obnoviť nastavenia?"
 
 msgid "Do you want to reboot your receiver?"
@@ -2621,17 +2906,32 @@ msgstr "Chcete obnoviť nastavenia?"
 msgid "Do you want to resume this playback?"
 msgstr "Chcete pokračovať v prehrávaní?"
 
+#, fuzzy
+msgid "Do you want to see more entries?"
+msgstr "Chcete obnoviť nastavenia?"
+
 msgid ""
 "Do you want to send all selected files:\n"
 "(choose 'No' to only send the currently selected file.)"
 msgstr ""
 
 #, fuzzy, python-format
+msgid "Do you want to update your %s %s"
+msgstr "Chcete obnoviť nastavenia?"
+
+#, fuzzy, python-format
 msgid "Do you want to update your %s %s ?"
+msgstr "Chcete obnoviť nastavenia?"
+
+#, fuzzy, python-format
+msgid "Do you want to update your %s %s?"
 msgstr "Chcete obnoviť nastavenia?"
 
 msgid "Do you want to upgrade the package:\n"
 msgstr "Chcete aktualizovať balíček:\n"
+
+msgid "Dobly Digital downmix is now"
+msgstr ""
 
 msgid "Dolby Digital / DTS downmix"
 msgstr ""
@@ -2643,30 +2943,57 @@ msgid "Don't stop current event but disable coming events"
 msgstr "Nezastaviť aktuálny záznam, ale vypnúť nasledujúce záznamy."
 
 #, fuzzy, python-format
+msgid "Done - Installed or upgraded %d packages"
+msgstr "Hotovo - %d nainštalovaných, aktualizovaných alebo odstránených balíčkov s %d chybami"
+
+#, fuzzy, python-format
 msgid "Done - Installed, upgraded or removed %d package (%s)"
 msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Hotovo - %d nainštalovaných, aktualizovaných alebo odstránených balíčkov s %d chybami"
 msgstr[1] "Hotovo - %d nainštalovaných, aktualizovaných alebo odstránených balíčkov s %d chybami"
 msgstr[2] "Hotovo - %d nainštalovaných, aktualizovaných alebo odstránených balíčkov s %d chybami"
 
-msgid "Download"
+#, fuzzy
+msgid "Down"
 msgstr "Stiahnuť"
 
-#, fuzzy, python-format
-msgid "Download %s from server"
-msgstr "Stiahnuť %s zo servera"
+#, fuzzy
+msgid "Download Failed !!"
+msgstr "Sťahovanie"
+
+#, python-format
+msgid ""
+"Download Failed !!\n"
+"%s"
+msgstr ""
 
 #, fuzzy
-msgid "Download .NFI-files for USB-flasher"
-msgstr "Stiahnuť súbory .NFI pre USB-Flasher"
+msgid "Download Video"
+msgstr "Stiahnuť"
+
+#, fuzzy
+msgid "Download location"
+msgstr "Neplatné umiestnenie"
 
 msgid "Download plugins"
 msgstr ""
 
+#, fuzzy
+msgid "Downloadable plugins"
+msgstr "Sťahovanie"
+
 msgid "Downloading"
 msgstr "Sťahovanie"
 
+#, fuzzy, python-format
+msgid "Downloading %s"
+msgstr "Sťahovanie"
+
 msgid "Downloading plugin information. Please wait..."
+msgstr "Sťahujem informácie o moduloch. Čakajte..."
+
+#, fuzzy
+msgid "Downloading screenshots. Please wait..."
 msgstr "Sťahujem informácie o moduloch. Čakajte..."
 
 #, python-format
@@ -2676,6 +3003,10 @@ msgstr ""
 #, python-format
 msgid "Drivers: %s"
 msgstr ""
+
+#, fuzzy
+msgid "Duration: "
+msgstr "Sýtosť"
 
 msgid "Dutch"
 msgstr "Holandčina"
@@ -2750,9 +3081,6 @@ msgstr "Upraviť DNS"
 msgid "Edit bouquets list"
 msgstr "Upraviť zoznam buketov"
 
-msgid "Edit chapters of current title"
-msgstr "Upraviť kapitoly aktuálneho titulu"
-
 msgid "Edit services list"
 msgstr "Upraviť zoznam staníc"
 
@@ -2771,11 +3099,12 @@ msgstr "Upraviť nastavenie siete v %s %se.\n"
 msgid "Edit timer"
 msgstr "Upraviť titul"
 
-msgid "Edit title"
-msgstr "Upraviť titul"
-
 msgid "Edit upgrade source url."
 msgstr "Upraviť URL zdroja aktualizácie."
+
+#, fuzzy
+msgid "Education"
+msgstr "Modulácia"
 
 msgid "Education/Science/..."
 msgstr ""
@@ -2808,6 +3137,18 @@ msgid "Enable Netmed EPG"
 msgstr ""
 
 msgid "Enable ViaSat EPG"
+msgstr ""
+
+msgid "Enable Virgin EPG"
+msgstr ""
+
+msgid "Enable Wake On LAN"
+msgstr ""
+
+msgid "Enable auto PIN"
+msgstr ""
+
+msgid "Enable auto fast scan"
 msgstr ""
 
 msgid "Enable debug logs"
@@ -2848,11 +3189,18 @@ msgstr "Druh šifrovacieho kľúča"
 msgid "Encryption:"
 msgstr "Šifrovanie:"
 
+#, fuzzy
+msgid "End"
+msgstr "Zapnuté"
+
 msgid "End time"
 msgstr "Čas ukončenia"
 
 msgid "English"
 msgstr "Angličtina"
+
+msgid "Enigma2 Changes"
+msgstr ""
 
 msgid "Enigma2 skin selector"
 msgstr ""
@@ -2869,17 +3217,31 @@ msgstr "Zadajte kód PIN"
 msgid "Enter the service pin"
 msgstr "Zadajte PIN stanice"
 
-msgid "Enter your e-mail address to send a copy of the log to."
+msgid "Enter your search term(s)"
 msgstr ""
 
-msgid "Enter your forum user name, to make it easier to trace logs."
-msgstr ""
+#, fuzzy
+msgid "Entertainment"
+msgstr "Otvoriť hlavné menu..."
 
 msgid "Entitlements"
 msgstr ""
 
+msgid "Epg/Guide"
+msgstr ""
+
+msgid "Epg/Guide long"
+msgstr ""
+
+#, fuzzy
+msgid "Equal to"
+msgstr "rovná sa"
+
 msgid "Error"
 msgstr "Chyba"
+
+msgid "Error checking disk. The disk may be damaged"
+msgstr ""
 
 msgid "Error code"
 msgstr ""
@@ -2889,6 +3251,9 @@ msgstr ""
 
 msgid "Error executing plugin"
 msgstr "Chyba pri spustení modulu"
+
+msgid "Error formatting disk. The disk may be damaged"
+msgstr ""
 
 msgid "Error reading webpage!"
 msgstr ""
@@ -2924,9 +3289,6 @@ msgstr ""
 
 msgid "Everywhere"
 msgstr ""
-
-msgid "Exceeds dual layer medium!"
-msgstr "Presahuje kapacitu dvojvrstvového DVD!"
 
 msgid "Execution finished!!"
 msgstr "Skončené!!"
@@ -3003,15 +3365,16 @@ msgid "Extended Software Plugin"
 msgstr "Modul rozšíreného softvéru"
 
 #, fuzzy
+msgid "Extended System"
+msgstr "Rozšírený softvér"
+
+#, fuzzy
 msgid "Extended network setup plugin..."
 msgstr "Modul rozšíreného nastavenia siete..."
 
 #, fuzzy
 msgid "Extended setup..."
 msgstr "Rozšírené nastavenie..."
-
-msgid "Extensions"
-msgstr "Rozšírenia"
 
 msgid "Extensions management"
 msgstr "Správa rozšírení"
@@ -3022,7 +3385,35 @@ msgstr ""
 msgid "External (CF)"
 msgstr ""
 
+#, fuzzy
+msgid "External PiP"
+msgstr "Interná pamäť flash"
+
 msgid "External subtitle color"
+msgstr ""
+
+msgid "Extra motor options"
+msgstr ""
+
+msgid "F1/F3"
+msgstr ""
+
+msgid "F1/LAN"
+msgstr ""
+
+msgid "F1/LAN long"
+msgstr ""
+
+msgid "F2"
+msgstr ""
+
+msgid "F2 long"
+msgstr ""
+
+msgid "F3"
+msgstr ""
+
+msgid "F3 long"
 msgstr ""
 
 msgid "FAILED"
@@ -3059,6 +3450,9 @@ msgstr "rýchlo"
 msgid "Fast DiSEqC"
 msgstr "Rýchly DiSEqC"
 
+msgid "Fast Mounted Remove"
+msgstr ""
+
 msgid "Fast Scan"
 msgstr ""
 
@@ -3068,8 +3462,28 @@ msgstr "rýchla doba"
 msgid "Fast forward speeds"
 msgstr ""
 
+#, fuzzy
+msgid "Fast mount"
+msgstr "rýchla doba"
+
+msgid ""
+"Fast mounted Media unmounted.\n"
+"You can safely remove the Device now, if no further Partitions (displayed as P.x on Devicelist - where x >=2) are mounted on the same Device.\n"
+"Please unmount Fixed Mounted Devices with Device Manager Panel!"
+msgstr ""
+
+#, fuzzy
+msgid "Fastforward"
+msgstr "skok vpred"
+
 msgid "Favourites"
 msgstr "Obľúbené"
+
+msgid "Fetching feed entries"
+msgstr ""
+
+msgid "Fetching search entries"
+msgstr ""
 
 msgid "File appears to be busy.\n"
 msgstr ""
@@ -3083,6 +3497,9 @@ msgid "Filesystem Check"
 msgstr "Kontrola systému súborov"
 
 msgid "Filesystem check"
+msgstr ""
+
+msgid "Film & Animation"
 msgstr ""
 
 #, fuzzy
@@ -3112,22 +3529,58 @@ msgstr "Reštartovanie siete je skončené"
 msgid "Finnish"
 msgstr "Fínčina"
 
+#, python-format
+msgid "Firmware: %s"
+msgstr ""
+
+msgid "Firmware: unknown"
+msgstr ""
+
 msgid "Fixed"
+msgstr ""
+
+msgid "Fixed mount"
 msgstr ""
 
 msgid "Flash"
 msgstr "Flešovať"
 
+msgid "Flash Image Online"
+msgstr ""
+
+msgid "Flash On the Fly"
+msgstr ""
+
+msgid "Flash On the fly (select a image)"
+msgstr ""
+
+msgid "Flash and restore settings and all saved plugins"
+msgstr ""
+
+#, fuzzy
+msgid "Flash and restore settings and no plugins"
+msgstr "Áno, teraz obnoviť nastavenia"
+
+msgid "Flash and restore settings and selected plugins (ask user)"
+msgstr ""
+
+msgid "Flash and start installation wizard"
+msgstr ""
+
 msgid "Flashing"
 msgstr ""
 
-msgid "Flashing failed"
+#, fuzzy
+msgid "Flashing: "
 msgstr "Flešovanie zlyhalo"
 
 msgid "Following tasks will be done after you press OK!"
 msgstr "Po stlačení OK sa vykonajú tieto úlohy."
 
 msgid "Fontsize"
+msgstr ""
+
+msgid "For more information see http://www.atemio4you.com"
 msgstr ""
 
 #, fuzzy
@@ -3137,11 +3590,43 @@ msgstr "Nakonfigurujte rozhranie"
 msgid "Format"
 msgstr "Formát"
 
+#, fuzzy
+msgid "Format as"
+msgstr "Formát"
+
+msgid "Format terminated with success"
+msgstr ""
+
+msgid "Format/Partition your Devices and manage Mountpoints"
+msgstr ""
+
+msgid "Formatting disk"
+msgstr ""
+
+#, python-format
+msgid "Formatting disk %s"
+msgstr ""
+
+#, fuzzy, python-format
+msgid "Formatting partition %d"
+msgstr "Odstrániť titul"
+
 msgid "Forward volume keys"
+msgstr ""
+
+#, python-format
+msgid "Four partitions (25% - 25% - 25% - 25%)"
 msgstr ""
 
 msgid "Frame size in full view"
 msgstr "Veľkosť obrazu pri plnom zobrazení"
+
+#, fuzzy
+msgid "France"
+msgstr "Zrušiť"
+
+msgid "Free"
+msgstr ""
 
 msgid "Free Memory:"
 msgstr ""
@@ -3188,11 +3673,21 @@ msgstr "Piatok"
 msgid "From :"
 msgstr ""
 
+msgid "Front Display Panel"
+msgstr ""
+
 #, python-format
 msgid "Frontprocessor version: %d"
 msgstr "Verzia frontprocesora: %d"
 
 msgid "Ftpd service type: Vsftpd server"
+msgstr ""
+
+msgid "Full Image Backup"
+msgstr ""
+
+#, python-format
+msgid "Full back-up on %s"
 msgstr ""
 
 msgid "Full screen"
@@ -3216,6 +3711,9 @@ msgstr ""
 "Pre použitie nového vzhľadu sa musí reštartovať GUI\n"
 "Chcete teraz reštartovať GUI?"
 
+msgid "Gaming"
+msgstr ""
+
 msgid "Gateway"
 msgstr "Brána"
 
@@ -3234,11 +3732,9 @@ msgstr "Žáner"
 msgid "German"
 msgstr "Nemčina"
 
-msgid "Get latest experimental image"
-msgstr "Získať najnovší experimentálny image"
-
-msgid "Get latest release image"
-msgstr "Získať najnovší hotový image"
+#, fuzzy
+msgid "Germany"
+msgstr "Nemčina"
 
 msgid "Getting Event Info failed!"
 msgstr ""
@@ -3317,8 +3813,18 @@ msgstr "Grafický Multi EPG"
 msgid "Graphics"
 msgstr ""
 
+msgid "Great Britain"
+msgstr ""
+
 msgid "Greek"
 msgstr "Gréčtina"
+
+#, fuzzy
+msgid "Green"
+msgstr "Gréčtina"
+
+msgid "Green long"
+msgstr ""
 
 msgid "Grey"
 msgstr ""
@@ -3331,6 +3837,24 @@ msgstr ""
 
 msgid "HD list"
 msgstr ""
+
+msgid "HD videos"
+msgstr ""
+
+msgid "HD1100"
+msgstr ""
+
+msgid "HD2400"
+msgstr ""
+
+msgid ""
+"HDD = Do you want to make an USB-back-up image on HDD? \n"
+"This only takes 2 or 10 minutes and is fully automatic."
+msgstr ""
+
+#, fuzzy
+msgid "HDD Partitioner"
+msgstr "motor"
 
 msgid "HDMI"
 msgstr ""
@@ -3355,10 +3879,33 @@ msgstr "Nastavenie pevného disku"
 msgid "Hard disk standby after"
 msgstr "Uspať disk po"
 
+#, fuzzy
+msgid "Harddisk Setup"
+msgstr "Nastavenie pevného disku"
+
+#, fuzzy
+msgid "Harddisk standby after"
+msgstr "Uspať disk po"
+
+#, python-format
+msgid "Heads: %s (max) %s (current)"
+msgstr ""
+
+#, fuzzy
+msgid "Heads: unknown"
+msgstr "neznáme"
+
 msgid "Hebrew"
 msgstr ""
 
 msgid "Height"
+msgstr ""
+
+#, fuzzy
+msgid "Hello"
+msgstr "žltá"
+
+msgid "Help"
 msgstr ""
 
 msgid "Helps setting up your dish"
@@ -3397,11 +3944,26 @@ msgstr "Hierarchické informácie"
 msgid "High bitrate support"
 msgstr "Spracuje vysoký dátový tok"
 
+msgid "History"
+msgstr ""
+
+#, fuzzy
+msgid "History back"
+msgstr "Obnoviť zálohy"
+
 msgid "History buttons mode"
 msgstr ""
 
+#, fuzzy
+msgid "History next"
+msgstr "Nahrať"
+
 msgid "History zap..."
 msgstr ""
+
+#, fuzzy
+msgid "Hold plugins"
+msgstr "Odstrániť moduly"
 
 msgid "Hold screen"
 msgstr ""
@@ -3409,7 +3971,13 @@ msgstr ""
 msgid "Hold till locked"
 msgstr ""
 
+msgid "Holland"
+msgstr ""
+
 msgid "Home"
+msgstr ""
+
+msgid "Hong Kong"
 msgstr ""
 
 msgid "Hops:"
@@ -3427,6 +3995,13 @@ msgstr ""
 msgid "Hostname: "
 msgstr ""
 
+#, fuzzy
+msgid "HotKey Setup"
+msgstr "Ochrániť nastavenia"
+
+msgid "Hotkey"
+msgstr ""
+
 msgid "Hour"
 msgstr ""
 
@@ -3441,6 +4016,9 @@ msgstr ""
 
 msgid "How many minutes do you want to record?"
 msgstr "Koľko minút chcete nahrávať?"
+
+msgid "Howto & Style"
+msgstr ""
 
 msgid "Hue"
 msgstr "Odtieň"
@@ -3464,11 +4042,9 @@ msgstr ""
 msgid "IP:"
 msgstr ""
 
-msgid "ISO file is too large for this filesystem!"
-msgstr "Súbor ISO je pre tento súborový systém príliš veľký!"
-
-msgid "ISO path"
-msgstr "Cesta ISO"
+#, fuzzy
+msgid "IPK Installer"
+msgstr "Inštalovať"
 
 msgid "Icons"
 msgstr ""
@@ -3592,7 +4168,22 @@ msgstr "Zvýšené napätie"
 msgid "Index allocated:"
 msgstr ""
 
+msgid "India"
+msgstr ""
+
 msgid "Info"
+msgstr "Informačná lišta"
+
+#, fuzzy
+msgid "Info (EPG)"
+msgstr "Informačná lišta"
+
+#, fuzzy
+msgid "Info (EPG) Long"
+msgstr "Informačná lišta"
+
+#, fuzzy
+msgid "Info Long"
 msgstr "Informačná lišta"
 
 msgid "Info button (long)"
@@ -3601,15 +4192,17 @@ msgstr ""
 msgid "Info button (short)"
 msgstr ""
 
+msgid "Info icon width"
+msgstr ""
+
 #, fuzzy
 msgid "InfoBar EPG"
 msgstr "Informačná lišta"
 
-#, fuzzy
-msgid "InfoBar EPG mode"
-msgstr "Informačná lišta"
-
 msgid "Infobar EPG"
+msgstr ""
+
+msgid "Infobar frontend data source"
 msgstr ""
 
 #, fuzzy
@@ -3645,6 +4238,10 @@ msgstr "Inicializácia"
 msgid "Initialize"
 msgstr "Inicializovať"
 
+#, fuzzy
+msgid "Initialize disk"
+msgstr "Inicializovať"
+
 msgid "Initializing storage device..."
 msgstr ""
 
@@ -3660,8 +4257,15 @@ msgstr "Nastavenie vstupného zariadenia"
 msgid "Input devices"
 msgstr ""
 
+msgid "Insert mount point:"
+msgstr ""
+
 msgid "Install"
 msgstr "Inštalovať"
+
+#, fuzzy
+msgid "Install Plugins"
+msgstr "Inštalujem"
 
 msgid "Install a new image with a USB stick"
 msgstr "Inštalovať nový image z kľúča USB"
@@ -3698,6 +4302,14 @@ msgstr "Inštalujem"
 
 msgid "Installing Service"
 msgstr ""
+
+#, fuzzy
+msgid "Installing plugins..."
+msgstr "Inštalácia je skončená."
+
+#, fuzzy
+msgid "Instant record"
+msgstr "Okamžité nahrávanie..."
 
 msgid "Instant record location"
 msgstr "Umiestnenie okamžitého záznamu"
@@ -3757,16 +4369,32 @@ msgstr ""
 msgid "Ipkg"
 msgstr "Ipkg"
 
+msgid "Ireland"
+msgstr ""
+
 msgid "Is this setting ok?"
 msgstr ""
 
 msgid "Is this video mode ok?"
 msgstr ""
 
+msgid "Israel"
+msgstr ""
+
+msgid "It's not elegant and low performace... but for skin developing is great!"
+msgstr ""
+
 msgid "Italian"
 msgstr "Taliančina"
 
+#, fuzzy
+msgid "Italy"
+msgstr "Taliančina"
+
 msgid "JUMP 24 HOURS"
+msgstr ""
+
+msgid "Japan"
 msgstr ""
 
 msgid "Job View"
@@ -3775,8 +4403,9 @@ msgstr "Prehľad úloh"
 msgid "Jump back 24 hours"
 msgstr ""
 
-msgid "Jump first press in channel selection*"
-msgstr ""
+#, fuzzy
+msgid "Jump first press in channel selection"
+msgstr "Vo výbere staníc zobraziť priebeh programu"
 
 msgid "Jump forward 24 hours"
 msgstr ""
@@ -3814,6 +4443,10 @@ msgstr "Na celú obrazovku (bez pomeru strán)"
 #, fuzzy
 msgid "Just zap"
 msgstr "Na celú obrazovku (bez pomeru strán)"
+
+#, fuzzy
+msgid "Keep old drive"
+msgstr "pridať stanicu"
 
 #, fuzzy
 msgid "Keep service"
@@ -3971,9 +4604,6 @@ msgstr "Kvalita spojenia:"
 msgid "Link:"
 msgstr "Spojenie:"
 
-msgid "Linked titles with a DVD menu"
-msgstr "Tituly prepojené s menu DVD"
-
 msgid "List EPG functions..."
 msgstr ""
 
@@ -3991,6 +4621,9 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
+msgid "List/Fav"
+msgstr ""
+
 #, fuzzy
 msgid "Listen to the radio..."
 msgstr "Počúvať rádio..."
@@ -3998,10 +4631,10 @@ msgstr "Počúvať rádio..."
 msgid "Lithuanian"
 msgstr "Litovčina"
 
-msgid "Load"
-msgstr "Natiahnuť"
-
 msgid "Load EPG"
+msgstr ""
+
+msgid "Load feed on startup:"
 msgstr ""
 
 #, fuzzy
@@ -4009,6 +4642,9 @@ msgid "Load playlist"
 msgstr "otvoriť zoznam prehrávok"
 
 msgid "Load/Save"
+msgstr ""
+
+msgid "Local = Flash a image from local path /hdd/images"
 msgstr ""
 
 msgid "Local box"
@@ -4033,6 +4669,13 @@ msgstr "Zaznamenať výsledky na pevný disk"
 
 msgid "LogManager"
 msgstr ""
+
+msgid "Login OK"
+msgstr ""
+
+#, fuzzy
+msgid "Login failed"
+msgstr "Flešovanie zlyhalo"
 
 msgid "Logs"
 msgstr ""
@@ -4064,6 +4707,13 @@ msgstr "Dlhé stlačenie tlačidla"
 
 msgid "Longitude"
 msgstr "Zem. dĺžka"
+
+#, fuzzy
+msgid "Loop through to"
+msgstr "prepojiť s"
+
+msgid "Lower Framerate save CPU Time"
+msgstr ""
 
 msgid "Luxembourgish"
 msgstr ""
@@ -4107,6 +4757,10 @@ msgstr "Spravovať rozšírenia"
 msgid "Manage your %s %s's software"
 msgstr "Spravovať softvér ptijímača"
 
+#, fuzzy
+msgid "Manual"
+msgstr "ručne"
+
 msgid "Manual Scan"
 msgstr "Ručné vyhľadávanie"
 
@@ -4122,6 +4776,9 @@ msgstr "Transpondér ručne"
 msgid "Manufacturer"
 msgstr "Výrobca"
 
+msgid "MaraM9"
+msgstr ""
+
 #, fuzzy
 msgid "Margin after recording (minutes)"
 msgstr "Rezerva pred začiatkom programu (min)"
@@ -4129,6 +4786,13 @@ msgstr "Rezerva pred začiatkom programu (min)"
 #, fuzzy
 msgid "Margin before recording (minutes)"
 msgstr "Rezerva pred začiatkom programu (min)"
+
+msgid "Mark/Portal/Playlist"
+msgstr ""
+
+#, fuzzy
+msgid "Max memory positions"
+msgstr "Uložiť pozíciu"
 
 #, fuzzy
 msgid "Max. bitrate: "
@@ -4159,12 +4823,6 @@ msgstr "Prehrávač médií"
 msgid "Media scanner"
 msgstr "Prehrávač médií"
 
-msgid "Medium is not a writeable DVD!"
-msgstr "Médium nie je zapisovateľný disk DVD!"
-
-msgid "Medium is not empty!"
-msgstr "Médium nie je prázdne!"
-
 msgid "Memory"
 msgstr ""
 
@@ -4173,10 +4831,6 @@ msgstr ""
 
 msgid "Memory index"
 msgstr ""
-
-#, fuzzy
-msgid "Memory positions"
-msgstr "Uložiť pozíciu"
 
 msgid "Menu"
 msgstr "Menu"
@@ -4187,6 +4841,9 @@ msgstr ""
 msgid "Merging Timeshift files"
 msgstr ""
 
+msgid "Mexico"
+msgstr ""
+
 msgid "MiniDLNA Log"
 msgstr ""
 
@@ -4194,6 +4851,12 @@ msgid "MiniDLNA Setup"
 msgstr ""
 
 msgid "MiniDLNA setup"
+msgstr ""
+
+msgid "MiniTV"
+msgstr ""
+
+msgid "MiniTV with OSD"
 msgstr ""
 
 #, python-format
@@ -4228,6 +4891,18 @@ msgstr "Model: "
 msgid "Model: "
 msgstr "Model: "
 
+#, fuzzy, python-format
+msgid "Model: %s"
+msgstr "Model: "
+
+#, fuzzy, python-format
+msgid "Model: %s %s\n"
+msgstr "Model: "
+
+#, fuzzy
+msgid "Model: unknown"
+msgstr "Model: "
+
 msgid "Modulation"
 msgstr "Modulácia"
 
@@ -4247,10 +4922,79 @@ msgstr "Pondelok"
 msgid "Monthly"
 msgstr "mesiac"
 
+msgid "More video entries."
+msgstr ""
+
 msgid "Mosquito noise reduction"
 msgstr "Potlačenie šumu na hranách"
 
+msgid "Most discussed"
+msgstr ""
+
+msgid "Most linked"
+msgstr ""
+
+msgid "Most popular"
+msgstr ""
+
+msgid "Most recent"
+msgstr ""
+
+msgid "Most responded"
+msgstr ""
+
+msgid "Most shared"
+msgstr ""
+
+msgid "Most viewed"
+msgstr ""
+
 msgid "Mount"
+msgstr ""
+
+msgid "Mount as /media/hdd1"
+msgstr ""
+
+msgid "Mount as /media/hdd2"
+msgstr ""
+
+msgid "Mount as /media/hdd3"
+msgstr ""
+
+msgid "Mount as /media/hdd4"
+msgstr ""
+
+msgid "Mount as /media/hdd5"
+msgstr ""
+
+msgid "Mount as /media/usb"
+msgstr ""
+
+msgid "Mount as /media/usb1"
+msgstr ""
+
+msgid "Mount as /media/usb2"
+msgstr ""
+
+msgid "Mount as /media/usb3"
+msgstr ""
+
+msgid "Mount as /media/usb4"
+msgstr ""
+
+msgid "Mount as /media/usb5"
+msgstr ""
+
+msgid "Mount as main hdd"
+msgstr ""
+
+msgid "Mount on custom path"
+msgstr ""
+
+msgid "Mount point exist!"
+msgstr ""
+
+msgid "Mountpoints"
 msgstr ""
 
 msgid "Mounts Setup"
@@ -4263,6 +5007,9 @@ msgid "Move"
 msgstr ""
 
 msgid "Move Left/Right"
+msgstr ""
+
+msgid "Move PIP"
 msgstr ""
 
 #, fuzzy
@@ -4364,18 +5111,60 @@ msgstr ""
 msgid "Multisat"
 msgstr "viac satelitov"
 
+msgid "Music"
+msgstr ""
+
 msgid "Music/Ballet/Dance"
+msgstr ""
+
+#, fuzzy
+msgid "My Favorites"
+msgstr "Obľúbené"
+
+msgid "My History"
+msgstr ""
+
+msgid "My Recommendations"
+msgstr ""
+
+#, fuzzy
+msgid "My Subscriptions"
+msgstr "Opis"
+
+msgid "My TubePlayer"
+msgstr ""
+
+msgid "My Uploads"
+msgstr ""
+
+msgid "My Watch Later"
+msgstr ""
+
+#, fuzzy
+msgid "MyTube Settings"
+msgstr "Nastavenia"
+
+msgid "MyTubePlayer"
+msgstr ""
+
+msgid "MyTubePlayer Help"
+msgstr ""
+
+msgid "MyTubePlayer active video downloads"
+msgstr ""
+
+#, fuzzy
+msgid "MyTubePlayer settings"
+msgstr "Nastavenia adaptéra"
+
+msgid "MyTubeVideoInfoScreen"
+msgstr ""
+
+msgid "MyTubeVideohelpScreen"
 msgstr ""
 
 msgid "N/A"
 msgstr "Nie je k dispozícii"
-
-#, fuzzy
-msgid "NFI image flashing"
-msgstr "Flešovanie image NFI"
-
-msgid "NFI image flashing completed. Press Yellow to Reboot!"
-msgstr "Flešovanie image .NFI skončené. Stlačením žltého tlačidla reštartujte."
 
 msgid "NFS Setup"
 msgstr ""
@@ -4476,8 +5265,18 @@ msgstr "Nové"
 msgid "New PIN"
 msgstr "Nový PIN"
 
+msgid "New Packages"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
 msgid "New profile: "
 msgstr ""
+
+#, fuzzy
+msgid "New subscription added"
+msgstr "Opis"
 
 msgid "New timers location"
 msgstr ""
@@ -4485,7 +5284,13 @@ msgstr ""
 msgid "New version:"
 msgstr "Nová verzia:"
 
+msgid "News & Politics"
+msgstr ""
+
 msgid "News Current Affairs"
+msgstr ""
+
+msgid "Next"
 msgstr ""
 
 msgctxt "now/next: 'next' event label"
@@ -4495,8 +5300,17 @@ msgstr ""
 msgid "No"
 msgstr "Nie"
 
-msgid "No (supported) DVDROM found!"
-msgstr "Nenájdený (podporovaný) DVDROM!"
+msgid ""
+"No /hdd found !!\n"
+"Please make sure you have a HDD mounted.\n"
+msgstr ""
+
+msgid ""
+"No /hdd found !!\n"
+"Please make sure you have a HDD mounted.\n"
+"\n"
+"Exit plugin."
+msgstr ""
 
 msgid "No Connection"
 msgstr "Nie je spojenie"
@@ -4505,6 +5319,12 @@ msgid "No HDD found or HDD not initialized!"
 msgstr "Pevný disk nebol nájdený alebo nebol inicializovaný."
 
 msgid "No Timeshift found to save as recording!"
+msgstr ""
+
+msgid ""
+"No USB-Device found for fullbackup !!\n"
+"\n"
+"\n"
 msgstr ""
 
 msgid "No backup needed"
@@ -4528,9 +5348,6 @@ msgstr ""
 
 msgid "No description available."
 msgstr "Opis nie je k dispozícii."
-
-msgid "No details for this image file"
-msgstr "Žiadne podrobnosti k tomuto súboru image"
 
 msgid "No displayable files on this medium found!"
 msgstr "Na tomto médiu sa nenašli žiadne zobraziteľné súbory!"
@@ -4563,12 +5380,15 @@ msgstr "Nie je dostupné sieťové pripojenie."
 msgid "No networks found"
 msgstr "Nenájdená žiadna sieť"
 
-#, fuzzy
-msgid "No new plugins found"
-msgstr "Nenájdená žiadna sieť"
-
 msgid "No of items switch (increase or reduced)"
 msgstr ""
+
+msgid "No packages were upgraded yet. So you can check your network and try again."
+msgstr ""
+
+#, fuzzy
+msgid "No playable video found! Stop playing this movie?"
+msgstr "Zastaviť prehrávanie tohto filmu?"
 
 msgid "No positioner capable frontend found."
 msgstr "Nebol nájdený tuner vhodný pre motor."
@@ -4635,6 +5455,10 @@ msgstr ""
 "Chcete teraz zmeniť PIN nastavení?\n"
 "Keď zvolíte „Nie“, ochrana nastavení zostane vypnutá!"
 
+#, fuzzy
+msgid "No videos to display"
+msgstr "Poskytovatelia na vyhľadávanie"
+
 msgid "No wireless networks found! Searching..."
 msgstr "Nenájdená bezdrôtová sieť. Hľadám ..."
 
@@ -4659,8 +5483,18 @@ msgstr ""
 "Nenájdené funkčné bezdrôtové sieťové rozhranie.\n"
 "Skontrolujte, či máte pripojené kompatibilné zariadenie WLAN alebo zapnite miestne sieťové rozhranie."
 
+#, fuzzy
+msgid "No, but play video again"
+msgstr "Nie, ale začať od začiatku."
+
 msgid "No, but restart from begin"
 msgstr "Nie, ale začať od začiatku."
+
+msgid "No, but switch to video entries."
+msgstr ""
+
+msgid "No, but switch to video search."
+msgstr ""
 
 msgid "No, do nothing."
 msgstr "Nie, nič neurobiť."
@@ -4683,6 +5517,9 @@ msgstr ""
 msgid "None"
 msgstr "Žiadne"
 
+msgid "Nonprofits & Activism"
+msgstr ""
+
 msgid "North"
 msgstr "severne"
 
@@ -4698,6 +5535,10 @@ msgstr ""
 msgid "Not associated"
 msgstr ""
 
+#, fuzzy
+msgid "Not configured"
+msgstr "nenakonfigurované"
+
 #, fuzzy, python-format
 msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
 msgstr "Nie je dosť miesta na disku. Uvoľnite miesto a skúste znova. (Je treba %d MB, ale je len %d MB.)"
@@ -4711,6 +5552,27 @@ msgid ""
 "Path: %s"
 msgstr ""
 
+#, python-format
+msgid ""
+"Not enough free space on %s !!\n"
+"You need at least 300Mb free space.\n"
+msgstr ""
+
+msgid ""
+"Not enough free space on /hdd !!\n"
+"You need at least 300Mb free space.\n"
+msgstr ""
+
+msgid ""
+"Not enough free space on /hdd !!\n"
+"You need at least 300Mb free space.\n"
+"\n"
+"Exit plugin."
+msgstr ""
+
+msgid "Not fetching feed entries"
+msgstr ""
+
 msgid "Not mounted"
 msgstr ""
 
@@ -4720,6 +5582,10 @@ msgstr ""
 #, fuzzy
 msgid "Nothing"
 msgstr "nič nerobiť"
+
+#, fuzzy
+msgid "Nothing connected"
+msgstr "nič nie je pripojené"
 
 msgid ""
 "Nothing to scan!\n"
@@ -4766,8 +5632,18 @@ msgstr "OK, poveď ma procesom aktualizácie."
 msgid "ONID"
 msgstr ""
 
+msgid "OSD"
+msgstr ""
+
 msgid "OSD 3D Setup"
 msgstr ""
+
+msgid "OSD Adjustment"
+msgstr ""
+
+#, fuzzy
+msgid "OSD Position"
+msgstr "motor"
 
 msgid "OSD name request"
 msgstr ""
@@ -4778,19 +5654,22 @@ msgstr ""
 msgid "OScam Info"
 msgstr ""
 
-msgid "OScam info"
-msgstr ""
-
 msgid "Off"
 msgstr "Vypnúť"
 
 msgid "Offline decode delay (ms)"
 msgstr ""
 
+msgid "Ok"
+msgstr ""
+
 msgid "On"
 msgstr "Zapnúť"
 
 msgid "On end of movie"
+msgstr ""
+
+msgid "On end of movie (as menu)"
 msgstr ""
 
 msgid "On reaching the end of a file during playback, you can choose the box's behavior."
@@ -4803,6 +5682,12 @@ msgid "One"
 msgstr "Jeden"
 
 msgid "One line"
+msgstr ""
+
+msgid "One partition"
+msgstr ""
+
+msgid "Online = Download a image from Atemio4you and flash it"
 msgstr ""
 
 msgid "OnlineVersionCheck"
@@ -4818,6 +5703,19 @@ msgstr "Len rozšírenia."
 msgid "Only free scan"
 msgstr "Vyhľadať len FTA"
 
+msgid "Open AutoTimer"
+msgstr ""
+
+msgid "Open event view"
+msgstr ""
+
+#, fuzzy
+msgid "Open favourites list"
+msgstr "skončiť úpravu obľúbených"
+
+msgid "Open graphical multi EPG"
+msgstr ""
+
 msgid "Open satellites list"
 msgstr ""
 
@@ -4827,7 +5725,13 @@ msgstr ""
 msgid "Open service list and select next channel"
 msgstr ""
 
+msgid "Open service list and select next channel for PiP"
+msgstr ""
+
 msgid "Open service list and select previous channel"
+msgstr ""
+
+msgid "Open service list and select previous channel for PiP"
 msgstr ""
 
 msgid "Open the movie list"
@@ -4857,8 +5761,27 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-msgid "Output"
+msgid "Overwrite Bootlogo Files ?"
 msgstr ""
+
+msgid "Overwrite Driver Files ?"
+msgstr ""
+
+msgid "Overwrite Emu Files ?"
+msgstr ""
+
+msgid "Overwrite Picon Files ?"
+msgstr ""
+
+msgid "Overwrite Setting Files ?"
+msgstr ""
+
+msgid "Overwrite Spinner Files ?"
+msgstr ""
+
+#, fuzzy
+msgid "Overwrite bootlogo files during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
 
 msgid "Overwrite configuration files during software upgrade?"
 msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
@@ -4866,17 +5789,47 @@ msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
 msgid "Overwrite configuration files?"
 msgstr ""
 
+#, fuzzy
+msgid "Overwrite driver files during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
+
+#, fuzzy
+msgid "Overwrite picon files during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
+
+#, fuzzy
+msgid "Overwrite setting files (channellist) during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
+
+#, fuzzy
+msgid "Overwrite softcam files during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
+
+#, fuzzy
+msgid "Overwrite spinner files during software upgrade?"
+msgstr "Prepísať konfiguračné súbory pri aktualizácii softvéru? "
+
 msgid "PAGE UP/DOWN"
 msgstr ""
 
 msgid "PAL"
 msgstr "PAL"
 
+#, fuzzy
+msgid "PCM Multichannel"
+msgstr "Stanica"
+
 msgid "PCR PID"
 msgstr ""
 
 msgid "PIDs"
 msgstr "PIDy"
+
+msgid "PIP"
+msgstr ""
+
+msgid "PIP with OSD"
+msgstr ""
 
 msgid "PLP ID"
 msgstr ""
@@ -4929,6 +5882,22 @@ msgstr "Nastavenie rodičovskej zámky"
 msgid "Parental control type"
 msgstr "Typ rodičovskej zámky"
 
+#, fuzzy
+msgid "Partitioner"
+msgstr "motor"
+
+#, fuzzy
+msgid "Partitioning failed!"
+msgstr "Zápis zlyhal!"
+
+#, fuzzy
+msgid "Partitioning..."
+msgstr "Zálohovanie beží..."
+
+#, fuzzy
+msgid "Partitions"
+msgstr "Polarizácia"
+
 msgid "Password"
 msgstr "Heslo"
 
@@ -4949,6 +5918,9 @@ msgid "Pause playback"
 msgstr ""
 
 msgid "Peak load (max queued requests per workerthread)"
+msgstr ""
+
+msgid "People & Blogs"
 msgstr ""
 
 msgid "Percentage"
@@ -4987,6 +5959,9 @@ msgstr ""
 
 msgid "Persian"
 msgstr "Perzština"
+
+msgid "Pets & Animals"
+msgstr ""
 
 msgid "Phone number"
 msgstr "Telefónne číslo"
@@ -5030,6 +6005,10 @@ msgstr "Prehrať DVD"
 msgid "Play Music..."
 msgstr "Prehrať hudbu..."
 
+#, fuzzy
+msgid "Play YouTube movies"
+msgstr "Prehrať nahrané filmy..."
+
 msgid "Play audio in background"
 msgstr ""
 
@@ -5065,20 +6044,30 @@ msgstr ""
 msgid "Play next (return to previous service)"
 msgstr ""
 
+msgid "Play next video"
+msgstr ""
+
 msgid "Play previous"
 msgstr ""
 
 msgid "Play recorded movies..."
 msgstr "Prehrať nahrané filmy..."
 
-msgid "Please add titles to the compilation."
-msgstr "Pridajte titulky do kompilácie."
+msgid "Play video again"
+msgstr ""
+
+#, fuzzy
+msgid "Playlist"
+msgstr "čierna listina"
+
+msgid "Please be aware, that anyone can disable the parental control, if you have not set a PIN."
+msgstr ""
+
+msgid "Please be patient, a backup will now be made,\n"
+msgstr ""
 
 msgid "Please change recording endtime"
 msgstr "Zmeňte koniec nahrávania"
-
-msgid "Please check your network settings!"
-msgstr "Skontrolujte nastavenia siete!"
 
 msgid "Please choose CCcam-Reader"
 msgstr ""
@@ -5134,11 +6123,23 @@ msgstr "Zadajte správny kód PIN"
 msgid "Please enter the old PIN code"
 msgstr "Zadajte starý kód PIN"
 
+#, fuzzy
+msgid "Please enter the your personal feed URL"
+msgstr "Zadajte správny kód PIN"
+
+#, fuzzy
+msgid "Please enter your search term."
+msgstr "Zadajte nový názov súboru"
+
 msgid "Please follow the instructions on the TV"
 msgstr "Riaďte sa pokynmi na televíznej obrazovke"
 
 msgid "Please note that the previously selected media could not be accessed and therefore the default directory is being used instead."
 msgstr "Nie je prístup k predtým zvolenému médiu, preto sa namiesto neho použije predvolený adresár."
+
+#, fuzzy
+msgid "Please open Picture in Picture first"
+msgstr "Nedá sa otvoriť obraz v obraze"
 
 msgid "Please press OK to continue."
 msgstr "Pre pokračovanie stlačte tlačidlo OK."
@@ -5152,6 +6153,9 @@ msgstr "Zvoľte zoznam prehrávok, ktorý sa má zmazať..."
 msgid "Please select a playlist..."
 msgstr "Zvoľte zoznam prehrávok..."
 
+msgid "Please select a standard feed or try searching for videos."
+msgstr ""
+
 #, fuzzy
 msgid "Please select a sub service..."
 msgstr "Zvoľte podkanál..."
@@ -5162,8 +6166,9 @@ msgstr "Zvoľte podkanál pre nahrávanie..."
 msgid "Please select a subservice..."
 msgstr "Zvoľte podkanál..."
 
-msgid "Please select an NFI file and press green key to flash!"
-msgstr "Zvoľte súbor NFI a stlačením zeleného tlačidla spusťte flash!"
+#, fuzzy
+msgid "Please select medium"
+msgstr "Vyberte médium na prehľadanie"
 
 #, fuzzy
 msgid "Please select medium to be scanned"
@@ -5196,6 +6201,15 @@ msgstr ""
 "\n"
 "Pokračujte stlačením OK."
 
+msgid ""
+"Please select what to do after flashing the image:\n"
+"(In addition, if it exists, a local script will be executed as well at /media/hdd/images/config/myrestore.sh)"
+msgstr ""
+
+#, fuzzy
+msgid "Please select your preferred configuration."
+msgstr "Vyčkajte na aktivovanie nastavenia siete..."
+
 msgid "Please set up tuner A"
 msgstr ""
 
@@ -5212,6 +6226,14 @@ msgstr "Nastavte tuner D"
 msgid ""
 "Please setup your user interface by adjusting the values till the edges of the blue box are touching the edges of your TV.\n"
 "When you are ready press OK to continue."
+msgstr ""
+"Nakonfigurujte si internetové pripojenie vyplnením požadovaných hodnôt.\n"
+"Po skončení stlačte OK a pokračujte."
+
+#, fuzzy
+msgid ""
+"Please setup your user interface by adjusting the values till the edges of the red box are touching the edges of your TV.\n"
+"When you are ready press green to continue."
 msgstr ""
 "Nakonfigurujte si internetové pripojenie vyplnením požadovaných hodnôt.\n"
 "Po skončení stlačte OK a pokračujte."
@@ -5244,6 +6266,10 @@ msgstr "Čakajte, kým sa testuje sieť..."
 msgid "Please wait while scanning is in progress..."
 msgstr "Čakajte, kým prebieha vyhľadávanie..."
 
+#, fuzzy
+msgid "Please wait while we check your installed plugins..."
+msgstr "Čakajte, kým sa testuje sieť..."
+
 msgid "Please wait while we configure your network..."
 msgstr "Čakajte, kým sa nastavuje sieť..."
 
@@ -5265,7 +6291,13 @@ msgstr "Čakajte..."
 msgid "Please wait... Loading list..."
 msgstr "Čakajte... Otvára sa zoznam..."
 
+msgid "Please: DO NOT reboot your STB and turn off the power.\n"
+msgstr ""
+
 msgid "Plugin Browser"
+msgstr ""
+
+msgid "Plugin Filter..."
 msgstr ""
 
 msgid "Plugin details"
@@ -5279,6 +6311,9 @@ msgstr "Pomocník správcu modulov"
 
 msgid "Plugins"
 msgstr "Moduly"
+
+msgid "Poland"
+msgstr ""
 
 #, fuzzy
 msgid "Polarisation"
@@ -5319,9 +6354,6 @@ msgstr "Nastavenie motora"
 msgid "Position of finished Timers in the Timer list"
 msgstr "Umiestnenie skončených časovačov v zozname časovačov"
 
-msgid "Position setup"
-msgstr ""
-
 #, fuzzy
 msgid "Position stored at index"
 msgstr "Nastavenie motora"
@@ -5329,8 +6361,20 @@ msgstr "Nastavenie motora"
 msgid "Positioner"
 msgstr "motor"
 
+#, fuzzy
+msgid "Positioner (selecting satellites)"
+msgstr "odstrániť zvolený satelit"
+
 msgid "Positioner setup"
 msgstr "Nastavenie motora"
+
+#, fuzzy
+msgid "Power"
+msgstr "Časovač zapnutia/vyp."
+
+#, fuzzy
+msgid "Power long"
+msgstr "Záznam časovača"
 
 msgid "Power threshold in mA"
 msgstr "Prah prúdu v mA"
@@ -5340,6 +6384,11 @@ msgid "PowerManager entry"
 msgstr "Odstrániť DNS"
 
 msgid "PowerManager log"
+msgstr ""
+
+msgid ""
+"PowerOff while Recording in progress!\n"
+"Entering standby, after recording the box will shutdown."
 msgstr ""
 
 #, fuzzy
@@ -5362,6 +6411,9 @@ msgstr "Preddefinovaný transpondér"
 msgid "Prefer AC3 track"
 msgstr ""
 
+msgid "Prefer AC3+ track"
+msgstr ""
+
 msgid "Prefer audio track stored by service"
 msgstr ""
 
@@ -5377,14 +6429,15 @@ msgstr ""
 msgid "Preferred tuner"
 msgstr ""
 
-msgid "Prepare another USB stick for image flashing"
-msgstr "Pripravte si iný kľúč USB na flashovanie image"
+msgid "Preferred tuner for recordings"
+msgstr ""
 
 msgid "Preparing... Please wait"
 msgstr "Pripravujem... Čakajte..."
 
-msgid "Press '0' to toggle internal/external PiP."
-msgstr ""
+#, fuzzy
+msgid "Press '0' to toggle PiP mode"
+msgstr "Stlačte OK pre prepnutie výberu."
 
 msgid "Press INFO on your remote control for additional information."
 msgstr "Stlačením INFO na DO si zobrazíte ďalšie informácie."
@@ -5415,6 +6468,10 @@ msgstr "Pre vyhľadávanie stlačte OK."
 msgid "Press OK to select a provider."
 msgstr "Stlačením OK zvolíte poskytovateľa."
 
+#, fuzzy
+msgid "Press OK to select satellites"
+msgstr "Stlačením OK zvolíte poskytovateľa."
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "Stlačením OK zvoľte alebo zrušte CAId."
 
@@ -5425,6 +6482,10 @@ msgstr "Stlačte OK pre zmenu nastavení."
 msgid "Press OK to start the scan"
 msgstr "Stlačením tlačidla OK spustíte vyhľadávanie"
 
+#, fuzzy
+msgid "Press OK to toggle the selection"
+msgstr "Stlačte OK pre prepnutie výberu."
+
 msgid "Press OK to toggle the selection."
 msgstr "Stlačte OK pre prepnutie výberu."
 
@@ -5434,8 +6495,9 @@ msgstr "Stlačením žltého tlačidla nastavíte toto rozhranie ako predvolené
 msgid "Preview"
 msgstr "Náhľad"
 
-msgid "Preview menu"
-msgstr "Prezrieť menu"
+#, fuzzy
+msgid "Previous"
+msgstr "Náhľad"
 
 msgid "Primary DNS"
 msgstr "Primárny DNS"
@@ -5466,9 +6528,6 @@ msgstr ""
 
 msgid "Progress bar right"
 msgstr ""
-
-msgid "Properties of current title"
-msgstr "Vlastnosti aktuálneho titulu"
 
 msgid "Protect services"
 msgstr "Ochrániť stanice"
@@ -5503,6 +6562,10 @@ msgstr ""
 msgid "Providers: "
 msgstr ""
 
+#, fuzzy
+msgid "Published"
+msgstr "Poľština"
+
 msgid "Put TV in standby"
 msgstr ""
 
@@ -5515,6 +6578,12 @@ msgstr "Python frontend pre /tmp/mmi.socket"
 
 msgid "Quick"
 msgstr "Rýchlo"
+
+msgid "Quick Actions"
+msgstr ""
+
+msgid "Quick and safe remove for your mounted devices "
+msgstr ""
 
 #, fuzzy
 msgid "Quick zap"
@@ -5532,8 +6601,15 @@ msgstr "VF výstup"
 msgid "RGB"
 msgstr "RGB"
 
+msgid "Radio"
+msgstr ""
+
 msgid "Random"
 msgstr "Náhodne"
+
+#, fuzzy
+msgid "Rating"
+msgstr "Čakám"
 
 #, python-format
 msgid "Rating defined by broadcaster - %d"
@@ -5542,8 +6618,26 @@ msgstr ""
 msgid "Rating undefined"
 msgstr ""
 
+#, fuzzy
+msgid "Ratings: "
+msgstr "Čakám"
+
 msgid "Read Userdata from oscam.conf"
 msgstr ""
+
+#, fuzzy, python-format
+msgid "Read cache speed: %s"
+msgstr "Rýchlosti prevíjania vzad"
+
+msgid "Read disk cache speed: unknown"
+msgstr ""
+
+msgid "Read disk speed: unknown"
+msgstr ""
+
+#, fuzzy, python-format
+msgid "Read speed: %s"
+msgstr "Rýchlosti prevíjania vzad"
 
 msgid "Reader"
 msgstr ""
@@ -5568,6 +6662,9 @@ msgstr "Naozaj zmazať dokončené časovače?"
 msgid "Really exit the subservices quickzap?"
 msgstr "Naozaj ukončiť rýchle prepínanie podkanálov?"
 
+msgid "Really quit MyTube Player?"
+msgstr ""
+
 msgid "Really reboot now?"
 msgstr "Naozaj mám teraz reštartovať?"
 
@@ -5591,6 +6688,13 @@ msgstr "Naozaj mám teraz reštartovať?"
 msgid "Reboot"
 msgstr "Reštartovať"
 
+#, fuzzy
+msgid "Rec"
+msgstr "Nahrať"
+
+msgid "Recently featured"
+msgstr ""
+
 msgid "Record"
 msgstr "Nahrať"
 
@@ -5610,6 +6714,10 @@ msgid "Record time limited due to conflicting timer %s"
 msgstr "Doba nahrávania je obmedzená, lebo sa prekrývajú časovače %s"
 
 msgid "Recording"
+msgstr "Nahrávanie"
+
+#, fuzzy
+msgid "Recording Setup"
 msgstr "Nahrávanie"
 
 msgid "Recording in progress"
@@ -5634,6 +6742,9 @@ msgid "Red"
 msgstr ""
 
 msgid "Red button..."
+msgstr ""
+
+msgid "Red long"
 msgstr ""
 
 msgid "Reduce time scale"
@@ -5661,7 +6772,13 @@ msgstr "Voľba obnovovacieho kmitočtu."
 msgid "Regard deep standby as standby"
 msgstr ""
 
+msgid "Related video entries."
+msgstr ""
+
 msgid "Relative"
+msgstr ""
+
+msgid "Relevance"
 msgstr ""
 
 msgid "Reload"
@@ -5716,9 +6833,6 @@ msgstr "odstrániť záložku"
 msgid "Remove completed timers after (days)"
 msgstr ""
 
-msgid "Remove currently selected title"
-msgstr "Odstrániť aktuálne zvolený titul"
-
 msgid "Remove finished."
 msgstr "Odstraňovanie skončené."
 
@@ -5730,9 +6844,6 @@ msgstr "Odstrániť moduly"
 
 msgid "Remove timer"
 msgstr "Zmazať časovač"
-
-msgid "Remove title"
-msgstr "Odstrániť titul"
 
 msgid "Removing"
 msgstr "Odstraňujem"
@@ -5757,6 +6868,10 @@ msgstr ""
 msgid "Rename to:"
 msgstr ""
 
+#, fuzzy
+msgid "Rename..."
+msgstr "Premenovať"
+
 #, python-format
 msgid "Renamed %s!"
 msgstr ""
@@ -5777,8 +6892,8 @@ msgstr "Práve sa nahráva opakovaná udalosť... Čo chcete urobiť?"
 msgid "Repeats"
 msgstr "Opakovania"
 
-msgid "Required medium type:"
-msgstr "Požadovaný druh média:"
+msgid "Require authentication for http streams"
+msgstr ""
 
 msgid "Rereading partition table"
 msgstr ""
@@ -5789,10 +6904,10 @@ msgstr ""
 msgid "Reset"
 msgstr "Resetovať"
 
-msgid "Reset and renumerate title names"
-msgstr "Resetovať a prečíslovať názvy titulov"
-
 msgid "Reset playback position"
+msgstr ""
+
+msgid "Reset tv-screen after playback:"
 msgstr ""
 
 msgid "Reset video enhancement settings to system defaults?"
@@ -5807,8 +6922,15 @@ msgstr ""
 msgid "Resolution"
 msgstr "Rozlíšenie"
 
+msgid "Response video entries."
+msgstr ""
+
 msgid "Restart"
 msgstr "Reštartovať"
+
+#, fuzzy, python-format
+msgid "Restart %s %s"
+msgstr "Zopakovať test"
 
 #, fuzzy
 msgid "Restart GUI"
@@ -5816,6 +6938,10 @@ msgstr "Teraz reštartovať GUI?"
 
 msgid "Restart GUI now?"
 msgstr "Teraz reštartovať GUI?"
+
+#, fuzzy
+msgid "Restart Network Adapter"
+msgstr "Reštartovať sieť"
 
 msgid "Restart enigma"
 msgstr ""
@@ -5832,16 +6958,21 @@ msgstr "Reštartujte sieťové pripojenie a rozhrania.\n"
 msgid "Restore"
 msgstr "Obnoviť"
 
+#, fuzzy
+msgid "Restore Plugins"
+msgstr "Odstrániť moduly"
+
 msgid "Restore backups"
 msgstr "Obnoviť zálohy"
-
-msgid "Restore is running..."
-msgstr "Prebieha obnova..."
 
 msgid "Restore system settings"
 msgstr "Obnoviť systémové nastavenia"
 
 msgid "Restoring..."
+msgstr ""
+
+#, python-format
+msgid "Results: %s - Page: %s "
 msgstr ""
 
 msgid "Resume from last position"
@@ -5862,6 +6993,14 @@ msgstr "Návrat na predchádzajúcu stanicu"
 
 msgid "Reverse bouquet buttons"
 msgstr ""
+
+#, fuzzy
+msgid "Reverse list"
+msgstr "Upraviť zoznam staníc"
+
+#, fuzzy
+msgid "Rewind"
+msgstr "Rýchlosti prevíjania vzad"
 
 msgid "Rewind speeds"
 msgstr "Rýchlosti prevíjania vzad"
@@ -5897,6 +7036,10 @@ msgstr ""
 msgid "Running"
 msgstr ""
 
+#, fuzzy
+msgid "Russia"
+msgstr "Ruština"
+
 msgid "Russian"
 msgstr "Ruština"
 
@@ -5911,9 +7054,6 @@ msgstr ""
 
 msgid "SID"
 msgstr ""
-
-msgid "SINGLE LAYER DVD"
-msgstr "JEDNOVRSTVOVÉ DVD"
 
 msgid "SPDIF"
 msgstr ""
@@ -6006,6 +7146,9 @@ msgstr ""
 msgid "Scaler sharpness"
 msgstr "Ostrosť škálovania"
 
+msgid "Scaler vertical dejagging"
+msgstr ""
+
 #, fuzzy
 msgid "Scaling mode"
 msgstr "Škálovací režim"
@@ -6068,6 +7211,9 @@ msgstr ""
 msgid "Scans default lamedbs sorted by satellite with a connected dish positioner"
 msgstr "Prehľadať predvolené lamedb zotriedené podľa satelitov a pripojeného motora"
 
+msgid "Science & Technology"
+msgstr ""
+
 msgid "Scrolling Speed"
 msgstr ""
 
@@ -6083,10 +7229,25 @@ msgstr ""
 msgid "Search IMDb for information about current event."
 msgstr ""
 
+#, fuzzy
+msgid "Search Term(s)"
+msgstr "Hľadať východne"
+
+#, fuzzy
+msgid "Search category:"
+msgstr "Hľadať východne"
+
 msgid "Search east"
 msgstr "Hľadať východne"
 
 msgid "Search for similar events"
+msgstr ""
+
+#, fuzzy
+msgid "Search region:"
+msgstr "Hľadať východne"
+
+msgid "Search restricted content:"
 msgstr ""
 
 msgid "Search the epg for current event."
@@ -6094,6 +7255,10 @@ msgstr ""
 
 msgid "Search west"
 msgstr "Hľadať západne"
+
+#, fuzzy
+msgid "Search/WEB"
+msgstr "Hľadať východne"
 
 #, fuzzy
 msgid "Searching"
@@ -6113,8 +7278,20 @@ msgstr "Hľadám novoinštalované alebo odstránené balíčky. Čakajte..."
 msgid "Searching west ..."
 msgstr "Hľadať západne"
 
+#, fuzzy
+msgid "Second cable of motorized LNB"
+msgstr "druhý kábel motorizovaného LNB"
+
 msgid "Secondary DNS"
 msgstr "Sekundárny DNS"
+
+#, python-format
+msgid "Sectors: %s (max) %s (current)"
+msgstr ""
+
+#, fuzzy
+msgid "Sectors: unknown"
+msgstr "neznáme"
 
 msgid "Seek"
 msgstr "Hľadanie"
@@ -6145,6 +7322,10 @@ msgid "Select CAId"
 msgstr "zvoliť CAId"
 
 #, fuzzy
+msgid "Select Software Update"
+msgstr "Aktualizovať softvér"
+
+#, fuzzy
 msgid "Select a wireless network"
 msgstr "Zvoľte bezdrôtovú sieť"
 
@@ -6153,8 +7334,8 @@ msgid "Select action for timer %s:"
 msgstr "Zvoliť súbory zálohy"
 
 #, fuzzy
-msgid "Select an image to be downloaded"
-msgstr "Zvoľte image na stiahnutie"
+msgid "Select all"
+msgstr "Zvoliť"
 
 msgid "Select audio track"
 msgstr "Zvoľte zvukovú stopu"
@@ -6173,12 +7354,6 @@ msgstr "Zvoľte stanicu na nahrávanie"
 msgid "Select copy destination for:"
 msgstr ""
 
-msgid "Select default EPG type..."
-msgstr ""
-
-msgid "Select desired image from feed list"
-msgstr "Zvoľte požadovaný image zo zoznamu"
-
 msgid "Select destination for:"
 msgstr ""
 
@@ -6191,16 +7366,10 @@ msgstr "Zvoľte súbory a adresáre na zálohovanie"
 msgid "Select folders"
 msgstr ""
 
-msgid "Select how to activate the Quick EPG mode:"
+msgid "Select how your box will upgrade."
 msgstr ""
 
 msgid "Select if timeshift should continue when set to record."
-msgstr ""
-
-msgid "Select if you want the Subservice mode to be activated."
-msgstr ""
-
-msgid "Select if you want to use the Atemio colored buttons (set to 'no' if you want to use (Multi Quick Button)."
 msgstr ""
 
 msgid "Select input device"
@@ -6220,17 +7389,29 @@ msgstr "Zvoľte umiestnenie"
 msgid "Select movie"
 msgstr "Zvoľte film"
 
+#, fuzzy
+msgid "Select new feed to view."
+msgstr "Zvoľte vstupné zariadenie."
+
 msgid "Select provider to add..."
 msgstr "Zvoľte poskytovateľa, ktorého chcete pridať..."
 
 msgid "Select refresh rate"
 msgstr "Zvoľte obnovovací kmitočet"
 
+#, fuzzy
+msgid "Select satellites"
+msgstr "jeden satelit"
+
 msgid "Select seekbar to be activated by arrow L/R (long) or << >> (long)."
 msgstr ""
 
 msgid "Select service to add..."
 msgstr "Zvoľte stanicu, ktorú chcete pridať..."
+
+#, fuzzy
+msgid "Select sort method:"
+msgstr "Zvoľte režim obrazu"
 
 #, fuzzy
 msgid "Select target folder"
@@ -6253,17 +7434,26 @@ msgstr "Tlačidlami nahor a nadol zvoľte vstup obrazu"
 msgid "Select video mode"
 msgstr "Zvoľte režim obrazu"
 
-msgid "Select what you want the Channel +/- buttons to activate."
-msgstr ""
-
-msgid "Select what you want the TV button to activate."
-msgstr ""
-
 msgid "Select wireless network"
 msgstr "Zvoľte bezdrôtovú sieť"
 
+#, fuzzy
+msgid "Select your choice."
+msgstr "Zvoľte vstupné zariadenie."
+
 msgid "Select your provider, and press OK to start the scan"
 msgstr ""
+
+msgid "Selected mount point is already used by another drive."
+msgstr ""
+
+#, fuzzy
+msgid "Selecting satellites 1 (USALS)"
+msgstr "jeden satelit"
+
+#, fuzzy
+msgid "Selecting satellites 2 (USALS)"
+msgstr "jeden satelit"
 
 msgid "Send"
 msgstr ""
@@ -6271,17 +7461,8 @@ msgstr ""
 msgid "Send Confirmation"
 msgstr ""
 
-msgid "Send DiSEqC"
-msgstr "Poslať DiSEqC"
-
 msgid "Send DiSEqC only on satellite change"
 msgstr "Poslať DiSEqC len pri zmene satelitu"
-
-msgid "Send yourself a copy"
-msgstr ""
-
-msgid "Seperate titles with a main menu"
-msgstr "Samostatné tituly s hlavným menu"
 
 msgid "Sequence repeat"
 msgstr "Opakovanie sekvencie"
@@ -6291,6 +7472,14 @@ msgstr "Srbčina"
 
 msgid "Serial No"
 msgstr ""
+
+#, fuzzy, python-format
+msgid "Serial: %s"
+msgstr "Signál:"
+
+#, fuzzy
+msgid "Serial: unknown"
+msgstr "neznáme"
 
 msgid "Serv.Name"
 msgstr ""
@@ -6374,8 +7563,15 @@ msgstr "Stanice"
 msgid "Services may be grouped in bouquets. When enabled, you can use more than one bouquet."
 msgstr ""
 
+msgid "Set Framerate for MiniTV"
+msgstr ""
+
 msgid "Set System"
 msgstr ""
+
+#, fuzzy
+msgid "Set default"
+msgstr "Predvolené"
 
 #, fuzzy
 msgid "Set end time"
@@ -6482,6 +7678,9 @@ msgstr ""
 msgid "Setup"
 msgstr "Nastavenia"
 
+msgid "Setup HDD / USB devices"
+msgstr ""
+
 msgid "Setup how to control the channel changing."
 msgstr ""
 
@@ -6508,10 +7707,6 @@ msgstr "Satelitné zariadenie"
 msgid "Setup your timezone."
 msgstr ""
 
-#, python-format
-msgid "Shall the USB stick wizard proceed and program the image file %s into flash memory?"
-msgstr "Má sorievodca kľúčom USB pokračovať a naprogramovať súbor image %s do pamäte flash?"
-
 msgid "Share Folder's"
 msgstr ""
 
@@ -6523,6 +7718,10 @@ msgstr ""
 
 msgid "Sharpness"
 msgstr "Ostrosť"
+
+#, fuzzy
+msgid "Short Movies"
+msgstr "Krátke názvy súborov"
 
 msgid "Short filenames"
 msgstr "Krátke názvy súborov"
@@ -6541,6 +7740,13 @@ msgstr ""
 
 msgid "Show 720p 24fps as"
 msgstr ""
+
+msgid "Show Atemio spinning logo when the system is busy."
+msgstr ""
+
+#, fuzzy
+msgid "Show Audioselection"
+msgstr "Výber titulkov"
 
 msgid "Show AutoTimer List"
 msgstr ""
@@ -6567,6 +7773,10 @@ msgstr ""
 msgid "Show Games show"
 msgstr ""
 
+#, fuzzy
+msgid "Show InfoBar"
+msgstr "Zobraziť informácie"
+
 msgid "Show Log"
 msgstr ""
 
@@ -6577,12 +7787,22 @@ msgstr "zobraziť rozšírenia..."
 msgid "Show Media playback Remaining/Elapsed as"
 msgstr ""
 
+msgid "Show MiniTV in the Front Display"
+msgstr ""
+
 msgid "Show OE Log"
 msgstr ""
 
 #, fuzzy
 msgid "Show OScam Info in extensions?"
 msgstr "zobraziť rozšírenia..."
+
+msgid "Show PIP"
+msgstr ""
+
+#, fuzzy
+msgid "Show PIP in the Front Display"
+msgstr "Prehrávanie rádia..."
 
 msgid "Show PVR status in Movie Player infobar"
 msgstr ""
@@ -6610,9 +7830,6 @@ msgstr ""
 msgid "Show VCR scart on main menu"
 msgstr "zobraziť hlavné menu DVD"
 
-msgid "Show Atemio spinning logo when the system is busy."
-msgstr ""
-
 #, fuzzy
 msgid "Show WLAN status"
 msgstr "Zobraziť stav WLAN"
@@ -6637,6 +7854,10 @@ msgstr "zobraziť infor. o transpondéri"
 msgid "Show channel numbers in channel selection"
 msgstr ""
 
+#, fuzzy
+msgid "Show crypto icons"
+msgstr "Zobraziť stanice začínajúce na"
+
 msgid "Show crypto info in infobar"
 msgstr ""
 
@@ -6657,11 +7878,27 @@ msgid "Show event-progress in channel selection"
 msgstr "Vo výbere staníc zobraziť priebeh programu"
 
 #, fuzzy
+msgid "Show eventinfo plugins"
+msgstr "zobraziť informácie"
+
+#, fuzzy
 msgid "Show extended description"
+msgstr "zobraziť rozšírený opis"
+
+#, fuzzy
+msgid "Show extension selection"
 msgstr "zobraziť rozšírený opis"
 
 msgid "Show extensions..."
 msgstr ""
+
+#, fuzzy
+msgid "Show favourites list"
+msgstr "zrušiť úpravu obľúbených"
+
+#, fuzzy
+msgid "Show help"
+msgstr "zobraziť menu štítkov"
 
 msgid "Show icon for new/unseen items"
 msgstr ""
@@ -6702,7 +7939,20 @@ msgstr ""
 msgid "Show movie lengths in movielist"
 msgstr ""
 
+#, fuzzy
+msgid "Show movies"
+msgstr "zobraziť menu štítkov"
+
+msgid "Show multi channel EPG"
+msgstr ""
+
 msgid "Show network mounts ..."
+msgstr ""
+
+msgid "Show new Packages"
+msgstr ""
+
+msgid "Show only found image and mtd partitions.\n"
 msgstr ""
 
 msgid "Show or hide the extended description, (skin dependent)."
@@ -6719,8 +7969,16 @@ msgid "Show screensaver"
 msgstr ""
 
 #, fuzzy
+msgid "Show second InfoBar"
+msgstr "zobraziť infor. o transpondéri"
+
+#, fuzzy
 msgid "Show second infobar"
 msgstr "zobraziť infor. o transpondéri"
+
+#, fuzzy
+msgid "Show service list"
+msgstr "Zobraziť stanice začínajúce na"
 
 #, fuzzy
 msgid "Show service type icons"
@@ -6736,6 +7994,10 @@ msgstr "zobraziť menu vypnutia"
 msgid "Show single epg for current channel"
 msgstr ""
 
+#, fuzzy
+msgid "Show single service EPG"
+msgstr "Zmeniť PIN stanice"
+
 msgid "Show source packages"
 msgstr ""
 
@@ -6747,16 +8009,21 @@ msgid "Show status icons in movielist"
 msgstr ""
 
 #, fuzzy
-msgid "Show tag menu"
-msgstr "zobraziť menu štítkov"
+msgid "Show subservice selection"
+msgstr "Zobraziť stanice začínajúce na"
+
+#, fuzzy
+msgid "Show subtitle selection"
+msgstr "Výber titulkov"
+
+#, fuzzy
+msgid "Show the DreamPlex player..."
+msgstr "Prehrávanie rádia..."
 
 msgid "Show the list of AutoTimers."
 msgstr ""
 
 msgid "Show the list of timers."
-msgstr ""
-
-msgid "Show the media player..."
 msgstr ""
 
 msgid "Show the plugin browser.."
@@ -6769,6 +8036,9 @@ msgid "Show the tv player..."
 msgstr "Prehrávanie TV..."
 
 msgid "Show time elapsed as positive"
+msgstr ""
+
+msgid "Show time in 24 hour clock format."
 msgstr ""
 
 msgid "Show time remaining/elapsed"
@@ -6832,8 +8102,8 @@ msgstr "Podobné programy:"
 msgid "Simple"
 msgstr "jednoduchý"
 
-msgid "Simple titleset (compatibility for legacy players)"
-msgstr "Jednoduchá sada titulov (kompatibilita so staršími prehrávačmi)"
+msgid "Simulate (no write)"
+msgstr ""
 
 msgid "Single"
 msgstr "Jeden"
@@ -6866,6 +8136,9 @@ msgstr "Zem. dĺžka"
 msgid "Size: "
 msgstr ""
 
+msgid "Skin Developer Mode"
+msgstr ""
+
 msgid "Skin Setting"
 msgstr ""
 
@@ -6876,11 +8149,23 @@ msgid "Skins"
 msgstr "Vzhľady"
 
 #, fuzzy
+msgid "Skip back"
+msgstr "skok vzad"
+
+#, fuzzy
 msgid "Skip empty services"
 msgstr "Ochrániť stanice"
 
+#, fuzzy
+msgid "Skip forward"
+msgstr "skok vpred"
+
 msgid "Skip internet connection check (disables automatic package installation)"
 msgstr ""
+
+#, fuzzy
+msgid "Sleep"
+msgstr "Časovač vypnutia"
 
 #, fuzzy
 msgid "Sleep delay"
@@ -6914,10 +8199,13 @@ msgstr ""
 msgid "Small progress"
 msgstr "Prebieha"
 
+msgid "Smooth"
+msgstr ""
+
 msgid "Social/Political/Economics"
 msgstr ""
 
-msgid "SoftCam / CI"
+msgid "SoftCam Panel"
 msgstr ""
 
 msgid "Softcam setings"
@@ -6970,8 +8258,9 @@ msgstr ""
 msgid "Sorry feeds are down for maintenance, please try again later."
 msgstr ""
 
-msgid "Sorry feeds seem be in an unstable state, if you wish to use them please enable 'Allow unstable updates' in \"software update setup\"."
-msgstr ""
+#, fuzzy
+msgid "Sorry that tuner is not available."
+msgstr "Aktualizačný feed je nedostupný."
 
 msgid "Sorry uShare Config is Missing"
 msgstr ""
@@ -6986,6 +8275,10 @@ msgstr ""
 msgid "Sorry, no details available!"
 msgstr ""
 
+#, fuzzy
+msgid "Sorry, video is not available!"
+msgstr "Niektoré moduly nie sú dostupné:\n"
+
 msgid ""
 "Sorry, your backup destination is not writeable.\n"
 "Please select a different one."
@@ -6997,7 +8290,17 @@ msgstr ""
 msgid "Sort EPG List"
 msgstr ""
 
+#, fuzzy
+msgid "Sort by"
+msgstr "Port A"
+
+msgid "Sort by default"
+msgstr ""
+
 msgid "Sort list by"
+msgstr ""
+
+msgid "Sort list:"
 msgstr ""
 
 msgid "Sort menu screens alphabetically"
@@ -7022,7 +8325,14 @@ msgstr ""
 msgid "South"
 msgstr "južne"
 
+#, fuzzy
+msgid "South Korea"
+msgstr "južne"
+
 msgid "Space used:"
+msgstr ""
+
+msgid "Spain"
 msgstr ""
 
 msgid "Spanish"
@@ -7031,11 +8341,18 @@ msgstr "Španielčina"
 msgid "Split preview mode"
 msgstr "Režim rozdelenia náhľadu"
 
+msgid "Splitscreen"
+msgstr ""
+
 msgid "Sports"
 msgstr ""
 
 msgid "Standard"
 msgstr ""
+
+#, fuzzy
+msgid "Standart list"
+msgstr "Spustiť test"
 
 msgid "Standby"
 msgstr "Pohotovostný režim"
@@ -7047,11 +8364,19 @@ msgstr "Vypnúť, reštartovať"
 msgid "Standby / restart"
 msgstr "Vypnúť, reštartovať"
 
+#, fuzzy
+msgid "StandbyLED"
+msgstr "Pohotovostný režim"
+
 msgid "Start"
 msgstr ""
 
 msgid "Start from the beginning"
 msgstr "Spustiť od začiatku"
+
+#, fuzzy
+msgid "Start instant recording"
+msgstr "táto nahrávka"
 
 msgid "Start offline decode"
 msgstr ""
@@ -7059,6 +8384,10 @@ msgstr ""
 #, fuzzy
 msgid "Start recording?"
 msgstr "táto nahrávka"
+
+#, fuzzy
+msgid "Start teletext"
+msgstr "Spustiť test"
 
 msgid "Start test"
 msgstr "Spustiť test"
@@ -7070,10 +8399,16 @@ msgstr "Začiatok"
 msgid "Start timeshift"
 msgstr ""
 
+msgid "Start with following feed:"
+msgstr ""
+
 msgid "Starting on"
 msgstr "Začína od"
 
 msgid "Status"
+msgstr ""
+
+msgid "Std. Feeds"
 msgstr ""
 
 msgid "Step east"
@@ -7110,6 +8445,9 @@ msgstr "zastaviť"
 msgid "Stop playing this movie?"
 msgstr "Zastaviť prehrávanie tohto filmu?"
 
+msgid "Stop previous broadcasted service on return to movielist."
+msgstr ""
+
 msgid "Stop recording"
 msgstr ""
 
@@ -7119,6 +8457,10 @@ msgstr ""
 #, fuzzy
 msgid "Stop recording now"
 msgstr "táto nahrávka"
+
+#, fuzzy
+msgid "Stop service on return to movie list"
+msgstr "Áno, vrátiť sa do zoznamu filmov"
 
 msgid "Stop test"
 msgstr "Zastaviť test"
@@ -7172,11 +8514,12 @@ msgstr ""
 msgid "Strongest position"
 msgstr "Uložiť pozíciu"
 
-msgid "Subservice mode"
+msgid "Subscribe to user"
 msgstr ""
 
-msgid "Subservices"
-msgstr "Podkanály"
+#, fuzzy
+msgid "Subtitle"
+msgstr "Titulky"
 
 #, fuzzy
 msgid "Subtitle Quickmenu"
@@ -7221,8 +8564,9 @@ msgstr ""
 msgid "Subtitle settings"
 msgstr ""
 
-msgid "Subtitles"
-msgstr "Titulky"
+#, fuzzy
+msgid "Subtitles Settings"
+msgstr "Výber titulkov"
 
 msgid "Sun"
 msgstr "Ne"
@@ -7231,6 +8575,9 @@ msgid "Sunday"
 msgstr "Nedeľa"
 
 msgid "Support at"
+msgstr ""
+
+msgid "Swap PIP"
 msgstr ""
 
 #, fuzzy
@@ -7243,6 +8590,10 @@ msgstr ""
 msgid "Swap services"
 msgstr ""
 
+#, fuzzy
+msgid "Sweden"
+msgstr "Švédčina"
+
 msgid "Swedish"
 msgstr "Švédčina"
 
@@ -7253,11 +8604,27 @@ msgstr ""
 msgid "Switch between filelist/playlist"
 msgstr "prepnúť na zoznam súborov"
 
+#, fuzzy
+msgid "Switch channel down"
+msgstr "Nájdených %d staníc!"
+
+#, fuzzy
+msgid "Switch channel up"
+msgstr "Nájdených %d staníc!"
+
 msgid "Switch config"
 msgstr ""
 
 msgid "Switch next channel"
 msgstr ""
+
+#, fuzzy
+msgid "Switch to HDMI in mode"
+msgstr "prepnúť na zoznam súborov"
+
+#, fuzzy
+msgid "Switch to TV mode"
+msgstr "prepnúť na zoznam súborov"
 
 #, fuzzy
 msgid "Switch to filelist"
@@ -7283,6 +8650,10 @@ msgstr ""
 #, fuzzy
 msgid "Switch to previous sub service"
 msgstr "Prepnúť na predchádzajúci podkanál"
+
+#, fuzzy
+msgid "Switch to radio mode"
+msgstr "prepnúť na zoznam súborov"
 
 msgid "Switchable tuner types:"
 msgstr "Prepínateľné typy tunerov:"
@@ -7319,16 +8690,13 @@ msgstr ""
 msgid "TRANSLATOR_INFO"
 msgstr "PREKLADATEĽ"
 
-msgid "TS file is too large for ISO9660 level 1!"
-msgstr "Súbor TS je príliš veľký pre úroveň 1 ISO9660!"
-
 msgid "TSID"
 msgstr ""
 
 msgid "TUNING"
 msgstr ""
 
-msgid "TV button mode"
+msgid "TV"
 msgstr ""
 
 msgid "TV physical address report"
@@ -7337,12 +8705,23 @@ msgstr ""
 msgid "TXT PID"
 msgstr ""
 
-#, fuzzy
-msgid "Table of contents for collection"
-msgstr "Obsah zostavy"
-
 msgid "Tags"
 msgstr "Štítky"
+
+#, fuzzy
+msgid "Tags: "
+msgstr "Štítky"
+
+msgid "Taiwan"
+msgstr ""
+
+#, fuzzy
+msgid "Teletext"
+msgstr "Vymazať"
+
+#, fuzzy
+msgid "Teletext base visibility"
+msgstr "Použiť sieťový adaptér"
 
 msgid "Teletext subtitle color"
 msgstr ""
@@ -7407,6 +8786,14 @@ msgstr ""
 msgid "The %s %s stores the EPG data every (hours)."
 msgstr ""
 
+#, fuzzy
+msgid ""
+"The Atemio Device Manager plugin is not installed!\n"
+"Please install it."
+msgstr ""
+"Modul bezdrôtovej LAN nie je nainštalovaný!\n"
+"Nainštalujte ho."
+
 msgid ""
 "The AutoTimer plugin is not installed!\n"
 "Please install it."
@@ -7417,9 +8804,13 @@ msgid ""
 "Please install it."
 msgstr ""
 
-#, fuzzy, python-format
-msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a %s %s format data DVD (which will not play in stand-alone DVD players) instead?"
-msgstr "DVD norma nepodporuje video H.264 (HDTV). Chcete namiesto toho vytvoriť dátové DVD vo formáte %s %s (nedá sa prehrať na samostatných DVD prehrávačoch)?"
+#, fuzzy
+msgid ""
+"The DreamPlex plugin is not installed!\n"
+"Please install it."
+msgstr ""
+"Modul bezdrôtovej LAN nie je nainštalovaný!\n"
+"Nainštalujte ho."
 
 msgid ""
 "The EPGSearch plugin is not installed!\n"
@@ -7436,23 +8827,11 @@ msgid ""
 "Please install it."
 msgstr ""
 
-msgid ""
-"The MediaPlayer plugin is not installed!\n"
-"Please install it."
-msgstr ""
-
 msgid "The PIN code has been changed successfully."
 msgstr "Kód PIN bol úspešne zmenený."
 
 msgid "The PIN codes you entered are different."
 msgstr "Kódy PIN, ktoré ste zadali, sú rôzne."
-
-msgid ""
-"The USB stick was prepared to be bootable.\n"
-"Now you can download an NFI image file!"
-msgstr ""
-"Kľúč USB je pripravený ako bootovateľný.\n"
-"Teraz môžete stiahnuť súbor NFI."
 
 msgid "The backup failed. Please choose a different backup location."
 msgstr "Zálohovanie zlyhalo. Zvoľte iné umiestnenie zálohy."
@@ -7474,28 +8853,14 @@ msgstr ""
 "Do adresára %s sa nedá zapisovať.\n"
 "Zvoľte taký adresár, do ktorého sa dá zapisovať."
 
-#, python-format
-msgid ""
-"The following device was found:\n"
-"\n"
-"%s\n"
-"\n"
-"Do you want to write the USB flasher to this stick?"
-msgstr ""
-"Bolo nájdené toto zariadenie:\n"
-"\n"
-"%s\n"
-"\n"
-"Chcete zapísať USB flasher na tento kľúč?"
-
 msgid "The following files were found..."
 msgstr "Boli nájdené tieto súbory..."
 
-msgid "The loopthrough setting is wrong."
+msgid "The image or kernel will be flashing and auto booted in few minutes.\n"
 msgstr ""
 
-msgid "The md5sum validation failed, the file may be corrupted!"
-msgstr "Overovanie md5sum zlyhalo. Súbor je asi porušený!"
+msgid "The loopthrough setting is wrong."
+msgstr ""
 
 #, fuzzy
 msgid ""
@@ -7523,6 +8888,9 @@ msgid ""
 msgstr ""
 "Rozšírenie Správa softvéru nie je nainštalované!\n"
 "Nainštalujte si ho."
+
+msgid "The status of the current update could not be checked because http://www.atemio4you.com could not be reached for some reason"
+msgstr ""
 
 #, fuzzy
 msgid "The timer file (pm_timers.xml) is corrupt and could not be loaded."
@@ -7564,10 +8932,6 @@ msgstr ""
 msgid "The wizard can backup your current settings. Do you want to do a backup now?"
 msgstr "Sprievodca môže zálohovať aktuálne nastavenia. Chcete teraz zálohovať?"
 
-#, python-format
-msgid "The wizard found a configuration backup. Do you want to restore your old settings from %s?"
-msgstr "Sprievodca našiel zálohu nastavení. Chcete obnoviť staré nastavenia z %s?"
-
 msgid "The wizard is finished now."
 msgstr "Sprievodca teraz skončil."
 
@@ -7597,12 +8961,22 @@ msgstr ""
 "Vo zvolenej partícii nemusí byť dostatok miesta.\n"
 "Naozaj chcete pokračovať?"
 
+#, fuzzy
+msgid "There was an error downloading the updatelist. Please try again."
+msgstr "Pokúšam sa stiahnuť nový zoznam paketov. Čakajte..."
+
+msgid "There was an error getting the feed entries. Please try again."
+msgstr ""
+
 #, fuzzy, python-format
 msgid "This %s %s cannot decode %s streams!"
 msgstr "Tento %s %s nedokáže dekódovať toky typu %s!"
 
-msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
-msgstr "Toto médium DVD RW je už naformátované - opätovným formátovaním sa vymaže celý obsah disku."
+msgid "This Month"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
 
 msgid "This allows you change the font size relative to skin size, so 1 increases by 1 point size, and -1 decreases by 1 point size"
 msgstr ""
@@ -7611,6 +8985,48 @@ msgid "This allows you to change the font size relative to skin size, so 1 incre
 msgstr ""
 
 msgid "This allows you to change the number of rows shown."
+msgstr ""
+
+msgid "This allows you to show drivers modules in downloads"
+msgstr ""
+
+msgid "This allows you to show extensions modules in downloads"
+msgstr ""
+
+msgid "This allows you to show kernel modules in downloads"
+msgstr ""
+
+msgid "This allows you to show lcd skins in downloads"
+msgstr ""
+
+msgid "This allows you to show m2k modules in downloads"
+msgstr ""
+
+msgid "This allows you to show picons modules in downloads"
+msgstr ""
+
+msgid "This allows you to show pli modules in downloads"
+msgstr ""
+
+msgid "This allows you to show security modules in downloads"
+msgstr ""
+
+msgid "This allows you to show settings modules in downloads"
+msgstr ""
+
+msgid "This allows you to show skins modules in downloads"
+msgstr ""
+
+msgid "This allows you to show softcams modules in downloads"
+msgstr ""
+
+msgid "This allows you to show systemplugins modules in downloads"
+msgstr ""
+
+msgid "This allows you to show weblinks modules in downloads"
+msgstr ""
+
+msgid "This is the help screen. Feed me with something to display."
 msgstr ""
 
 msgid "This option allows to reduce the block-noise in the picture. Obviously this is at the cost of the picture's sharpness."
@@ -7629,6 +9045,12 @@ msgid "This option allows you choose how to display the remaining/elapsed time f
 msgstr ""
 
 msgid "This option allows you choose the background color of transparent picons."
+msgstr ""
+
+msgid "This option allows you enable smoothing filter to control the dithering process."
+msgstr ""
+
+msgid "This option allows you enable the vertical scaler dejagging."
 msgstr ""
 
 msgid "This option allows you set the layout view (Text or Graphics)."
@@ -7673,7 +9095,7 @@ msgstr ""
 msgid "This option allows you to choose how to display the remaining/elapsed time for media playback."
 msgstr ""
 
-msgid "This option allows you to choose what the first button press jumps to in channel list screen, (so pressing '2' jumps to 'A' or '2' first)"
+msgid "This option allows you to choose what the first button press jumps to in channel list screen, (so pressing '2' jumps to 'A' or '2' first), when 'Quick Actions' preset actions are perfomed. "
 msgstr ""
 
 msgid "This option allows you to disable sorting of the menus"
@@ -7754,18 +9176,6 @@ msgstr ""
 msgid "This option sets up the picture sharpness, used when the picture is being upscaled."
 msgstr ""
 
-#, fuzzy, python-format
-msgid ""
-"This plugin creates a USB stick which can be used to update the firmware of your %s %s without the need for a network or WLAN connection.\n"
-"First, a USB stick needs to be prepared so that it becomes bootable.\n"
-"In the next step, an NFI image file can be downloaded from the update server and saved on the USB stick.\n"
-"If you already have a prepared bootable USB stick, please insert it now. Otherwise plug in a USB stick with a minimum size of 64 MB!"
-msgstr ""
-"Tento zásuvný modul vytvorí kľúč USB, ktorý sa dá použiť na aktualizáciu firmvéru %s %sa bez pripojenia LAN alebo WLAN.\n"
-"Najprv treba kľúč USB pripraviť tak, aby bol bootovateľný.\n"
-"Potom stiahnete súbor NFI zo servera a uložíte na kľúč USB.\n"
-"Ak ste si už pripravili bootovateľný kľúč USB, vložte ho. Ak nie, vložte kľúč USB s minimálnou kapacitou 64 MB."
-
 msgid "This plugin is installed."
 msgstr "Tento modul je nainštalovaný."
 
@@ -7835,6 +9245,9 @@ msgstr ""
 msgid "Three"
 msgstr "Tri"
 
+msgid "Three partitions (33% - 33% - 33%)"
+msgstr ""
+
 msgid "Threshold"
 msgstr "Prah"
 
@@ -7869,8 +9282,15 @@ msgstr ""
 msgid "Time to execute command or script"
 msgstr ""
 
+msgid "Timeline 24 Hour"
+msgstr ""
+
 msgid "Timeline font size"
 msgstr ""
+
+#, fuzzy
+msgid "Timer"
+msgstr "Časovač"
 
 msgid "Timer List"
 msgstr ""
@@ -7960,22 +9380,23 @@ msgstr "Časové pásmo"
 msgid "Title"
 msgstr "Titul"
 
-msgid "Title properties"
-msgstr "Vlastnosti titulu"
-
-msgid "Titleset mode"
-msgstr "Režim sady titulov"
-
-#, python-format
-msgid ""
-"To update your %s %s firmware, please follow these steps:\n"
-"1) Turn off your box with the rear power switch and make sure the bootable USB stick is plugged in.\n"
-"2) Turn mains back on and hold the DOWN button on the front panel pressed for 10 seconds.\n"
-"3) Wait for bootup and follow instructions of the wizard."
+msgid "To back-up directly to the USB-stick, the USB-stick MUST\n"
 msgstr ""
 
 msgid "Today"
 msgstr "Dnes"
+
+msgid "Toggle Digital downmix..."
+msgstr ""
+
+msgid "Toggle HDMI-In PiP"
+msgstr ""
+
+msgid "Toggle HDMI-In full screen"
+msgstr ""
+
+msgid "Toggle PIPzap"
+msgstr ""
 
 msgid "Toggle Picture In Graphics"
 msgstr ""
@@ -7987,6 +9408,9 @@ msgid "Toggle aspect ratio..."
 msgstr ""
 
 msgid "Toggle between bouquet/epg lists"
+msgstr ""
+
+msgid "Toggle infoBar"
 msgstr ""
 
 msgid "Tone amplitude"
@@ -8004,8 +9428,13 @@ msgstr "Tónový impulz A/B"
 msgid "Top and Bottom"
 msgstr ""
 
-msgid "Top and bottom"
-msgstr ""
+#, fuzzy
+msgid "Top favorites"
+msgstr "Pridať do obľúbených"
+
+#, fuzzy
+msgid "Top rated"
+msgstr "Symbolová rýchlosť"
 
 msgid "Total"
 msgstr ""
@@ -8027,9 +9456,6 @@ msgstr ""
 
 msgid "Total:"
 msgstr ""
-
-msgid "Track"
-msgstr "Stopa"
 
 #, fuzzy
 msgid "Translation Information"
@@ -8058,6 +9484,12 @@ msgstr ""
 msgid "Trashcan:"
 msgstr ""
 
+msgid "Travel & Events"
+msgstr ""
+
+msgid "Trending videos"
+msgstr ""
+
 msgid "Tries left:"
 msgstr "Zostávajúce pokusy:"
 
@@ -8065,6 +9497,18 @@ msgid "Try to find used transponders in cable network.. please wait..."
 msgstr "Pokúšam sa nájsť použité transpondéry v káblovej sieti... čakajte..."
 
 msgid "Trying to download a new packetlist. Please wait..."
+msgstr "Pokúšam sa stiahnuť nový zoznam paketov. Čakajte..."
+
+#, fuzzy
+msgid "Trying to download a new updatelist. Please wait..."
+msgstr "Pokúšam sa stiahnuť nový zoznam paketov. Čakajte..."
+
+#, fuzzy
+msgid "Trying to download the Youtube feed entries. Please wait..."
+msgstr "Pokúšam sa stiahnuť nový zoznam paketov. Čakajte..."
+
+#, fuzzy
+msgid "Trying to download the Youtube search results. Please wait..."
 msgstr "Pokúšam sa stiahnuť nový zoznam paketov. Čakajte..."
 
 msgid "Tue"
@@ -8090,8 +9534,16 @@ msgstr "Tuner"
 msgid "Tuner :"
 msgstr "Tuner"
 
+#, fuzzy
+msgid "Tuner Configuration"
+msgstr "Nastavenie tunera"
+
 msgid "Tuner configuration"
 msgstr "Nastavenie tunera"
+
+#, fuzzy
+msgid "Tuner is not supported"
+msgstr "tuner nie je podporovaný"
 
 msgid "Tuner settings"
 msgstr ""
@@ -8109,16 +9561,40 @@ msgstr "Stav tunera"
 msgid "Tuner type"
 msgstr "Typ tunera"
 
-msgid "Tuning step size"
-msgstr ""
-
 msgid "Turkish"
 msgstr "Turečtina"
+
+msgid "Turn off HDMI-IN Full screen mode"
+msgstr ""
+
+msgid "Turn off HDMI-IN PiP mode"
+msgstr ""
+
+msgid "Turn on HDMI-IN Full screen mode"
+msgstr ""
+
+msgid "Turn on HDMI-IN PiP mode"
+msgstr ""
+
+msgid "Turn on the power LED during standby."
+msgstr ""
+
+#, fuzzy
+msgid "Turning step size"
+msgstr "Zmeniť veľkosť kroku"
 
 msgid "Two"
 msgstr "Dva"
 
 msgid "Two lines"
+msgstr ""
+
+#, python-format
+msgid "Two partitions (50% - 50%)"
+msgstr ""
+
+#, python-format
+msgid "Two partitions (75% - 25%)"
 msgstr ""
 
 msgid "Type"
@@ -8136,14 +9612,17 @@ msgstr "USALS"
 msgid "USALS calibration"
 msgstr ""
 
-msgid "USB stick wizard"
-msgstr "Sprievodca pre kľúč USB"
+msgid ""
+"USB = Do you want to make a back-up on USB?\n"
+"This will take between 4 and 15 minutes depending on the used filesystem and is fully automatic.\n"
+"Make sure you first insert an USB flash drive before you select USB."
+msgstr ""
+
+msgid "Unattended upgrade without GUI"
+msgstr ""
 
 msgid "Unattended upgrade without GUI and reboot system"
 msgstr ""
-
-msgid "Uncommitted DiSEqC command"
-msgstr "Nepotvrdený príkaz DiSEqC"
 
 msgid "Undetermined"
 msgstr ""
@@ -8169,10 +9648,17 @@ msgstr ""
 msgid "Uninstall"
 msgstr "Odinštalovať"
 
+msgid "United States"
+msgstr ""
+
 msgid "Universal LNB"
 msgstr "Univerzálny LNB"
 
 msgid "Unknown"
+msgstr "Neznáme"
+
+#, fuzzy
+msgid "Unknown error"
 msgstr "Neznáme"
 
 msgid "Unmount"
@@ -8181,8 +9667,26 @@ msgstr ""
 msgid "Unsupported"
 msgstr "Nepodporované"
 
+#, fuzzy
+msgid "Unzipping files, Please wait ..."
+msgstr "Čakajte..."
+
+msgid "Up"
+msgstr ""
+
 msgid "Update"
 msgstr "Aktualizovať"
+
+#, fuzzy
+msgid "Update Cache"
+msgstr "Aktualizovať"
+
+#, fuzzy
+msgid "Update anyway?"
+msgstr "Aktualizovať"
+
+msgid "Update at your own risk"
+msgstr ""
 
 msgid "Update channel list only"
 msgstr ""
@@ -8205,11 +9709,17 @@ msgstr ""
 msgid "Update interval (in seconds)"
 msgstr ""
 
+msgid "Update is reported as faulty !!"
+msgstr ""
+
 msgid "Updatefeed not available."
 msgstr "Aktualizačný feed je nedostupný."
 
 msgid "Updating software catalog"
 msgstr "Aktualizácia katalógu softvéru"
+
+msgid "Upgrade and ask to reboot"
+msgstr ""
 
 msgid "Upgrade and reboot system"
 msgstr ""
@@ -8223,6 +9733,10 @@ msgid ""
 "Please wait until your %s %s reboots\n"
 "This may take a few minutes"
 msgstr ""
+
+#, fuzzy
+msgid "Upgrade with GUI"
+msgstr "Aktualizácia je skončená."
 
 msgid "Upgrading"
 msgstr "Aktualizujem"
@@ -8238,6 +9752,10 @@ msgstr ""
 
 msgid "Uptime"
 msgstr ""
+
+#, fuzzy
+msgid "Usage Setup"
+msgstr "Nastavenia"
 
 msgid "Use"
 msgstr "Použiť"
@@ -8263,13 +9781,10 @@ msgstr ""
 msgid "Use USALS for this sat"
 msgstr ""
 
-msgid "Use Atemio colored Buttons*"
-msgstr ""
-
 msgid "Use ViaSat EPG information when it is available."
 msgstr ""
 
-msgid "Use WOL"
+msgid "Use Virgin EPG information when it is available."
 msgstr ""
 
 msgid "Use a gateway"
@@ -8307,6 +9822,9 @@ msgid "Use slim screen"
 msgstr ""
 
 msgid "Use the Left/Right buttons on your remote to adjust the size of the user interface. Left button decreases the size, Right increases the size."
+msgstr ""
+
+msgid "Use the Left/Right buttons on your remote to move the user interface left/right"
 msgstr ""
 
 msgid "Use the Left/Right buttons on your remote to move the user interface up/down"
@@ -8366,12 +9884,16 @@ msgstr "Užívateľsky definované"
 msgid "User defined transponder"
 msgstr "Preddefinovaný transpondér"
 
-msgid "User interface"
-msgstr ""
+#, fuzzy
+msgid "User interface settings"
+msgstr "Použiť sieťový adaptér"
 
 #, fuzzy
 msgid "User interface visibility"
 msgstr "Použiť sieťový adaptér"
+
+msgid "User video entries."
+msgstr ""
 
 msgid "Username"
 msgstr "Užívateľské meno"
@@ -8402,7 +9924,7 @@ msgstr ""
 msgid "VCR scart"
 msgstr "Scart - videorekordér"
 
-msgid "VMGM (intro trailer)"
+msgid "VU+"
 msgstr ""
 
 #, fuzzy, python-format
@@ -8420,9 +9942,6 @@ msgid "Vertical"
 msgstr "Zvislá"
 
 msgid "Vertical turning speed"
-msgstr ""
-
-msgid "Atemio EPG"
 msgstr ""
 
 msgid "Video Enhancement Settings"
@@ -8467,14 +9986,15 @@ msgstr "Voľba režimu obrazu."
 msgid "Video output"
 msgstr ""
 
-msgid "Video setup"
-msgstr ""
-
-msgid "Video wizard"
-msgstr ""
+#, fuzzy
+msgid "Video successfully added to favorites"
+msgstr "Stanica bola pridaná do obľúbených"
 
 #, python-format
 msgid "Video: %s fps"
+msgstr ""
+
+msgid "Videobrowser exit behavior:"
 msgstr ""
 
 msgid "Videocodec"
@@ -8483,10 +10003,16 @@ msgstr ""
 msgid "Videoformat"
 msgstr ""
 
+msgid "Videoplayer stop/exit behavior:"
+msgstr ""
+
 msgid "Videosize"
 msgstr ""
 
 msgid "View"
+msgstr ""
+
+msgid "View Count"
 msgstr ""
 
 msgid "View Movies..."
@@ -8497,6 +10023,9 @@ msgstr "Zobraziť RASS interaktívne..."
 
 msgid "View Video CD..."
 msgstr "Zobraziť Video CD..."
+
+msgid "View active downloads"
+msgstr ""
 
 msgid "View details"
 msgstr "Zobraziť podrobnosti"
@@ -8548,31 +10077,31 @@ msgstr ""
 msgid "View photos..."
 msgstr "Zobraziť fotografie..."
 
+msgid "View related videos"
+msgstr ""
+
+msgid "View response videos"
+msgstr ""
+
 msgid "View teletext..."
 msgstr "Zobraziť teletext..."
 
-msgid "View the changes"
-msgstr ""
+#, fuzzy
+msgid "View user videos"
+msgstr "Zobraziť Video CD..."
 
 #, fuzzy
 msgid "View video CD..."
 msgstr "Zobraziť Video CD..."
 
-msgid "Virtuosso Image Xtreme"
+msgid "Views: "
 msgstr ""
-
-#, fuzzy
-msgid "Atemio forum user name"
-msgstr "Vyhľadávanie staníc"
 
 msgid "Voltage mode"
 msgstr "Napäťový režim"
 
 msgid "W"
 msgstr "Z"
-
-msgid "WARNING: feeds may be unstable."
-msgstr ""
 
 msgid "WEP"
 msgstr "WEP"
@@ -8655,6 +10184,37 @@ msgstr "týždenne"
 msgid "Weighted position"
 msgstr "Uložená pozícia"
 
+msgid ""
+"Welcome to Atemio Online Flash !\n"
+"\n"
+"With this tool you can flash a new image on the fly.\n"
+"Flash image from online or flash a local image."
+msgstr ""
+
+msgid ""
+"Welcome to the MyTube Youtube Player.\n"
+"\n"
+"Use the Bouqet+ button to navigate to the search field and the Bouqet- to navigate to the video entries.\n"
+"\n"
+"To play a movie just press OK on your remote control.\n"
+"\n"
+"Press info to see the movie description.\n"
+"\n"
+"Press the Menu button for additional options.\n"
+"\n"
+"The Help button shows this help again."
+msgstr ""
+
+msgid ""
+"Welcome to the MyTube Youtube Player.\n"
+"\n"
+"While entering your search term(s) you will get suggestions displayed matching your search term.\n"
+"\n"
+"To select a suggestion press DOWN on your remote, select the desired result and press OK on your remote to start the search.\n"
+"\n"
+"Press exit to get back to the input field."
+msgstr ""
+
 #, fuzzy
 msgid ""
 "Welcome to the cutlist editor.\n"
@@ -8699,6 +10259,10 @@ msgstr ""
 "\n"
 "Po stlačení OK začnite konfigurovať sieť"
 
+#, fuzzy
+msgid "Welcome..."
+msgstr "zmazať..."
+
 msgid "West"
 msgstr "západne"
 
@@ -8736,6 +10300,9 @@ msgid "When enabled, a recording is allowed to interrupt live TV, when there are
 msgstr ""
 
 msgid "When enabled, a warning will be displayed and the user will get an option to stop or to continue the timeshift."
+msgstr ""
+
+msgid "When enabled, authentication is required to watch http streams."
 msgstr ""
 
 msgid "When enabled, channel numbering will start at '1' for every bouquet."
@@ -8811,6 +10378,9 @@ msgid "When enabled, the receiver will automatically use the subtitles which you
 msgstr ""
 
 msgid "When enabled, the receiver will select an AC3 track (when available)."
+msgstr ""
+
+msgid "When enabled, the receiver will select an AC3+ track (when available)."
 msgstr ""
 
 msgid "When enabled, timeshift starts automatically in background after the specified time."
@@ -8919,10 +10489,13 @@ msgid ""
 "%s"
 msgstr ""
 
-msgid "Write failed!"
-msgstr "Zápis zlyhal!"
-
 msgid "XBox 360 support"
+msgstr ""
+
+msgid "XP1000"
+msgstr ""
+
+msgid "XP3000"
 msgstr ""
 
 msgid "YPbPr"
@@ -8931,7 +10504,14 @@ msgstr "YPbPr"
 msgid "Year"
 msgstr "Rok"
 
+#, fuzzy
+msgid "Yellow"
+msgstr "žltá"
+
 msgid "Yellow DVB subtitles"
+msgstr ""
+
+msgid "Yellow long"
 msgstr ""
 
 msgid "Yes"
@@ -8953,11 +10533,21 @@ msgstr "Áno, zálohovať nastavenia!"
 msgid "Yes, but don't save timeshift as movie"
 msgstr "Áno, a zmazať tento film"
 
+msgid "Yes, but play next video"
+msgstr ""
+
+msgid "Yes, but play previous video"
+msgstr ""
+
 msgid "Yes, but save timeshift as movie and continue recording"
 msgstr ""
 
 msgid "Yes, but save timeshift as movie and stop recording"
 msgstr ""
+
+#, fuzzy
+msgid "Yes, delete this movie and return to movie list"
+msgstr "Áno, vrátiť sa do zoznamu filmov"
 
 msgid "Yes, do a manual scan now"
 msgstr "Áno, teraz vyhľadávať ručne"
@@ -8994,6 +10584,12 @@ msgid ""
 "\"%s\"?"
 msgstr ""
 
+msgid "You can Display MiniTV with or without OSD Menu"
+msgstr ""
+
+msgid "You can Display PIP with or without OSD Menu"
+msgstr ""
+
 msgid "You can cancel the installation."
 msgstr "Môžete zrušiť inštaláciu."
 
@@ -9012,10 +10608,6 @@ msgstr ""
 msgid "You can install this plugin."
 msgstr "Môžete nainštalovať tento modul."
 
-#, fuzzy, python-format
-msgid "You can only burn %s %s recordings!"
-msgstr "Napáliť môžete len nahrávky %s %sa."
-
 msgid "You can remove this plugin."
 msgstr "Tento modul môžete odstrániť!"
 
@@ -9030,9 +10622,6 @@ msgstr ""
 
 msgid "You have chosen to backup your settings. Please press OK to start the backup now."
 msgstr "Vybrali ste si zálohovanie nastavení. Stlačením tlačidla OK spustíte zálohovanie."
-
-msgid "You have chosen to create a new .NFI flasher bootable USB stick. This will repartition the USB stick and therefore all data on it will be erased."
-msgstr "Zvolili ste si vytvorenie nového bootovateľného USB kľúča pre zápis .NFI. Pritom sa vytvorí nová partícia na kľúči a stratíte všetky dáta, ktoré sú na ňom."
 
 msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
 msgstr "Vybrali ste si obnovu nastavení. Po obnovení sa Enigma2 reštartuje. Stlačením tlačidla OK spustíte obnovu."
@@ -9057,12 +10646,22 @@ msgstr ""
 msgid "You have to wait %s!"
 msgstr "Musíte čakať %s!"
 
+#, fuzzy
 msgid ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
+"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.atemio4you.com\n"
 "Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
 msgstr ""
 "Musíte mať počítač pripojený k %s %su. Ak potrebujete ďalšie pokyny, navštívte webovú stránku http://www.dm7025.de.\n"
 "%s %s sa teraz zastaví. Po splnení aktualizačných pokynov z webovej stránky vás nový firmvér požiada o obnovu nastavení."
+
+msgid ""
+"You need to set a PIN code and hide it from your children.\n"
+"\n"
+"Do you want to set the pin now?"
+msgstr ""
+
+msgid "You seem to be in timeshft, the service wil breifly stop as timeshfit stops."
+msgstr ""
 
 msgid "You seem to be in timeshift!"
 msgstr ""
@@ -9114,7 +10713,15 @@ msgid "Your %s %s is shutting down. Please wait..."
 msgstr "%s %s sa vypína. Vyčkajte..."
 
 #, python-format
+msgid "Your %s %s isn't connected to the internet properly. Please check it and try again."
+msgstr ""
+
+#, python-format
 msgid "Your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
+msgstr ""
+
+#, python-format
+msgid "Your %s %s will Reboot..."
 msgstr ""
 
 #, python-format
@@ -9136,23 +10743,20 @@ msgid ""
 "Do you want to remove now ?"
 msgstr ""
 
+msgid "Your STB will freeze during the flashing process.\n"
+msgstr ""
+
 msgid "Your STB will restart after pressing OK on your remote control."
 msgstr ""
 
 msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
 msgstr "Zálohovanie sa podarilo.Teraz vysvetlíme ďalší postup pri aktualizácii."
 
-msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
-msgstr "Zostava presahuje kapacitu jednovrstvového média. Potrebujete prázdny dvojvrstvový disk DVD!"
-
 #, python-format
 msgid ""
 "Your config file is not well-formed:\n"
 "%s"
 msgstr ""
-
-msgid "Your current collection will get lost!"
-msgstr "Vaša aktuálna zostava sa stratí."
 
 msgid ""
 "Your frontprocessor firmware must be upgraded.\n"
@@ -9166,6 +10770,21 @@ msgid ""
 "Your frontprocessor will be upgraded\n"
 "Please wait until your %s %s reboots\n"
 "This may take a few minutes"
+msgstr ""
+
+#, python-format
+msgid ""
+"Your image is out of date!\n"
+"\n"
+"After such a long time, there is a risk that your %s %s  will not\n"
+"boot after online-update, or will show disfunction in running Image.\n"
+"\n"
+"A new flash will increase the stability\n"
+"\n"
+"An online update is done at your own risk !!\n"
+"\n"
+"\n"
+"Do you still want to update?"
 msgstr ""
 
 msgid ""
@@ -9199,6 +10818,12 @@ msgstr ""
 "\n"
 "Zvoľte, čo chcete robiť ďalej."
 
+msgid "Youtube Password (reopen plugin on change):"
+msgstr ""
+
+msgid "Youtube Username (reopen plugin on change):"
+msgstr ""
+
 msgid "Zap"
 msgstr ""
 
@@ -9214,6 +10839,9 @@ msgstr "Prepnúť späť na stanicu spred nastavovania motora?"
 msgid "Zap back to service before tuner setup?"
 msgstr "Prepnúť späť na stanicu spred nastavovania tunera?"
 
+msgid "Zap down"
+msgstr ""
+
 msgid "Zap focus to Picture in Picture"
 msgstr ""
 
@@ -9223,16 +10851,29 @@ msgstr ""
 msgid "Zap mode"
 msgstr ""
 
+msgid "Zap to"
+msgstr ""
+
 msgid "Zap to channel (setup in menu)"
 msgstr ""
 
 msgid "Zap to channel and close (setup in menu)"
 msgstr ""
 
+msgid "Zap up"
+msgstr ""
+
 msgid "Zoom In/Out TV..."
 msgstr ""
 
 msgid "Zoom Off..."
+msgstr ""
+
+#, fuzzy
+msgid "[Enigma2 Settings]\n"
+msgstr "Upraviť nastavenia"
+
+msgid "[Image Info]\n"
 msgstr ""
 
 msgid "[TimeShift] Restarting Timeshift!"
@@ -9273,6 +10914,9 @@ msgstr "hneď začne"
 
 msgid "activate network adapter configuration"
 msgstr "aktivovať konfiguráciu sieťového adaptéra"
+
+msgid "activatePiP"
+msgstr ""
 
 msgid "add alternatives"
 msgstr "pridať alternatívy"
@@ -9320,6 +10964,13 @@ msgstr ""
 msgid "alternative"
 msgstr "pridať alternatívy"
 
+#, fuzzy
+msgid "am"
+msgstr "Názov"
+
+msgid "are you sure to cancel all changes"
+msgstr ""
+
 msgid "arts/culture (without music, general)"
 msgstr ""
 
@@ -9338,9 +10989,6 @@ msgstr "Na konci"
 msgid "athletics"
 msgstr ""
 
-msgid "audio tracks"
-msgstr "zvukové stopy"
-
 msgid "auto"
 msgstr "auto"
 
@@ -9358,14 +11006,17 @@ msgstr ""
 msgid "back"
 msgstr "späť"
 
-msgid "background image"
-msgstr "obraz v pozadí"
+msgid "backupstick or backupstick.txt"
+msgstr ""
 
 msgid "ballet"
 msgstr ""
 
 #, python-format
 msgid "bc%s"
+msgstr ""
+
+msgid "because of the used filesystem the back-up\n"
 msgstr ""
 
 msgid "better"
@@ -9386,6 +11037,9 @@ msgstr "modrá"
 msgid "broadcasting/press"
 msgstr ""
 
+msgid "by Atemio4you Image Team"
+msgstr ""
+
 msgid "by date"
 msgstr ""
 
@@ -9403,9 +11057,6 @@ msgstr ""
 
 msgid "center"
 msgstr ""
-
-msgid "chapters"
-msgstr "kapitoly"
 
 msgid "childrens's/youth program (general)"
 msgstr ""
@@ -9425,14 +11076,20 @@ msgstr ""
 msgid "complex"
 msgstr "komplexné"
 
+#, fuzzy
+msgid "configure your network"
+msgstr "Znova nakonfigurujte sieť"
+
 msgid "confirmed"
 msgstr "potvrdené"
 
 msgid "connected"
 msgstr "pripojené"
 
-msgid "continue"
-msgstr "pokrač."
+msgid ""
+"contain a file with the name: \n"
+"\n"
+msgstr ""
 
 msgid "cooking"
 msgstr ""
@@ -9446,15 +11103,8 @@ msgstr "skopírovať do buketov"
 msgid "create directory"
 msgstr "vytvoriť adresár"
 
-#, python-format
-msgid "currently installed image: %s"
-msgstr "Aktuálne nainštalovaný image: %s"
-
 msgid "daily"
 msgstr "denne"
-
-msgid "day"
-msgstr "deň"
 
 msgid "decrease uphop by 1"
 msgstr ""
@@ -9486,6 +11136,10 @@ msgstr "odpojené"
 msgid "discussion/interview/debate"
 msgstr ""
 
+#, fuzzy
+msgid "display"
+msgstr "Prehrávač médií"
+
 msgid "do nothing"
 msgstr "nič nerobiť"
 
@@ -9498,9 +11152,8 @@ msgstr ""
 msgid "done!"
 msgstr "Hotovo!"
 
-#, fuzzy
-msgid "e-mail address"
-msgstr "Adresa IP"
+msgid "drivers"
+msgstr ""
 
 #, fuzzy
 msgid "east"
@@ -9566,6 +11219,21 @@ msgstr "rovná sa"
 msgid "equestrian"
 msgstr ""
 
+msgid "et4000"
+msgstr ""
+
+msgid "et5000/6000"
+msgstr ""
+
+msgid "et8000/et10000"
+msgstr ""
+
+msgid "et9000/et9100"
+msgstr ""
+
+msgid "et9200/9500/6500"
+msgstr ""
+
 msgid "exit DVD player or return to file browser"
 msgstr "zatvoriť prehrávač DVD alebo sa vrátiť do správcu súborov"
 
@@ -9580,6 +11248,10 @@ msgstr "zatvoriť menu nastavení sieťových rozhraní"
 
 msgid "experimental film/video"
 msgstr ""
+
+#, fuzzy
+msgid "extensions"
+msgstr "Rozšírenia"
 
 msgid "extensions."
 msgstr ""
@@ -9703,6 +11375,9 @@ msgstr "inic. moduly"
 msgid "insert mark here"
 msgstr "sem vložiť značku"
 
+msgid "install IPK from any device"
+msgstr ""
+
 msgid "invalid type"
 msgstr ""
 
@@ -9718,6 +11393,10 @@ msgstr "skok vzad na predchádzajúci titul"
 msgid "jump forward to the next title"
 msgstr "skok vpred na nasledujúci titul"
 
+#, fuzzy
+msgid "kernel modules"
+msgstr "inic. moduly"
+
 msgid "languages"
 msgstr ""
 
@@ -9729,9 +11408,6 @@ msgstr "doľava"
 
 msgid "leisure hobbies (general)"
 msgstr ""
-
-msgid "length"
-msgstr "dĺžka"
 
 msgid "limit ..., aborting !"
 msgstr ""
@@ -9747,6 +11423,9 @@ msgstr "zachytený"
 
 msgid "loopthrough to"
 msgstr "prepojiť s"
+
+msgid "m2k"
+msgstr ""
 
 msgid "magazines/reports/documentary"
 msgstr ""
@@ -9775,9 +11454,6 @@ msgstr "minút"
 
 msgid "minutes"
 msgstr "minút"
-
-msgid "month"
-msgstr "mesiac"
 
 msgid "motor sport"
 msgstr ""
@@ -9872,28 +11548,32 @@ msgstr "nepoužité"
 msgid "nothing connected"
 msgstr "nič nie je pripojené"
 
-msgid "of a DUAL layer medium used."
-msgstr "dvojvrstvového média využitých."
-
-msgid "of a SINGLE layer medium used."
-msgstr "jednovrstvového média využitých."
-
 msgid "off"
 msgstr "vyp."
 
 msgid "offset is"
 msgstr ""
 
+msgid ""
+"ofgwrite not found !!\n"
+"Please make sure you have ofgwrite installed in /usr/bin/ofgwrite.\n"
+"\n"
+"Exit plugin."
+msgstr ""
+
+msgid "ofgwrite will stop enigma2 now to run the flash.\n"
+msgstr ""
+
 msgid "on"
 msgstr "zap."
-
-msgid "on READ ONLY medium."
-msgstr "na nezapisovateľné médium."
 
 msgid "once"
 msgstr "raz"
 
 msgid "only HD"
+msgstr ""
+
+msgid "open atemio device manager"
 msgstr ""
 
 msgid "open bouquetlist"
@@ -9920,6 +11600,9 @@ msgstr "prechod"
 msgid "performing arts"
 msgstr ""
 
+msgid "picons"
+msgstr ""
+
 msgid "pid:"
 msgstr ""
 
@@ -9936,6 +11619,12 @@ msgid "please wait, loading picture..."
 msgstr "Čakajte, nahrávam obraz..."
 
 msgid "please wait..."
+msgstr ""
+
+msgid "pli"
+msgstr ""
+
+msgid "pm"
 msgstr ""
 
 msgid "popular culture/traditional arts"
@@ -10033,9 +11722,15 @@ msgstr ""
 msgid "romance"
 msgstr ""
 
+msgid "root and kernel"
+msgstr ""
+
 #, fuzzy
 msgid "running..."
 msgstr "Zálohovanie beží..."
+
+msgid "save"
+msgstr ""
 
 msgid "save last directory on exit"
 msgstr "pri ukončení uložiť posledný adresár"
@@ -10054,6 +11749,9 @@ msgstr "druhý kábel motorizovaného LNB"
 
 msgid "seconds"
 msgstr "sekúnd"
+
+msgid "security"
+msgstr ""
 
 msgid "select"
 msgstr "zvoliť"
@@ -10075,6 +11773,10 @@ msgstr "PIN stanice"
 
 msgid "set as startup service"
 msgstr ""
+
+#, fuzzy
+msgid "settings"
+msgstr "Nastavenia"
 
 msgid "setup PIN"
 msgstr "PIN nastavení"
@@ -10140,12 +11842,6 @@ msgstr "Stanica nie je v zozname staníc"
 msgid "show program information..."
 msgstr ""
 
-msgid "show softwaremanager in plugin menu"
-msgstr ""
-
-msgid "show softwaremanager on blue button"
-msgstr ""
-
 msgid "show transponder info"
 msgstr "zobraziť infor. o transpondéri"
 
@@ -10160,6 +11856,10 @@ msgstr "vypnúť"
 
 msgid "simple"
 msgstr "jednoduché"
+
+#, fuzzy
+msgid "skins"
+msgstr "Vzhľady"
 
 msgid "skip backward"
 msgstr "skok vzad"
@@ -10184,6 +11884,10 @@ msgstr ""
 
 msgid "social/spiritual science"
 msgstr ""
+
+#, fuzzy
+msgid "softcams"
+msgstr "Softvér"
 
 msgid "sorting of playlists"
 msgstr ""
@@ -10236,6 +11940,10 @@ msgstr "prepnúť na nasledujúci jazyk podtitulkov"
 msgid "system:"
 msgstr ""
 
+#, fuzzy
+msgid "systemplugins"
+msgstr "Odstrániť moduly"
+
 msgid "talk show"
 msgstr ""
 
@@ -10245,9 +11953,6 @@ msgstr ""
 msgid "technology/natural science"
 msgstr ""
 
-msgid "template file"
-msgstr "šablóna"
-
 msgid "tennis/squash"
 msgstr ""
 
@@ -10256,6 +11961,9 @@ msgstr "táto nahrávka"
 
 msgid "this service is protected by a parental control pin"
 msgstr "táto stanica je chránená rodičovskou zámkou"
+
+msgid "this will take between 2 and 9 minutes\n"
+msgstr ""
 
 msgid "toggle time, chapter, audio, subtitle info"
 msgstr "prepnúť informácie o čase, kapitole, zvuku a podtitulkoch"
@@ -10268,9 +11976,6 @@ msgstr ""
 
 msgid "true"
 msgstr ""
-
-msgid "tuner is not supported"
-msgstr "tuner nie je podporovaný"
 
 msgid "uShare Log"
 msgstr ""
@@ -10311,6 +12016,10 @@ msgstr ""
 msgid "user defined"
 msgstr "užívateľsky definované"
 
+#, fuzzy
+msgid "user feed url"
+msgstr "užívateľsky definované"
+
 msgid "using:"
 msgstr ""
 
@@ -10342,6 +12051,9 @@ msgstr "prejsť do pohotovostného režimu"
 msgid "water sport"
 msgstr ""
 
+msgid "weblinks"
+msgstr ""
+
 msgid "weekly"
 msgstr "týždenne"
 
@@ -10365,6 +12077,9 @@ msgid "whitelist"
 msgstr "biela listina"
 
 msgid "width"
+msgstr ""
+
+msgid "will take about 3-12 minutes for this system\n"
 msgstr ""
 
 msgid "winter sport"
@@ -10401,6 +12116,10 @@ msgstr "áno"
 msgid "yes (keep feeds)"
 msgstr "áno (zachovať feedy)"
 
+#, python-format
+msgid "your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
+msgstr ""
+
 msgid "zap"
 msgstr "prepnúť"
 
@@ -10411,3 +12130,362 @@ msgstr "nahrať"
 msgid "zapped"
 msgstr "prepnuté"
 
+#, fuzzy
+#~ msgid "%s %s format data DVD (HDTV compatible)"
+#~ msgstr "Dátové DVD vo formáte %s %s (vyhovuje HDTV)"
+
+#~ msgid "A recording is currently running. Please stop the recording before trying to start the satfinder."
+#~ msgstr "Práve sa nahráva. Zastavte nahrávanie pred spustením vyhľadávača satelitov."
+
+#~ msgid "AA"
+#~ msgstr "AA"
+
+#~ msgid "AB"
+#~ msgstr "AB"
+
+#~ msgid "Add a new title"
+#~ msgstr "Pridať nový titul"
+
+#~ msgid "Add title"
+#~ msgstr "Pridať titul"
+
+#, fuzzy
+#~ msgid "Atemio forum user name"
+#~ msgstr "Vyhľadávanie staníc"
+
+#, fuzzy
+#~ msgid "Audio track (%s) format"
+#~ msgstr "formát zvukovej stopy (%s)"
+
+#, fuzzy
+#~ msgid "Audio track (%s) language"
+#~ msgstr "jazyk zvukovej stopy (%s)"
+
+#~ msgid "Authoring mode"
+#~ msgstr "Režim autorizácie"
+
+#~ msgid "Auto chapter split every ? minutes (0=never)"
+#~ msgstr "Automaticky rozdeľovať kapitoly každých ? minút (0 = nikdy)"
+
+#~ msgid "Available format variables"
+#~ msgstr "Dostupné premenné formátu"
+
+#~ msgid "BA"
+#~ msgstr "BA"
+
+#~ msgid "BB"
+#~ msgstr "BB"
+
+#~ msgid "Burn DVD"
+#~ msgstr "Napáliť DVD"
+
+#, fuzzy
+#~ msgid "Burn audio track (%s)"
+#~ msgstr "napáliť zvukovú stopu (%s)"
+
+#~ msgid "Burn existing image to DVD"
+#~ msgstr "Napáliť existujúci image na DVD"
+
+#~ msgid "Burn to DVD"
+#~ msgstr "Napáliť na DVD..."
+
+#~ msgid "Changelog"
+#~ msgstr "Protokol zmien"
+
+#~ msgid "Close title selection"
+#~ msgstr "Zatvoriť výber titulkov"
+
+#~ msgid "Collection name"
+#~ msgstr "Názov zostavy"
+
+#~ msgid "Collection settings"
+#~ msgstr "Nastavenia zostavy"
+
+#~ msgid "Complex (allows mixing audio tracks and aspects)"
+#~ msgstr "Komplexné (umožňuje miešanie rôznych zvukových a obrazových formátov)"
+
+#~ msgid "Content does not fit on DVD!"
+#~ msgstr "Obsah sa nezmestí na DVD!"
+
+#, fuzzy
+#~ msgid "Could not connect to %s %s .NFI image feed server:"
+#~ msgstr "Nemôžem sa pripojiť k serveru so súbormi %s %s .NFI:"
+
+#, fuzzy
+#~ msgid "Could not load medium! No disc inserted?"
+#~ msgstr "Nemôžem použiť médium. Je vložený disk?"
+
+#~ msgid "Create DVD-ISO"
+#~ msgstr "Vytvoriť disk DVD-ISO"
+
+#~ msgid "Currently installed image"
+#~ msgstr "Aktuálne nainštalovaný image"
+
+#~ msgid "DUAL LAYER DVD"
+#~ msgstr "DVOJVRSTVOVÉ DVD"
+
+#, fuzzy
+#~ msgid "DVD file browser"
+#~ msgstr "Prehliadač súborov DVD"
+
+#~ msgid "DVD media toolbox"
+#~ msgstr "Nástroje pre DVD"
+
+#, fuzzy
+#~ msgid "DVD titlelist"
+#~ msgstr "Zoznam titulov DVD"
+
+#~ msgid "Direct playback of linked titles without menu"
+#~ msgstr "Priame prehrávanie prepojených titulov bez menu"
+
+#~ msgid "Do you really want to exit?"
+#~ msgstr "Naozaj chcete skončiť?"
+
+#~ msgid "Do you want to burn this collection to DVD medium?"
+#~ msgstr "Chcete túto zostavu napáliť na DVD?"
+
+#~ msgid "Do you want to download the image to %s ?"
+#~ msgstr "Chcete stiahnuť image na %s?"
+
+#~ msgid "Do you want to preview this DVD before burning?"
+#~ msgstr "Chcete si toto DVD prezrieť pred napálením?"
+
+#, fuzzy
+#~ msgid "Download %s from server"
+#~ msgstr "Stiahnuť %s zo servera"
+
+#, fuzzy
+#~ msgid "Download .NFI-files for USB-flasher"
+#~ msgstr "Stiahnuť súbory .NFI pre USB-Flasher"
+
+#~ msgid "Edit chapters of current title"
+#~ msgstr "Upraviť kapitoly aktuálneho titulu"
+
+#~ msgid "Edit title"
+#~ msgstr "Upraviť titul"
+
+#~ msgid "Exceeds dual layer medium!"
+#~ msgstr "Presahuje kapacitu dvojvrstvového DVD!"
+
+#~ msgid "Get latest experimental image"
+#~ msgstr "Získať najnovší experimentálny image"
+
+#~ msgid "Get latest release image"
+#~ msgstr "Získať najnovší hotový image"
+
+#~ msgid "ISO file is too large for this filesystem!"
+#~ msgstr "Súbor ISO je pre tento súborový systém príliš veľký!"
+
+#~ msgid "ISO path"
+#~ msgstr "Cesta ISO"
+
+#~ msgid "Linked titles with a DVD menu"
+#~ msgstr "Tituly prepojené s menu DVD"
+
+#~ msgid "Load"
+#~ msgstr "Natiahnuť"
+
+#~ msgid "Medium is not a writeable DVD!"
+#~ msgstr "Médium nie je zapisovateľný disk DVD!"
+
+#~ msgid "Medium is not empty!"
+#~ msgstr "Médium nie je prázdne!"
+
+#, fuzzy
+#~ msgid "NFI image flashing"
+#~ msgstr "Flešovanie image NFI"
+
+#~ msgid "NFI image flashing completed. Press Yellow to Reboot!"
+#~ msgstr "Flešovanie image .NFI skončené. Stlačením žltého tlačidla reštartujte."
+
+#~ msgid "No (supported) DVDROM found!"
+#~ msgstr "Nenájdený (podporovaný) DVDROM!"
+
+#~ msgid "No details for this image file"
+#~ msgstr "Žiadne podrobnosti k tomuto súboru image"
+
+#, fuzzy
+#~ msgid "No new plugins found"
+#~ msgstr "Nenájdená žiadna sieť"
+
+#~ msgid "Please add titles to the compilation."
+#~ msgstr "Pridajte titulky do kompilácie."
+
+#~ msgid "Please check your network settings!"
+#~ msgstr "Skontrolujte nastavenia siete!"
+
+#~ msgid "Please select an NFI file and press green key to flash!"
+#~ msgstr "Zvoľte súbor NFI a stlačením zeleného tlačidla spusťte flash!"
+
+#~ msgid "Prepare another USB stick for image flashing"
+#~ msgstr "Pripravte si iný kľúč USB na flashovanie image"
+
+#~ msgid "Preview menu"
+#~ msgstr "Prezrieť menu"
+
+#~ msgid "Properties of current title"
+#~ msgstr "Vlastnosti aktuálneho titulu"
+
+#~ msgid "Remove currently selected title"
+#~ msgstr "Odstrániť aktuálne zvolený titul"
+
+#~ msgid "Remove title"
+#~ msgstr "Odstrániť titul"
+
+#~ msgid "Required medium type:"
+#~ msgstr "Požadovaný druh média:"
+
+#~ msgid "Reset and renumerate title names"
+#~ msgstr "Resetovať a prečíslovať názvy titulov"
+
+#~ msgid "Restore is running..."
+#~ msgstr "Prebieha obnova..."
+
+#~ msgid "SINGLE LAYER DVD"
+#~ msgstr "JEDNOVRSTVOVÉ DVD"
+
+#, fuzzy
+#~ msgid "Select an image to be downloaded"
+#~ msgstr "Zvoľte image na stiahnutie"
+
+#~ msgid "Select desired image from feed list"
+#~ msgstr "Zvoľte požadovaný image zo zoznamu"
+
+#~ msgid "Send DiSEqC"
+#~ msgstr "Poslať DiSEqC"
+
+#~ msgid "Seperate titles with a main menu"
+#~ msgstr "Samostatné tituly s hlavným menu"
+
+#~ msgid "Shall the USB stick wizard proceed and program the image file %s into flash memory?"
+#~ msgstr "Má sorievodca kľúčom USB pokračovať a naprogramovať súbor image %s do pamäte flash?"
+
+#, fuzzy
+#~ msgid "Show tag menu"
+#~ msgstr "zobraziť menu štítkov"
+
+#~ msgid "Simple titleset (compatibility for legacy players)"
+#~ msgstr "Jednoduchá sada titulov (kompatibilita so staršími prehrávačmi)"
+
+#~ msgid "Subservices"
+#~ msgstr "Podkanály"
+
+#~ msgid "TS file is too large for ISO9660 level 1!"
+#~ msgstr "Súbor TS je príliš veľký pre úroveň 1 ISO9660!"
+
+#, fuzzy
+#~ msgid "Table of contents for collection"
+#~ msgstr "Obsah zostavy"
+
+#, fuzzy
+#~ msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a %s %s format data DVD (which will not play in stand-alone DVD players) instead?"
+#~ msgstr "DVD norma nepodporuje video H.264 (HDTV). Chcete namiesto toho vytvoriť dátové DVD vo formáte %s %s (nedá sa prehrať na samostatných DVD prehrávačoch)?"
+
+#~ msgid ""
+#~ "The USB stick was prepared to be bootable.\n"
+#~ "Now you can download an NFI image file!"
+#~ msgstr ""
+#~ "Kľúč USB je pripravený ako bootovateľný.\n"
+#~ "Teraz môžete stiahnuť súbor NFI."
+
+#~ msgid ""
+#~ "The following device was found:\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Do you want to write the USB flasher to this stick?"
+#~ msgstr ""
+#~ "Bolo nájdené toto zariadenie:\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Chcete zapísať USB flasher na tento kľúč?"
+
+#~ msgid "The md5sum validation failed, the file may be corrupted!"
+#~ msgstr "Overovanie md5sum zlyhalo. Súbor je asi porušený!"
+
+#~ msgid "The wizard found a configuration backup. Do you want to restore your old settings from %s?"
+#~ msgstr "Sprievodca našiel zálohu nastavení. Chcete obnoviť staré nastavenia z %s?"
+
+#~ msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
+#~ msgstr "Toto médium DVD RW je už naformátované - opätovným formátovaním sa vymaže celý obsah disku."
+
+#, fuzzy
+#~ msgid ""
+#~ "This plugin creates a USB stick which can be used to update the firmware of your %s %s without the need for a network or WLAN connection.\n"
+#~ "First, a USB stick needs to be prepared so that it becomes bootable.\n"
+#~ "In the next step, an NFI image file can be downloaded from the update server and saved on the USB stick.\n"
+#~ "If you already have a prepared bootable USB stick, please insert it now. Otherwise plug in a USB stick with a minimum size of 64 MB!"
+#~ msgstr ""
+#~ "Tento zásuvný modul vytvorí kľúč USB, ktorý sa dá použiť na aktualizáciu firmvéru %s %sa bez pripojenia LAN alebo WLAN.\n"
+#~ "Najprv treba kľúč USB pripraviť tak, aby bol bootovateľný.\n"
+#~ "Potom stiahnete súbor NFI zo servera a uložíte na kľúč USB.\n"
+#~ "Ak ste si už pripravili bootovateľný kľúč USB, vložte ho. Ak nie, vložte kľúč USB s minimálnou kapacitou 64 MB."
+
+#~ msgid "Title properties"
+#~ msgstr "Vlastnosti titulu"
+
+#~ msgid "Titleset mode"
+#~ msgstr "Režim sady titulov"
+
+#~ msgid "Track"
+#~ msgstr "Stopa"
+
+#~ msgid "USB stick wizard"
+#~ msgstr "Sprievodca pre kľúč USB"
+
+#~ msgid "Uncommitted DiSEqC command"
+#~ msgstr "Nepotvrdený príkaz DiSEqC"
+
+#, fuzzy
+#~ msgid "You can only burn %s %s recordings!"
+#~ msgstr "Napáliť môžete len nahrávky %s %sa."
+
+#~ msgid "You have chosen to create a new .NFI flasher bootable USB stick. This will repartition the USB stick and therefore all data on it will be erased."
+#~ msgstr "Zvolili ste si vytvorenie nového bootovateľného USB kľúča pre zápis .NFI. Pritom sa vytvorí nová partícia na kľúči a stratíte všetky dáta, ktoré sú na ňom."
+
+#~ msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
+#~ msgstr "Zostava presahuje kapacitu jednovrstvového média. Potrebujete prázdny dvojvrstvový disk DVD!"
+
+#~ msgid "Your current collection will get lost!"
+#~ msgstr "Vaša aktuálna zostava sa stratí."
+
+#~ msgid "audio tracks"
+#~ msgstr "zvukové stopy"
+
+#~ msgid "background image"
+#~ msgstr "obraz v pozadí"
+
+#~ msgid "chapters"
+#~ msgstr "kapitoly"
+
+#~ msgid "continue"
+#~ msgstr "pokrač."
+
+#~ msgid "currently installed image: %s"
+#~ msgstr "Aktuálne nainštalovaný image: %s"
+
+#~ msgid "day"
+#~ msgstr "deň"
+
+#, fuzzy
+#~ msgid "e-mail address"
+#~ msgstr "Adresa IP"
+
+#~ msgid "length"
+#~ msgstr "dĺžka"
+
+#~ msgid "month"
+#~ msgstr "mesiac"
+
+#~ msgid "of a DUAL layer medium used."
+#~ msgstr "dvojvrstvového média využitých."
+
+#~ msgid "of a SINGLE layer medium used."
+#~ msgstr "jednovrstvového média využitých."
+
+#~ msgid "on READ ONLY medium."
+#~ msgstr "na nezapisovateľné médium."
+
+#~ msgid "template file"
+#~ msgstr "šablóna"
