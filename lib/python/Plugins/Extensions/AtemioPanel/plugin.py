@@ -153,4 +153,5 @@ def menu(menuid, **kwargs):
 def Plugins(**kwargs):
     list = []
     list.append(PluginDescriptor(icon='icons/icon.png', name='Atemio Panel', description='Atemio Panel', where=PluginDescriptor.WHERE_MENU, fnc=menu))
+    list.append(PluginDescriptor(icon='icons/icon.png', name='Atemio Panel', description='Atemio Panel', where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=main))
     return list
