@@ -18,7 +18,13 @@ dist_pkgdata_DATA = \
 	distro-logo.png
 
 if HAVE_TEXTLCD
-SUBDIRS += displaytext
+	if INIHDE
+		SUBDIRS += displaysmalltext
+	else ifeq INIHDE2
+		SUBDIRS += displaysmalltext
+	else
+		SUBDIRS += displaytext
+	endif
 endif
 
 if HAVE_COLORLCD
