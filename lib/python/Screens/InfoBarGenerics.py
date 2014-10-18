@@ -616,14 +616,17 @@ class InfoBarShowHide(InfoBarScreenSaver):
 			self.pvrStateDialog.hide()
 
 	def toggleShow(self):
-		if self.__state == self.STATE_HIDDEN:
-			self.showFirstInfoBar()
-		else:
-			self.showSecondInfoBar()
-
-	def showSecondInfoBar(self):
-		if isStandardInfoBar(self) and config.usage.show_second_infobar.value == "EPG":
-			if not(hasattr(self, "hotkeyGlobal") and self.hotkeyGlobal("info") != 0):
+		if not hasattr(self, "LongButtonPressed"):
+			self.LongButtonPressed = False
+		if not self.LongButtonPressed:
+			if self.__state == self.STATE_HIDDEN:
+				if not self.secondInfoBarWasShown:
+					self.show()
+				if self.secondInfoBarScreen:
+					self.secondInfoBarScreen.hide()
+				self.secondInfoBarWasShown = False
+				self.EventViewIsShown = False
+			elif isStandardInfoBar(self) and config.usage.show_second_infobar.value == "EPG":
 				self.showDefaultEPG()
 			elif isStandardInfoBar(self) and config.usage.show_second_infobar.value == "INFOBAREPG":
 				self.openInfoBarEPG()
@@ -653,14 +656,6 @@ class InfoBarShowHide(InfoBarScreenSaver):
 			if isinstance(self, InfoBarEPG):
 				if config.atemiosettings.InfoBarEpg_mode.value == "1":
 					self.openInfoBarEPG()
-
-	def showFirstInfoBar(self):
-		if self.__state == self.STATE_HIDDEN or self.secondInfoBarScreen and self.secondInfoBarScreen.shown:
-			self.secondInfoBarScreen and self.secondInfoBarScreen.hide()
-			self.show()
-		else:
-			self.hide()
-			self.hideTimer.stop()
 
 	def lockShow(self):
 		self.__locked += 1
