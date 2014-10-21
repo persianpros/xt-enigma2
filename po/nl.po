@@ -46,7 +46,7 @@ msgid ""
 "After pressing OK, please wait!"
 msgstr ""
 "\n"
-"Druk op OK en een ogenblik geduld."
+"Druk op OK en wacht daarna even!"
 
 #, python-format
 msgid ""
@@ -61,6 +61,8 @@ msgid ""
 "\n"
 "Backup your running %s %s image to HDD or USB."
 msgstr ""
+"\n"
+"Maak een backup van je %s %s Image op HDD of USB."
 
 msgid ""
 "\n"
@@ -74,6 +76,8 @@ msgid ""
 "\n"
 "Flash on the fly your %s %s."
 msgstr ""
+"\n"
+"Flash je %s %s meteen."
 
 #, python-format
 msgid ""
@@ -389,7 +393,7 @@ msgid "* Only available if more than one interface is active."
 msgstr "* Alleen beschikbaar indien meer dan één interface actief is."
 
 msgid "/media/custom"
-msgstr ""
+msgstr "/media/custom"
 
 msgid "/s"
 msgstr "/s"
@@ -698,7 +702,7 @@ msgid "AC3"
 msgstr "AC3"
 
 msgid "ACQUIRING TSID/ONID"
-msgstr "ACQUIRING TSID/ONID"
+msgstr "OPHALEN TSID/ONID"
 
 msgid "AFP Setup"
 msgstr "AFP-instellingen"
@@ -729,13 +733,13 @@ msgid "Activate"
 msgstr "Activeer"
 
 msgid "Activate HbbTV (Redbutton)"
-msgstr ""
+msgstr "Activeer HbbTV (Rode toets)"
 
 msgid "Activate MAC-address configuration"
 msgstr "Activeer MAC-adresconfiguratie"
 
 msgid "Activate Picture in Picture"
-msgstr "Activeer Picture In Picture"
+msgstr "Activeer Beeld in beeld (PiP)"
 
 msgid "Activate current configuration"
 msgstr "Activeer huidige configuratie"
@@ -750,7 +754,7 @@ msgid "Activate timeshift End"
 msgstr "Timeshift starten"
 
 msgid "Activate timeshift end and pause"
-msgstr ""
+msgstr "Activeer timeshift einde en pauze"
 
 msgid "Active"
 msgstr "Actief"
@@ -822,7 +826,7 @@ msgid "Add service"
 msgstr "Voeg zender toe"
 
 msgid "Add timer"
-msgstr "Timer"
+msgstr "Timer toevoegen"
 
 msgid "Add to bouquet"
 msgstr "Voeg aan favorietenlijst  toe"
@@ -834,13 +838,13 @@ msgid "Add to favourites"
 msgstr "Voeg aan favorieten toe"
 
 msgid "Add/Remove timer for current event"
-msgstr "Ttimer voor huidige event toevoegen/verwijderen"
+msgstr "Timer voor huidig event toevoegen/verwijderen"
 
 msgid "Added: "
-msgstr ""
+msgstr "Toegevoegd"
 
 msgid "Adding schedule..."
-msgstr "Voegt schema toe..."
+msgstr "Voegt tijdschema toe..."
 
 msgid "Additional Info"
 msgstr "Aanvullende info"
@@ -881,7 +885,7 @@ msgid "After event"
 msgstr "Na opname"
 
 msgid "After pressing OK, please wait!"
-msgstr "Druk op OK en een ogenblik geduld."
+msgstr "Druk op OK en wacht even!"
 
 msgid ""
 "After the start wizard is completed, you need to protect single services. "
@@ -889,8 +893,8 @@ msgid ""
 "\n"
 "Please press OK to continue."
 msgstr ""
-"Nadat de wizard gereed is, moet u nog de enkele kanalen beschermen.Refereer "
-"aan uw %s %s's handleiding hoe dat te doen."
+"Nadat de wizard gereed is, moet u de afzonderlijke zenders beschermen. Raadpleeg "
+"uw %s %s's handleiding voor meer informatie."
 
 msgid "Album"
 msgstr "Album"
@@ -902,7 +906,7 @@ msgid "All"
 msgstr "Alles"
 
 msgid "All Time"
-msgstr "All Time"
+msgstr "Alles Tijd"
 
 msgid "All ages"
 msgstr "Alle leeftijden"
@@ -929,7 +933,7 @@ msgid "Allocate unused memory index"
 msgstr "Wijs niet gebruikte geheugen index toe"
 
 msgid "Allow subtitle language to equal audio language"
-msgstr "Ondertiteltaal overeenkomstig aan audiotaal"
+msgstr "Ondertiteltaal gelijk aan audiotaal toestaan"
 
 msgid "Allow subtitles for hearing impaired"
 msgstr "Accepteer ondertitels voor slechthorenden."
@@ -938,7 +942,7 @@ msgid "Allow unstable (experimental) updates"
 msgstr "Accepteer niet geteste (experimentele) updates"
 
 msgid "Allows more detailed information to be in the crash log"
-msgstr "Geeft de mogelijkheid meer details in een crashlog op te nemen."
+msgstr "Toestaan om meer details in een crashlog op te nemen."
 
 msgid "Allows the %s %s to read the stored EPG data regularly."
 msgstr "Laat de %s %s regelmatig de opgeslagen EPG-data lezen."
@@ -1011,13 +1015,13 @@ msgid "Always hide infobar"
 msgstr "Informatiebalk altijd verbergen"
 
 msgid "Always show bouquets"
-msgstr "Toon altijd favorieten"
+msgstr "Toon favorieten altijd"
 
 msgid "An empty filename is illegal."
-msgstr "Een lege bestandsnaam is ongeldig."
+msgstr "Een lege bestandsnaam is ongeoorloofd."
 
 msgid "An error occured."
-msgstr "Er is een onbekende fout opgetreden! "
+msgstr "Er is een fout opgetreden! "
 
 msgid "An error occurred while downloading the packetlist. Please try again."
 msgstr ""
@@ -1084,7 +1088,7 @@ msgid ""
 "Your receiver will restart after the backup has been restored!"
 msgstr ""
 "Weet u zeker dat u de volgende\n"
-"backup wilt terugplaatsen:\n"
+"backup terug wilt plaatsen:\n"
 "%s\n"
 "Uw ontvanger zal herstarten nadat de backup is teruggeplaatst!"
 
@@ -1092,8 +1096,8 @@ msgid ""
 "Are you sure you want to restore the backup?\n"
 "Your receiver will restart after the backup has been restored!"
 msgstr ""
-"Weet u zeker dat u de backup wilt terugplaatsen?\n"
-"Uw ontvangerzal herstarten als het proces gereed is."
+"Weet u zeker dat u de backup terug wilt plaatsen?\n"
+"Uw ontvanger zal herstarten als het proces gereed is."
 
 msgid "Are you sure you want to save the EPG Cache to:\n"
 msgstr "Weet u zeker dat u de EPG Cache wilt opslaan in:\n"
@@ -1112,13 +1116,13 @@ msgid "Arts/Culture"
 msgstr "Kunst/Cultuur"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Oplopend"
 
 msgid "Ask user"
 msgstr "Vraag gebruiker"
 
 msgid "Assigned CAIds:"
-msgstr "toegewezen CAIds:"
+msgstr "Toegewezen CAIds:"
 
 msgid "Assigned services/provider:"
 msgstr "Toegewezen zenders/providers:"
@@ -1133,7 +1137,7 @@ msgid "Atemio Device Manager"
 msgstr "Atemio Device Manager"
 
 msgid "Atemio Device Manager - Fast Mounted Remove"
-msgstr ""
+msgstr "Atemio Device Manager - Fast Mounted Remove"
 
 msgid "Atemio Image"
 msgstr "Atemio Image"
@@ -1176,10 +1180,10 @@ msgid "Auto"
 msgstr "Auto"
 
 msgid "Auto Deep Standby"
-msgstr "Uitschakelen"
+msgstr "Auto Deep Standby"
 
 msgid "Auto Standby"
-msgstr "Stand-by"
+msgstr "Auto Standby"
 
 msgid "Auto flesh"
 msgstr "Automatische huidskleur tint"
@@ -1237,7 +1241,7 @@ msgid "Automatically update Client/Server View?"
 msgstr "Automatisch Klant/Server overzicht updaten??"
 
 msgid "Autos & Vehicles"
-msgstr "Autos & Vehicles"
+msgstr "Autos & Voertuigen"
 
 msgid "Autostart"
 msgstr "Autostart"
@@ -1256,7 +1260,7 @@ msgstr "Terug"
 
 #, python-format
 msgid "Back-up Tool for a %s\n"
-msgstr ""
+msgstr "Back-up Tool voor een %s\n"
 
 msgid "Background"
 msgstr "Achtergrond"
@@ -1296,6 +1300,8 @@ msgid ""
 "Backup plugins found\n"
 "do you want to install now?"
 msgstr ""
+"Gebackupte plugins gevonden\n"
+"wil je deze nu installeren?"
 
 msgid "Backup system settings"
 msgstr "Backup uw instellingen"
@@ -1307,12 +1313,14 @@ msgid "Bandwidth"
 msgstr "Bandbreedte"
 
 msgid "Base time"
-msgstr "Basis timer"
+msgstr "Basis tijd"
 
 msgid ""
 "Base transparency for teletext, more options available within teletext "
 "screen."
 msgstr ""
+"Basis transparantie voor teletext, meer opties beschikbaar in teletext "
+"scherm."
 
 msgid "Basque"
 msgstr "Baskisch"
@@ -1330,7 +1338,7 @@ msgid "Behavior when a movie is started"
 msgstr "Actie na \"start afspelen\""
 
 msgid "Behavior when a movie is stopped"
-msgstr "Actie na \"top afspelen\""
+msgstr "Actie na \"stop afspelen\""
 
 msgid "Behavior when a movie reaches the end"
 msgstr "Actie bij het einde van de opname"
@@ -1372,13 +1380,13 @@ msgid "Bouquet List"
 msgstr "Favorietenlijst"
 
 msgid "Brazil"
-msgstr ""
+msgstr "Brazilië"
 
 msgid "Brightness"
 msgstr "Helderheid"
 
 msgid "Brightness (Normal)"
-msgstr "Helderheid (normaal)"
+msgstr "Helderheid (Normaal)"
 
 msgid "Brightness (Standby)"
 msgstr "Helderheid (Standby)"
@@ -1401,7 +1409,7 @@ msgid "Bus: "
 msgstr "Bus: "
 
 msgid "But you have activated \"Install unstable updates\""
-msgstr ""
+msgstr "Maar je hebt \"Installeer onstabiele updates\" geactiveerd"
 
 msgid "Button"
 msgstr "Toets"
@@ -1410,7 +1418,7 @@ msgid "Button setup"
 msgstr "Toets instellingen"
 
 msgid "Button setup for"
-msgstr "Toets instellingen"
+msgstr "Toets instellingen voor"
 
 msgid "Bypass HDMI EDID Check"
 msgstr "Omzeil HDMI EDID check"
@@ -1428,7 +1436,7 @@ msgid "CAID"
 msgstr "CAID"
 
 msgid "CCcam Client Info"
-msgstr "CCcam klantinfo"
+msgstr "CCcam Client Info"
 
 msgid "CCcam Config Switcher"
 msgstr "CCcam configuratie kiezer"
@@ -1479,7 +1487,7 @@ msgid "CHANGE BOUQUET"
 msgstr "VERANDER BOUQUET"
 
 msgid "CI (Common Interface) Setup"
-msgstr "Common interface instellingen"
+msgstr "Common Interface instellingen"
 
 msgid "CI assignment"
 msgstr "CI toewijzing"
@@ -1515,7 +1523,7 @@ msgid "Cached:"
 msgstr "Cached:"
 
 msgid "Calculate"
-msgstr "Bereken"
+msgstr "Berekenen"
 
 msgid "Calculate all positions"
 msgstr "Bereken alle posities"
@@ -1528,10 +1536,10 @@ msgstr "Kalibreer"
 
 msgid "Can be used for different fps between external subtitles and video."
 msgstr ""
-"Kan worden gebruikt voor verschillen in fps tussen externe ondertitels."
+"Kan worden gebruikt voor fps-verschillen tussen externe ondertitels en video."
 
 msgid "Canada"
-msgstr ""
+msgstr "Canada"
 
 msgid "Cancel"
 msgstr "Annuleren"
@@ -1546,7 +1554,7 @@ msgid "Cannot determine"
 msgstr "Kan niet beslissen"
 
 msgid "Cannot find any signal ..., aborting !"
-msgstr "Kan geen signaal vinden..., breek af!!"
+msgstr "Kan geen signaal vinden..., afgebroken!!"
 
 msgid ""
 "Cannot format current drive.\n"
@@ -1554,6 +1562,10 @@ msgid ""
 "and nfsd) may cause this problem.\n"
 "Please stop this actions/applications and try again"
 msgstr ""
+"Kan deze disk niet formateren.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
+"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 #, python-format
 msgid "Cannot format partition %d"
@@ -1563,6 +1575,9 @@ msgid ""
 "Cannot mount new drive.\n"
 "Please check filesystem or format it and try again"
 msgstr ""
+"Kan de nieuwe disk niet aankoppelen.\n"
+"Controleer AUB het bestandssysteem of formateer het "
+"en probeer opnieuw"
 
 msgid "Cannot move to trash can"
 msgstr "Kan bestanden niet naar de prullenbak verplaatsen"
@@ -1573,6 +1588,10 @@ msgid ""
 "and nfsd) may cause this problem.\n"
 "Please stop this actions/applications and try again"
 msgstr ""
+"Kan het huidige apparaat niet ontkoppelen.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
+"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid ""
 "Cannot umount current drive.\n"
@@ -1580,6 +1599,10 @@ msgid ""
 "and nfsd) may cause this problem.\n"
 "Please stop this actions/applications and try again"
 msgstr ""
+"Kan de huidige disk niet ontkoppelen.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
+"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid ""
 "Cannot umount device.\n"
@@ -1587,6 +1610,10 @@ msgid ""
 "and nfsd) may cause this problem.\n"
 "Please stop this actions/applications and try again"
 msgstr ""
+"Kan dit apparaat niet ontkoppelen.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
+"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid "Capacity: "
 msgstr "Capaciteit: "
@@ -1610,7 +1637,7 @@ msgid "Cascade PiP"
 msgstr "Waterval PiP"
 
 msgid "Caution update not tested yet !!"
-msgstr ""
+msgstr "Voorzichtig - update nog niet getest !!"
 
 msgid "Center DVB subtitles"
 msgstr "Centreer DVB-ondertitels"
@@ -1622,7 +1649,7 @@ msgid "Change next timer"
 msgstr "Verander de volgende timer"
 
 msgid "Change old drive with this new drive"
-msgstr ""
+msgstr "Vervang het oude station door het nieuwe"
 
 msgid "Change pin code"
 msgstr "Verander pincode"
@@ -1724,7 +1751,7 @@ msgid "Check"
 msgstr "Controleer"
 
 msgid "Check disk terminated with success"
-msgstr ""
+msgstr "Schijfcontrole succesvol afgesloten"
 
 msgid "Check every (hours)"
 msgstr "Controleer elke (uur)"
@@ -1780,7 +1807,7 @@ msgid "Choose Bouquet"
 msgstr "Kies favorieten"
 
 msgid "Choose a tag for easy finding a recording."
-msgstr "Kies een tag om een opname makkelijk te vinden."
+msgstr "Kies een markering om een opname makkelijk te vinden."
 
 msgid "Choose between Daily, Weekly, Weekdays or user defined."
 msgstr "Kies tussen Dagelijks, Wekelijks, Werkdagen en eigen keuze."
@@ -1837,10 +1864,13 @@ msgid "Choose which tuner to configure."
 msgstr "Kies de tuner die u in wilt stellen."
 
 msgid "Chose between record and ZAP."
-msgstr "Kies tussen opname en zap"
+msgstr "Kies tussen opname en ZAP"
+
+msgid "Choose between record and ZAP."
+msgstr "Kies tussen opname en ZAP"
 
 msgid "Circular"
-msgstr "Circular"
+msgstr "Circulair"
 
 msgid "Circular left"
 msgstr "Circulair links"
@@ -1867,7 +1897,7 @@ msgid "Clear fixed"
 msgstr "Verwijder vaste"
 
 msgid "Clear history on Exit:"
-msgstr "Clear history on Exit:"
+msgstr "Geschiedenis wissen bij verlaten:"
 
 msgid "Clear log"
 msgstr "Log wissen"
@@ -1876,13 +1906,13 @@ msgid "Clear playlist"
 msgstr "Afspeellijst leegmaken"
 
 msgid "Clients"
-msgstr "Klanten"
+msgstr "Clients"
 
 msgid "Close"
 msgstr "Sluiten"
 
 msgid "Close PiP on exit"
-msgstr "Sluit PiP met de exit-toets."
+msgstr "Sluit PiP bij verlaten."
 
 msgid "Close bouquet list."
 msgstr "Sluit favorietenlijst"
@@ -1924,10 +1954,10 @@ msgid "Common Interface"
 msgstr "Common interface"
 
 msgid "Common Interface Assignment"
-msgstr "Common interface taken"
+msgstr "Common interface toewijzing"
 
 msgid "Common Interface assignment"
-msgstr "Common interface taken"
+msgstr "Common interface toewijzing"
 
 msgid "Common interface"
 msgstr "Common interface"
@@ -12051,7 +12081,7 @@ msgid "show all cards"
 msgstr "toon alle kaarten"
 
 msgid "show all tags"
-msgstr "Laat alle tags zien"
+msgstr "Laat alle markeringen zien"
 
 msgid "show alternatives"
 msgstr "Alternatieven weergeven"
