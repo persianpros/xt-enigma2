@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: Atemio4you E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-18 02:16+0200\n"
-"PO-Revision-Date: 2014-10-21 10:07+0100\n"
-"Last-Translator: Delagroov <delagroov@gmail.com>\n"
+"PO-Revision-Date: 2014-10-23 02:28+0100\n"
+"Last-Translator: dispatcher <dispatcher@telfort.nl>\n"
 "Language-Team: Dispatcher/DeGroov/Rob van der Does\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -893,8 +893,8 @@ msgid ""
 "\n"
 "Please press OK to continue."
 msgstr ""
-"Nadat de wizard gereed is, moet u de afzonderlijke zenders beschermen. Raadpleeg "
-"uw %s %s's handleiding voor meer informatie."
+"Nadat de wizard gereed is, moet u de afzonderlijke zenders beschermen. "
+"Raadpleeg uw %s %s's handleiding voor meer informatie."
 
 msgid "Album"
 msgstr "Album"
@@ -1197,9 +1197,8 @@ msgstr "Auto focus begint... ..."
 msgid "Auto language selection"
 msgstr "Automatische taal instellingen"
 
-#, fuzzy
 msgid "Auto paginate on last entry:"
-msgstr "verplaats omlaag naar laaste ingave"
+msgstr "verplaats omlaag naar laatste ingave"
 
 msgid "Auto scart switching"
 msgstr "Automatisch scart schakelen"
@@ -1563,8 +1562,8 @@ msgid ""
 "Please stop this actions/applications and try again"
 msgstr ""
 "Kan deze disk niet formateren.\n"
-"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
-"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile en "
+"nfsd) kunnen dit probleem veroorzaken.\n"
 "Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 #, python-format
@@ -1576,8 +1575,7 @@ msgid ""
 "Please check filesystem or format it and try again"
 msgstr ""
 "Kan de nieuwe disk niet aankoppelen.\n"
-"Controleer AUB het bestandssysteem of formateer het "
-"en probeer opnieuw"
+"Controleer AUB het bestandssysteem of formateer het en probeer opnieuw"
 
 msgid "Cannot move to trash can"
 msgstr "Kan bestanden niet naar de prullenbak verplaatsen"
@@ -1589,8 +1587,8 @@ msgid ""
 "Please stop this actions/applications and try again"
 msgstr ""
 "Kan het huidige apparaat niet ontkoppelen.\n"
-"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
-"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile en "
+"nfsd) kunnen dit probleem veroorzaken.\n"
 "Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid ""
@@ -1600,8 +1598,8 @@ msgid ""
 "Please stop this actions/applications and try again"
 msgstr ""
 "Kan de huidige disk niet ontkoppelen.\n"
-"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
-"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile en "
+"nfsd) kunnen dit probleem veroorzaken.\n"
 "Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid ""
@@ -1611,8 +1609,8 @@ msgid ""
 "Please stop this actions/applications and try again"
 msgstr ""
 "Kan dit apparaat niet ontkoppelen.\n"
-"Een lopende opname, timeshift of externe tools (zoals samba, swapfile "
-"en nfsd) kunnen dit probleem veroorzaken.\n"
+"Een lopende opname, timeshift of externe tools (zoals samba, swapfile en "
+"nfsd) kunnen dit probleem veroorzaken.\n"
 "Stop deze akties/toepassingen AUB en probeer opnieuw"
 
 msgid "Capacity: "
@@ -2553,16 +2551,16 @@ msgstr "Cutlist editor..."
 
 #, python-format
 msgid "Cylinders: %s (max) %s (current)"
-msgstr ""
+msgstr "Cylinders: %s (max) %s (actueel)"
 
 msgid "Cylinders: unknown"
-msgstr ""
+msgstr "Cilinders: onbekend"
 
 msgid "Czech"
 msgstr "Tsjechisch"
 
 msgid "Czech Republic"
-msgstr ""
+msgstr "Tsjechië"
 
 msgid "DAC"
 msgstr "DAC"
@@ -2631,7 +2629,7 @@ msgid "Default"
 msgstr "Standaard"
 
 msgid "Default PIN for CI"
-msgstr ""
+msgstr "Standaard PIN voor CI"
 
 msgid "Default movie location"
 msgstr "Standaard opnamelokatie"
@@ -2855,7 +2853,7 @@ msgid "Display >16:9 content as"
 msgstr "Toon >16:9 materiaal als"
 
 msgid "Display MyTube in extensions menu:"
-msgstr ""
+msgstr "Toon MyTube in extensies menu:"
 
 msgid "Display and user interface"
 msgstr "Scherm- en gebruikersinterface"
@@ -2864,7 +2862,7 @@ msgid "Display message before playing next movie"
 msgstr "Toon een bericht alvorens de volgende film te spelen"
 
 msgid "Display search results by:"
-msgstr ""
+msgstr "Toon zoekresultaten op:"
 
 msgid "Display the EIT now/next eventdata in infobar."
 msgstr "Toon EIT nu/straks programmagegevens in de infobar."
@@ -3313,9 +3311,8 @@ msgstr "Coderingssleuteltype"
 msgid "Encryption:"
 msgstr "Codering:"
 
-#, fuzzy
 msgid "End"
-msgstr "Aan het einde:"
+msgstr "Beëindigen"
 
 msgid "End time"
 msgstr "Eindtijd"
@@ -3342,7 +3339,7 @@ msgid "Enter the service pin"
 msgstr "Voer de zender pincode in"
 
 msgid "Enter your search term(s)"
-msgstr ""
+msgstr "Voer uw zoekterm(en) in"
 
 msgid "Entertainment"
 msgstr "Entertainment"
@@ -3351,7 +3348,7 @@ msgid "Entitlements"
 msgstr "Rechten"
 
 msgid "Epg/Guide"
-msgstr ""
+msgstr "EPG/Gids"
 
 msgid "Epg/Guide long"
 msgstr "Epg/Guide lang"
@@ -3363,7 +3360,7 @@ msgid "Error"
 msgstr "Fout"
 
 msgid "Error checking disk. The disk may be damaged"
-msgstr ""
+msgstr "Fout bij schijfcontrole. De schijf is mogelijk beschadigd."
 
 msgid "Error code"
 msgstr "Foutcode"
@@ -3375,7 +3372,7 @@ msgid "Error executing plugin"
 msgstr "Fout bij uitvoeren applicatie"
 
 msgid "Error formatting disk. The disk may be damaged"
-msgstr ""
+msgstr "Fout bij formateren. De schijf is mogelijk beschadigd."
 
 msgid "Error reading webpage!"
 msgstr "Fout bij lezen webpagina"
@@ -3508,22 +3505,22 @@ msgid "Extra motor options"
 msgstr "Extra motor opties"
 
 msgid "F1/F3"
-msgstr ""
+msgstr "F1/F3"
 
 msgid "F1/LAN"
-msgstr ""
+msgstr "F1/LAN"
 
 msgid "F1/LAN long"
-msgstr ""
+msgstr "F1/LAN lang"
 
 msgid "F2"
-msgstr ""
+msgstr "F2"
 
 msgid "F2 long"
 msgstr "F2 lang"
 
 msgid "F3"
-msgstr ""
+msgstr "F3"
 
 msgid "F3 long"
 msgstr "F3 lang"
@@ -3613,7 +3610,7 @@ msgid "Filesystem check"
 msgstr "Controle filesysteem"
 
 msgid "Film & Animation"
-msgstr ""
+msgstr "Film & Animatie"
 
 msgid "Final position at"
 msgstr "Eindpositie op"
@@ -3641,10 +3638,10 @@ msgstr "Fins"
 
 #, python-format
 msgid "Firmware: %s"
-msgstr ""
+msgstr "Firmware: %s"
 
 msgid "Firmware: unknown"
-msgstr ""
+msgstr "Firmware: onbekend"
 
 msgid "Fixed"
 msgstr "Vast"
@@ -3656,7 +3653,7 @@ msgid "Flash"
 msgstr "Flash"
 
 msgid "Flash Image Online"
-msgstr ""
+msgstr "Image Online Flashen"
 
 msgid "Flash On the Fly"
 msgstr ""
@@ -3701,17 +3698,17 @@ msgid "Format as"
 msgstr "Formatteer als"
 
 msgid "Format terminated with success"
-msgstr ""
+msgstr "Formateren succesvol voltooid"
 
 msgid "Format/Partition your Devices and manage Mountpoints"
-msgstr ""
+msgstr "Formateer/partitioneer je Apparaten en beheer Mounts"
 
 msgid "Formatting disk"
-msgstr ""
+msgstr "Disk formateren"
 
 #, python-format
 msgid "Formatting disk %s"
-msgstr ""
+msgstr "Disk formateren %s"
 
 #, python-format
 msgid "Formatting partition %d"
@@ -3722,7 +3719,7 @@ msgstr "Geef volume opdrachten door"
 
 #, python-format
 msgid "Four partitions (25% - 25% - 25% - 25%)"
-msgstr ""
+msgstr "Vier partities (25% - 25% - 25% - 25%)"
 
 msgid "Frame size in full view"
 msgstr "Framegrootte in vol beeld"
@@ -3793,7 +3790,7 @@ msgstr "Maak een volledige imagebackup"
 
 #, python-format
 msgid "Full back-up on %s"
-msgstr ""
+msgstr "Volledige backup op %s"
 
 msgid "Full screen"
 msgstr "Volledig scherm"
@@ -3815,7 +3812,7 @@ msgstr ""
 "de nieuwe skin te activeren. Nu herstarten?"
 
 msgid "Gaming"
-msgstr ""
+msgstr "Gaming"
 
 msgid "Gateway"
 msgstr "Gateway"
@@ -3938,15 +3935,17 @@ msgid "HD videos"
 msgstr "HD videos"
 
 msgid "HD1100"
-msgstr ""
+msgstr "HD1100"
 
 msgid "HD2400"
-msgstr ""
+msgstr "HD2400"
 
 msgid ""
 "HDD = Do you want to make an USB-back-up image on HDD? \n"
 "This only takes 2 or 10 minutes and is fully automatic."
 msgstr ""
+"HDD = Will je een USB-back-up image op HDD maken? \n"
+"Dit duurt 2 tot 10 minuten en gebeurt volledig automatisch."
 
 msgid "HDD Partitioner"
 msgstr "HDD Partitioner"
@@ -3980,7 +3979,7 @@ msgstr "Harde schijf standby na"
 
 #, python-format
 msgid "Heads: %s (max) %s (current)"
-msgstr ""
+msgstr "Koppen: %s (max) %s (huidig)"
 
 msgid "Heads: unknown"
 msgstr "Heads: onbekend"
@@ -3995,7 +3994,7 @@ msgid "Hello"
 msgstr "Hello"
 
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 msgid "Helps setting up your dish"
 msgstr "Helpt uw schotel op te zetten"
@@ -4055,13 +4054,13 @@ msgid "Hold till locked"
 msgstr "Hold till locked"
 
 msgid "Holland"
-msgstr ""
+msgstr "Holland"
 
 msgid "Home"
 msgstr "Thuis"
 
 msgid "Hong Kong"
-msgstr ""
+msgstr "Hong Kong"
 
 msgid "Hops:"
 msgstr "Hops:"
@@ -4082,7 +4081,7 @@ msgid "HotKey Setup"
 msgstr "HotKey instellingen"
 
 msgid "Hotkey"
-msgstr ""
+msgstr "Hotkey"
 
 msgid "Hour"
 msgstr "Uur"
@@ -4301,7 +4300,7 @@ msgid "Index allocated:"
 msgstr "Index toegewezen:"
 
 msgid "India"
-msgstr ""
+msgstr "India"
 
 msgid "Info"
 msgstr "Informatie"
@@ -4391,10 +4390,10 @@ msgid "Install Plugins"
 msgstr "Installeer plugins"
 
 msgid "Install a new image with a USB stick"
-msgstr ""
+msgstr "Installeer een nieuw Image via USB stick"
 
 msgid "Install a new image with your web browser"
-msgstr ""
+msgstr "Installeer een nieuw Image via Webbrowser"
 
 msgid "Install channel list"
 msgstr "Installeer kanaallijst"
@@ -4485,7 +4484,7 @@ msgid "Ipkg"
 msgstr "IPKG"
 
 msgid "Ireland"
-msgstr ""
+msgstr "Ierland"
 
 msgid "Is this setting ok?"
 msgstr "Is deze instelling OK?"
@@ -4494,7 +4493,7 @@ msgid "Is this video mode ok?"
 msgstr "Is deze videomode goed?"
 
 msgid "Israel"
-msgstr ""
+msgstr "Israel"
 
 msgid ""
 "It's not elegant and low performace... but for skin developing is great!"
@@ -4505,15 +4504,14 @@ msgstr ""
 msgid "Italian"
 msgstr "Italiaans"
 
-#, fuzzy
 msgid "Italy"
-msgstr "Italiaans"
+msgstr "Italië"
 
 msgid "JUMP 24 HOURS"
 msgstr "SPRING 24 UUR"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "Job View"
 msgstr "Taken"
@@ -4730,7 +4728,7 @@ msgstr[0] "Toon verise%d, gevonden %d kanal"
 msgstr[1] "Toon verise%d, gevonden %d kanalen"
 
 msgid "List/Fav"
-msgstr ""
+msgstr "Lijst/Fav"
 
 msgid "Listen to the radio..."
 msgstr "Luister naar radio..."
@@ -4742,7 +4740,7 @@ msgid "Load EPG"
 msgstr "Laad EPG"
 
 msgid "Load feed on startup:"
-msgstr ""
+msgstr "Feed laden bij opstarten"
 
 msgid "Load playlist"
 msgstr "Afspeellijst laden"
@@ -4775,7 +4773,7 @@ msgid "LogManager"
 msgstr "Logmanager"
 
 msgid "Login OK"
-msgstr ""
+msgstr "Login OK"
 
 msgid "Login failed"
 msgstr "Login mislukt"
@@ -4852,11 +4850,9 @@ msgstr "Universele markering"
 msgid "Manage extensions"
 msgstr "Beheer van extensies"
 
-#, fuzzy, python-format
+#, python-format
 msgid "Manage your %s %s's software"
-msgstr ""
-"\n"
-"Online bijwerken van uw %s %s software."
+msgstr "Beheer uw %s %s software."
 
 msgid "Manual"
 msgstr "Handmatig"
@@ -4877,7 +4873,7 @@ msgid "Manufacturer"
 msgstr "Fabrikant"
 
 msgid "MaraM9"
-msgstr ""
+msgstr "MaraM9"
 
 msgid "Margin after recording (minutes)"
 msgstr "Marge na opname (minuten)"
@@ -4937,7 +4933,7 @@ msgid "Merging Timeshift files"
 msgstr "Samenvoegen timeshiftbestanden"
 
 msgid "Mexico"
-msgstr ""
+msgstr "Mexico"
 
 msgid "MiniDLNA Log"
 msgstr "MiniDLNA Log"
@@ -5021,70 +5017,70 @@ msgid "Mosquito noise reduction"
 msgstr "Mosquito ruisonderdrukking"
 
 msgid "Most discussed"
-msgstr ""
+msgstr "Meest besproken"
 
 msgid "Most linked"
 msgstr "Most linked"
 
 msgid "Most popular"
-msgstr ""
+msgstr "Meest populair"
 
 msgid "Most recent"
 msgstr "Most recent"
 
 msgid "Most responded"
-msgstr ""
+msgstr "Vaakst beantwoord"
 
 msgid "Most shared"
-msgstr ""
+msgstr "Vaakst gedeeld"
 
 msgid "Most viewed"
-msgstr ""
+msgstr "Meest bekeken"
 
 msgid "Mount"
 msgstr "Mount"
 
 msgid "Mount as /media/hdd1"
-msgstr ""
+msgstr "Mount als /media/hdd1"
 
 msgid "Mount as /media/hdd2"
-msgstr ""
+msgstr "Mount als /media/hdd2"
 
 msgid "Mount as /media/hdd3"
-msgstr ""
+msgstr "Mount als /media/hdd3"
 
 msgid "Mount as /media/hdd4"
-msgstr ""
+msgstr "Mount als /media/hdd4"
 
 msgid "Mount as /media/hdd5"
-msgstr ""
+msgstr "Mount als /media/hdd5"
 
 msgid "Mount as /media/usb"
-msgstr ""
+msgstr "Mount als /media/usb"
 
 msgid "Mount as /media/usb1"
-msgstr ""
+msgstr "Mount als /media/usb1"
 
 msgid "Mount as /media/usb2"
-msgstr ""
+msgstr "Mount als /media/usb2"
 
 msgid "Mount as /media/usb3"
-msgstr ""
+msgstr "Mount als /media/usb3"
 
 msgid "Mount as /media/usb4"
-msgstr ""
+msgstr "Mount als /media/usb4"
 
 msgid "Mount as /media/usb5"
-msgstr ""
+msgstr "Mount als /media/usb5"
 
 msgid "Mount as main hdd"
 msgstr "Mount als standaard hdd"
 
 msgid "Mount on custom path"
-msgstr ""
+msgstr "Mount op aangepast pad"
 
 msgid "Mount point exist!"
-msgstr ""
+msgstr "Mountpunt bestaat!"
 
 msgid "Mountpoints"
 msgstr "Mountpoints"
@@ -5192,7 +5188,7 @@ msgid "Multisat"
 msgstr "Multisat"
 
 msgid "Music"
-msgstr ""
+msgstr "Muziek"
 
 msgid "Music/Ballet/Dance"
 msgstr "Muziek/Ballet/Dans"
@@ -5201,43 +5197,43 @@ msgid "My Favorites"
 msgstr "Favorieten"
 
 msgid "My History"
-msgstr ""
+msgstr "Mijn Geschiedenis"
 
 msgid "My Recommendations"
-msgstr ""
+msgstr "Mijn Aanbevelingen"
 
 msgid "My Subscriptions"
 msgstr "My Subscriptions"
 
 msgid "My TubePlayer"
-msgstr ""
+msgstr "Mijn TubePlayer"
 
 msgid "My Uploads"
-msgstr ""
+msgstr "Mijn Uploads"
 
 msgid "My Watch Later"
-msgstr ""
+msgstr "Mijn Bekijk Later"
 
 msgid "MyTube Settings"
 msgstr "MyTube instellingen"
 
 msgid "MyTubePlayer"
-msgstr ""
+msgstr "MyTubePlayer"
 
 msgid "MyTubePlayer Help"
-msgstr ""
+msgstr "MyTubePlayer Help"
 
 msgid "MyTubePlayer active video downloads"
-msgstr ""
+msgstr "MyTubePlayer actieve video downloads"
 
 msgid "MyTubePlayer settings"
 msgstr "MyTubePlayer instellingen"
 
 msgid "MyTubeVideoInfoScreen"
-msgstr ""
+msgstr "MyTubeVideoInfoScherm"
 
 msgid "MyTubeVideohelpScreen"
-msgstr ""
+msgstr "MyTubeVideohelpScherm"
 
 msgid "N/A"
 msgstr "Niet beschikbaar"
@@ -5340,14 +5336,13 @@ msgid "New Packages"
 msgstr "Nieuwe pakketten"
 
 msgid "New Zealand"
-msgstr ""
+msgstr "Nieuw Zeeland"
 
 msgid "New profile: "
 msgstr "Niew profiel: "
 
-#, fuzzy
 msgid "New subscription added"
-msgstr "Beschrijving"
+msgstr "Nieuw abonnement toegevoegd"
 
 msgid "New timers location"
 msgstr "Lokatie voor nieuwe timers"
@@ -5356,13 +5351,13 @@ msgid "New version:"
 msgstr "Nieuwe versie:"
 
 msgid "News & Politics"
-msgstr ""
+msgstr "Nieuws & Politiek"
 
 msgid "News Current Affairs"
 msgstr "Nieuws/Actualiteiten"
 
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 msgctxt "now/next: 'next' event label"
 msgid "Next"
@@ -5375,6 +5370,8 @@ msgid ""
 "No /hdd found !!\n"
 "Please make sure you have a HDD mounted.\n"
 msgstr ""
+"Geen /hdd gevonden !!\n"
+"Verzeker U er AUB van dat U een HDD gemount heeft.\n"
 
 msgid ""
 "No /hdd found !!\n"
@@ -5382,6 +5379,10 @@ msgid ""
 "\n"
 "Exit plugin."
 msgstr ""
+"Geen /hdd gevonden !!\n"
+"Verzeker U er AUB van dat U een HDD gemount heeft.\n"
+"\n"
+"Sluit plugin."
 
 msgid "No Connection"
 msgstr "Geen verbinding"
@@ -5640,11 +5641,15 @@ msgid ""
 "Not enough free space on %s !!\n"
 "You need at least 300Mb free space.\n"
 msgstr ""
+"Niet genoeg vrije ruimte op %s !!\n"
+"Er is minstens 300Mb vrije ruimte nodig.\n"
 
 msgid ""
 "Not enough free space on /hdd !!\n"
 "You need at least 300Mb free space.\n"
 msgstr ""
+"Niet genoeg vrije ruimte op /hdd !!\n"
+"Er is minstens 300Mb vrije ruimte nodig.\n"
 
 msgid ""
 "Not enough free space on /hdd !!\n"
@@ -5652,6 +5657,10 @@ msgid ""
 "\n"
 "Exit plugin."
 msgstr ""
+"Niet genoeg vrije ruimte op /hdd !!\n"
+"Er is minstens 300Mb vrije ruimte nodig.\n"
+"\n"
+"Sluit plugin."
 
 msgid "Not fetching feed entries"
 msgstr ""
@@ -5714,7 +5723,7 @@ msgid "OK button (short)"
 msgstr "OK (kort) toets"
 
 msgid "OK, guide me through the upgrade process"
-msgstr ""
+msgstr "OK, loods me door het opwaarderingsproces"
 
 msgid "ONID"
 msgstr "ONID"
@@ -5726,7 +5735,7 @@ msgid "OSD 3D Setup"
 msgstr "OSD 3D-Instellingen"
 
 msgid "OSD Adjustment"
-msgstr ""
+msgstr "OSD Aanpassing"
 
 msgid "OSD Position"
 msgstr "OSD Positie"
@@ -5747,7 +5756,7 @@ msgid "Offline decode delay (ms)"
 msgstr "Offline decodeer vertraging (ms)"
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid "On"
 msgstr "Aan"
@@ -5776,7 +5785,7 @@ msgid "One partition"
 msgstr "One partition"
 
 msgid "Online = Download a image from Atemio4you and flash it"
-msgstr ""
+msgstr "Online = Download een image van Atemio4you en flash het"
 
 msgid "OnlineVersionCheck"
 msgstr "Controle op update"
@@ -5859,7 +5868,6 @@ msgstr "Emu bestanden overschrijven?"
 msgid "Overwrite Picon Files ?"
 msgstr "Picon bestanden overschrijven?"
 
-#, fuzzy
 msgid "Overwrite Setting Files ?"
 msgstr "Configuratiebestanden overschrijven?"
 
@@ -6037,7 +6045,7 @@ msgid "Persian"
 msgstr "Perzisch"
 
 msgid "Pets & Animals"
-msgstr ""
+msgstr "(Huis)dieren"
 
 msgid "Phone number"
 msgstr "Telefoonnummer"
@@ -6122,7 +6130,7 @@ msgid "Play recorded movies..."
 msgstr "Opname afspelen..."
 
 msgid "Play video again"
-msgstr ""
+msgstr "Video nogmaals afspelen"
 
 msgid "Playlist"
 msgstr "Playlist"
@@ -6134,7 +6142,7 @@ msgstr ""
 "Let op: als u geen PIN instelt, kan iedereen het kinderslot de-activeren."
 
 msgid "Please be patient, a backup will now be made,\n"
-msgstr ""
+msgstr "Even geduld AUB, er wordt nu een backup gemaakt,\n"
 
 msgid "Please change recording endtime"
 msgstr "Wijzig de eindtijd van de opname"
@@ -6198,9 +6206,8 @@ msgstr "Oude pincode invoeren a.u.b."
 msgid "Please enter the your personal feed URL"
 msgstr "Geef de URL van uw persoonlijke feed in."
 
-#, fuzzy
 msgid "Please enter your search term."
-msgstr "Geef de URL van uw persoonlijke feed in."
+msgstr "Voer uw zoekterm in."
 
 msgid "Please follow the instructions on the TV"
 msgstr "Volg nu de instructies op uw TV"
@@ -6239,9 +6246,8 @@ msgstr "Selecteer een subzender voor opname a.u.b..."
 msgid "Please select a subservice..."
 msgstr "Selecteer een subzender..."
 
-#, fuzzy
 msgid "Please select medium"
-msgstr "Selecteer het te scannen medium..."
+msgstr "Selecteer medium"
 
 msgid "Please select medium to be scanned"
 msgstr "Selecteer het te scannen medium..."
@@ -6281,9 +6287,8 @@ msgid ""
 "media/hdd/images/config/myrestore.sh)"
 msgstr ""
 
-#, fuzzy
 msgid "Please select your preferred configuration."
-msgstr "Een ogenblikje geduld terwijl we uw netwerk activeren..."
+msgstr "Selecteer AUB uw voorkeursconfiguratie"
 
 msgid "Please set up tuner A"
 msgstr "Cofigureer tuner A"
@@ -6306,15 +6311,14 @@ msgstr ""
 "beeld bedekt.\n"
 "Druk op OK om verder te gaan."
 
-#, fuzzy
 msgid ""
 "Please setup your user interface by adjusting the values till the edges of "
 "the red box are touching the edges of your TV.\n"
 "When you are ready press green to continue."
 msgstr ""
-"Configureer uw gebruikersinterface zo dat het blauwe veld precies uw TV-"
-"beeld bedekt.\n"
-"Druk op OK om verder te gaan."
+"Configureer uw gebruikersinterface zo dat de randen van het rode veld "
+"precies uw TV-beeld bedekken.\n"
+"Druk op groen als u klaar bent om verder te gaan."
 
 msgid ""
 "Please use direction keys to move the PiP window.\n"
@@ -6347,9 +6351,9 @@ msgstr "Wacht op het verzamelen van data..."
 msgid "Please wait while scanning is in progress..."
 msgstr "Een ogenblikje geduld, zoeken is bezig..."
 
-#, fuzzy
 msgid "Please wait while we check your installed plugins..."
-msgstr "Een ogenblikje geduld; uw netwerk wordt getest..."
+msgstr ""
+"Een ogenblik geduld terwijl we uw geïnstalleerde plugins controleren..."
 
 msgid "Please wait while we configure your network..."
 msgstr "Een ogenblikje geduld; uw netwerk wordt geconfigureerd..."
@@ -6394,7 +6398,7 @@ msgid "Plugins"
 msgstr "Applicaties"
 
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 msgid "Polarisation"
 msgstr "Polarisatie"
@@ -6561,9 +6565,8 @@ msgstr "Druk op geel om deze interface als standaard in te stellen."
 msgid "Preview"
 msgstr "Voorbeeld"
 
-#, fuzzy
 msgid "Previous"
-msgstr "Speel vorige"
+msgstr "Vorige"
 
 msgid "Primary DNS"
 msgstr "Primaire DNS"
@@ -6628,9 +6631,8 @@ msgstr "Providers:"
 msgid "Providers: "
 msgstr "Providers: "
 
-#, fuzzy
 msgid "Published"
-msgstr "Niet gepubliceerd"
+msgstr "Gepubliceerd"
 
 msgid "Put TV in standby"
 msgstr "Zet TV in standby"
@@ -6672,9 +6674,8 @@ msgstr "Radio"
 msgid "Random"
 msgstr "Willekeurig"
 
-#, fuzzy
 msgid "Rating"
-msgstr "ingepland"
+msgstr "Rating"
 
 #, python-format
 msgid "Rating defined by broadcaster - %d"
@@ -6683,9 +6684,8 @@ msgstr "Waardering bepaald door omroep - %d"
 msgid "Rating undefined"
 msgstr "Waardering niet bepaald"
 
-#, fuzzy
 msgid "Ratings: "
-msgstr "ingepland"
+msgstr "ratings:"
 
 msgid "Read Userdata from oscam.conf"
 msgstr "Lees gebruikersgegevens van oscam.conf"
@@ -6695,10 +6695,10 @@ msgid "Read cache speed: %s"
 msgstr "Read cache speed: %s"
 
 msgid "Read disk cache speed: unknown"
-msgstr ""
+msgstr "Diskcache leessnelheid: onbekend"
 
 msgid "Read disk speed: unknown"
-msgstr ""
+msgstr "Disk leessnelheid: onbekend"
 
 #, python-format
 msgid "Read speed: %s"
@@ -6728,7 +6728,7 @@ msgid "Really exit the subservices quickzap?"
 msgstr "Subkanalen snelzap verlaten?"
 
 msgid "Really quit MyTube Player?"
-msgstr ""
+msgstr "Wilt U MyTube Player verlaten?"
 
 msgid "Really reboot now?"
 msgstr "Nu herstarten?"
@@ -6843,7 +6843,7 @@ msgid "Relative"
 msgstr "Relatief"
 
 msgid "Relevance"
-msgstr ""
+msgstr "Relevantie"
 
 msgid "Reload"
 msgstr "Herlaad"
@@ -7027,7 +7027,7 @@ msgstr "Bezig met terugzetten..."
 
 #, python-format
 msgid "Results: %s - Page: %s "
-msgstr ""
+msgstr "Resultaten: %s - Pagina: %s "
 
 msgid "Resume from last position"
 msgstr "Ga door op laatste positie"
@@ -7087,9 +7087,8 @@ msgstr "Hoe vaak uitvoeren?"
 msgid "Running"
 msgstr "Actief"
 
-#, fuzzy
 msgid "Russia"
-msgstr "Russisch"
+msgstr "Rusland"
 
 msgid "Russian"
 msgstr "Russisch"
@@ -7261,7 +7260,7 @@ msgstr ""
 "DiSEqC rotor"
 
 msgid "Science & Technology"
-msgstr ""
+msgstr "Wetenschap & Technologie"
 
 msgid "Scrolling Speed"
 msgstr "Sroll-snelheid"
@@ -7329,7 +7328,7 @@ msgstr "Secondaire DNS"
 
 #, python-format
 msgid "Sectors: %s (max) %s (current)"
-msgstr ""
+msgstr "Sectoren: %s (max) %s (huidig)"
 
 msgid "Sectors: unknown"
 msgstr "Sectors: unknown"
@@ -7735,7 +7734,7 @@ msgid "Setup"
 msgstr "Instellingen"
 
 msgid "Setup HDD / USB devices"
-msgstr ""
+msgstr "Installeer HDD / USB apparaten"
 
 msgid "Setup how to control the channel changing."
 msgstr "Stel hier in hoe u van kanaal wilt veranderen."
@@ -8339,7 +8338,7 @@ msgid "Space used:"
 msgstr "Gebruikte ruimte:"
 
 msgid "Spain"
-msgstr ""
+msgstr "Spanje"
 
 msgid "Spanish"
 msgstr "Spaans"
@@ -8399,7 +8398,7 @@ msgid "Start timeshift"
 msgstr "Timeshift starten"
 
 msgid "Start with following feed:"
-msgstr ""
+msgstr "Start met de volgende feed:"
 
 msgid "Starting on"
 msgstr "Start op"
@@ -8408,7 +8407,7 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Std. Feeds"
-msgstr ""
+msgstr "Std. Feeds"
 
 msgid "Step east"
 msgstr "Stap > oost"
@@ -8577,9 +8576,8 @@ msgstr "Wissel SNR in  '%'  met SNR in 'db'"
 msgid "Swap services"
 msgstr "Zenders omwisselen"
 
-#, fuzzy
 msgid "Sweden"
-msgstr "Zweeds"
+msgstr "Zweden"
 
 msgid "Swedish"
 msgstr "Zweeds"
@@ -8689,7 +8687,7 @@ msgid "Tags: "
 msgstr "Markeringen"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Teletext"
 msgstr "Teletext"
@@ -8957,10 +8955,10 @@ msgid "This %s %s cannot decode %s streams!"
 msgstr "Deze %s %s kan %s streams niet decoderen!"
 
 msgid "This Month"
-msgstr ""
+msgstr "Deze Maand"
 
 msgid "This Week"
-msgstr ""
+msgstr "Deze Week"
 
 msgid ""
 "This allows you change the font size relative to skin size, so 1 increases "
@@ -9345,7 +9343,7 @@ msgid "Three"
 msgstr "Drie"
 
 msgid "Three partitions (33% - 33% - 33%)"
-msgstr ""
+msgstr "Drie partities (33% - 33% - 33%)"
 
 msgid "Threshold"
 msgstr "Drempelwaarde"
@@ -9573,7 +9571,7 @@ msgid "Trashcan:"
 msgstr "Prullenbak:"
 
 msgid "Travel & Events"
-msgstr ""
+msgstr "Reizen en Evenementen"
 
 msgid "Trending videos"
 msgstr ""
@@ -9589,9 +9587,8 @@ msgstr ""
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Probeert een nieuwe pakketlijst te downloaden. Een ogenblik a.u.b..."
 
-#, fuzzy
 msgid "Trying to download a new updatelist. Please wait..."
-msgstr "Probeert een nieuwe pakketlijst te downloaden. Een ogenblik a.u.b..."
+msgstr "Probeer een nieuwe pakketlijst te downloaden. Een ogenblik a.u.b..."
 
 msgid "Trying to download the Youtube feed entries. Please wait..."
 msgstr "Trying to download the Youtube feed entries. Please wait..."
@@ -9673,11 +9670,11 @@ msgstr "Twee regels"
 
 #, python-format
 msgid "Two partitions (50% - 50%)"
-msgstr ""
+msgstr "Twee partitities (50% - 50%)"
 
 #, python-format
 msgid "Two partitions (75% - 25%)"
-msgstr ""
+msgstr "Twee partitities (75% - 25%)"
 
 msgid "Type"
 msgstr "Type"
@@ -9700,10 +9697,13 @@ msgid ""
 "is fully automatic.\n"
 "Make sure you first insert an USB flash drive before you select USB."
 msgstr ""
+"USB = Wilt U een backup maken op USB?\n"
+"Dit duurt 4 tot 15 minuten afhankelijk van het gebruikte bestandssysteem en "
+"verloopt volledig automatisch.\n"
+"Vergezeker U ervan dat een USB stick is aangesloten voordat U USB kiest."
 
-#, fuzzy
 msgid "Unattended upgrade without GUI"
-msgstr "Upgrade uitvoeren en vervolgens systeem herstarten"
+msgstr "Upgrade uitvoeren zonder GUI"
 
 msgid "Unattended upgrade without GUI and reboot system"
 msgstr "Upgrade uitvoeren en vervolgens systeem herstarten"
@@ -9733,7 +9733,7 @@ msgid "Uninstall"
 msgstr "De-installeer"
 
 msgid "United States"
-msgstr ""
+msgstr "Verenigde Staten"
 
 msgid "Universal LNB"
 msgstr "Universele LNB"
@@ -9741,9 +9741,8 @@ msgstr "Universele LNB"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#, fuzzy
 msgid "Unknown error"
-msgstr "Onbekend"
+msgstr "Onbekende fout"
 
 msgid "Unmount"
 msgstr "Unmount"
@@ -9755,21 +9754,19 @@ msgid "Unzipping files, Please wait ..."
 msgstr "Unzipping files, Please wait ..."
 
 msgid "Up"
-msgstr ""
+msgstr "Naar boven"
 
 msgid "Update"
 msgstr "Update"
 
-#, fuzzy
 msgid "Update Cache"
-msgstr "Update"
+msgstr "Update Cache"
 
-#, fuzzy
 msgid "Update anyway?"
-msgstr "Update"
+msgstr "Toch updaten?"
 
 msgid "Update at your own risk"
-msgstr ""
+msgstr "Bijwerken op eigen risico"
 
 msgid "Update channel list only"
 msgstr "Update alleen de kanaallijst"
@@ -9986,7 +9983,7 @@ msgstr "Gebruikers interface zichtbaarheid"
 
 #, fuzzy
 msgid "User video entries."
-msgstr "Gebruikers interface"
+msgstr ""
 
 msgid "Username"
 msgstr "Gebruikersnaam"
@@ -10126,7 +10123,7 @@ msgid "View Video CD..."
 msgstr "Bekijk video CD..."
 
 msgid "View active downloads"
-msgstr ""
+msgstr "Bekijk aktieve downloads"
 
 msgid "View details"
 msgstr "Bekijk details"
@@ -10178,7 +10175,7 @@ msgid "View photos..."
 msgstr "Bekijk foto's."
 
 msgid "View related videos"
-msgstr ""
+msgstr "Bekijk gerelateerde videos"
 
 msgid "View response videos"
 msgstr ""
@@ -10283,6 +10280,10 @@ msgid ""
 "With this tool you can flash a new image on the fly.\n"
 "Flash image from online or flash a local image."
 msgstr ""
+"Welkom bij Atemio Online Flash !\n"
+"\n"
+"Met deze tool kunt U onmiddelijk een nieuw image flashen.\n"
+"Flash image van online of flash een lokaal image."
 
 msgid ""
 "Welcome to the MyTube Youtube Player.\n"
@@ -10740,7 +10741,7 @@ msgid "XP1000"
 msgstr "XP1000"
 
 msgid "XP3000"
-msgstr ""
+msgstr "XP3000"
 
 msgid "YPbPr"
 msgstr "Component"
@@ -10776,10 +10777,10 @@ msgid "Yes, but don't save timeshift as movie"
 msgstr "Ja, maar sla timeshift niet op als opname."
 
 msgid "Yes, but play next video"
-msgstr ""
+msgstr "Ja, maar speel de volgende video af"
 
 msgid "Yes, but play previous video"
-msgstr ""
+msgstr "Ja, maar speel de vorige video af"
 
 msgid "Yes, but save timeshift as movie and continue recording"
 msgstr "Ja, maar bewaar timeshift als opname en ga door met opnemen"
@@ -11865,7 +11866,7 @@ msgid "only HD"
 msgstr "alleen HD"
 
 msgid "open atemio device manager"
-msgstr ""
+msgstr "open atemio apparaatbeheer"
 
 msgid "open bouquetlist"
 msgstr "open favorietenlijst"
@@ -12018,7 +12019,7 @@ msgid "running..."
 msgstr "actief......"
 
 msgid "save"
-msgstr ""
+msgstr "bewaar"
 
 msgid "save last directory on exit"
 msgstr "Bij verlaten bewaar laatste map"
@@ -12246,7 +12247,7 @@ msgid "this service is protected by a parental control pin"
 msgstr "Dit kanaal is beveiligd met een kinderslot-pincode"
 
 msgid "this will take between 2 and 9 minutes\n"
-msgstr ""
+msgstr "dit duurt 2 tot 9 minuten\n"
 
 msgid "toggle time, chapter, audio, subtitle info"
 msgstr "Tijd, hoofdstuk, audio en ondertitels instellen"
@@ -12363,7 +12364,7 @@ msgid "width"
 msgstr "breedte"
 
 msgid "will take about 3-12 minutes for this system\n"
-msgstr ""
+msgstr "duurt ongeveer 3-12 minuten voor dit systeem\n"
 
 msgid "winter sport"
 msgstr "wintersport"
