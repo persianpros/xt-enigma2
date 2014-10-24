@@ -623,7 +623,7 @@ def InitUsageConfig():
 	config.atemiosettings = ConfigSubsection()
 	config.atemiosettings.Subservice = ConfigYesNo(default = False)
 	config.atemiosettings.ColouredButtons = ConfigYesNo(default = True)
-	config.atemiosettings.InfoBarEpg_mode = ConfigSelection(default="3", choices = [
+	config.atemiosettings.InfoBarEpg_mode = ConfigSelection(default="1", choices = [
 					("0", _("as plugin in extended bar")),
 					("1", _("with long OK press")),
 					("2", _("with exit button")),
