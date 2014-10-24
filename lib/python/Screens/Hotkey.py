@@ -30,6 +30,8 @@ hotkeys = [	(_("Red"), "red", "Infobar/activateRedButton"),
 	(_("Right"), "cross_right", ""),
 	(_("Up"), "cross_up", ""),
 	(_("Down"), "cross_down", ""),
+    (_("OK"), "ok", ""),
+    (_("OK long"), "ok_long", "Infobar/openInfoBarEPG"),
 	(_("Channel up"), "channelup", ""),
 	(_("Channel down"), "channeldown", ""),
 	(_("TV"), "showTv", "Infobar/showTv"),
@@ -116,6 +118,7 @@ def getHotkeyFunctions():
 			hotkeyFunctions.append((plugin.name, plugin.path[24:] + "/" + str(twinPaths[plugin.path[24:]]) , "EPG"))
 			twinPlugins.append(plugin.name)
 	hotkeyFunctions.append((_("Open graphical multi EPG"), "Infobar/openGraphEPG", "EPG"))
+	hotkeyFunctions.append((_("Open InfoBarEPG"), "Infobar/openInfoBarEPG", "EPG"))
 	hotkeyFunctions.append((_("Open event view"), "Infobar/openEventView", "EPG"))
 	hotkeyFunctions.append((_("Main menu"), "Infobar/mainMenu", "InfoBar"))
 	hotkeyFunctions.append((_("Show help"), "Infobar/showHelp", "InfoBar"))
