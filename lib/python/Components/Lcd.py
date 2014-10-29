@@ -259,8 +259,8 @@ def InitLcd():
 			config.lcd.contrast = ConfigNothing()
 			standby_default = 1
 
-        config.lcd.standby = ConfigSlider(default=standby_default, limits=(0, 10))
-        config.lcd.bright = ConfigSlider(default=10, limits=(0, 10))
+		config.lcd.standby = ConfigSlider(default=standby_default, limits=(0, 10))
+		config.lcd.bright = ConfigSlider(default=10, limits=(0, 10))
 		config.lcd.standby.addNotifier(setLCDbright);
 		config.lcd.standby.apply = lambda : setLCDbright(config.lcd.standby)
 

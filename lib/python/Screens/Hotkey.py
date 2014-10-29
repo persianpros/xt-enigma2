@@ -342,21 +342,21 @@ class HotkeySetupSelect(Screen):
 				if currentSelected[:2] in self.selected:
 					self.selected.remove(currentSelected[:2])
 				else:
-                    if currentSelected[0][1].startswith("Zap"):
-                        self.session.openWithCallback(self.zaptoCallback, SimpleChannelSelection, _("Hotkey zap") + " " + self.key[0][0], currentBouquet=True)
-                    else:
-                        self.selected.append(currentSelected[:2])
+					if currentSelected[0][1].startswith("Zap"):
+						self.session.openWithCallback(self.zaptoCallback, SimpleChannelSelection, _("Hotkey zap") + " " + self.key[0][0], currentBouquet=True)
+					else:
+						self.selected.append(currentSelected[:2])
 		elif self.selected:
 			self.selected.remove(self["choosen"].l.getCurrentSelection())
 			if not self.selected:
 				self.toggleMode()
 		self["choosen"].setList(self.selected)
 
-    def zaptoCallback(self, *args):
-        if args:
-            currentSelected = self["list"].l.getCurrentSelection()[:]
-            currentSelected[1]=currentSelected[1][:-1] + (_("Zap to") + " " + ServiceReference(args[0]).getServiceName(),)
-            self.selected.append([(currentSelected[0][0], currentSelected[0][1] + "/" + args[0].toString()), currentSelected[1]])
+	def zaptoCallback(self, *args):
+		if args:
+			currentSelected = self["list"].l.getCurrentSelection()[:]
+			currentSelected[1]=currentSelected[1][:-1] + (_("Zap to") + " " + ServiceReference(args[0]).getServiceName(),)
+			self.selected.append([(currentSelected[0][0], currentSelected[0][1] + "/" + args[0].toString()), currentSelected[1]])
 
 	def keyLeft(self):
 		self[self.mode].instance.moveSelection(self[self.mode].instance.pageUp)
@@ -370,21 +370,21 @@ class HotkeySetupSelect(Screen):
 	def keyDown(self):
 		self[self.mode].instance.moveSelection(self[self.mode].instance.moveDown)
     
-    def moveUp(self):
-        self.moveChoosen(self.keyUp)
+	def moveUp(self):
+		self.moveChoosen(self.keyUp)
         
-    def moveDown(self):
-        self.moveChoosen(self.keyDown)
+	def moveDown(self):
+		self.moveChoosen(self.keyDown)
         
-    def moveChoosen(self, direction):
-        if self.mode == "choosen":
-            currentIndex = self["choosen"].getSelectionIndex()
-            swapIndex = (currentIndex + (direction == self.keyDown and 1 or -1)) % len(self["choosen"].list)
-            self["choosen"].list[currentIndex], self["choosen"].list[swapIndex] = self["choosen"].list[swapIndex], self["choosen"].list[currentIndex]
-            self["choosen"].setList(self["choosen"].list)
-            direction()
-        else:
-            return 0
+	def moveChoosen(self, direction):
+		if self.mode == "choosen":
+			currentIndex = self["choosen"].getSelectionIndex()
+			swapIndex = (currentIndex + (direction == self.keyDown and 1 or -1)) % len(self["choosen"].list)
+			self["choosen"].list[currentIndex], self["choosen"].list[swapIndex] = self["choosen"].list[swapIndex], self["choosen"].list[currentIndex]
+			self["choosen"].setList(self["choosen"].list)
+			direction()
+		else:
+			return 0
 
 	def save(self):
 		configValue = []
