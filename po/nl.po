@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: Atemio4you E2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-18 02:16+0200\n"
-"PO-Revision-Date: 2014-10-23 02:28+0100\n"
-"Last-Translator: dispatcher <dispatcher@telfort.nl>\n"
+"PO-Revision-Date: 2014-10-29 10:17+0100\n"
+"Last-Translator: Delagroov <delagroov@gmail.com>\n"
 "Language-Team: Dispatcher/DeGroov/Rob van der Does\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -3448,7 +3448,7 @@ msgid "Exit movie player?"
 msgstr "Sluit moviespeler?"
 
 msgid "Exit nameserver configuration"
-msgstr "verlaat nameserver configuratie"
+msgstr "Verlaat nameserver configuratie"
 
 msgid "Exit network interface list"
 msgstr "verlaat netwerkinterface lijst"
@@ -3560,10 +3560,10 @@ msgid "Fast DiSEqC"
 msgstr "Snelle DiSEqC"
 
 msgid "Fast Mounted Remove"
-msgstr ""
+msgstr "Fast Mounted Remove"
 
 msgid "Fast Scan"
-msgstr "Fastscan"
+msgstr "Snelle Scan"
 
 msgid "Fast epoch"
 msgstr "Snel spoelen"
@@ -3587,11 +3587,13 @@ msgstr "Vooruitspoelen"
 msgid "Favourites"
 msgstr "Favorieten"
 
+# not sure of context
 msgid "Fetching feed entries"
-msgstr ""
+msgstr "Feeds ophalen"
 
+# Not sure of context
 msgid "Fetching search entries"
-msgstr ""
+msgstr "Zoek resultaten ophalen"
 
 msgid "File appears to be busy.\n"
 msgstr "Bestand lijkt in gebruik te zijn.\n"
@@ -3656,22 +3658,23 @@ msgid "Flash Image Online"
 msgstr "Image Online Flashen"
 
 msgid "Flash On the Fly"
-msgstr ""
+msgstr "Flash On the Fly"
 
 msgid "Flash On the fly (select a image)"
-msgstr ""
+msgstr "Flash On the fly (selecteer een image)"
 
 msgid "Flash and restore settings and all saved plugins"
-msgstr ""
+msgstr "Flash en herstel instellingen en alle opgeslagen plugins"
 
 msgid "Flash and restore settings and no plugins"
-msgstr ""
+msgstr "Flash en herstel instellingen  plugins"
 
 msgid "Flash and restore settings and selected plugins (ask user)"
 msgstr ""
+"Flash en herstel instellingen en geselecteerde plugins(vraag gebruiker)"
 
 msgid "Flash and start installation wizard"
-msgstr ""
+msgstr "Flash en start installatie wizard"
 
 msgid "Flashing"
 msgstr "Bezig met flashen"
@@ -3680,13 +3683,13 @@ msgid "Flashing: "
 msgstr "Bezig met flashen"
 
 msgid "Following tasks will be done after you press OK!"
-msgstr "Nadat u op OK drukt worden de volgende taken uitgevoerd!"
+msgstr "Nadat u op OK gedrukt hebt worden de volgende taken uitgevoerd!"
 
 msgid "Fontsize"
 msgstr "Lettergrootte"
 
 msgid "For more information see http://www.atemio4you.com"
-msgstr ""
+msgstr "Voor meer informatie zie http://www.atemio4you.com"
 
 msgid "Force de-interlace"
 msgstr "Forceer de-interlace"
@@ -3698,21 +3701,21 @@ msgid "Format as"
 msgstr "Formatteer als"
 
 msgid "Format terminated with success"
-msgstr "Formateren succesvol voltooid"
+msgstr "Formatteren succesvol voltooid"
 
 msgid "Format/Partition your Devices and manage Mountpoints"
-msgstr "Formateer/partitioneer je Apparaten en beheer Mounts"
+msgstr "Formatteer/partitioneer je Apparaten en beheer Mounts"
 
 msgid "Formatting disk"
-msgstr "Disk formateren"
+msgstr "Disk formatteren"
 
 #, python-format
 msgid "Formatting disk %s"
-msgstr "Disk formateren %s"
+msgstr "Disk formatteren %s"
 
 #, python-format
 msgid "Formatting partition %d"
-msgstr "Formatting partition %d"
+msgstr "Formatteer partitie %d"
 
 msgid "Forward volume keys"
 msgstr "Geef volume opdrachten door"
@@ -3896,19 +3899,19 @@ msgid "GotoX calibration"
 msgstr "GotoX calibratie"
 
 msgid "Graphical EPG"
-msgstr "Graphische EPG..."
+msgstr "Grafische EPG..."
 
 msgid "Graphical Infobar EPG settings"
-msgstr "Graphical Infobar EPG instellingen"
+msgstr "Grafische Infobalk EPG instellingen"
 
 msgid "GraphicalEPG settings"
-msgstr "GraphicalEPG instellingen"
+msgstr "Grafische EPG instellingen"
 
 msgid "Graphics"
 msgstr "Grafisch"
 
 msgid "Great Britain"
-msgstr "Great Britain"
+msgstr "Groot-Brittannië"
 
 msgid "Greek"
 msgstr "Grieks"
@@ -3982,7 +3985,7 @@ msgid "Heads: %s (max) %s (current)"
 msgstr "Koppen: %s (max) %s (huidig)"
 
 msgid "Heads: unknown"
-msgstr "Heads: onbekend"
+msgstr "Koppen: onbekend"
 
 msgid "Hebrew"
 msgstr "Hebreeuws"
@@ -3991,7 +3994,7 @@ msgid "Height"
 msgstr "Hoogte"
 
 msgid "Hello"
-msgstr "Hello"
+msgstr "Hallo"
 
 msgid "Help"
 msgstr "Help"
@@ -4030,19 +4033,19 @@ msgid "High bitrate support"
 msgstr "Hoge bitrate ondersteuning"
 
 msgid "History"
-msgstr "Historie"
+msgstr "Geschiedenis"
 
 msgid "History back"
-msgstr "History back"
+msgstr "Geschiedenis terug"
 
 msgid "History buttons mode"
 msgstr "Geschiedenis toetsfunctie"
 
 msgid "History next"
-msgstr "History next"
+msgstr "Geschiedenis vooruit"
 
 msgid "History zap..."
-msgstr "History zap..."
+msgstr "Geschiedenis zap..."
 
 msgid "Hold plugins"
 msgstr "Behoud plugins"
@@ -4072,10 +4075,10 @@ msgid "Horizontal turning speed"
 msgstr "Horizontale draaisnelheid"
 
 msgid "Hostname:"
-msgstr "Hostname:"
+msgstr "Hostnaam:"
 
 msgid "Hostname: "
-msgstr "Hostname: "
+msgstr "Hostnaam: "
 
 msgid "HotKey Setup"
 msgstr "HotKey instellingen"
@@ -4099,7 +4102,7 @@ msgid "How many minutes do you want to record?"
 msgstr "Hoeveel minuten wilt u opnemen?"
 
 msgid "Howto & Style"
-msgstr ""
+msgstr "Howto & Style"
 
 msgid "Hue"
 msgstr "Tint"
@@ -4381,7 +4384,7 @@ msgid "Input devices"
 msgstr "Invoerapparaten"
 
 msgid "Insert mount point:"
-msgstr ""
+msgstr "Voeg mount point toe:"
 
 msgid "Install"
 msgstr "Installeer"
@@ -4498,8 +4501,8 @@ msgstr "Israel"
 msgid ""
 "It's not elegant and low performace... but for skin developing is great!"
 msgstr ""
-"Het i sniet elegant en verlaagt de prestaties... maar voor een "
-"skinontwikkelaar is het geweldig!"
+"Het is niet elegant en verlaagt de prestaties... maar voor skinontwikkeling "
+"is het geweldig!"
 
 msgid "Italian"
 msgstr "Italiaans"
@@ -4640,7 +4643,7 @@ msgstr "Laatst gebruikte share: "
 
 msgctxt "third event: 'third' event label"
 msgid "Later"
-msgstr ""
+msgstr "Later"
 
 msgid "Latitude"
 msgstr "Breedtegraad"
@@ -4749,7 +4752,7 @@ msgid "Load/Save"
 msgstr "Laad/Sla op"
 
 msgid "Local = Flash a image from local path /hdd/images"
-msgstr ""
+msgstr "Lokaal = Flash een image van lokaal pad /hdd/images"
 
 msgid "Local box"
 msgstr "Lokale box"
@@ -4882,7 +4885,7 @@ msgid "Margin before recording (minutes)"
 msgstr "Marge voor opname (minuten)"
 
 msgid "Mark/Portal/Playlist"
-msgstr ""
+msgstr "Mark/Portal/Playlist"
 
 msgid "Max memory positions"
 msgstr "Max aantal geheugenposities"
@@ -5011,7 +5014,7 @@ msgid "Monthly"
 msgstr "Maandelijks"
 
 msgid "More video entries."
-msgstr ""
+msgstr "Meer video ingangen."
 
 msgid "Mosquito noise reduction"
 msgstr "Mosquito ruisonderdrukking"
@@ -5020,13 +5023,13 @@ msgid "Most discussed"
 msgstr "Meest besproken"
 
 msgid "Most linked"
-msgstr "Most linked"
+msgstr "Meest gelinkt"
 
 msgid "Most popular"
 msgstr "Meest populair"
 
 msgid "Most recent"
-msgstr "Most recent"
+msgstr "Meest recent"
 
 msgid "Most responded"
 msgstr "Vaakst beantwoord"
@@ -5361,7 +5364,7 @@ msgstr "Volgende"
 
 msgctxt "now/next: 'next' event label"
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 msgid "No"
 msgstr "Nee"
@@ -5398,9 +5401,12 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"Er werdt geen USB-Device gevonden voor een fullbackup !!\n"
+"\n"
+"\n"
 
 msgid "No backup needed"
-msgstr "No backup needed"
+msgstr "Backup niet nodig"
 
 msgid "No cable tuner found!"
 msgstr "Geen kabeltuner gevonden!"
@@ -5461,6 +5467,8 @@ msgstr "Aantal onderdelen (verklein of vergroot)"
 msgid ""
 "No packages were upgraded yet. So you can check your network and try again."
 msgstr ""
+"Er zijn geen pakketten geüpgrade. Je kunt je netwerk controleren en het "
+"nogmaals proberen"
 
 msgid "No playable video found! Stop playing this movie?"
 msgstr "Stop afspelen van deze opname?"
@@ -5566,17 +5574,18 @@ msgstr "Nee, vanaf begin herstarten"
 msgid "No, but restart from begin"
 msgstr "Nee, vanaf begin herstarten"
 
+# Not sure of context
 msgid "No, but switch to video entries."
-msgstr ""
+msgstr "Nee, maaar schakel naar video's"
 
 msgid "No, but switch to video search."
-msgstr ""
+msgstr "Nee, maar schakel naar video's zoeken"
 
 msgid "No, do nothing."
-msgstr "geen actie"
+msgstr "Nee, doe niets."
 
 msgid "No, just start my %s %s"
-msgstr "No, just start my %s %s"
+msgstr "No, start alleen mijn %s %s"
 
 msgid "No, never"
 msgstr "Nee, nooit"
@@ -5594,7 +5603,7 @@ msgid "None"
 msgstr "Geen"
 
 msgid "Nonprofits & Activism"
-msgstr ""
+msgstr "Non-Profit & Activisme"
 
 msgid "North"
 msgstr "Noord"
@@ -5662,8 +5671,9 @@ msgstr ""
 "\n"
 "Sluit plugin."
 
+# Not sure of context
 msgid "Not fetching feed entries"
-msgstr ""
+msgstr "Feeds worden niet opgehaald"
 
 msgid "Not mounted"
 msgstr "Niet gemount"
@@ -6002,7 +6012,7 @@ msgid "Peak load (max queued requests per workerthread)"
 msgstr "Piekbelasting (max rij verzoeken per workerthread)"
 
 msgid "People & Blogs"
-msgstr ""
+msgstr "Mensen & Blogs"
 
 msgid "Percentage"
 msgstr "Percentage"
@@ -6235,7 +6245,7 @@ msgid "Please select a playlist..."
 msgstr "Selecteer een afspeellijst..."
 
 msgid "Please select a standard feed or try searching for videos."
-msgstr ""
+msgstr "Selecteer AUB een standaard feed of zoek naar videos."
 
 msgid "Please select a sub service..."
 msgstr "Selecteer een subkanaal..."
@@ -6286,6 +6296,9 @@ msgid ""
 "(In addition, if it exists, a local script will be executed as well at /"
 "media/hdd/images/config/myrestore.sh)"
 msgstr ""
+"Selecteer wat U wil doen na het flashen van het image:\n"
+"\v(Eventueel, wordt als het bestaat, een lokaal script uitgevoerd van /media/"
+"hdd/images/config/myrestore.sh) "
 
 msgid "Please select your preferred configuration."
 msgstr "Selecteer AUB uw voorkeursconfiguratie"
@@ -6377,7 +6390,7 @@ msgid "Please wait... Loading list..."
 msgstr "Even geduld... De lijst wordt geladen..."
 
 msgid "Please: DO NOT reboot your STB and turn off the power.\n"
-msgstr ""
+msgstr "Alstublieft: NIET uw STB herstarten en de stroom uitschakelen.\n"
 
 msgid "Plugin Browser"
 msgstr "Pluginbrowser"
@@ -6467,6 +6480,8 @@ msgid ""
 "PowerOff while Recording in progress!\n"
 "Entering standby, after recording the box will shutdown."
 msgstr ""
+"PowerOff while Recording in progress!\n"
+"Entering standby, after recording the box will shutdown."
 
 msgid "PowerTimer List"
 msgstr "Powertimer Lijst"
@@ -6651,7 +6666,7 @@ msgid "Quick Actions"
 msgstr "Snelle aktie"
 
 msgid "Quick and safe remove for your mounted devices "
-msgstr ""
+msgstr "Snel en veilig verwijderen van uw gemounte apparaten"
 
 msgid "Quick zap"
 msgstr "Snelzap"
@@ -6757,7 +6772,7 @@ msgid "Rec"
 msgstr "Rec"
 
 msgid "Recently featured"
-msgstr ""
+msgstr "Recently featured"
 
 msgid "Record"
 msgstr "Opname"
@@ -6837,7 +6852,7 @@ msgid "Regard deep standby as standby"
 msgstr "Beschouw deep stand-by als stand-by"
 
 msgid "Related video entries."
-msgstr ""
+msgstr "Related video entries."
 
 msgid "Relative"
 msgstr "Relatief"
@@ -6965,7 +6980,7 @@ msgid "Reset playback position"
 msgstr "Zet afspeelpunt terug naar begin"
 
 msgid "Reset tv-screen after playback:"
-msgstr ""
+msgstr "Reset tv-beeld na he afspelen:"
 
 msgid "Reset video enhancement settings to system defaults?"
 msgstr "Standaard videoverbetering instellingen gebruiken?"
@@ -7293,7 +7308,7 @@ msgid "Search region:"
 msgstr "Search region:"
 
 msgid "Search restricted content:"
-msgstr ""
+msgstr "Search restricted content:"
 
 msgid "Search the epg for current event."
 msgstr "Doorzoek de EPG voor huidige event."
@@ -7401,7 +7416,7 @@ msgid "Select folders"
 msgstr "Kies mappen"
 
 msgid "Select how your box will upgrade."
-msgstr ""
+msgstr "Selecteer hoe U uw box wilt upgraden"
 
 msgid "Select if timeshift should continue when set to record."
 msgstr ""
@@ -7471,7 +7486,7 @@ msgid "Select your provider, and press OK to start the scan"
 msgstr "Kies uw provider en druk OK om de scan te starten"
 
 msgid "Selected mount point is already used by another drive."
-msgstr ""
+msgstr "Geselecteerde mount point wordt al door een ander apparaat gebruikt"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Selecteer satellieten 1 (USALS)"
@@ -8122,7 +8137,7 @@ msgid "Simple"
 msgstr "Eenvoudig"
 
 msgid "Simulate (no write)"
-msgstr ""
+msgstr "Simuleren (niet schrijven)"
 
 msgid "Single"
 msgstr "Enkel"
@@ -8840,6 +8855,8 @@ msgstr "De volgende bestanden werden gevonden..."
 
 msgid "The image or kernel will be flashing and auto booted in few minutes.\n"
 msgstr ""
+"Het image of kernel wordt geflashd en automatisch herstart binnen enkele "
+"minuten.\n"
 
 msgid "The loopthrough setting is wrong."
 msgstr "De loopthrough-instelling is verkeerd."
@@ -8873,6 +8890,8 @@ msgid ""
 "The status of the current update could not be checked because http://www."
 "atemio4you.com could not be reached for some reason"
 msgstr ""
+"De status van de huidige update kon niet worden gecontroleerd, omdat http://"
+"www.atemio4you.com door onbekende rede niet kon worden bereikt "
 
 msgid "The timer file (pm_timers.xml) is corrupt and could not be loaded."
 msgstr ""
@@ -9017,7 +9036,7 @@ msgid "This allows you to show weblinks modules in downloads"
 msgstr "Dit geeft u de mogelijkheid weblinks te zien in downloads."
 
 msgid "This is the help screen. Feed me with something to display."
-msgstr ""
+msgstr "Dit is de help screen. Voer iets in om te tonen"
 
 msgid ""
 "This option allows to reduce the block-noise in the picture. Obviously this "
@@ -9472,7 +9491,7 @@ msgid "Title"
 msgstr "Titel"
 
 msgid "To back-up directly to the USB-stick, the USB-stick MUST\n"
-msgstr ""
+msgstr "Om direct te backuppen naar de USB-stick, moet de USB-stick\n"
 
 msgid "Today"
 msgstr "Vandaag"
@@ -9487,7 +9506,7 @@ msgid "Toggle HDMI-In full screen"
 msgstr "Schakel HDMI-in vol-sherm modus in"
 
 msgid "Toggle PIPzap"
-msgstr ""
+msgstr "Wissel PIPzap"
 
 msgid "Toggle Picture In Graphics"
 msgstr "Wissel Picture In Graphics"
@@ -9502,7 +9521,7 @@ msgid "Toggle between bouquet/epg lists"
 msgstr "Schakel tussen favorieten- en EPG-lijst"
 
 msgid "Toggle infoBar"
-msgstr ""
+msgstr "Wissel infoBar"
 
 msgid "Tone amplitude"
 msgstr "Tone-amplitude"
@@ -9547,7 +9566,7 @@ msgid "Total:"
 msgstr "Totaal:"
 
 msgid "Translation Information"
-msgstr "Iinformatie over vertaling"
+msgstr "Informatie over vertaling"
 
 msgid "Translations"
 msgstr "Vertalingen"
@@ -9574,7 +9593,7 @@ msgid "Travel & Events"
 msgstr "Reizen en Evenementen"
 
 msgid "Trending videos"
-msgstr ""
+msgstr "Trending videos"
 
 msgid "Tries left:"
 msgstr "Aantal resterende pogingen:"
@@ -9830,9 +9849,9 @@ msgstr "Uphops: "
 msgid "Uptime"
 msgstr "Uptime"
 
-#, fuzzy
+# No idea how to translate
 msgid "Usage Setup"
-msgstr "Usage Setup"
+msgstr ""
 
 msgid "Use"
 msgstr "Gebruik"
@@ -9981,9 +10000,8 @@ msgstr "Gebruikers interface instellingen"
 msgid "User interface visibility"
 msgstr "Gebruikers interface zichtbaarheid"
 
-#, fuzzy
 msgid "User video entries."
-msgstr ""
+msgstr "User video entries."
 
 msgid "Username"
 msgstr "Gebruikersnaam"
@@ -10093,7 +10111,7 @@ msgid "Video: %s fps"
 msgstr "Video: %s fps"
 
 msgid "Videobrowser exit behavior:"
-msgstr ""
+msgstr "Videobrowser exit gedrag:"
 
 msgid "Videocodec"
 msgstr "Videocodec"
@@ -10102,7 +10120,7 @@ msgid "Videoformat"
 msgstr "Videoformaat"
 
 msgid "Videoplayer stop/exit behavior:"
-msgstr ""
+msgstr "Videoplayer stop/exit gedrag:"
 
 msgid "Videosize"
 msgstr "Video-afmetingen"
@@ -10299,6 +10317,18 @@ msgid ""
 "\n"
 "The Help button shows this help again."
 msgstr ""
+"Welcome to the MyTube Youtube Player.\n"
+"\n"
+"Use the Bouqet+ button to navigate to the search field and the Bouqet- to "
+"navigate to the video entries.\n"
+"\n"
+"To play a movie just press OK on your remote control.\n"
+"\n"
+"Press info to see the movie description.\n"
+"\n"
+"Press the Menu button for additional options.\n"
+"\n"
+"The Help button shows this help again."
 
 msgid ""
 "Welcome to the MyTube Youtube Player.\n"
@@ -10311,6 +10341,15 @@ msgid ""
 "\n"
 "Press exit to get back to the input field."
 msgstr ""
+"Welcome to the MyTube Youtube Player.\n"
+"\n"
+"While entering your search term(s) you will get suggestions displayed "
+"matching your search term.\n"
+"\n"
+"To select a suggestion press DOWN on your remote, select the desired result "
+"and press OK on your remote to start the search.\n"
+"\n"
+"Press exit to get back to the input field."
 
 msgid ""
 "Welcome to the cutlist editor.\n"
@@ -11036,7 +11075,7 @@ msgstr ""
 "Wilt u nu verwijderen?"
 
 msgid "Your STB will freeze during the flashing process.\n"
-msgstr ""
+msgstr "Uw STB wordt gestopt tijdens de flash procedure.\n"
 
 msgid "Your STB will restart after pressing OK on your remote control."
 msgstr "Als u op OK drukt zal uw %s %s opnieuw opstarten."
@@ -11087,6 +11126,17 @@ msgid ""
 "\n"
 "Do you still want to update?"
 msgstr ""
+"Your image is out of date!\n"
+"\n"
+"After such a long time, there is a risk that your %s %s  will not\n"
+"boot after online-update, or will show disfunction in running Image.\n"
+"\n"
+"A new flash will increase the stability\n"
+"\n"
+"An online update is done at your own risk !!\n"
+"\n"
+"\n"
+"Do you still want to update?"
 
 msgid ""
 "Your internet connection is not working!\n"
@@ -11120,10 +11170,10 @@ msgstr ""
 "Kies wat u nu wilt doen."
 
 msgid "Youtube Password (reopen plugin on change):"
-msgstr ""
+msgstr "Youtube Password (reopen plugin on change):"
 
 msgid "Youtube Username (reopen plugin on change):"
-msgstr ""
+msgstr "Youtube Username (reopen plugin on change):"
 
 msgid "Zap"
 msgstr "Zap"
@@ -11162,7 +11212,7 @@ msgid "Zap to channel and close (setup in menu)"
 msgstr "Zap naar kanaal en sluit (stel in in menu)"
 
 msgid "Zap up"
-msgstr ""
+msgstr "ZapOmhoog"
 
 msgid "Zoom In/Out TV..."
 msgstr "Zoom In/Uit TV..."
@@ -11303,7 +11353,7 @@ msgid "back"
 msgstr "terug"
 
 msgid "backupstick or backupstick.txt"
-msgstr ""
+msgstr "backupstick of backupstick.txt"
 
 msgid "ballet"
 msgstr "ballet"
@@ -11313,7 +11363,7 @@ msgid "bc%s"
 msgstr "bc%s"
 
 msgid "because of the used filesystem the back-up\n"
-msgstr ""
+msgstr "Vanwege het gebruikte bestandssysteem de back-up\n"
 
 msgid "better"
 msgstr "beter"
@@ -11385,6 +11435,8 @@ msgid ""
 "contain a file with the name: \n"
 "\n"
 msgstr ""
+"bevat een bestand met de naam: \n"
+"\n"
 
 msgid "cooking"
 msgstr "koken"
@@ -11670,7 +11722,7 @@ msgid "insert mark here"
 msgstr "markeerpunt invoegen"
 
 msgid "install IPK from any device"
-msgstr ""
+msgstr "Installeer IPK van randapparaat"
 
 msgid "invalid type"
 msgstr "ongeldig type"
@@ -11852,9 +11904,13 @@ msgid ""
 "\n"
 "Exit plugin."
 msgstr ""
+"ofgwrite niet gevonden !!\n"
+"Verzeker u ervan dat ofgwrite geïnstalleerd is in /usr/bin/ofgwrite.\n"
+"\n"
+"Sluit plugin."
 
 msgid "ofgwrite will stop enigma2 now to run the flash.\n"
-msgstr ""
+msgstr "ofgwrite zal enigma2 nu stoppen en tot flashen overgaan.\n"
 
 msgid "on"
 msgstr "aan"
@@ -12013,7 +12069,7 @@ msgid "romance"
 msgstr "romantiek"
 
 msgid "root and kernel"
-msgstr ""
+msgstr "root en kernel"
 
 msgid "running..."
 msgstr "actief......"
@@ -12031,7 +12087,7 @@ msgid "scan state"
 msgstr "status"
 
 msgid "science fiction/fantasy/horror"
-msgstr "science fiction/fantasie/horror"
+msgstr "science fiction/fantasy/horror"
 
 msgid "second cable of motorized LNB"
 msgstr "2e kabel van gemotoriseerde LNB"
