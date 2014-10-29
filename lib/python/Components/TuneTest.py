@@ -22,7 +22,7 @@ class Tuner:
 			parm.rolloff = transponder[8]
 			parm.pilot = transponder[9]
 			self.tuneSatObj(parm)
-			
+
 	def tuneSatObj(self, transponderObj):
 		if self.frontend:
 			feparm = eDVBFrontendParameters()
@@ -30,7 +30,7 @@ class Tuner:
 			self.lastparm = feparm
 			self.frontend.tune(feparm)
 
-	def tuneTerr(self, frequency, 
+	def tuneTerr(self, frequency,
 		inversion=2, bandwidth = 7000000, fechigh = 6, feclow = 6,
 		modulation = 2, transmission = 2, guard = 4,
 		hierarchy = 4, system = 0, plpid = 0):
@@ -49,11 +49,30 @@ class Tuner:
 			parm.system = system
 			parm.plpid = plpid
 			self.tuneTerrObj(parm)
-			
+
 	def tuneTerrObj(self, transponderObj):
 		if self.frontend:
 			feparm = eDVBFrontendParameters()
-			feparm.setDVBS(parm, self.ignore_rotor)
+			feparm.setDVBT(transponderObj)
+			self.lastparm = feparm
+			self.frontend.tune(feparm)
+
+	def tuneCab(self, transponder):
+		if self.frontend:
+			print "[TuneTest] tuning to transponder with data", transponder
+			parm = eDVBFrontendParametersCable()
+			parm.frequency = transponder[0]
+			parm.symbol_rate = transponder[1]
+			parm.modulation = transponder[2]
+			parm.fec_inner = transponder[3]
+			parm.inversion = transponder[4]
+			#parm.system = transponder[5]
+			self.tuneCabObj(parm)
+
+	def tuneCabObj(self, transponderObj):
+		if self.frontend:
+			feparm = eDVBFrontendParameters()
+			feparm.setDVBC(transponderObj)
 			self.lastparm = feparm
 			self.frontend.tune(feparm)
 
