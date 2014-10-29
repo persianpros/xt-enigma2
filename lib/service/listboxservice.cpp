@@ -724,7 +724,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 					if (isPlayable)
 					{
 						//picon stuff
-						if (PyCallable_Check(m_GetPiconNameFunc) and (m_column_width || piconPixmap))
+						if (PyCallable_Check(m_GetPiconNameFunc))
 						{
 							eRect area = m_element_position[celServiceInfo];
 							/* PIcons are usually about 100:60. Make it a
@@ -736,15 +736,32 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 							m_element_position[celServiceInfo].setWidth(area.width() - iconWidth);
 							area = m_element_position[celServiceName];
 							xoffs += iconWidth;
-							if (piconPixmap)
+							ePyObject pArgs = PyTuple_New(1);
+							PyTuple_SET_ITEM(pArgs, 0, PyString_FromString(ref.toString().c_str()));
+							ePyObject pRet = PyObject_CallObject(m_GetPiconNameFunc, pArgs);
+							Py_DECREF(pArgs);
+							if (pRet)
 							{
-								area.moveBy(offset);
-								painter.clip(area);
-								painter.blitScale(piconPixmap,
-									eRect(area.left(), area.top(), iconWidth, area.height()),
-									area,
-									gPainter::BT_ALPHABLEND | gPainter::BT_KEEP_ASPECT_RATIO);
-								painter.clippop();
+								if (PyString_Check(pRet))
+								{
+									std::string piconFilename = PyString_AS_STRING(pRet);
+									if (!piconFilename.empty())
+									{
+										ePtr<gPixmap> piconPixmap;
+										loadPNG(piconPixmap, piconFilename.c_str());
+										if (piconPixmap)
+										{
+											area.moveBy(offset);
+											painter.clip(area);
+											painter.blitScale(piconPixmap,
+												eRect(area.left(), area.top(), iconWidth, area.height()),
+												area,
+												gPainter::BT_ALPHABLEND | gPainter::BT_KEEP_ASPECT_RATIO);
+											painter.clippop();
+										}
+									}
+								}
+								Py_DECREF(pRet);
 							}
 						}
 
