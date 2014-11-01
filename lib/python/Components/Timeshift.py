@@ -211,7 +211,7 @@ class InfoBarTimeshift:
 				self.SaveTimeshift("pts_livebuffer_%s" % self.pts_eventcount, mergelater=True)
 				self.ptsRecordCurrentEvent()
 			else:
-				self.SaveTimeshift("pts_livebuffer_%s" % self.pts_eventcount)  
+				self.SaveTimeshift("pts_livebuffer_%s" % self.pts_eventcount)
 		self.service_changed = 0
 		if not config.timeshift.isRecording.value:
 			self.__seekableStatusChanged()
@@ -630,6 +630,10 @@ class InfoBarTimeshift:
 								ptsfilename = "%s - %s - %s - %s" % (strftime("%Y%m%d %H%M",localtime(self.pts_starttime)),self.pts_curevent_station,self.pts_curevent_name.replace("\n", ""),self.pts_curevent_description.replace("\n", ""))
 							elif config.recording.filename_composition.value == "short":
 								ptsfilename = "%s - %s" % (strftime("%Y%m%d",localtime(self.pts_starttime)),self.pts_curevent_name.replace("\n", ""))
+							elif config.recording.filename_composition.value == "veryshort":
+								ptsfilename = "%s - %s" % (self.pts_curevent_name.replace("\n", ""),strftime("%Y%m%d %H%M",localtime(self.pts_starttime)))
+							elif config.recording.filename_composition.value == "veryveryshort":
+								ptsfilename = "%s - %s" % (self.pts_curevent_name.replace("\n", ""),strftime("%Y%m%d %H%M",localtime(self.pts_starttime)))
 					except Exception, errormsg:
 						print "[TimeShift] Using default filename"
 
@@ -660,6 +664,10 @@ class InfoBarTimeshift:
 								ptsfilename = "%s - %s - %s - %s" % (strftime("%Y%m%d %H%M",localtime(int(begintime))),self.pts_curevent_station,eventname,description)
 							elif config.recording.filename_composition.value == "short":
 								ptsfilename = "%s - %s" % (strftime("%Y%m%d",localtime(int(begintime))),eventname)
+							elif config.recording.filename_composition.value == "veryshort":
+								ptsfilename = "%s - %s" % (eventname,strftime("%Y%m%d %H%M",localtime(int(begintime))))
+							elif config.recording.filename_composition.value == "veryveryshort":
+								ptsfilename = "%s - %s" % (eventname,strftime("%Y%m%d %H%M",localtime(int(begintime))))
 					except Exception, errormsg:
 						print "[TimeShift] Using default filename"
 
