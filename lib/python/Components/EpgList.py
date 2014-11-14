@@ -623,14 +623,14 @@ class EPGList(HTMLComponent, GUIComponent):
 		if clock_types:
 			if self.wasEntryAutoTimer and clock_types in (2,7,12):
 				res.extend((
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-21, (r3.h/2-11), 21, 21, self.clocks[clock_types]),
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-42, (r3.h/2-11), 21, 21, self.autotimericon),
-					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-42, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName)
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-25, (r3.h/2-13), 25, 25, self.clocks[clock_types]),
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-52, (r3.h/2-13), 25, 25, self.autotimericon),
+					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-52, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName)
 					))
 			else:
 				res.extend((
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-21, (r3.h/2-11), 21, 21, self.clocks[clock_types]),
-					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-21, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName)
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-25, (r3.h/2-13), 25, 25, self.clocks[clock_types]),
+					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-25, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName)
 					))
 		else:
 			res.append((eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName))
@@ -650,14 +650,14 @@ class EPGList(HTMLComponent, GUIComponent):
 		if clock_types:
 			if self.wasEntryAutoTimer and clock_types in (2,7,12):
 				res.extend((
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-21, (r3.h/2-11), 21, 21, self.clocks[clock_types]),
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-42, (r3.h/2-11), 21, 21, self.autotimericon),
-					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-42, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, service_name)
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-25, (r3.h/2-13), 25, 25, self.clocks[clock_types]),
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-52, (r3.h/2-13), 25, 25, self.autotimericon),
+					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-52, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, service_name)
 				))
 			else:
 				res.extend((
-					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-21, (r3.h/2-11), 21, 21, self.clocks[clock_types]),
-					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-21, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, service_name)
+					(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, r3.x+r3.w-25, (r3.h/2-13), 25, 25, self.clocks[clock_types]),
+					(eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w-25, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, service_name)
 				))
 		else:
 			res.append((eListboxPythonMultiContent.TYPE_TEXT, r3.x, r3.y, r3.w, r3.h, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, service_name))
@@ -696,13 +696,13 @@ class EPGList(HTMLComponent, GUIComponent):
 				if self.wasEntryAutoTimer and clock_types in (2,7,12):
 					res.extend((
 						(eListboxPythonMultiContent.TYPE_TEXT, r3.x + 90, r3.y, r3.w-131, r3.h, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName),
-						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos, (r3.h/2-11), 21, 21, self.clocks[clock_types]),
-						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos-22, (r3.h/2-11), 21, 21, self.autotimericon)
+						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos, (r3.h/2-13), 25, 25, self.clocks[clock_types]),
+						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos-26, (r3.h/2-13), 25, 25, self.autotimericon)
 					))
 				else:
 					res.extend((
 						(eListboxPythonMultiContent.TYPE_TEXT, r3.x + 90, r3.y, r3.w-110, r3.h, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName),
-						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos, (r3.h/2-11), 21, 21, self.clocks[clock_types])
+						(eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, pos, (r3.h/2-13), 25, 25, self.clocks[clock_types])
 					))
 			else:
 				res.append((eListboxPythonMultiContent.TYPE_TEXT, r3.x + 90, r3.y, r3.w-100, r3.h, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, EventName))
@@ -996,19 +996,19 @@ class EPGList(HTMLComponent, GUIComponent):
 							flags = BT_SCALE))
 
 				# recording icons
-				if clock_types is not None and ewidth > 23:
+				if clock_types is not None and ewidth > 27:
 					if clock_types in (1,6,11):
-						pos = (left+xpos+ewidth-13, top+height-22)
+						pos = (left+xpos+ewidth-17, top+height-28)
 					elif clock_types in (5,10,15):
-						pos = (left+xpos-8, top+height-23)
+						pos = (left+xpos-2, top+height-28)
 					else:
-						pos = (left+xpos+ewidth-23, top+height-22)
+						pos = (left+xpos+ewidth-29, top+height-28)
 					res.append(MultiContentEntryPixmapAlphaBlend(
 						pos = pos, size = (21, 21),
 						png = clocks))
 					if self.wasEntryAutoTimer and clock_types in (2,7,12):
 						res.append(MultiContentEntryPixmapAlphaBlend(
-							pos = (pos[0]-22,pos[1]), size = (21, 21),
+							pos = (pos[0]-29,pos[1]), size = (25, 25),
 							png = self.autotimericon))
 		return res
 
