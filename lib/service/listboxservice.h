@@ -68,7 +68,6 @@ public:
 		picMarker,
 		picServiceEventProgressbar,
 		picCrypto,
-		picRecord,
 		picElements
 	};
 
@@ -82,12 +81,9 @@ public:
 
 	int getItemHeight() { return m_itemheight; }
 	void setItemHeight(int height);
-	void setServiceTypeIconMode(int mode) { m_servicetype_icon_mode = mode; }
-	void setCryptoIconMode(int mode) { m_crypto_icon_mode = mode; }
-	void setRecordIndicatorMode(int mode) { m_record_indicator_mode = mode; }
-	void setColumnWidth(int value) { m_column_width = value; }
-	void setProgressbarHeight(int value) {	m_progressbar_height = value; }
-	void setProgressbarBorderWidth(int value) { m_progressbar_border_width = value; }
+	void setServiceTypeIconMode(int mode);
+	void setCryptoIconMode(int mode);
+	void setColumnWidth(int value);
 
 	static void setGetPiconNameFunc(SWIG_PYOBJECT(ePyObject) func);
 
@@ -105,19 +101,17 @@ public:
 		serviceEventProgressbarColorSelected,
 		serviceEventProgressbarBorderColor,
 		serviceEventProgressbarBorderColorSelected,
-		serviceRecorded,
 		colorElements
 	};
 
 	void setColor(int color, gRGB &col);
-	bool checkServiceIsRecorded(eServiceReference ref);
 protected:
 	void cursorHome();
 	void cursorEnd();
 	int cursorMove(int count=1);
 	int cursorValid();
 	int cursorSet(int n);
-	int cursorResolve(int);
+	int cursorResolve(int cursor_position);
 	int cursorGet();
 	int currentCursorSelectable();
 
@@ -166,10 +160,7 @@ private:
 	int m_itemheight;
 	int m_servicetype_icon_mode;
 	int m_crypto_icon_mode;
-	int m_record_indicator_mode;
 	int m_column_width;
-	int m_progressbar_height;
-	int m_progressbar_border_width;
 };
 
 #endif
