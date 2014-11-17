@@ -65,7 +65,7 @@ class AtemioPanel(Screen):
 		self['conn'] = StaticText('')
 		self['spaceused'] = ProgressBar()
 
-		self.MenuList = [('SoftCam',_('SoftCam Panel'),_('Configure and install softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SoftCamPanel/plugin.pyo')),
+		self.MenuList = [('CamCenter',_('Atemio Cam Center'),_('Download and install softcams'),'icons/p_cam.png',fileExists('/usr/lib/enigma2/python/Plugins/Extensions/AtemioCamCenter/plugin.pyo')),
 			('Network',_('Network'),_('configure your network'),'icons/p_network.png',True),
 			('IPKInstaller',_('IPK Installer'),_('install IPK from any device'),'icons/p_plugins.png',True),
 #			('FlashOnline',_('Flash online / local'),_('Flash image online on the fly'),'icons/p_plugins.png',True),        
@@ -107,9 +107,9 @@ class AtemioPanel(Screen):
 	def KeyOk(self):
 		self['conn'].text = ''
 		sel = self['list'].getCurrent()[0]
-		if sel == 'SoftCam':
-			from Plugins.Extensions.SoftCamPanel import SoftCamPanel
-			self.session.open(SoftCamPanel.SoftCamPanel)
+		if sel == 'CamCenter':
+			from Plugins.Extensions.AtemioCamCenter.plugin import main
+			main(self.session)
 		elif sel == 'Network':
 			self.session.open(NetworkAdapterSelection)
 		elif sel == 'IPKInstaller':
