@@ -21,7 +21,7 @@ import math
 from boxbranding import getBoxType,  getImageDistro, getMachineName, getMachineBrand
 
 #############################################################################################################
-feedurl_a4y = 'http://beta.atemio4you.com/'
+feedurl_a4y = 'http://image.atemio4you.com/'
 imagePath = '/media/hdd/images'
 flashPath = '/media/hdd/images/flash'
 flashTmp = '/media/hdd/images/tmp'
